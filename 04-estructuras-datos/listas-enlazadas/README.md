@@ -1,9 +1,7 @@
-# Linked Lists
+# Listas Enlazadas
 
-[Spanish version](README.es.md)
+Implementaciones, ejercicios y apuntes sobre listas enlazadas simples y dobles.
 
-Implementations, exercises, and notes about singly and doubly linked lists.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

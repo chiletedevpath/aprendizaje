@@ -1,9 +1,7 @@
 # HTML
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre HTML semantico y estructura de documentos.
 
-Exercises and notes about semantic HTML and document structure.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

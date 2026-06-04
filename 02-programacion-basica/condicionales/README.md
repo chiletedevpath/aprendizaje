@@ -1,13 +1,10 @@
-# Conditionals
+# Condicionales
 
-[Spanish version](README.es.md)
+Ejercicios sobre estructuras de decisión en Java.
 
-Exercises and notes about decision structures such as if, else, and switch.
+## Contenido
 
-## Practice
-
-- `java/ejercicios-basicos`: Java exercises focused on character classification, `switch`, and conditional branching.
-
-## Status
-
-In progress.
+- `java/ejercicios-basicos`: ejercicios introductorios.
+- `java/condicionales-basicos`: decisiones con `if`, `else if` y `else`.
+- `java/juegos-condicionales`: ejercicios aplicados a juegos simples.
+- `java/switch-y-ternario`: selección múltiple y operador ternario.

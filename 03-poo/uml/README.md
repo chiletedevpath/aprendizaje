@@ -1,9 +1,7 @@
 # UML
 
-[Spanish version](README.es.md)
+Diagramas usados para practicar modelado orientado a objetos antes de implementar codigo.
 
-Diagrams used to practice object-oriented modeling before implementing code.
+## Estructura
 
-## Structure
-
-- `class-diagrams`: class diagrams, relationships, and responsibilities.
+- `class-diagrams`: diagramas de clases, relaciones y responsabilidades.

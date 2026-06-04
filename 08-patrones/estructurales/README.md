@@ -1,9 +1,7 @@
-# Structural Patterns
+# Patrones Estructurales
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre patrones de composicion de objetos como Adapter, Decorator y Facade.
 
-Exercises and notes about object composition patterns such as Adapter, Decorator, and Facade.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

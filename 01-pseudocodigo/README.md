@@ -1,9 +1,11 @@
-# Pseudocode
+# Pseudocódigo
 
-[Spanish version](README.es.md)
+Ejercicios de lógica de programación desarrollados en pseudocódigo.
 
-Exercises and notes written in pseudocode before implementing solutions in a programming language.
+## Contenido
 
-## Status
+- `pseint`: ejercicios organizados por tipo de estructura lógica.
 
-In progress.
+## Propósito
+
+Practicar análisis de problemas, secuencia de pasos, uso de variables, condicionales y bucles antes de pasar a un lenguaje de programación.

@@ -1,9 +1,7 @@
-# Mini Projects
+# Mini Proyectos
 
-[Spanish version](README.es.md)
+Pequenos proyectos de programacion orientada a objetos para aplicar varios conceptos juntos.
 
-Small object-oriented programming projects used to apply multiple concepts together.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

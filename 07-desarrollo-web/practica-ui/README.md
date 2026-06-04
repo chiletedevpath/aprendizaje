@@ -1,9 +1,7 @@
-# UI Practice
+# Practica de UI
 
-[Spanish version](README.es.md)
+Pequenos ejercicios de interfaz enfocados en layout, componentes y experiencia de usuario.
 
-Small interface exercises focused on layout, components, and user experience.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

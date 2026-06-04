@@ -1,9 +1,3 @@
-# Functions
+# Funciones
 
-[Spanish version](README.es.md)
-
-Exercises and notes about funciones, parameters, return values, and decomposition.
-
-## Status
-
-In progress.
+Ejercicios sobre métodos, parámetros, valores de retorno y reutilización de lógica.

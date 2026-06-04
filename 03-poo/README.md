@@ -1,19 +1,13 @@
-# Object-Oriented Programming
+# Programación orientada a objetos
 
-[Spanish version](README.es.md)
+Ejercicios de programación orientada a objetos en Java.
 
-This folder contains exercises, notes, and examples related to object-oriented programming.
+## Temas
 
-## Topics
-
-- `classes-and-objects`: modeling entities with classes and objects.
-- `encapsulation`: access control and data protection.
-- `inheritance`: class hierarchies and code reuse.
-- `polymorphism`: flexible behavior through overriding and interfaces.
-- `abstraction`: abstract classes, interfaces, and essential modeling.
-- `uml`: class diagrams and visual system modeling.
-- `mini-projects`: small projects that combine OOP concepts.
-
-## Status
-
-In progress.
+- `clases-objetos`: creación de clases, atributos, métodos y objetos.
+- `encapsulamiento`: acceso controlado a datos internos.
+- `herencia`: reutilización y especialización de clases.
+- `abstraccion`: clases abstractas e interfaces.
+- `polimorfismo`: comportamiento variable según el tipo de objeto.
+- `mini-proyectos`: ejercicios integradores.
+- `uml`: diagramas de clases y modelado.

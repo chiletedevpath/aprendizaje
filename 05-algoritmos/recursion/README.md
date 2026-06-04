@@ -1,9 +1,7 @@
-# Recursion
+# Recursividad
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre pensamiento recursivo, casos base y llamadas recursivas.
 
-Exercises and notes about recursive thinking, base cases, and recursive calls.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

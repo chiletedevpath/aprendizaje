@@ -1,13 +1,3 @@
-# Data Types
+# Tipos de datos
 
-[Spanish version](README.es.md)
-
-Exercises and notes about primitive and common data types.
-
-## Topics
-
-- `java/tipos-datos-basicos`: exercises about conversions, casting, and primitive types.
-
-## Status
-
-In progress.
+Ejercicios sobre tipos de datos básicos, conversiones y representación de valores en Java.

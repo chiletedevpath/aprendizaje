@@ -1,9 +1,7 @@
-# Inheritance
+# Herencia
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre jerarquias de clases y reutilizacion de codigo mediante herencia.
 
-Exercises and notes about class hierarchies and code reuse through inheritance.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

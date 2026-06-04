@@ -1,9 +1,7 @@
-# Hash Tables
+# Tablas Hash
 
-[Spanish version](README.es.md)
+Implementaciones, ejercicios y apuntes sobre tablas hash y acceso clave-valor.
 
-Implementations, exercises, and notes about hash tables and key-value access.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

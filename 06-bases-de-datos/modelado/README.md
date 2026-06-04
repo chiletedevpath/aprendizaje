@@ -1,14 +1,12 @@
-# Database Modeling
+# Modelado de Bases de Datos
 
-[Spanish version](README.es.md)
+Apuntes y ejercicios sobre entidades, relaciones, normalizacion y diagramas de base de datos.
 
-Notes and exercises about entities, relationships, normalization, and database diagrams.
+## Estructura
 
-## Structure
+- `entity-relationship`: diagramas del modelo entidad-relacion.
+- `logical-relational`: scripts SQL derivados del modelo logico relacional.
 
-- `entity-relationship`: entity-relationship model diagrams.
-- `logical-relational`: SQL scripts derived from logical relational models.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

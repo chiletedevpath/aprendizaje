@@ -1,9 +1,7 @@
-# Sorting
+# Ordenamiento
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre algoritmos de ordenamiento y sus diferencias.
 
-Exercises and notes about sorting algorithms and their tradeoffs.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

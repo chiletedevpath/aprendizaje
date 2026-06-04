@@ -1,19 +1,13 @@
-# Data Structures
+# Estructuras de datos
 
-[Spanish version](README.es.md)
+Ejercicios sobre estructuras de datos, colecciones y formas de organizar información en memoria.
 
-This folder contains exercises, notes, and implementations of common data structures.
+## Temas
 
-## Topics
-
-- `arreglos`: indexed collections and basic operations.
-- `linked-lists`: node-based linear structures.
-- `stacks`: LIFO operations.
-- `queues`: FIFO operations.
-- `trees`: hierarchical data structures.
-- `graphs`: nodes, edges, and traversals.
-- `hash-tables`: key-value access.
-
-## Status
-
-In progress.
+- `arreglos`: colecciones indexadas.
+- `listas-enlazadas`: listas y nodos.
+- `pilas`: estructura LIFO.
+- `colas`: estructura FIFO.
+- `tablas-hash`: dispersión y acceso por clave.
+- `grafos`: recorridos y caminos.
+- `arboles`: estructuras jerárquicas.

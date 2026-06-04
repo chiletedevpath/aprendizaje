@@ -1,9 +1,7 @@
-# Abstraction
+# Abstraccion
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre clases abstractas, interfaces y modelado esencial.
 
-Exercises and notes about abstract classes, interfaces, and essential modeling.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

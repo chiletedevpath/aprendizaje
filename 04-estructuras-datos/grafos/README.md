@@ -1,9 +1,7 @@
-# Graphs
+# Grafos
 
-[Spanish version](README.es.md)
+Implementaciones, ejercicios y apuntes sobre grafos, nodos, aristas y recorridos.
 
-Implementations, exercises, and notes about graphs, nodes, edges, and traversals.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

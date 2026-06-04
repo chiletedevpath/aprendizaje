@@ -1,9 +1,7 @@
 # Spring Boot
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre construccion de aplicaciones backend con Spring Boot.
 
-Exercises and notes about building backend applications with Spring Boot.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

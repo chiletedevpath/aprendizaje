@@ -1,9 +1,7 @@
-# Searching
+# Busqueda
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre algoritmos de busqueda como busqueda lineal y busqueda binaria.
 
-Exercises and notes about search algorithms such as linear search and binary search.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

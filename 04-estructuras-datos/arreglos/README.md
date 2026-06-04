@@ -1,9 +1,7 @@
-# Arrays
+# Arreglos
 
-[Spanish version](README.es.md)
+Implementaciones, ejercicios y apuntes sobre arreglos como estructura de datos.
 
-Implementations, exercises, and notes about arreglos as a data structure.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

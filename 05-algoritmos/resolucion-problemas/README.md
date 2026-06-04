@@ -1,9 +1,7 @@
-# Problem-Solving Strategies
+# Estrategias de Resolucion de Problemas
 
-[Spanish version](README.es.md)
+Apuntes y ejercicios sobre estrategias para resolver problemas algoritmicos.
 
-Notes and exercises about strategies for solving algorithmic problems.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

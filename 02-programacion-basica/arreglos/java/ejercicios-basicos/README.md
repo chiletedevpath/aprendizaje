@@ -1,20 +1,18 @@
-# Basic Java Exercises: Arrays
+# Ejercicios Basicos Java: Arreglos
 
-[Spanish version](README.es.md)
+Ejercicios Java de practica enfocados en arreglos y recorrido de datos.
 
-Java practice exercises focused on arreglos and array traversal.
+## Ejercicios
 
-## Exercises
+- `DetectarNumerosDuplicados.java`: detecta numeros repetidos usando bucles anidados.
+- `AnalizarPromedioVentas.java`: calcula ventas totales, promedio y valores por encima o debajo del promedio.
+- `AnalizarNotasAlumnos.java`: procesa nombres y notas de alumnos usando arreglos paralelos.
 
-- `DetectarNumerosDuplicados.java`: detects repeated numbers using nested bucles.
-- `AnalizarPromedioVentas.java`: calculates total sales, average sales, and values above or below the average.
-- `AnalizarNotasAlumnos.java`: processes student names and grades using parallel arreglos.
+## Conceptos Principales
 
-## Main Concepts
-
-- Arrays
-- Parallel arreglos
-- Traversal
-- Counters
-- Numeric processing
-- Duplicate detection
+- Arreglos
+- Arreglos paralelos
+- Recorridos
+- Contadores
+- Procesamiento numerico
+- Deteccion de duplicados

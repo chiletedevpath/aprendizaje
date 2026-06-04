@@ -1,16 +1,14 @@
-# Databases
+# Bases de Datos
 
-[Spanish version](README.es.md)
+Ejercicios, apuntes y practicas sobre modelado de datos, SQL, MySQL, PostgreSQL y SQL Server.
 
-Exercises, notes, and practice about data modeling, SQL, MySQL, PostgreSQL, and SQL Server.
+## Temas
 
-## Topics
+- `modeling`: modelos entidad-relacion y modelos logico-relacionales.
+- `mysql`: practicas y apuntes orientados a MySQL.
+- `postgresql`: practicas y apuntes orientados a PostgreSQL.
+- `sql-server`: consultas, DDL, DML y ejercicios de clase en SQL Server.
 
-- `modeling`: entity-relationship and logical-relational models.
-- `mysql`: MySQL-oriented practice and notes.
-- `postgresql`: PostgreSQL-oriented practice and notes.
-- `sql-server`: queries, DDL, DML, and SQL Server class exercises.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

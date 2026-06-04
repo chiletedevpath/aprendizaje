@@ -1,13 +1,13 @@
-# Arrays
+# Arreglos
 
-[Spanish version](README.es.md)
+Ejercicios sobre arreglos, matrices, recorridos y operaciones básicas en Java.
 
-Exercises and notes about arreglos, indexing, traversal, and basic operations.
+## Contenido
 
-## Practice
-
-- `java/ejercicios-basicos`: Java exercises focused on array traversal, parallel arreglos, numeric processing, and duplicate detection.
-
-## Status
-
-In progress.
+- `java/arreglos-basicos`: operaciones fundamentales.
+- `java/arreglos-paralelos`: trabajo con arreglos relacionados.
+- `java/ejercicios-basicos`: ejercicios introductorios.
+- `java/ejercicios-aplicados`: problemas contextualizados.
+- `java/matrices`: arreglos bidimensionales.
+- `java/metodos-arreglos`: operaciones separadas en métodos.
+- `java/utilidades-arrays`: utilidades de copia y manipulación.

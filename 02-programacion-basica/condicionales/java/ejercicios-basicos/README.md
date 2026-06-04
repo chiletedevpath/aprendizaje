@@ -1,19 +1,17 @@
-# Basic Java Exercises: Conditionals
+# Ejercicios Basicos Java: Condicionales
 
-[Spanish version](README.es.md)
+Ejercicios Java de practica enfocados en estructuras de decision y clasificacion de caracteres.
 
-Java practice exercises focused on decision structures and character classification.
+## Ejercicios
 
-## Exercises
+- `ContarVocalesConsonantes.java`: cuenta vocales y consonantes usando `switch`.
+- `ContarSoloLetras.java`: mejora la clasificacion ignorando caracteres que no son letras.
+- `ContarTiposCaracteres.java`: clasifica caracteres en vocales, consonantes, digitos y simbolos.
 
-- `ContarVocalesConsonantes.java`: counts vowels and consonants using `switch`.
-- `ContarSoloLetras.java`: improves classification by ignoring non-letter characters.
-- `ContarTiposCaracteres.java`: classifies characters into vowels, consonants, digits, and symbols.
-
-## Main Concepts
+## Conceptos Principales
 
 - `if`
 - `switch`
-- Character classification
-- Counters
-- Validation
+- Clasificacion de caracteres
+- Contadores
+- Validacion

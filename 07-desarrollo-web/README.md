@@ -1,17 +1,10 @@
-# Frontend
+# Desarrollo web
 
-[Spanish version](README.es.md)
+Ejercicios de desarrollo web con HTML, CSS y JavaScript.
 
-This folder contains exercises, notes, and examples related to frontend development.
+## Temas
 
-## Topics
-
-- `html`: semantic structure and document markup.
-- `css`: styling, layout, and responsive design.
-- `javascript`: browser logic, DOM, and language fundamentals.
-- `react`: components, props, state, hooks, and UI composition.
-- `ui-practice`: small interface exercises.
-
-## Status
-
-In progress.
+- `html`: estructura semántica de páginas web.
+- `css`: estilos, diseño visual y maquetación.
+- `javascript`: lógica del navegador, DOM y fundamentos del lenguaje.
+- `practica-ui`: ejercicios pequeños de interfaz.

@@ -1,9 +1,7 @@
-# Creational Patterns
+# Patrones Creacionales
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre patrones de creacion de objetos como Singleton, Factory Method y Builder.
 
-Exercises and notes about object creation patterns such as Singleton, Factory Method, and Builder.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

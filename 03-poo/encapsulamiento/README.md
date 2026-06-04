@@ -1,9 +1,7 @@
-# Encapsulation
+# Encapsulamiento
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre control de acceso, atributos, metodos y proteccion de datos.
 
-Exercises and notes about access control, attributes, methods, and data protection.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

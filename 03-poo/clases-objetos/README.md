@@ -1,9 +1,7 @@
-# Classes and Objects
+# Clases y Objetos
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre modelado de entidades usando clases y objetos.
 
-Exercises and notes about modeling entities using classes and objects.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

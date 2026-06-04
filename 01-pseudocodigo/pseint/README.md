@@ -1,15 +1,13 @@
 # PSeInt
 
-[Spanish version](README.es.md)
+Ejercicios de pseudocódigo desarrollados con PSeInt.
 
-Programming logic exercises organized by main concept.
+## Organización
 
-## Structure
-
-- `01-secuenciales`: input, process, and output without decisions.
-- `02-condicionales`: decisions with `Si`.
-- `03-segun`: multiple selection with `Segun`.
-- `04-bucles-para`: iterations with a defined amount of repetitions.
-- `05-bucles-mientras`: iterations checked at the beginning.
-- `06-bucles-repetir`: validations and iterations checked at the end.
-- `07-practica-integrada`: exercises that combine multiple concepts.
+- `01-secuenciales`: instrucciones paso a paso sin decisiones.
+- `02-condicionales`: decisiones con estructuras condicionales.
+- `03-segun`: selección múltiple.
+- `04-bucles-para`: repeticiones con contador.
+- `05-bucles-mientras`: repeticiones condicionadas al inicio.
+- `06-bucles-repetir`: repeticiones condicionadas al final.
+- `07-practica-integrada`: ejercicios que combinan varias estructuras.

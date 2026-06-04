@@ -1,19 +1,17 @@
-# Programming Fundamentals
+# Programación básica
 
-[Spanish version](README.es.md)
+Ejercicios de fundamentos de programación, principalmente en Java.
 
-This folder contains exercises, notes, and examples related to core programming fundamentals.
+## Temas
 
-## Topics
+- `variables`: declaración, asignación y uso de variables.
+- `tipos-datos`: tipos primitivos, conversiones y valores básicos.
+- `condicionales`: estructuras de decisión.
+- `bucles`: estructuras repetitivas.
+- `funciones`: métodos, parámetros, retorno y descomposición.
+- `cadenas`: manipulación de texto.
+- `arreglos`: arreglos, matrices y recorridos.
 
-- `variables`: declaration, assignment, and usage.
-- `data-types`: primitive and common data types.
-- `condicionales`: decision structures.
-- `bucles`: repetition structures.
-- `funciones`: parameters, returns, and decomposition.
-- `arreglos`: indexing, traversal, and basic operations.
-Java practice exercises are organized inside the topic they reinforce, such as `bucles`, `arreglos`, and `condicionales`.
+## Criterio
 
-## Status
-
-In progress.
+Cada carpeta agrupa ejercicios pequeños orientados a reforzar un concepto concreto.

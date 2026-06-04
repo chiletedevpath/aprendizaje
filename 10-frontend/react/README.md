@@ -1,9 +1,7 @@
 # React
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre componentes, estado, props, hooks y composicion de interfaces en React.
 
-Exercises and notes about React components, state, props, hooks, and UI composition.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

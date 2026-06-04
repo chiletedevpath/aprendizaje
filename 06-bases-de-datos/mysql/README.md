@@ -1,9 +1,7 @@
 # MySQL
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre bases de datos MySQL, tablas y consultas.
 
-Exercises and notes about MySQL databases, tables, and queries.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

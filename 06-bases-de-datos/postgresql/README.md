@@ -1,9 +1,7 @@
 # PostgreSQL
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre bases de datos PostgreSQL, esquemas y consultas.
 
-Exercises and notes about PostgreSQL databases, schemas, and queries.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

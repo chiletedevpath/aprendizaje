@@ -1,9 +1,7 @@
 # JavaScript
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre fundamentos de JavaScript, manipulacion del DOM y comportamiento del navegador.
 
-Exercises and notes about JavaScript fundamentals, DOM manipulation, and browser behavior.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

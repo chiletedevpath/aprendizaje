@@ -1,9 +1,7 @@
 # CSS
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre estilos, layout, diseno responsive y estructura visual.
 
-Exercises and notes about styling, layout, responsive design, and visual structure.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

@@ -1,13 +1,10 @@
-# Loops
+# Bucles
 
-[Spanish version](README.es.md)
+Ejercicios sobre estructuras repetitivas en Java.
 
-Exercises and notes about repetition structures such as for, while, and do while.
+## Contenido
 
-## Practice
-
-- `java/ejercicios-basicos`: Java exercises focused on `for`, `while`, and `do while`.
-
-## Status
-
-In progress.
+- `java/ejercicios-basicos`: ejercicios introductorios.
+- `java/bucles-basicos`: uso de `for`, `while` y `do while`.
+- `java/series-numericas`: generación y procesamiento de series.
+- `java/validaciones`: repetición aplicada a validaciones de entrada.

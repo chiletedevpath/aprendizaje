@@ -1,9 +1,7 @@
-# Polymorphism
+# Polimorfismo
 
-[Spanish version](README.es.md)
+Ejercicios y apuntes sobre sobrescritura de metodos, interfaces y comportamiento flexible.
 
-Exercises and notes about method overriding, interfaces, and flexible behavior.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

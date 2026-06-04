@@ -1,9 +1,8 @@
 # Variables
 
-[Spanish version](README.es.md)
+Ejercicios sobre declaración, asignación, lectura y uso de variables en Java.
 
-Exercises and notes about declaring, assigning, and using variables.
+## Contenido
 
-## Status
-
-In progress.
+- `java/calculos-basicos`: operaciones y fórmulas simples.
+- `java/entrada-salida`: captura y presentación de datos.

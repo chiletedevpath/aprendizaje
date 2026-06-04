@@ -1,23 +1,21 @@
-# Design Patterns
+# Patrones de Diseno
 
-[Spanish version](README.es.md)
+Esta carpeta contiene practica de principios SOLID y patrones de diseno, organizada por concepto para diferenciar teoria aplicada, ejercicios de clase y ejemplos con Spring Boot.
 
-This folder contains practice for SOLID principles and design patterns, organized by concept to separate applied theory, class exercises, and Spring Boot examples.
+## Estructura
 
-## Structure
+- `solid-principles`: ejercicios sobre SRP, OCP, LSP, ISP, DIP y practicas calificadas.
+- `creational`: patrones creacionales como Builder, Factory, Prototype y Singleton.
+- `structural`: patrones estructurales como Adapter y Facade.
+- `behavioral`: patrones de comportamiento. Reservado para ejemplos puros de Observer, Strategy, Command, etc.
+- `integrated-practice`: ejercicios donde se combinan principios SOLID y patrones en un mismo caso.
+- `assessments`: evaluaciones, PC o practicas calificadas relacionadas con patrones.
 
-- `solid-principles`: exercises for SRP, OCP, LSP, ISP, DIP, and graded practice.
-- `creational`: creational patterns such as Builder, Factory, Prototype, and Singleton.
-- `structural`: structural patterns such as Adapter and Facade.
-- `behavioral`: behavioral patterns. Reserved for pure Observer, Strategy, Command, etc. examples.
-- `integrated-practice`: exercises that combine SOLID principles and patterns in the same case.
-- `assessments`: exams, graded practice, or evaluations related to design patterns.
+## Convencion
 
-## Convention
+- `java`: ejercicios de clase o laboratorio.
+- `spring-boot`: ejemplos implementados como proyectos Spring Boot.
 
-- `java`: class or lab exercises.
-- `spring-boot`: examples implemented as Spring Boot projects.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

@@ -1,17 +1,15 @@
 # Backend
 
-[Spanish version](README.es.md)
+Esta carpeta contiene ejercicios, apuntes y ejemplos relacionados con desarrollo backend.
 
-This folder contains exercises, notes, and examples related to backend development.
+## Temas
 
-## Topics
+- `java`: logica backend y estructura de aplicaciones.
+- `java/spring-boot`: aplicaciones backend con Java y Spring Boot.
+- `node-express`: desarrollo backend con Node.js y Express.
+- `rest-apis`: diseno, implementacion y consumo de APIs.
+- `authentication`: login, sesiones, tokens y control de acceso.
 
-- `java`: backend logic and application structure.
-- `java/spring-boot`: backend applications with Java and Spring Boot.
-- `node-express`: backend development with Node.js and Express.
-- `rest-apis`: API design, implementation, and consumption.
-- `authentication`: login flows, sessions, tokens, and access control.
+## Estado
 
-## Status
-
-In progress.
+En progreso.

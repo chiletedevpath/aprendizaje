@@ -1,19 +1,17 @@
-# Basic Java Exercises: Loops
+# Ejercicios Basicos Java: Bucles
 
-[Spanish version](README.es.md)
+Ejercicios Java de practica enfocados en estructuras repetitivas.
 
-Java practice exercises focused on repetition structures.
+## Ejercicios
 
-## Exercises
+- `BuscarNumeroMayor.java`: encuentra el numero mayor de un arreglo usando un bucle `for`.
+- `SumarNumerosHastaCero.java`: lee numeros hasta ingresar `0`, luego muestra suma y cantidad.
+- `ValidarClaveConIntentos.java`: simula validacion de clave con intentos limitados.
 
-- `BuscarNumeroMayor.java`: finds the largest number in an array using a `for` loop.
-- `SumarNumerosHastaCero.java`: reads numbers until `0`, then reports the sum and count.
-- `ValidarClaveConIntentos.java`: simulates password validation with limited attempts.
-
-## Main Concepts
+## Conceptos Principales
 
 - `for`
 - `while`
 - `do while`
-- Sentinel values
-- User input
+- Valores centinela
+- Entrada de usuario
