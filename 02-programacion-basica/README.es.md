@@ -8,11 +8,11 @@ Esta carpeta contiene ejercicios, apuntes y ejemplos relacionados con los fundam
 
 - `variables`: declaracion, asignacion y uso.
 - `data-types`: tipos de datos primitivos y comunes.
-- `conditionals`: estructuras de decision.
-- `loops`: estructuras repetitivas.
-- `functions`: parametros, retornos y descomposicion.
-- `arrays`: indices, recorridos y operaciones basicas.
-Los ejercicios Java estan organizados dentro del tema que refuerzan, como `loops`, `arrays` y `conditionals`.
+- `condicionales`: estructuras de decision.
+- `bucles`: estructuras repetitivas.
+- `funciones`: parametros, retornos y descomposicion.
+- `arreglos`: indices, recorridos y operaciones basicas.
+Los ejercicios Java estan organizados dentro del tema que refuerzan, como `bucles`, `arreglos` y `condicionales`.
 
 ## Estado
 
