@@ -2,6 +2,10 @@
 
 Estos ejercicios están pensados para practicar fundamentos antes de entrar a pseudocódigo y programación formal.
 
+## Nota de autoría
+
+Ejercicios creados para Chilete DevPath. No provienen de una fuente externa.
+
 ## Ejercicio 1: Entrada, proceso y salida
 
 Elige una actividad diaria y sepárala en:

@@ -17,10 +17,12 @@ Construir una base ordenada para aprender desarrollo de software de forma progre
 - Lectura de errores y depuración inicial.
 - Método para resolver ejercicios.
 - Documentación breve de prácticas y laboratorios.
+- Ética profesional, autoría y uso correcto de fuentes.
 
 ## Estructura del módulo
 
 - `guia-de-estudio.md`: orientación para estudiar y avanzar sin perder el orden.
+- `etica-y-fuentes.md`: criterios para citar, adaptar contenido y usar IA de forma responsable.
 - `ejercicios-propuestos/`: retos para practicar antes de mirar una solución.
 - `ejercicios-resueltos/`: soluciones explicadas paso a paso.
 - `laboratorios/`: prácticas integradoras pequeñas.
@@ -28,10 +30,11 @@ Construir una base ordenada para aprender desarrollo de software de forma progre
 ## Cómo usar este módulo
 
 1. Lee la guía de estudio.
-2. Resuelve los ejercicios propuestos sin copiar la solución.
-3. Compara tu respuesta con los ejercicios resueltos.
-4. Documenta qué aprendiste y qué error corregiste.
-5. Avanza al módulo `01-pseudocodigo` cuando puedas explicar tu solución con tus propias palabras.
+2. Revisa el criterio de ética y fuentes.
+3. Resuelve los ejercicios propuestos sin copiar la solución.
+4. Compara tu respuesta con los ejercicios resueltos.
+5. Documenta qué aprendiste, qué error corregiste y qué fuente usaste si corresponde.
+6. Avanza al módulo `01-pseudocodigo` cuando puedas explicar tu solución con tus propias palabras.
 
 ## Criterio de avance
 
@@ -42,3 +45,9 @@ Este módulo se considera logrado cuando puedes:
 - Separar entrada, proceso y salida.
 - Usar Git para registrar avances.
 - Escribir una nota breve sobre lo aprendido.
+- Citar una fuente externa cuando uses material que no fue creado por ti.
+- Diferenciar entre contenido propio, contenido adaptado y contenido apoyado por IA.
+
+## Nota de autoría
+
+Los ejercicios iniciales de este módulo fueron creados para Chilete DevPath como material formativo propio. No provienen de una fuente externa.

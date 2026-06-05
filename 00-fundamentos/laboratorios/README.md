@@ -2,6 +2,10 @@
 
 Los laboratorios son prácticas pequeñas que integran varios fundamentos.
 
+## Nota de autoría
+
+Laboratorios creados para Chilete DevPath. Si se adapta un laboratorio desde una fuente externa, debe agregarse una sección de referencias.
+
 ## Laboratorio 1: Bitácora de aprendizaje
 
 Crea una bitácora personal de una práctica técnica.

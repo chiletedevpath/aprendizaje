@@ -2,6 +2,10 @@
 
 Las soluciones no buscan ser la única respuesta correcta. Su objetivo es mostrar una forma clara de razonar.
 
+## Nota de autoría
+
+Soluciones creadas para Chilete DevPath a partir de los ejercicios propuestos de este módulo.
+
 ## Solución 1: Entrada, proceso y salida
 
 Actividad: calcular el costo de una compra.

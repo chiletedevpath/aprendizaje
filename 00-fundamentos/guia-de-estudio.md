@@ -68,3 +68,15 @@ No basta con que el código funcione. Debes poder explicar:
 - Qué entrada recibe.
 - Qué salida produce.
 - Qué mejorarías después.
+
+## 7. Trabaja con ética
+
+Antes de publicar contenido, verifica:
+
+- Si el ejercicio es propio.
+- Si está inspirado en una fuente externa.
+- Si pertenece a una clase, curso o evaluación privada.
+- Si necesita una referencia.
+- Si puedes explicarlo con tus propias palabras.
+
+Cuando uses una fuente externa, agrega una sección de referencias. Cuando uses IA como apoyo, revisa el contenido y asume la validación final antes de publicarlo.
