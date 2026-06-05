@@ -34,6 +34,7 @@ Este módulo está dirigido a:
 
 - `guia-de-estudio.md`: orientación para estudiar, practicar y documentar sin perder el orden.
 - `plantilla-evidencia.md`: formato base para registrar una práctica o laboratorio.
+- `checklist-avance.md`: autoevaluación para saber si ya puedes avanzar a pseudocódigo.
 - `ejercicios-propuestos/`: retos para practicar antes de mirar una solución.
 - `ejercicios-resueltos/`: soluciones explicadas paso a paso.
 - `laboratorios/`: prácticas integradoras pequeñas.
@@ -46,7 +47,8 @@ Este módulo está dirigido a:
 4. Compara tu respuesta con los ejercicios resueltos.
 5. Documenta tu práctica usando la plantilla de evidencia.
 6. Haz pausas activas si tu sesión se vuelve larga.
-7. Avanza al módulo `01-pseudocodigo` cuando puedas explicar tus soluciones con tus propias palabras.
+7. Completa el checklist de avance.
+8. Avanza al módulo `01-pseudocodigo` cuando puedas explicar tus soluciones con tus propias palabras.
 
 ## Criterio de avance
 
