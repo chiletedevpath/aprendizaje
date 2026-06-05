@@ -33,6 +33,7 @@ Este módulo está dirigido a:
 ## Estructura del módulo
 
 - `guia-de-estudio.md`: orientación para estudiar, practicar y documentar sin perder el orden.
+- `glosario.md`: términos básicos para entender el módulo.
 - `plantilla-evidencia.md`: formato base para registrar una práctica o laboratorio.
 - `checklist-avance.md`: autoevaluación para saber si ya puedes avanzar a pseudocódigo.
 - `ejercicios-propuestos/`: retos para practicar antes de mirar una solución.
@@ -42,13 +43,14 @@ Este módulo está dirigido a:
 ## Cómo usar este módulo
 
 1. Lee la guía de estudio.
-2. Revisa las políticas de Chilete DevPath.
-3. Resuelve los ejercicios propuestos sin mirar primero las soluciones.
-4. Compara tu respuesta con los ejercicios resueltos.
-5. Documenta tu práctica usando la plantilla de evidencia.
-6. Haz pausas activas si tu sesión se vuelve larga.
-7. Completa el checklist de avance.
-8. Avanza al módulo `01-pseudocodigo` cuando puedas explicar tus soluciones con tus propias palabras.
+2. Consulta el glosario si encuentras términos nuevos.
+3. Revisa las políticas de Chilete DevPath.
+4. Resuelve los ejercicios propuestos sin mirar primero las soluciones.
+5. Compara tu respuesta con los ejercicios resueltos.
+6. Documenta tu práctica usando la plantilla de evidencia.
+7. Haz pausas activas si tu sesión se vuelve larga.
+8. Completa el checklist de avance.
+9. Avanza al módulo `01-pseudocodigo` cuando puedas explicar tus soluciones con tus propias palabras.
 
 ## Criterio de avance
 
