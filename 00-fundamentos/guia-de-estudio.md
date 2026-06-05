@@ -1,8 +1,26 @@
 # Guía de Estudio
 
-Esta guía define una forma simple de estudiar desarrollo de software sin acumular archivos sueltos ni ejercicios sin contexto.
+Esta guía propone una forma simple de estudiar desarrollo de software sin acumular archivos sueltos, copiar soluciones sin entenderlas ni convertir el aprendizaje en jornadas agotadoras.
 
-## 1. Entiende el problema
+## 1. Prepara tu sesión
+
+Antes de empezar, define:
+
+- Qué tema vas a practicar.
+- Cuánto tiempo aproximado dedicarás.
+- Qué resultado esperas obtener.
+- Qué evidencia dejarás al final.
+
+Ejemplo:
+
+```txt
+Tema: entrada, proceso y salida
+Tiempo estimado: 30 minutos
+Resultado esperado: resolver 2 ejercicios
+Evidencia: notas breves y casos de prueba
+```
+
+## 2. Entiende el problema
 
 Antes de escribir código, responde:
 
@@ -11,7 +29,9 @@ Antes de escribir código, responde:
 - Qué reglas debo respetar.
 - Qué casos pueden fallar.
 
-## 2. Divide el trabajo
+Si no puedes explicar el problema, todavía no estás listo para resolverlo.
+
+## 3. Divide el trabajo
 
 Un problema grande se vuelve manejable cuando se separa en pasos pequeños.
 
@@ -23,17 +43,20 @@ Ejemplo:
 4. Mostrar resultado.
 5. Probar con casos simples y casos límite.
 
-## 3. Practica con evidencia
+## 4. Practica con evidencia
 
-Cada práctica debe dejar alguna evidencia útil:
+Cada práctica debe dejar una evidencia útil:
 
-- Código fuente.
-- README corto.
-- Captura solo si aporta valor.
-- Explicación de errores corregidos.
-- Lista de aprendizajes.
+- Código fuente, si corresponde.
+- Explicación corta del problema.
+- Pasos de solución.
+- Error encontrado.
+- Cómo se corrigió.
+- Aprendizaje final.
 
-## 4. Aprende a leer errores
+Usa `plantilla-evidencia.md` como base.
+
+## 5. Aprende a leer errores
 
 Cuando aparezca un error:
 
@@ -43,14 +66,16 @@ Cuando aparezca un error:
 4. Formula una hipótesis.
 5. Cambia una sola cosa y vuelve a probar.
 
-## 5. Usa Git como bitácora
+No corrijas muchas cosas al mismo tiempo. Eso dificulta saber qué cambio resolvió el problema.
+
+## 6. Usa Git como bitácora
 
 Un commit debe explicar un avance concreto.
 
 Ejemplos correctos:
 
-- `docs: agrega guia inicial de fundamentos`
-- `feat: resuelve ejercicios basicos de entrada y salida`
+- `docs: agrega evidencia de fundamentos`
+- `feat: resuelve ejercicios de entrada y salida`
 - `fix: corrige validacion de datos vacios`
 
 Evita commits genéricos como:
@@ -59,24 +84,56 @@ Evita commits genéricos como:
 - `avance`
 - `update`
 
-## 6. Explica antes de avanzar
+## 7. Usa IA con criterio
 
-No basta con que el código funcione. Debes poder explicar:
+Puedes usar IA para:
 
-- Qué hace.
-- Por qué lo resolviste así.
-- Qué entrada recibe.
-- Qué salida produce.
-- Qué mejorarías después.
+- pedir una explicación alternativa
+- revisar redacción
+- comparar enfoques
+- detectar errores de lógica
+- generar ideas de práctica
 
-## 7. Trabaja con ética
+Pero antes de publicar o guardar una solución, verifica:
+
+- que entiendes la respuesta
+- que puedes explicarla con tus palabras
+- que no contiene datos inventados
+- que no usa material privado o ajeno sin referencia
+- que declaras el apoyo de IA cuando corresponde
+
+## 8. Trabaja con ética
 
 Antes de publicar contenido, verifica:
 
-- Si el ejercicio es propio.
-- Si está inspirado en una fuente externa.
-- Si pertenece a una clase, curso o evaluación privada.
-- Si necesita una referencia.
-- Si puedes explicarlo con tus propias palabras.
+- si el ejercicio es propio
+- si está inspirado en una fuente externa
+- si pertenece a una clase, curso o evaluación privada
+- si necesita referencias
+- si puedes explicarlo con tus propias palabras
 
-Cuando uses una fuente externa, agrega una sección de referencias. Cuando uses IA como apoyo, revisa el contenido y asume la validación final antes de publicarlo.
+Cuando uses una fuente externa, agrega una sección de `Fuentes` o `Referencias`.
+
+## 9. Cuida tu bienestar
+
+Aprender no significa estudiar sin parar.
+
+Durante sesiones largas:
+
+- levántate de la silla
+- estira cuello, hombros, espalda y manos
+- descansa la vista
+- toma agua
+- cierra la sesión si el cansancio te impide comprender
+
+La pausa también es parte del aprendizaje.
+
+## 10. Cierra la sesión
+
+Antes de terminar, responde:
+
+- Qué entendí hoy.
+- Qué me falta practicar.
+- Qué error corregí.
+- Qué evidencia dejé.
+- Qué haré en la siguiente sesión.
