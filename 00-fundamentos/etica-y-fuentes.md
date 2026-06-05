@@ -1,31 +1,34 @@
 # Ética Profesional y Fuentes
 
-La ruta de aprendizaje de Chilete DevPath debe crecer con honestidad técnica. Aprender no significa copiar sin criterio: significa practicar, comprender, citar cuando corresponde y explicar con palabras propias.
+La ruta de aprendizaje de Chilete DevPath se publica con honestidad técnica. Cada guía, ejercicio, laboratorio o solución debe ayudar a la comunidad a aprender con claridad, respetando la autoría y diferenciando el contenido propio del contenido inspirado o basado en fuentes externas.
+
+Este documento explica cómo Chilete DevPath presenta sus materiales para que cualquier estudiante pueda saber de dónde viene el contenido, cómo fue trabajado y con qué criterio se comparte.
 
 ## Principios
 
-- Diferenciar contenido propio, contenido inspirado y contenido tomado de una fuente externa.
-- Citar fuentes cuando se usen ideas, ejercicios, documentación, videos, libros, cursos o repositorios externos.
-- No publicar evaluaciones internas completas si pertenecen a una institución, docente o curso cerrado.
-- No presentar como propio el trabajo de otra persona.
-- Usar IA como apoyo de aprendizaje, no como sustituto de comprensión.
-- Explicar qué se entendió, qué se adaptó y qué se resolvió personalmente.
+- El contenido propio se identifica como material creado para Chilete DevPath.
+- El contenido inspirado en fuentes externas se presenta como adaptación, no como copia.
+- Las fuentes externas se citan cuando se usan ideas, ejercicios, documentación, videos, libros, cursos o repositorios.
+- Las evaluaciones internas, materiales privados o enunciados cerrados no se publican completos.
+- El trabajo de otras personas no se presenta como propio.
+- La IA puede apoyar la estructuración, revisión o generación de ideas, pero el contenido publicado debe ser comprendido, revisado y validado por el autor de Chilete DevPath.
+- Cada material debe poder explicarse con palabras propias antes de publicarse.
 
-## Tipos de contenido
+## Cómo se presenta el contenido
 
-| Tipo | Cómo documentarlo |
+| Tipo de contenido | Presentación en Chilete DevPath |
 |---|---|
-| Creado para Chilete DevPath | Indicar que el ejercicio o guía fue creado para esta ruta. |
-| Inspirado en una fuente | Mencionar la fuente y explicar que el contenido fue adaptado. |
-| Basado en documentación oficial | Enlazar la documentación consultada. |
-| Tomado de una clase | Registrar institución, curso y contexto si se puede compartir. |
-| Evaluación o material privado | No publicar el enunciado completo; crear una versión propia o registrar solo aprendizajes. |
+| Creado para Chilete DevPath | Se indica que el ejercicio, guía o laboratorio fue creado para esta ruta. |
+| Inspirado en una fuente | Se menciona la fuente y se aclara que el contenido fue adaptado. |
+| Basado en documentación oficial | Se enlaza la documentación consultada. |
+| Basado en una clase o curso | Se registra la institución, curso o contexto cuando se puede compartir públicamente. |
+| Relacionado con una evaluación o material privado | No se publica el enunciado completo; se crea una versión propia o se documentan solo aprendizajes generales. |
 
 ## Uso de fuentes externas
 
-Cuando se use una fuente externa, agregar una sección llamada `Fuentes` o `Referencias`.
+Cuando un material use una fuente externa, incluye una sección llamada `Fuentes` o `Referencias`. Esa sección permite que la comunidad revise el origen del contenido y continúe estudiando desde la fuente original.
 
-Formato sugerido:
+Formato usado:
 
 ```md
 ## Fuentes
@@ -33,7 +36,7 @@ Formato sugerido:
 - Autor o institución: título del recurso. URL o referencia consultada.
 ```
 
-Si el material fue adaptado:
+Si el material fue adaptado, se presenta así:
 
 ```md
 ## Fuentes
@@ -43,16 +46,16 @@ Si el material fue adaptado:
 
 ## Uso de IA
 
-Cuando se use IA para apoyar una explicación, crear ejercicios o revisar redacción, debe quedar claro que el contenido fue revisado y asumido por quien lo publica.
+Cuando se use IA para apoyar una explicación, crear ejercicios o revisar redacción, el material debe aclarar que fue revisado y validado antes de publicarse.
 
-Formato sugerido:
+Formato usado:
 
 ```md
 ## Nota de autoría
 
-Contenido creado para Chilete DevPath con apoyo de IA para estructuración y revisión. El criterio, selección y validación final corresponden al autor del repositorio.
+Contenido creado para Chilete DevPath con apoyo de IA para estructuración o revisión. El criterio, selección y validación final corresponden al autor de Chilete DevPath.
 ```
 
-## Regla práctica
+## Compromiso con la comunidad
 
-Si no puedes explicar un ejercicio con tus propias palabras, todavía no está listo para publicarse como contenido formativo.
+Chilete DevPath busca compartir contenido útil, honesto y verificable. Si un ejercicio, explicación o laboratorio no puede explicarse con palabras propias, todavía no está listo para publicarse como contenido formativo.
