@@ -55,4 +55,4 @@ Los ejercicios iniciales de este módulo fueron creados para Chilete DevPath com
 
 La autoría, el uso de fuentes externas, el uso de IA, el material académico y las colaboraciones se documentan según la política editorial central de Chilete DevPath:
 
-- [Política Editorial de Chilete DevPath](https://github.com/chiletedevpath/chiletedevpath/blob/main/POLITICA_EDITORIAL.md)
+- [Política Editorial de Chilete DevPath](https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_EDITORIAL.md)
