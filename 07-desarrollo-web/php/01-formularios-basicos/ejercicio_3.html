@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3 - Sueldo Neto</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <main class="contenedor">
+      <section class="tarjeta">
+        <h1>Calcular sueldo neto</h1>
+
+        <p class="descripcion">
+          Esta aplicación permite calcular el sueldo neto en base a los días trabajados, horas por
+          día y costo por hora. Además, aplica un impuesto a la renta del 10% sobre el sueldo total.
+        </p>
+
+        <form action="ejercicio_3.php" method="POST" class="formulario">
+          <div class="grupo">
+            <label for="dias">Días trabajados:</label>
+            <input type="number" id="dias" name="dias" min="1" required />
+          </div>
+
+          <div class="grupo">
+            <label for="horas">Horas por día:</label>
+            <input type="number" id="horas" name="horas" min="1" step="0.01" required />
+          </div>
+
+          <div class="grupo">
+            <label for="costo">Costo por hora: S/</label>
+            <input type="number" id="costo" name="costo" min="1" step="0.01" required />
+          </div>
+
+          <button type="submit" class="boton">Mostrar resultado</button>
+        </form>
+
+        <br />
+
+        <a href="index.html" class="enlace">Volver al menú principal</a>
+      </section>
+    </main>
+  </body>
+</html>
