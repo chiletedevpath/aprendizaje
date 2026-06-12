@@ -32,7 +32,6 @@ Antes de iniciar este módulo, conviene poder:
 - `pseint/`: ejercicios desarrollados con PSeInt, organizados por estructura lógica.
 - `glosario.md`: términos clave de pseudocódigo.
 - `checklist-avance.md`: autoevaluación para saber si puedes avanzar a programación básica.
-- `nota-local-pendientes.md`: pendientes internos para continuar mejorando esta sección.
 
 ## Ruta sugerida
 
