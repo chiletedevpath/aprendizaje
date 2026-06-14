@@ -11,6 +11,7 @@ Practicar el uso de PHP en páginas web, especialmente la comunicación entre fo
 ## Contenido
 
 - `01-formularios-basicos/`: ejercicios iniciales con HTML, PHP, estilos y envío de datos.
+- `02-ciclos-y-arreglos/`: ejercicios de ciclos, cálculos repetitivos y listas simples en PHP.
 - `glosario.md`: términos básicos del módulo.
 
 ## Ruta sugerida
@@ -18,8 +19,9 @@ Practicar el uso de PHP en páginas web, especialmente la comunicación entre fo
 1. Revisa el glosario.
 2. Abre la carpeta `01-formularios-basicos/`.
 3. Identifica qué archivos son formularios HTML y qué archivos procesan datos con PHP.
-4. Prueba los ejercicios en un entorno local compatible con PHP.
-5. Documenta qué aprendiste y qué errores encontraste.
+4. Continúa con `02-ciclos-y-arreglos/` para practicar repetición y procesamiento de listas.
+5. Prueba los ejercicios en un entorno local compatible con PHP.
+6. Documenta qué aprendiste y qué errores encontraste.
 
 ## Criterio de organización
 
