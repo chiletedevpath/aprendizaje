@@ -3,18 +3,18 @@ public class EjecutarListaMultiple {
 		ListaMultiple lista = new ListaMultiple();
 
 		lista.cargarDatosIniciales();
-		lista.mostrarTodo("Tabla Inicial");
+		lista.mostrarTodo("Tabla inicial");
 
-		lista.agregarRegistro(5, 500, "Juan Pérez", "Jirón 2", 1000.00);
-		lista.mostrarTodo("Después de agregar Clave 5 - Juan Pérez");
+		lista.agregarRegistro(5, 500, "Cliente A", "Direccion 2", 1000.00);
+		lista.mostrarTodo("Despues de agregar clave 5 - Cliente A");
 
-		lista.agregarRegistro(100, 3, "María Robles", "Pasaje 1", 2000.00);
-		lista.mostrarTodo("Después de agregar Clave 100 - María Robles");
+		lista.agregarRegistro(100, 3, "Cliente B", "Direccion 1", 2000.00);
+		lista.mostrarTodo("Despues de agregar clave 100 - Cliente B");
 
-		lista.eliminarRegistro(23, "Yolanda Morales");
-		lista.mostrarTodo("Después de eliminar Clave 23 - Yolanda Morales");
+		lista.eliminarRegistro(23, "Cliente C");
+		lista.mostrarTodo("Despues de eliminar clave 23 - Cliente C");
 
-		lista.eliminarRegistro(94, "Ana Torres");
-		lista.mostrarTodo("Después de eliminar Clave 94 - Ana Torres");
+		lista.eliminarRegistro(94, "Cliente F");
+		lista.mostrarTodo("Despues de eliminar clave 94 - Cliente F");
 	}
 }

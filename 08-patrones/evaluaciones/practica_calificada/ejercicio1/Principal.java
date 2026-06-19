@@ -19,7 +19,7 @@ public class Principal {
         bd.guardar(reporte);
 
         EnviarPorEmail email = new EnviarPorEmail();
-        email.enviar(reporte, "adrian@gmail.com");
+        email.enviar(reporte, "usuario.ejemplo@example.test");
 
         ImprimirReporte impresora = new ImprimirReporte();
         impresora.imprimir(reporte);

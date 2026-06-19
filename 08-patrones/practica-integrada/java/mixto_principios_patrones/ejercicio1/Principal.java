@@ -32,8 +32,8 @@ public class Principal {
         gestor.agregarObservador(whatsapp);
 
         // 5. Crear pedidos
-        Pedido pedido1 = new Pedido(1, "Adrian", 150.00);
-        Pedido pedido2 = new Pedido(2, "Lucia", 220.50);
+        Pedido pedido1 = new Pedido(1, "Cliente A", 150.00);
+        Pedido pedido2 = new Pedido(2, "Cliente B", 220.50);
 
         // 6. Registrar pedidos
         gestor.registrarPedido(pedido1);

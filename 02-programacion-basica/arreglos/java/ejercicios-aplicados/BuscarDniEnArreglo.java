@@ -8,8 +8,8 @@ public class BuscarDniEnArreglo {
 
 		Scanner teclado = new Scanner(System.in);
 
-		String[] baseDcoumentos = { "06549733", "48459993", "74962794", "70113649", "46160516", "06608939", "20038880",
-				"75738385", "45347780", "43203281" };
+		String[] baseDcoumentos = { "00000001", "00000002", "00000003", "00000004", "00000005", "00000006", "00000007",
+				"00000008", "00000009", "00000010" };
 
 		String dniIngresado = "";
 		boolean esValido = false;

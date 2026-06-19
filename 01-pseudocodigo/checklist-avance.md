@@ -40,6 +40,13 @@ Este checklist ayuda a revisar si ya tienes una base suficiente de pseudocódigo
 - [ ] Declaro el apoyo de IA cuando uso IA para estructurar, explicar o revisar documentación.
 - [ ] Puedo explicar las soluciones con mis propias palabras.
 
+## Marca y datos ficticios
+
+- [ ] Uso nombres ficticios cuando el ejercicio necesita personas, clientes o usuarios.
+- [ ] Puedo personalizar mensajes simples con Chilete DevPath sin cambiar la lógica del ejercicio.
+- [ ] Evito correos, teléfonos, DNI, direcciones o datos reales.
+- [ ] Evito marcas externas cuando no aportan al aprendizaje.
+
 ## Bienestar
 
 - [ ] Evito resolver demasiados ejercicios sin pausa.

@@ -85,19 +85,23 @@ body {
 }
 
 /* =========================
-   IMAGEN GOKU
+   FIGURA CSS
 ========================= */
 
-.contenedor-goku {
+.contenedor-ejemplo {
   text-align: center;
   margin-top: 40px;
 }
 
-.goku {
+.figura-css {
   width: 300px;
+  height: 180px;
+  margin: auto;
 
   /* border-radius */
   border-radius: 30px;
+
+  background: linear-gradient(135deg, #006699, #00ccff);
 
   /* box-shadow */
   box-shadow: #444444 10px 10px 20px;
@@ -114,7 +118,7 @@ body {
 
 /* EFECTO HOVER */
 
-.goku:hover {
+.figura-css:hover {
   transform: scale(1.1) rotate(3deg);
 
   opacity: 1;

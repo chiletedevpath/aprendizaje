@@ -12,7 +12,7 @@ public class PatternBuilderApplication {
 				.nombre("Paul")
 				.apellido("Rodrige")
 				.edad(29)
-				.email("nike_1109@outlook.es")
+				.email("cliente.ejemplo@example.test")
 				.ciudad("Lima")
 				.activo(true)
 				.rol("ADMIN")
@@ -23,9 +23,9 @@ public class PatternBuilderApplication {
 		//========================================================
 
 		Usuario2 usuario2 = Usuario2.builder()
-				.nombre("Nike")
+				.nombre("Cliente Demo")
 				.apellido("")
-				.email("nike_1109@outlook.es")
+				.email("cliente.ejemplo@example.test")
 				.build();
 
 		//aqui recien podria validarlo

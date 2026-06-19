@@ -7,7 +7,7 @@ public class ValidarCredenciales {
 	 * ESCRIBIR UN PROGRAMA EN JAVA QUE PIDA UNA DIRECCIÓN DE CORREO Y UNA CLAVE DE
 	 * ACCESO. MOSTRAR “ACCESO DENEGADO” MIENTRAS EL CORREO NO CUMPLA CON EL FORMATO
 	 * CORRECTO (CLASES PATTERN & MATCHING) O MIENTRAS LA CLAVE INGRESADA SEA
-	 * DIFERENTE DE “P@55w0rd”. HAGA USO DEL BUCLE WHILE. SI SE INGRESAN LAS
+	 * DIFERENTE DE UNA CLAVE DE EJEMPLO. HAGA USO DEL BUCLE WHILE. SI SE INGRESAN LAS
 	 * CREDENCIALES CORRECTAS SE MOSTRARÁ “BIENVENIDO AL SISTEMA” Y EL PROGRAMA
 	 * TERMINA. EL NÚMERO MÁXIMO DE INTENTOS ES 5. SI EL USUARIO EXCEDE EL LÍMITE SE
 	 * MOSTRARÁ “CUENTA SUSPENDIDA” Y EL PROGRAMA TERMINA.
@@ -29,7 +29,7 @@ public class ValidarCredenciales {
 				System.out.println("Ingrese su contraseña: ");
 				String password = teclado.next();
 
-				if (!evaluadorCorreo.matches() || !password.equals("P@55w0rd")) {
+				if (!evaluadorCorreo.matches() || !password.equals("CLAVE_DE_EJEMPLO")) {
 					System.out.println("ACCESO DENEGADO");
 					intentos++;
 

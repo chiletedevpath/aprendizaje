@@ -7,10 +7,10 @@ public class EjecutarRegistroEstudiantes {
 
 		// INSTANCIO LOS DATOS DE 3 ESTUDIANTES USANDO CLASES Y TIPOS GENERICOS
 		// TIPO STRING PARA NOMBRES Y APELLIDOS, Y DOUBLE PARA LAS NOTAS
-		Estudiante<String, Double> estudiante1 = new Estudiante<>(new DatosDelEstudiante<>("Adrian"),
-				new DatosDelEstudiante<>("Pisco Soto"), new DatosDelEstudiante<>(20.0), new DatosDelEstudiante<>(5.9));
+		Estudiante<String, Double> estudiante1 = new Estudiante<>(new DatosDelEstudiante<>("Estudiante Uno"),
+				new DatosDelEstudiante<>("Apellido Ejemplo"), new DatosDelEstudiante<>(20.0), new DatosDelEstudiante<>(5.9));
 
-		Estudiante<String, Double> estudiante2 = new Estudiante<>(new DatosDelEstudiante<>("Lucero"),
+		Estudiante<String, Double> estudiante2 = new Estudiante<>(new DatosDelEstudiante<>("Estudiante Dos"),
 				new DatosDelEstudiante<>("Lozano Leon"), new DatosDelEstudiante<>(9.0), new DatosDelEstudiante<>(13.3));
 
 		Estudiante<String, Double> estudiante3 = new Estudiante<>(new DatosDelEstudiante<>("Pancho"),

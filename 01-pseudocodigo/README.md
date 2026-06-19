@@ -55,6 +55,16 @@ Este módulo se considera logrado cuando puedes:
 - probar un algoritmo con casos normales y casos límite
 - pasar de pseudocódigo a un lenguaje de programación sin perder la lógica
 
+## Criterio de marca y datos de ejemplo
+
+Los ejercicios pueden usar nombres o mensajes personalizados cuando ayuden a dar identidad al material. Para mantener el contenido seguro y reutilizable:
+
+- usa nombres ficticios como `Usuario Chilete`, `Aprendiz DevPath` o `Cliente Chilete`;
+- usa mensajes de bienvenida como `Bienvenido a Chilete DevPath` cuando el ejercicio lo permita;
+- evita datos reales de personas, teléfonos, correos, DNI o direcciones;
+- evita marcas externas si no son necesarias para la lógica del problema;
+- conserva el objetivo técnico del ejercicio aunque se adapte el contexto.
+
 ## Políticas aplicables
 
 Este módulo se rige por las políticas centrales de Chilete DevPath:
@@ -65,4 +75,6 @@ Este módulo se rige por las políticas centrales de Chilete DevPath:
 
 ## Nota de autoría y fuentes
 
-Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. La documentación de organización del módulo fue creada para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.
+Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. En Chilete DevPath se documentan como práctica académica propia y evidencia de aprendizaje, no como material oficial de la institución.
+
+La documentación de organización del módulo fue creada para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.

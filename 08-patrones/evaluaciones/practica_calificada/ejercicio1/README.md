@@ -68,7 +68,7 @@ public class Main {
         reporteService.guardarEnBaseDeDatos(reporte);
 
         // Enviar reporte por email
-        reporteService.enviarPorEmail(reporte, "adrian@gmail.com");
+        reporteService.enviarPorEmail(reporte, "usuario.ejemplo@example.test");
 
         // Imprimir reporte
         reporteService.imprimirReporte(reporte);

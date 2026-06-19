@@ -7,7 +7,7 @@ public class EjecutarListaPersonas {
 		ArrayList<Persona> persona1 = new ArrayList<>();
 
 		// AGREGO MIS DATOS
-		persona1.add(new Persona("Adrian Ivan", "Pisco Soto", 27, "IV", "Ingenieria de Sistemas e Informatica"));
+		persona1.add(new Persona("Estudiante", "Ejemplo", 20, "IV", "Ingenieria de Sistemas e Informatica"));
 
 		// IMPRIMO MIS DATOS
 		for (Persona pers : persona1) {

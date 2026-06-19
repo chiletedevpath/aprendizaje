@@ -23,9 +23,9 @@ GO
 -- INSERTAR REGISTROS EN LA TABLA CLIENTES
 INSERT INTO Clientes(ID_cliente, Nombre_cliente, Correo, Telefono)
 VALUES
-(1, 'Ana Torres', 'ana.torres@gmail.com', 945834043),
-(2, 'Carlos Perez', 'carlos.perez@gmail.com', 900789256),
-(3, 'Lucia Ramirez', 'lucia.ramirez@gmail.com', 987458159);       
+(1, 'Cliente Uno', 'cliente.uno@example.test', 900000001),
+(2, 'Cliente Dos', 'cliente.dos@example.test', 900000002),
+(3, 'Cliente Tres', 'cliente.tres@example.test', 900000003);
 GO
 
 -- INSERTAR REGISTROS EN LA TABLA Pedidos
@@ -62,7 +62,7 @@ GO
 
 -- ACTUALIZAR UN TELEFONO DE LA TABLA CLIENTES
 UPDATE Clientes 
-SET Telefono = 999000777
+SET Telefono = 900000004
 WHERE ID_cliente = 2;
 GO
 
@@ -145,7 +145,7 @@ GO
 -- INSERTO UN NUEVO REGISTRO EN LA TABLA CLIENTES
 INSERT INTO Clientes(ID_cliente, Nombre_cliente, Correo, Telefono)
 VALUES
-(4, 'Alexandra Meza', 'ale.meza@gmail.com', 900500100);
+(4, 'Cliente Cuatro', 'cliente.cuatro@example.test', 900000004);
 GO
 
 SELECT ID_cliente, Nombre_cliente, Fecha_registro
@@ -298,7 +298,7 @@ GO
 -----------------------------------------------------------------------------------------------
 -- GESTION DE INDICES
 --		HAZ CLIC EN "INCLUDE ACTUAL EXECUTION PLAN! ( O PRESIONA CTRL + M) ANTES DE EJECUTAR LA CONSULTA 
---		LUEGO EJECUTA LA CONSULTA Y VERAS UNA PESTA—A ADICIONAL LLAMADA EXECUTION PLAN.
+--		LUEGO EJECUTA LA CONSULTA Y VERAS UNA PESTA√ëA ADICIONAL LLAMADA EXECUTION PLAN.
 
 -- 1ra. FORMA
 
@@ -308,12 +308,12 @@ FROM Clientes
 WHERE Nombre_cliente LIKE 'A%';
 GO
 
---Crear el Ìndice
+--Crear el √≠ndice
 CREATE NONCLUSTERED INDEX IX_Clientes_Nombre
 ON Clientes (Nombre_cliente);
 GO
 
---Consulta CON Ìndice
+--Consulta CON √≠ndice
 SELECT *
 FROM Clientes
 WHERE Nombre_cliente LIKE 'A%';
@@ -323,15 +323,15 @@ GO
 --2DA FORMA
 ----------------
 
---Ver tiempo de ejecuciÛn, Antes de ejecutar tu consulta, activa las opciones:
+--Ver tiempo de ejecuci√≥n, Antes de ejecutar tu consulta, activa las opciones:
 
---Comparar con y sin Ìndice
---Primero sin Ìndice:
+--Comparar con y sin √≠ndice
+--Primero sin √≠ndice:
 
 DROP INDEX IF EXISTS IX_Clientes_Nombre ON Clientes;
 GO
 
-SET STATISTICS TIME ON;   -- Muestra el tiempo de ejecuciÛn
+SET STATISTICS TIME ON;   -- Muestra el tiempo de ejecuci√≥n
 SET STATISTICS IO ON;     -- Muestra la cantidad de lecturas de disco
 GO
 
@@ -340,7 +340,7 @@ FROM Clientes
 WHERE Nombre_cliente LIKE 'A%';
 GO
 
---Luego con Ìndice:
+--Luego con √≠ndice:
 
 CREATE NONCLUSTERED INDEX IX_Clientes_Nombre
 ON Clientes (Nombre_cliente);
@@ -355,37 +355,37 @@ GO
 --3 FORMA:
 --------------
 
--- Activar estadÌsticas
+-- Activar estad√≠sticas
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
 GO
 
 -- ==================================
--- 1. CONSULTA SIN ÕNDICE
+-- 1. CONSULTA SIN √çNDICE
 -- ==================================
--- Eliminar Ìndice si existe
+-- Eliminar √≠ndice si existe
 DROP INDEX IF EXISTS IX_Clientes_Nombre ON Clientes;
 GO
 
 
 
-PRINT '---- CONSULTA SIN ÕNDICE ----';
+PRINT '---- CONSULTA SIN √çNDICE ----';
 SELECT *
 FROM Clientes
 WHERE Nombre_cliente LIKE 'A%';
 GO
 
 -- ==================================
--- 2. CONSULTA CON ÕNDICE
+-- 2. CONSULTA CON √çNDICE
 -- ==================================
--- Crear Ìndice
+-- Crear √≠ndice
 CREATE NONCLUSTERED INDEX IX_Clientes_Nombre
 ON Clientes (Nombre_cliente);
 GO
 
 PRINT ''
 PRINT '-----------------------------'
-PRINT '---- CONSULTA CON ÕNDICE ----';
+PRINT '---- CONSULTA CON √çNDICE ----';
 SELECT *
 FROM Clientes
 WHERE Nombre_cliente LIKE 'A%';

@@ -26,14 +26,14 @@ GO
 
 -- Probando el procedimiento almacenado
 EXEC dbo.SP_InsertarCliente 
-    @Nombre = 'Pedro Rojas',
-    @Correo = 'pedro.rojas@gmail.com',
-    @Telefono = '987551122';
+    @Nombre = 'Cliente de prueba',
+    @Correo = 'cliente.prueba@example.test',
+    @Telefono = '900000001';
 GO
 
 
 /* =====================================================
-      2.- TRY – CATCH (MANEJO DE ERRORES)
+      2.- TRY â€“ CATCH (MANEJO DE ERRORES)
    ===================================================== */
 
 -- Voy actualizar un cliente a NULL
@@ -42,7 +42,7 @@ GO
 BEGIN TRY
 
     UPDATE Clientes
-    SET Nombre_cliente = NULL  -- Aquí ocurre el error
+    SET Nombre_cliente = NULL  -- AquÃ­ ocurre el error
     WHERE ID_cliente = 1;
 
     PRINT 'Cliente actualizado correctamente';
@@ -51,7 +51,7 @@ END TRY
 
 BEGIN CATCH
 
-    PRINT 'Ocurrió un error en la actualización';
+    PRINT 'OcurriÃ³ un error en la actualizaciÃ³n';
     PRINT 'Mensaje del error: ' + ERROR_MESSAGE();
 
 END CATCH;

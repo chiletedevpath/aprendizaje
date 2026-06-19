@@ -6,7 +6,7 @@ public class ValidarClaveConIntentos {
 
 		Scanner teclado = new Scanner(System.in);
 
-		String claveCorrecta = "java123";
+		String claveCorrecta = "CLAVE_DE_EJEMPLO";
 		String claveIngresada;
 
 		int intentos = 3;

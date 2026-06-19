@@ -1,7 +1,7 @@
 public class EjecutarArchivoSimple {
 	public static void main(String[] args) {
 		System.out.println("\n===================================================================");
-		System.out.println("\t\t\tBÚSQUEDA CON LISTAS INVERSAS");
+		System.out.println("\t\t\tBUSQUEDA CON LISTAS INVERSAS");
 		System.out.println("===================================================================\n");
 
 		ListaInversaSimple sistema = new ListaInversaSimple();
@@ -10,24 +10,20 @@ public class EjecutarArchivoSimple {
 		System.out.println("Tabla inicial:");
 		sistema.mostrarTablaFormatted();
 
-		// 1) Agregar Clave: 5, Ubicación: 500, Nombre: Juan Pérez
-		System.out.println("Operación: Agregar → (5, 500, Juan Pérez)");
-		sistema.agregar(5, 500, "Juan Pérez");
+		System.out.println("Operacion: Agregar -> (5, 500, Cliente A)");
+		sistema.agregar(5, 500, "Cliente A");
 		sistema.mostrarTablaFormatted();
 
-		// 2) Agregar Clave: 100, Ubicación: 3, Nombre: María Robles
-		System.out.println("Operación: Agregar → (100, 3, María Robles)");
-		sistema.agregar(100, 3, "María Robles");
+		System.out.println("Operacion: Agregar -> (100, 3, Cliente B)");
+		sistema.agregar(100, 3, "Cliente B");
 		sistema.mostrarTablaFormatted();
 
-		// 3) Eliminar Clave: 23, Ubicación: 120, Nombre: Norma Gomez
-		System.out.println("Operación: Eliminar → (23, Yolanda Morales)");
-		sistema.eliminar(23, "Yolanda Morales");
+		System.out.println("Operacion: Eliminar -> (23, Cliente C)");
+		sistema.eliminar(23, "Cliente C");
 		sistema.mostrarTablaFormatted();
 
-		// 4) Eliminar Clave: 8, Nombre: Eva Mendez
-		System.out.println("Operación: Eliminar → (8, Eva Mendez)");
-		sistema.eliminar(8, "Eva Mendez");
+		System.out.println("Operacion: Eliminar -> (8, Cliente D)");
+		sistema.eliminar(8, "Cliente D");
 		sistema.mostrarTablaFormatted();
 
 		System.out.println("=== FIN ===");

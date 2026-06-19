@@ -7,7 +7,7 @@ public class EjecutarSerializacionPersona {
 	public static void main(String[] args) {
 
 		// AQUI CREO EL OBJETO PERSONA CON MIS DATOS PERSONALES.
-		PersonaSerial persona = new PersonaSerial("ADRIAN IVAN", "PISCO SOTO", "73748381", "MASCULINO",
+		PersonaSerial persona = new PersonaSerial("NOMBRE", "EJEMPLO", "00000000", "MASCULINO",
 				"INGENIERIA DE SISTEMAS E INFORMATICA");
 
 		// SERIALIZACION: GUARDO EL OBJETO DENTRO DE UN ARCHIVO LLAMADO persona.dat

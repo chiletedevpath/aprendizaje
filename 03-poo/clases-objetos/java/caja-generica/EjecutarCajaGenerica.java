@@ -4,7 +4,7 @@
 
 		Box<String> elementosString = new Box<>(""); // SIEMPRE SE DEBE INICIALIZAR LA INSTANCIA
 
-		elementosString.setContent("Me llamo Adrian");
+		elementosString.setContent("Contenido de ejemplo");
 
 		String contenido = elementosString.getContent();
 

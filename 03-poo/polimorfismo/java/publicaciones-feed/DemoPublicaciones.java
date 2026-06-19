@@ -5,11 +5,11 @@ public class DemoPublicaciones {
     public static void main(String[] args) {
         List<Publicacion> feed = new ArrayList<>();
 
-        feed.add(new PostImagen("AnaA", "Almuerzo de hoy","img_0001_jpg"));
-        feed.add(new PostVideo("Luis", "Entrenamiento",45));
-        feed.add(new PostImagen("Nike", "Vista de la Playa","img_1231_jpg"));
-        feed.add(new PostVideo("Arturo", "Cocinando",120));
-        feed.add(new PostImagen("Adrian", "Cena","img_8561_jpg"));
+        feed.add(new PostImagen("Usuario01", "Publicacion de ejemplo", "img_0001"));
+        feed.add(new PostVideo("Usuario02", "Video de ejemplo", 45));
+        feed.add(new PostImagen("Usuario03", "Imagen de ejemplo", "img_0002"));
+        feed.add(new PostVideo("Usuario04", "Contenido de ejemplo", 120));
+        feed.add(new PostImagen("Usuario05", "Registro de ejemplo", "img_0003"));
 
         int cantImagen = 0;
         int cantVideo = 0;
@@ -28,12 +28,12 @@ public class DemoPublicaciones {
 
         boolean encontrado = false;
         for (Publicacion p : feed){
-            if(p.getAutor().equals("Ana")){
+            if(p.getAutor().equals("Usuario01")){
                 encontrado = true;
                 break;
             }
         }
-        System.out.println(encontrado ? "Encontrado autor ANA" : "NO ENCONTRADO AUTOR ANA");
+        System.out.println(encontrado ? "Autor encontrado" : "Autor no encontrado");
 
     }
 }

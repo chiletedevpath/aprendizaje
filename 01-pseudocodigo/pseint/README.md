@@ -33,6 +33,19 @@ Los ejercicios están organizados por estructura lógica para facilitar el avanc
 - Corrige errores de uno en uno.
 - Haz pausas si una sesión se vuelve larga.
 
+## Adaptación para Chilete DevPath
+
+Si un ejercicio necesita nombres, usuarios, clientes o mensajes de bienvenida, se pueden usar datos ficticios alineados a la marca, por ejemplo:
+
+- `Usuario Chilete`
+- `Aprendiz DevPath`
+- `Cliente Chilete`
+- `Bienvenido a Chilete DevPath`
+
+Estos nombres son solo datos de práctica. No deben reemplazar la lógica del ejercicio ni incluir información personal real.
+
 ## Nota de fuente
 
 Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. Se conservan como evidencia de aprendizaje y práctica académica dentro de Chilete DevPath.
+
+Los comentarios o enunciados internos deben tratarse como contexto de práctica. Si este contenido pasa a la web, deben redactarse con palabras propias y como recurso educativo de Chilete DevPath.

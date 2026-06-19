@@ -15,21 +15,21 @@ public class ListaMultiple {
 		archivoClaves.add(new Clave(6, -1, -1));
 		archivoClaves.add(new Clave(7, -1, -1));
 
-		archivoClientes.add(new Cliente(7, 94, "Ana Torres", "Calle 1", 1800.00));
-		archivoClientes.add(new Cliente(6, 87, "Jael Alcantara", "Avenida 2", 5890.00));
-		archivoClientes.add(new Cliente(5, 45, "Norma Gomez", "Calle 2", 6200.00));
-		archivoClientes.add(new Cliente(4, 23, "Yolanda Morales", "Calle 3", 2900.00));
-		archivoClientes.add(new Cliente(3, 17, "Olga Castro", "Avenida 3", 3800.00));
-		archivoClientes.add(new Cliente(2, 8, "Eva Mendez", "Jiron 1", 4100.00));
+		archivoClientes.add(new Cliente(7, 94, "Cliente F", "Direccion 1", 1800.00));
+		archivoClientes.add(new Cliente(6, 87, "Cliente H", "Direccion 2", 5890.00));
+		archivoClientes.add(new Cliente(5, 45, "Cliente G", "Direccion 3", 6200.00));
+		archivoClientes.add(new Cliente(4, 23, "Cliente C", "Direccion 4", 2900.00));
+		archivoClientes.add(new Cliente(3, 17, "Cliente E", "Direccion 5", 3800.00));
+		archivoClientes.add(new Cliente(2, 8, "Cliente D", "Direccion 6", 4100.00));
 		archivoClientes.add(new Cliente(1, -1, null, null, 0.0));
 		archivoClientes.add(new Cliente(0, -1, null, null, 0.0));
 
-		archivoUbicaciones.add(new Ubicacion(0, "Ana Torres", 0));
-		archivoUbicaciones.add(new Ubicacion(1, "Jael Alcantara", 600));
-		archivoUbicaciones.add(new Ubicacion(2, "Norma Gomez", 480));
-		archivoUbicaciones.add(new Ubicacion(3, "Yolanda Morales", 120));
-		archivoUbicaciones.add(new Ubicacion(4, "Olga Castro", 240));
-		archivoUbicaciones.add(new Ubicacion(5, "Eva Mendez", 360));
+		archivoUbicaciones.add(new Ubicacion(0, "Cliente F", 0));
+		archivoUbicaciones.add(new Ubicacion(1, "Cliente H", 600));
+		archivoUbicaciones.add(new Ubicacion(2, "Cliente G", 480));
+		archivoUbicaciones.add(new Ubicacion(3, "Cliente C", 120));
+		archivoUbicaciones.add(new Ubicacion(4, "Cliente E", 240));
+		archivoUbicaciones.add(new Ubicacion(5, "Cliente D", 360));
 		archivoUbicaciones.add(new Ubicacion(6, null, -1));
 		archivoUbicaciones.add(new Ubicacion(7, null, -1));
 	}
@@ -97,10 +97,10 @@ public class ListaMultiple {
 	public void mostrarTodo(String titulo) {
 		System.out.println("\n" + titulo);
 		System.out.printf("%-40s %-60s %-40s\n", "Archivo de Claves", "Archivo Clientes", "Archivo de Ubicaciones");
-		System.out.printf("%-7s %-7s %-10s %-10s\t", "Indice", "Clave", "Ubicación", "Puntero");
-		System.out.printf("%-7s %-7s %-20s %-15s %-10s %-10s\t", "Indice", "Clave", "Nombre", "Dirección", "Saldo",
+		System.out.printf("%-7s %-7s %-10s %-10s\t", "Indice", "Clave", "Ubicacion", "Puntero");
+		System.out.printf("%-7s %-7s %-20s %-15s %-10s %-10s\t", "Indice", "Clave", "Nombre", "Direccion", "Saldo",
 				"Puntero");
-		System.out.printf("%-7s %-20s %-10s\n", "Indice", "Nombre", "Ubicación");
+		System.out.printf("%-7s %-20s %-10s\n", "Indice", "Nombre", "Ubicacion");
 
 		int max = Math.max(archivoClaves.size(), Math.max(archivoClientes.size(), archivoUbicaciones.size()));
 		for (int i = 0; i < max; i++) {

@@ -4,14 +4,14 @@ public class EjecutarObjetosBasicos {
 
 		// CLASE ANIMAL
 
-		Animal animal = new Animal("Animal.jpg", "Lucifer", 20, "Mamifero", 13.52, "Marron",
+		Animal animal = new Animal("sin-imagen", "Animal Ejemplo", 20, "Mamifero", 13.52, "Marron",
 				true);
 
 		String reporteHtmlAnimal = """
 				                <tr>
 				                    <td>
 				                        <figure class="image is-64x64">
-				                            <img class="is-rounded" src="%s" alt="Animal.jpg">
+				                            <span>%s</span>
 				                        </figure>
 				                    </td>
 				                    </td>
@@ -31,13 +31,13 @@ public class EjecutarObjetosBasicos {
 
 		// CLASE CASA
 
-		Casa casa = new Casa("Casa.jpg", true, "Jr La paz", 3, 2, false, 10.5);
+		Casa casa = new Casa("sin-imagen", true, "Direccion de ejemplo", 3, 2, false, 10.5);
 
 		String reporteHtmlCasa = """
 				            <tr>
 				                <td>
 				                    <figure class="image is-64x64">
-				                        <img class="is-rounded" src="%s" alt="Casa.jpg">
+				                        <span>%s</span>
 				                    </figure>
 				                </td>
 				                </td>
@@ -56,14 +56,14 @@ public class EjecutarObjetosBasicos {
 
 		// CLASE CELULAR
 
-		Celular celular = new Celular("Celular.jpg", "125ER223F", " Black", "Edge Fusion 50",
+		Celular celular = new Celular("sin-imagen", "IMEI-EJEMPLO", "Black", "Modelo Ejemplo",
 				"Motorola", 8, 50);
 
 		String reporteHtmlCelular = """
 				            <tr>
 				                <td>
 				                    <figure class="image is-64x64">
-				                        <img class="is-rounded" src="%s" alt="Celular.jpg">
+				                        <span>%s</span>
 				                    </figure>
 				                </td>
 				                </td>
@@ -84,10 +84,10 @@ public class EjecutarObjetosBasicos {
 		// CLASE ESTUDIANTE
 
 		Estudiante estudiante = new Estudiante();
-		estudiante.setFoto("Estudiante.jpg");
+		estudiante.setFoto("sin-imagen");
 		estudiante.setId(242005);
-		estudiante.setNombre("Adrian Ivan");
-		estudiante.setApellido("Pisco Soto");
+		estudiante.setNombre("Estudiante Ejemplo");
+		estudiante.setApellido("Apellido Ejemplo");
 		estudiante.setGrado(5);
 		estudiante.setGenero("Masculino");
 		estudiante.setPromedio(17.8);
@@ -96,7 +96,7 @@ public class EjecutarObjetosBasicos {
 				            <tr>
 				                <td>
 				                    <figure class="image is-64x64">
-				                        <img class="is-rounded" src="%s" alt="Estudiante.jpg">
+				                        <span>%s</span>
 				                    </figure>
 				                </td>
 				                </td>

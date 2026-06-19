@@ -1,0 +1,11 @@
+# Carpetas generadas por compilacion o herramientas
+target/
+build/
+dist/
+out/
+node_modules/
+.idea/
+
+# Archivos temporales locales
+*.log
+*.tmp

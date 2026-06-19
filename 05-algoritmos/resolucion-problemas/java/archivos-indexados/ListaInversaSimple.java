@@ -3,25 +3,22 @@ import java.util.Collections;
 import java.util.List;
 
 class ListaInversaSimple {
-	private List<ArchivoSimple> asc; // archivo de claves (orden ascendente)
+	private List<ArchivoSimple> asc;
 
 	public ListaInversaSimple() {
 		asc = new ArrayList<>();
 	}
 
-	// Carga de la tabla inicial
 	public void cargarDatosIniciales() {
 		asc.clear();
-		asc.add(new ArchivoSimple(8, 600, "Eva Mendez"));
-		asc.add(new ArchivoSimple(17, 480, "Olga Castro"));
-		asc.add(new ArchivoSimple(23, 120, "Yolanda Morales"));
-		asc.add(new ArchivoSimple(45, 240, "Norma Gomez"));
-		asc.add(new ArchivoSimple(87, 360, "Jael Alcantara"));
-		asc.add(new ArchivoSimple(94, 0, "Ana Torres"));
-		// asc ya está en orden ascendente por claves
+		asc.add(new ArchivoSimple(8, 600, "Cliente D"));
+		asc.add(new ArchivoSimple(17, 480, "Cliente E"));
+		asc.add(new ArchivoSimple(23, 120, "Cliente C"));
+		asc.add(new ArchivoSimple(45, 240, "Cliente G"));
+		asc.add(new ArchivoSimple(87, 360, "Cliente H"));
+		asc.add(new ArchivoSimple(94, 0, "Cliente F"));
 	}
 
-	// Devuelve la vista descendente construida a partir de asc.
 	private List<ArchivoSimple> construirDescendente() {
 		List<ArchivoSimple> desc = new ArrayList<>(asc);
 		Collections.reverse(desc);
@@ -33,12 +30,11 @@ class ListaInversaSimple {
 
 		System.out.println();
 		System.out.println("\tArchivo de Claves\t\t\tArchivo Principal");
-		System.out.println("Indice\tClave\tUbicación\tPuntero\t\tClave\tNombre");
+		System.out.println("Indice\tClave\tUbicacion\tPuntero\t\tClave\tNombre");
 		System.out.println("----------------------------------------------------------------------");
 
-		int filas = 8; 
+		int filas = 8;
 		for (int i = 0; i < filas; i++) {
-			// Izquierda: asc (archivo de claves)
 			String claveIzq = "Null";
 			String ubicIzq = "Null";
 
@@ -48,7 +44,6 @@ class ListaInversaSimple {
 				ubicIzq = String.valueOf(a.getUbicacion());
 			}
 
-			// Derecha: desc (archivo principal)
 			String claveDer = "Null";
 			String nombreDer = "Null";
 			if (i < desc.size()) {
@@ -57,7 +52,6 @@ class ListaInversaSimple {
 				nombreDer = b.getNombre();
 			}
 
-			// Puntero: calculo la posición en 'desc' donde aparece la clave asc[i]
 			String puntero = "Null";
 			if (i < asc.size()) {
 				int clave = asc.get(i).getClave();
@@ -78,12 +72,10 @@ class ListaInversaSimple {
 	}
 
 	public void agregar(int clave, int ubicacion, String nombre) {
-		// buscar posición de inserción
 		int pos = 0;
 		while (pos < asc.size() && asc.get(pos).getClave() < clave)
 			pos++;
 
-		// si ya existe clave, no insertar
 		if (pos < asc.size() && asc.get(pos).getClave() == clave) {
 			System.out.printf("La clave %d ya existe (no se agrega).%n", clave);
 			return;
@@ -103,7 +95,7 @@ class ListaInversaSimple {
 			}
 		}
 		if (pos == -1) {
-			System.out.printf("No se encontró (clave=%d, nombre=%s).%n", clave, nombre);
+			System.out.printf("No se encontro (clave=%d, nombre=%s).%n", clave, nombre);
 			return;
 		}
 
