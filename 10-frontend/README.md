@@ -10,9 +10,7 @@ Esta seccion queda reservada para practicas de frontend moderno: componentes, es
 
 ## Contenido actual
 
-| Carpeta | Enfoque |
-|---|---|
-| `react` | Espacio reservado para practicas futuras con React. |
+Esta seccion todavia no tiene practicas publicables. Se activara cuando existan ejercicios propios desarrollados, revisados y alineados con Chilete DevPath.
 
 ## Ruta sugerida futura
 
@@ -27,7 +25,7 @@ Esta seccion queda reservada para practicas de frontend moderno: componentes, es
 
 ## Criterio Chilete DevPath
 
-No se agregan ejercicios vacios ni placeholders sin contenido real. Esta seccion crecera cuando existan practicas desarrolladas o aprobadas para documentar.
+No se agregan carpetas vacias, ejercicios ficticios ni placeholders sin contenido real. Esta seccion crecera cuando existan practicas desarrolladas o aprobadas para documentar.
 
 ## Autoria y fuentes
 

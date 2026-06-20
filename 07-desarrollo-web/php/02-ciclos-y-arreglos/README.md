@@ -24,7 +24,8 @@ Practicar ciclos, contadores, acumuladores y arreglos como base para resolver pr
 ## Recomendaciones
 
 - Ejecuta `index.php` para navegar entre ejercicios.
-- Lee el README de cada ejercicio antes de revisar el codigo.
+- Usa la tabla de este README como indice del modulo.
+- Revisa el archivo PHP de cada ejercicio y contrasta su entrada, proceso y salida.
 - Identifica si el ejercicio usa ciclos, arreglos, contadores o acumuladores.
 - Prueba entradas normales y casos limite.
 

@@ -37,6 +37,17 @@ Antes de iniciar este modulo, conviene poder:
 - `cadenas`: manipulacion de texto.
 - `arreglos`: arreglos, matrices y recorridos.
 
+## Organizacion interna
+
+Algunas carpetas tienen subcarpetas por lenguaje o tipo de practica:
+
+| Tema | Contenido principal |
+|---|---|
+| `variables` | Calculos basicos y entrada/salida en Java. |
+| `condicionales` | Decisiones basicas, juegos simples, `switch` y operador ternario. |
+| `bucles` | Ejercicios introductorios, bucles basicos, series numericas y validaciones. |
+| `arreglos` | Arreglos basicos, arreglos paralelos, matrices, metodos y utilidades de arrays. |
+
 ## Ruta sugerida
 
 1. Empieza con `variables`.
