@@ -20,7 +20,6 @@ Este espacio está pensado para dos objetivos:
 - `08-patrones`: principios SOLID y patrones de diseño.
 - `09-backend`: prácticas de backend y Spring Boot.
 - `10-frontend`: prácticas enfocadas en frontend moderno.
-- `docs`: notas generales del repositorio.
 
 ## Criterio
 
@@ -48,9 +47,9 @@ No todos los módulos necesitan todas las carpetas desde el inicio. La estructur
 6. Algoritmos.
 7. Bases de datos.
 8. Desarrollo web.
-9. Backend.
-10. Frontend moderno.
-11. Principios SOLID y patrones de diseño.
+9. Principios SOLID y patrones de diseño.
+10. Backend.
+11. Frontend moderno.
 
 ## Relación con otros repositorios
 
