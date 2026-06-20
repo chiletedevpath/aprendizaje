@@ -44,9 +44,9 @@ GO
 -- INSERTAR REGISTROS EN LA TABLA Items_pedidos 
 INSERT INTO Items_pedido(ID_detalle, ID_pedido, Producto, Cantidad, Precio)
 VALUES 
-(1001, 101, 'Laptop Lenovo', 1, 2500.00),
+(1001, 101, 'Laptop Chilete DevPath', 1, 2500.00),
 (1002, 102, 'Mouse Inalambrico', 2, 75.50),
-(1003, 103, 'Impresora HP', 1, 1500.00), 
+(1003, 103, 'Impresora Demo', 1, 1500.00), 
 (1004, 104, 'Teclado Inalambrico', 2, 440.00);
 GO
 -----------------------------------------------------------------------------------------------
@@ -259,7 +259,7 @@ REVERT;
 GO
 
 -- AHORA SI DOY PRIVILEGIOS DE LECTURA SOBRE LA TABLA CLIENTES
-GRANt SELECT ON CLientes TO Usuario_demo
+GRANT SELECT ON Clientes TO Usuario_demo
 GO
 
 -- PONERLO EN EJECUCION NUEVAMENTE 

@@ -1,12 +1,21 @@
-# Modelado de Bases de Datos
+# Modelado de bases de datos
 
-Apuntes y ejercicios sobre entidades, relaciones, normalizacion y diagramas de base de datos.
+Ejercicios sobre diseno conceptual y logico de bases de datos.
+
+## Contenido
+
+- Modelos entidad-relacion.
+- Modelos logico-relacionales.
+- Identificacion de entidades, atributos y relaciones.
+- Transformacion de modelos hacia scripts SQL.
 
 ## Estructura
 
-- `entity-relationship`: diagramas del modelo entidad-relacion.
-- `logical-relational`: scripts SQL derivados del modelo logico relacional.
+| Carpeta | Proposito |
+|---|---|
+| `entity-relationship` | Diagramas de modelo entidad-relacion. |
+| `logical-relational` | Scripts SQL derivados del modelo logico-relacional. |
 
-## Estado
+## Uso comunitario
 
-En progreso.
+Puede convertirse en material para comunidad si se acompana cada modelo con el enunciado del problema, reglas de negocio y explicacion de decisiones de diseno.

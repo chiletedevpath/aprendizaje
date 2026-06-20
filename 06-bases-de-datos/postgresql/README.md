@@ -1,7 +1,11 @@
 # PostgreSQL
 
-Ejercicios y apuntes sobre bases de datos PostgreSQL, esquemas y consultas.
+Espacio reservado para practicas futuras de PostgreSQL.
 
-## Estado
+## Proposito
 
-En progreso.
+Registrar ejercicios propios sobre esquemas, consultas, restricciones, funciones y caracteristicas especificas de PostgreSQL.
+
+## Criterio
+
+Mientras no exista contenido practico desarrollado, esta carpeta funciona como marcador de ruta dentro del aprendizaje de bases de datos.

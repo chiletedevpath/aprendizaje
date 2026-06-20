@@ -1,7 +1,11 @@
 # MySQL
 
-Ejercicios y apuntes sobre bases de datos MySQL, tablas y consultas.
+Espacio reservado para practicas futuras de MySQL.
 
-## Estado
+## Proposito
 
-En progreso.
+Registrar ejercicios propios sobre creacion de bases de datos, tablas, consultas y funciones especificas de MySQL.
+
+## Criterio
+
+Mientras no exista contenido practico desarrollado, esta carpeta funciona como marcador de ruta dentro del aprendizaje de bases de datos.
