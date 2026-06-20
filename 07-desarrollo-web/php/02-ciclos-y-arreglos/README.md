@@ -1,33 +1,33 @@
-# Ciclos y Arreglos en PHP
+# Ciclos y arreglos en PHP
 
-Esta sección reúne ejercicios de PHP enfocados en repetición, cálculos progresivos y listas simples.
+Esta seccion reune ejercicios de PHP enfocados en repeticion, calculos progresivos y listas simples.
 
 ## Objetivo
 
-Practicar ciclos, contadores, acumuladores y arreglos como base para resolver problemas web más dinámicos.
+Practicar ciclos, contadores, acumuladores y arreglos como base para resolver problemas web mas dinamicos.
 
 ## Ejercicios
 
 | Carpeta | Tema |
 |---|---|
-| `tabla-multiplicar/` | Generación de una tabla de multiplicar. |
-| `numeros-pares/` | Listado de números pares. |
-| `factorial/` | Cálculo de factorial. |
-| `suma-numeros/` | Suma de números. |
+| `tabla-multiplicar/` | Generacion de una tabla de multiplicar. |
+| `numeros-pares/` | Listado de numeros pares. |
+| `factorial/` | Calculo de factorial. |
+| `suma-numeros/` | Suma de numeros. |
 | `contador-descendente/` | Conteo regresivo. |
-| `potencias/` | Cálculo de potencias. |
-| `multiplos-cinco/` | Identificación de múltiplos de 5. |
+| `potencias/` | Calculo de potencias. |
+| `multiplos-cinco/` | Identificacion de multiplos de 5. |
 | `contador-vocales/` | Conteo de vocales en texto. |
 | `lista-productos/` | Manejo de una lista simple de productos. |
-| `registro-notas/` | Registro básico de notas. |
+| `registro-notas/` | Registro basico de notas. |
 
 ## Recomendaciones
 
 - Ejecuta `index.php` para navegar entre ejercicios.
-- Lee el README de cada ejercicio antes de revisar el código.
+- Lee el README de cada ejercicio antes de revisar el codigo.
 - Identifica si el ejercicio usa ciclos, arreglos, contadores o acumuladores.
-- Prueba entradas normales y casos límite.
+- Prueba entradas normales y casos limite.
 
-## Nota de autoría
+## Nota de autoria
 
-Ejercicios desarrollados por Adrian Pisco como parte del curso **Taller de Programación Web** de la **UTP**. Se conservan como evidencia de aprendizaje dentro de Chilete DevPath.
+Ejercicios desarrollados por Adrian Pisco como parte del curso **Taller de Programacion Web** de la **UTP**. Se conservan como evidencia de aprendizaje dentro de Chilete DevPath.

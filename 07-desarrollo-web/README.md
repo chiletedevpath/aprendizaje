@@ -1,17 +1,39 @@
-# Desarrollo Web
+# Desarrollo web
 
-Ejercicios de desarrollo web con HTML, CSS, JavaScript y PHP.
+Esta seccion organiza ejercicios de fundamentos web: estructura HTML, estilos CSS, primeras practicas de interfaz, JavaScript inicial y PHP aplicado a formularios.
 
-## Enfoque
+## Objetivo
 
-Este módulo cubre fundamentos web: estructura de páginas, estilos, interacción básica en navegador y primeras prácticas del lado del servidor.
+Comprender como se construye una pagina web desde sus bases: contenido, presentacion, interaccion y procesamiento inicial del lado del servidor.
 
-No reemplaza al módulo `10-frontend`. Aquí se trabajan bases web; en `10-frontend` se trabajan herramientas modernas para construir interfaces más complejas, como React.
+## Diferencia con frontend
 
-## Temas
+`07-desarrollo-web` trabaja fundamentos web y practicas introductorias.
 
-- `html`: estructura semántica de páginas web.
-- `css`: estilos, diseño visual y maquetación.
-- `javascript`: lógica del navegador, DOM y fundamentos del lenguaje.
-- `php`: prácticas iniciales de programación web del lado del servidor.
-- `practica-ui`: ejercicios pequeños de interfaz.
+`10-frontend` queda reservado para herramientas modernas de interfaz, componentes, frameworks y proyectos frontend mas completos.
+
+## Ruta sugerida
+
+1. Revisar `html` para practicar estructura de documentos.
+2. Continuar con `css` para aplicar estilos y maquetacion.
+3. Explorar `practica-ui` para ejercicios visuales pequenos.
+4. Usar `javascript` como espacio para futuras practicas de comportamiento en navegador.
+5. Avanzar a `php` para conectar formularios y procesamiento basico del lado del servidor.
+
+## Contenido actual
+
+| Carpeta | Enfoque |
+|---|---|
+| `html` | Estructura de paginas y plantilla academica de CV web con datos ficticios. |
+| `css` | Aplicacion de propiedades CSS3 y maquetacion visual. |
+| `javascript` | Espacio reservado para ejercicios de interaccion en navegador. |
+| `php` | Formularios, ciclos, arreglos y procesamiento inicial con PHP. |
+| `practica-ui` | Ejercicios pequenos de interfaz y layout. |
+
+## Criterio Chilete DevPath
+
+Los ejercicios se conservan como practica de aprendizaje. Para llevarlos a una futura web, deben seleccionarse los ejemplos mas claros y transformarse en guias con enunciado, explicacion y resultado esperado.
+
+## Autoria y fuentes
+
+El contenido corresponde a ejercicios desarrollados por Adrian Pisco durante su proceso de aprendizaje. Si algun ejercicio futuro se adapta desde una fuente externa, debe indicarse la referencia antes de publicarlo.

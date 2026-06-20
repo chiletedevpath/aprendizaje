@@ -1,7 +1,11 @@
 # JavaScript
 
-Ejercicios y apuntes sobre fundamentos de JavaScript, manipulacion del DOM y comportamiento del navegador.
+Espacio reservado para practicas futuras de JavaScript.
 
-## Estado
+## Proposito
 
-En progreso.
+Registrar ejercicios propios sobre fundamentos del lenguaje, eventos, DOM e interaccion en navegador.
+
+## Criterio
+
+Mientras no exista contenido practico desarrollado, esta carpeta funciona como marcador de ruta dentro del aprendizaje de desarrollo web.
