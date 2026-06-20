@@ -1,6 +1,6 @@
 # Patrones de diseno
 
-Esta seccion organiza practicas sobre principios SOLID, patrones de diseno y ejercicios integrados en Java y Spring Boot.
+Esta seccion organiza practicas sobre principios SOLID, patrones de diseno y casos integradores en Java y Spring Boot.
 
 ## Objetivo
 
@@ -11,7 +11,7 @@ Comprender como los principios y patrones ayudan a organizar codigo, reducir aco
 1. Revisar `principios-solid` para reforzar bases de diseno orientado a objetos.
 2. Continuar con `creacionales` para estudiar formas de crear objetos.
 3. Avanzar a `estructurales` para entender adaptacion, composicion y simplificacion de subsistemas.
-4. Revisar `practica-integrada` para observar combinaciones de principios y patrones.
+4. Revisar `casos-integradores` para observar combinaciones de principios y patrones.
 5. Usar los casos practicos como refuerzo tecnico antes de crear guias para comunidad.
 
 ## Contenido actual
@@ -21,13 +21,14 @@ Comprender como los principios y patrones ayudan a organizar codigo, reducir aco
 | `principios-solid` | Ejercicios sobre OCP, LSP y principios relacionados. |
 | `creacionales` | Builder, Factory, Prototype y Singleton. |
 | `estructurales` | Adapter y Facade. |
-| `practica-integrada` | Casos que combinan principios SOLID y patrones. |
+| `casos-integradores` | Casos que combinan principios SOLID y patrones en un flujo completo. |
 
 ## Convencion
 
 - `java`: ejercicios de clase, laboratorio o practica tecnica.
 - `spring-boot`: ejemplos implementados como proyectos Spring Boot.
 - `casos-practicos`: ejercicios reorganizados por concepto para reforzar principios y patrones sin formato de actividad academica.
+- `casos-integradores`: casos de mayor alcance donde se combinan varios principios y patrones.
 
 ## Criterio Chilete DevPath
 

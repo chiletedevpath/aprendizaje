@@ -1,7 +1,7 @@
-package edu.pe.utp.mixto_principios_patrones.ejercicio1.observer;
+package edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.observer;
 
-import edu.pe.utp.mixto_principios_patrones.ejercicio1.adapter.Notificador;
-import edu.pe.utp.mixto_principios_patrones.ejercicio1.model.Pedido;
+import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter.Notificador;
+import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.model.Pedido;
 
 public class ObservadorWhatsApp implements ObservadorPedido{
 
@@ -20,3 +20,4 @@ public class ObservadorWhatsApp implements ObservadorPedido{
 
     }
 }
+

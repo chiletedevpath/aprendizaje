@@ -1,4 +1,4 @@
-package edu.pe.utp.mixto_principios_patrones.ejercicio1.model;
+package edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.model;
 
 public class Pedido {
 
@@ -29,3 +29,4 @@ public class Pedido {
         return "Pedido{id=" + id + ", cliente='" + cliente + "', monto=" + monto + "}";
     }
 }
+

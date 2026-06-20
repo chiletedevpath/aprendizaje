@@ -1,4 +1,4 @@
-package edu.pe.utp.mixto_principios_patrones.ejercicio1.adapter;
+package edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter;
 
 public class AdaptadorWhatsApp implements Notificador {
 
@@ -13,3 +13,4 @@ public class AdaptadorWhatsApp implements Notificador {
         servicioExterno.enviarMensajeWhatsApp(mensaje);
     }
 }
+

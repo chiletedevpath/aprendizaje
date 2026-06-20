@@ -1,4 +1,4 @@
-package edu.pe.utp.mixto_principios_patrones.ejercicio1.adapter;
+package edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter;
 
 public class ServicioWhatsAppExterno {
 
@@ -6,3 +6,4 @@ public class ServicioWhatsAppExterno {
         System.out.println("[WHATSAPP EXTERNO] " + texto);
     }
 }
+
