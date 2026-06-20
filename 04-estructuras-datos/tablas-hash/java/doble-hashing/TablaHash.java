@@ -1,19 +1,19 @@
 public class TablaHash {
-	int TAMTABLA; // Tamaño de la tabla hash
-	Nodo[] tabla; // Arreglo de listas enlazadas
+	int TAMTABLA; // Tamano de la tabla hash.
+	Nodo[] tabla; // Arreglo de listas enlazadas.
 
-	// Constructor: recibe el tamaño deseado y crea la tabla
-	public TablaHash(int tamaño) {
-		this.TAMTABLA = tamaño;
+	// Constructor: recibe el tamano deseado y crea la tabla.
+	public TablaHash(int tamano) {
+		this.TAMTABLA = tamano;
 		tabla = new Nodo[TAMTABLA];
 		for (int i = 0; i < TAMTABLA; i++) {
 			tabla[i] = null;
 		}
 	}
 
-	// Método insertar: agrega una nueva clave a la tabla hash
+	// Inserta una nueva clave en la tabla hash.
 	public void insertar(int clave) {
-		int indice = clave % 7; // ⚡ Se fija la función hash en %7
+		int indice = clave % TAMTABLA;
 		Nodo nuevo = new Nodo(clave);
 
 		if (tabla[indice] == null) {
@@ -27,9 +27,9 @@ public class TablaHash {
 		}
 	}
 
-	// Método buscar: verifica si una clave existe
+	// Verifica si una clave existe.
 	public boolean buscar(int clave) {
-		int indice = clave % 7;
+		int indice = clave % TAMTABLA;
 		Nodo actual = tabla[indice];
 
 		while (actual != null) {
@@ -41,9 +41,9 @@ public class TablaHash {
 		return false;
 	}
 
-	// Método eliminar: elimina una clave si existe
+	// Elimina una clave si existe.
 	public boolean eliminar(int clave) {
-		int indice = clave % 7;
+		int indice = clave % TAMTABLA;
 		Nodo actual = tabla[indice];
 		Nodo anterior = null;
 
@@ -62,11 +62,11 @@ public class TablaHash {
 		return false;
 	}
 
-	// Método mostrar: imprime el contenido de la tabla
+	// Imprime el contenido de la tabla.
 	public void mostrar() {
 		System.out.println("\n=== Contenido de la tabla hash ===");
 		for (int i = 0; i < TAMTABLA; i++) {
-			System.out.print("Índice " + i + ": ");
+			System.out.print("Indice " + i + ": ");
 			Nodo actual = tabla[i];
 			if (actual == null) {
 				System.out.println("null");

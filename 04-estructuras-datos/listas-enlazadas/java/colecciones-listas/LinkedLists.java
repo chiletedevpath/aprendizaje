@@ -10,14 +10,13 @@ public class LinkedLists {
 		lista2.add(new FiguraGeometrica(2, "cuadrado"));
 		lista2.add(new FiguraGeometrica(3, "triangulo"));
 
-		// distinto: se agrego la posicion 0
+		// Inserta un nuevo elemento al inicio de la lista.
 		lista2.add(0, new FiguraGeometrica(4, "rectangulo"));
 
-		System.out.println("Impresion con integracion");
+		System.out.println("Impresion con iteracion for-each");
 
 		for (FiguraGeometrica figura1 : lista2) {
 			System.out.println(figura1.getNombre());
 		}
 	}
 }
-

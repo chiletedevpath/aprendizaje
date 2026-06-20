@@ -2,23 +2,23 @@ import java.util.Arrays;
 
 public class Dijkstra {
 
-	// METODO PARA EJECUTAR DIJKSTRA DESDE UN ORIGEN
+	// Ejecuta Dijkstra desde un nodo de origen.
 	public static void dijkstra(int[][] grafo, int origen) {
 
-		int n = grafo.length; // NUMERO DE NODOS
+		int n = grafo.length; // Numero de nodos.
 
-		int[] distancia = new int[n]; // GUARDO DISTANCIAS MINIMAS
-		boolean[] visitado = new boolean[n]; // PARA SABER QUE NODOS YA SE PROCESARON
+		int[] distancia = new int[n]; // Distancias minimas acumuladas.
+		boolean[] visitado = new boolean[n]; // Nodos ya procesados.
 
-		// INICIALIZO TODAS LAS DISTANCIAS EN "INFINITO"
+		// Inicializa todas las distancias como no alcanzadas.
 		Arrays.fill(distancia, Integer.MAX_VALUE);
 
-		distancia[origen] = 0; // EL ORIGEN SIEMPRE VALE 0
+		distancia[origen] = 0; // El origen siempre vale 0.
 
-		// REPITO N-1 VECES PARA IR MEJORANDO LOS CAMINOS
+		// Repite n-1 veces para mejorar las rutas disponibles.
 		for (int i = 0; i < n - 1; i++) {
 
-			// BUSCO EL NODO MAS CERCANO QUE NO ESTE VISITADO
+			// Busca el nodo no visitado con menor distancia acumulada.
 			int min = -1;
 			for (int j = 0; j < n; j++) {
 				if (!visitado[j] && (min == -1 || distancia[j] < distancia[min])) {
@@ -26,9 +26,9 @@ public class Dijkstra {
 				}
 			}
 
-			visitado[min] = true; // YA PROCESE ESTE NODO
+			visitado[min] = true; // Marca el nodo como procesado.
 
-			// ACTUALIZO SUS VECINOS (SI MEJORAN LA DISTANCIA LA CAMBIO)
+			// Actualiza vecinos si se encuentra una distancia menor.
 			for (int j = 0; j < n; j++) {
 				if (grafo[min][j] > 0 && distancia[min] + grafo[min][j] < distancia[j]) {
 					distancia[j] = distancia[min] + grafo[min][j];
@@ -36,20 +36,16 @@ public class Dijkstra {
 			}
 		}
 
-		// IMPRIMO RESULTADOS FINALES
-		System.out.println("DISTANCIAS MINIMAS DESDE EL NODO " + origen + ":");
+		System.out.println("Distancias minimas desde el nodo " + origen + ":");
 		for (int i = 0; i < n; i++) {
 			System.out.println("A " + i + " = " + distancia[i]);
 		}
 	}
 
-	// ============================================================
-	// PROGRAMA PRINCIPAL PARA PROBAR EL ALGORITMO DE DIJKSTRA
-	// ============================================================
+	// Programa principal para probar el algoritmo de Dijkstra.
 	public static void main(String[] args) {
 
-		// MATRIZ DE ADYACENCIA CON PESOS
-		// PUEDO CAMBIAR ESTOS VALORES PARA PROBARLO
+		// Matriz de adyacencia con pesos.
 		int[][] grafo = { { 0, 6, 0, 10, 0, 0, 8, 0, 0 }, // A
 				{ 6, 0, 11, 0, 15, 0, 0, 13, 0 }, // B
 				{ 0, 11, 0, 0, 0, 0, 0, 4, 0 }, // C
@@ -61,7 +57,6 @@ public class Dijkstra {
 				{ 0, 0, 0, 0, 0, 6, 5, 7, 0 } // I
 		};
 
-		// PRUEBA DESDE EL NODO 0 (A)
-		dijkstra(grafo, 0); // 0 ES A, PERO PUEDO PONER 1 PARA B ETC.
+		dijkstra(grafo, 0); // 0 representa A.
 	}
 }

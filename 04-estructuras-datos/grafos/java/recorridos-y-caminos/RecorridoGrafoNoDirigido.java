@@ -1,17 +1,28 @@
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
 public class RecorridoGrafoNoDirigido {
 
-	// MAPA PARA GUARDAR MIS ADYACENCIAS
+	// Mapa de adyacencia para representar el grafo no dirigido.
 	private Map<Character, List<Character>> ady = new HashMap<>();
 
 	public RecorridoGrafoNoDirigido() {
 
-		// AGREGO LOS NODOS
-		for (char v : new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' })
+		// Declara los vertices del grafo.
+		for (char v : new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' }) {
 			ady.put(v, new ArrayList<>());
+		}
 
-		// CARGO LAS CONEXIONES SEGUN EL GRAFO
+		// Registra las conexiones segun el grafo de practica.
 		ady.get('A').addAll(Arrays.asList('B', 'G', 'D'));
 		ady.get('B').addAll(Arrays.asList('A', 'C', 'H', 'G'));
 		ady.get('C').addAll(Arrays.asList('B', 'H'));
@@ -23,9 +34,9 @@ public class RecorridoGrafoNoDirigido {
 		ady.get('I').addAll(Arrays.asList('F', 'G', 'H'));
 	}
 
-	// BFS ============================================================
+	// BFS: recorrido en anchura.
 	public void bfs(char inicio) {
-		System.out.println("BFS DESDE " + inicio + ":");
+		System.out.println("BFS desde " + inicio + ":");
 
 		Queue<Character> cola = new LinkedList<>();
 		Set<Character> visitados = new HashSet<>();
@@ -47,9 +58,9 @@ public class RecorridoGrafoNoDirigido {
 		System.out.println("\n");
 	}
 
-	// DFS ===========================================================
+	// DFS: recorrido en profundidad.
 	public void dfs(char inicio) {
-		System.out.println("DFS DESDE " + inicio + ":");
+		System.out.println("DFS desde " + inicio + ":");
 
 		Deque<Character> pila = new ArrayDeque<>();
 		Set<Character> visitados = new HashSet<>();

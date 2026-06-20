@@ -1,28 +1,23 @@
 public class Warshall {
 
-	// METODO PARA EJECUTAR WARSHALL
+	// Ejecuta Warshall sobre una matriz de adyacencia.
 	public static void warshall(int[][] M) {
 
-		int n = M.length; // GUARDO EL NUMERO DE NODOS
+		int n = M.length; // Numero de nodos.
 
-		// RECORRO CADA NODO COMO INTERMEDIO K
+		// Evalua cada nodo como punto intermedio.
 		for (int k = 0; k < n; k++) {
-
-			// RECORRO LAS FILAS I
 			for (int i = 0; i < n; i++) {
-
-				// RECORRO LAS COLUMNAS J
 				for (int j = 0; j < n; j++) {
 
-					// APLICO LA FORMULA DE WARSHALL
-					// SI EXISTE CAMINO i->k Y k->j ENTONCES EXISTE i->j
+					// Si existe camino i->k y k->j, entonces existe i->j.
 					M[i][j] = (M[i][j] == 1) || (M[i][k] == 1 && M[k][j] == 1) ? 1 : 0;
 				}
 			}
 		}
 	}
 
-	// METODO PARA IMPRIMIR LA MATRIZ
+	// Imprime la matriz resultante.
 	public static void imprimir(int[][] M) {
 		for (int[] fila : M) {
 			for (int x : fila) {
@@ -32,22 +27,18 @@ public class Warshall {
 		}
 	}
 
-	// ===========================================================
-	// PROGRAMA PRINCIPAL PARA PROBAR EL ALGORITMO
-	// ===========================================================
+	// Programa principal para probar el algoritmo.
 	public static void main(String[] args) {
 
-		// MATRIZ INICIAL DE ADYACENCIA
-		// ESTA SE PUEDE CAMBIAR PARA PROBAR CON OTROS GRAFOS
+		// Matriz inicial de adyacencia.
 		int[][] matriz = { { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 }, { 0, 0, 0, 0 } };
 
-		System.out.println("MATRIZ ORIGINAL:");
+		System.out.println("Matriz original:");
 		imprimir(matriz);
 
-		// LLAMO A WARSHALL
 		warshall(matriz);
 
-		System.out.println("\nMATRIZ FINAL (CAMINOS ALCANZABLES):");
+		System.out.println("\nMatriz final (caminos alcanzables):");
 		imprimir(matriz);
 	}
 }

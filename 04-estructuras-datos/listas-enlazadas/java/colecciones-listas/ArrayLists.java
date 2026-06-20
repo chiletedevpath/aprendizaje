@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayLists {
-	
+
 	public static void main(String[] args) {
 		List<FiguraGeometrica> lista1 = new ArrayList<FiguraGeometrica>();
 
@@ -10,12 +10,10 @@ public class ArrayLists {
 		lista1.add(new FiguraGeometrica(2, "cuadrado"));
 		lista1.add(new FiguraGeometrica(3, "triangulo"));
 
-		System.out.println("Impresion con integracion");
+		System.out.println("Impresion con iteracion por indice");
 
 		for (int i = 0; i < lista1.size(); i++) {
 			System.out.println(lista1.get(i).getNombre());
 		}
-
 	}
 }
-
