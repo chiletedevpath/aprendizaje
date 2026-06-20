@@ -1,29 +1,27 @@
 public class ReporteProductosCodigos {
 	/*
-	 * CREAR LA CLASE BOLETA: TODOS LOS DATOS DEBEN ESTAR INICIALIZADOS. IDENTIFICAR
-	 * Y PROGRAMAR LOS ARREGLOS PARALELOS NECESARIOS. EL PROGRAMA DEBE CALCULAR EL
-	 * MONTO POR CADA PRODUCTO, EL IGV Y EL IMPORTE TOTAL. EL REPORTE ASCII DEBE
-	 * GENERARSE HACIENDO USO DE STRINGBUILDER.APPEND()
+	 * CREAR UNA BOLETA CON DATOS INICIALIZADOS. IDENTIFICAR Y PROGRAMAR ARREGLOS
+	 * PARALELOS PARA CALCULAR MONTO POR PRODUCTO, IGV E IMPORTE TOTAL.
 	 */
 
 	public static void main(String[] args) {
 
 		String inicioCodigo = "77";
 		String codigos[] = { "54125852147", "52563210489", "96525415" };
-		String productos[] = { "DETERGENTE ULTRA", "JAM.PIZZA", "LECHE EN CAJA" };
+		String productos[] = { "CUADERNO DEVPATH", "LAPICERO CHILETE", "GUIA DE PRACTICA" };
 		int cantidad[] = { 6, 2, 12 };
 		double precio[] = { 3.25, 12.90, 30.50 };
-		String nombres[] = { "ROSA", "CARLOS" };
+		String nombres[] = { "Usuario Chilete", "Cliente DevPath" };
 
-		System.out.println(String.format("%27s", "TIENDA ABC\n"));
-		System.out.println(String.format("%29s", "RUC 21521458563"));
-		System.out.println(String.format("%30s", "Chiclayo - Perú\n"));
+		System.out.println(String.format("%27s", "CHILETE STORE\n"));
+		System.out.println(String.format("%29s", "RUC 00000000000"));
+		System.out.println(String.format("%30s", "Chiclayo - Peru\n"));
 
 		StringBuilder boleta = new StringBuilder();
 		boleta.append("Cajero: ").append(nombres[0]).append("\n");
 
 		String codigoCompleto[] = new String[3];
-		for (int i = 0; i < 3; i++) { // NO USO ARRAY COPY PORQUE LOS DOS DEBEN SER ARRAYS
+		for (int i = 0; i < 3; i++) {
 			codigoCompleto[i] = inicioCodigo + codigos[i];
 		}
 

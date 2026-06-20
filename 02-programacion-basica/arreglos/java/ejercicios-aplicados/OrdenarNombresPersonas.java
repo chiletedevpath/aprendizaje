@@ -1,15 +1,12 @@
 public class OrdenarNombresPersonas {
 	/*
-	 * GENERAR EL REPORTE MOSTRADO. UTILIZAR ARREGLOS PARALELOS INICIALIZADOS.
-	 * CALCULAR PROMEDIO POR ALUMNO Y PROMEDIO TOTAL LOS DATOS DEBEN CALCULARSE A
-	 * PARTIR DE UNA COPIA DE LOS ARREGLOS PARALELOS. EL REPORTE ASCII DEBE
-	 * GENERARSE HACIENDO USO DE STRINGBUILDER.APPEND()
-	 * 
+	 * GENERAR UN REPORTE CON ARREGLOS PARALELOS INICIALIZADOS. CALCULAR PROMEDIO
+	 * POR ALUMNO Y PROMEDIO TOTAL A PARTIR DE COPIAS DE LOS ARREGLOS.
 	 */
 	public static void main(String[] args) {
 
-		String nombres[] = { "Juan Carlos", "Ana Mariela", "Rosa", "Carlos Alberto", "Gabriela Lucia" };
-		String apellidos[] = { "Garcia Rodriguez", "Torre Montez", "Inoñan Farro", "Rojas Chan", "Alvites Ch" };
+		String nombres[] = { "Usuario", "Aprendiz", "Cliente", "Estudiante", "Integrante" };
+		String apellidos[] = { "Chilete", "DevPath", "Demo", "Ejemplo", "Practica" };
 		double edad[] = { 19, 25, 22, 24, 25 };
 		double grado[] = { 5, 5, 4, 5, 5 };
 		double pc1[] = { 20, 20, 20, 16, 20 };
@@ -35,8 +32,8 @@ public class OrdenarNombresPersonas {
 		double promAlum[] = new double[copiaNombres.length];
 		double promedio;
 		double sumaTotal = 0;
-		int CANT_NOTAS = 4;
-		
+		int cantNotas = 4;
+
 		StringBuilder reporte = new StringBuilder();
 
 		reporte.append("########################### REPORTE DE NOTAS ##########################\n");
@@ -45,7 +42,7 @@ public class OrdenarNombresPersonas {
 		reporte.append("#######################################################################\n");
 
 		for (int i = 0; i < copiaNombres.length; i++) {
-			promAlum[i] = (copiaPc1[i] + copiaPc2[i] + copiaPc3[i] + copiaEf[i]) / CANT_NOTAS;
+			promAlum[i] = (copiaPc1[i] + copiaPc2[i] + copiaPc3[i] + copiaEf[i]) / cantNotas;
 			sumaTotal += promAlum[i];
 			reporte.append(String.format("%-31s %-4.0f %-4.0f %-4.0f %-4.0f %-4.0f %-4.0f %6.2f\n", nomCompleto[i],
 					copiaEdad[i], copiaGrado[i], copiaPc1[i], copiaPc2[i], copiaPc3[i], copiaEf[i], promAlum[i]));
@@ -56,6 +53,5 @@ public class OrdenarNombresPersonas {
 		reporte.append("\n#######################################################################\n");
 
 		System.out.println(reporte.toString());
-
 	}
 }

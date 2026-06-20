@@ -2,7 +2,7 @@ public class AnalizarNotasAlumnos {
 
 	public static void main(String[] args) {
 
-		String[] alumnos = { "Ana", "Luis", "Pedro", "Maria" };
+		String[] alumnos = { "Aprendiz DevPath", "Usuario Chilete", "Cliente Chilete", "Estudiante Demo" };
 		double[] notas = { 14.5, 9.8, 16.0, 10.0 };
 		double sumaNotas = 0;
 		double promedioNotas;
@@ -14,7 +14,7 @@ public class AnalizarNotasAlumnos {
 		// Presenta los datos en formato tabular para facilitar la lectura.
 		System.out.println("|       Datos de los alumnos         |");
 		System.out.println("|------------------------------------|");
-		System.out.printf("|%-10s | %-8s | %-12s|%n", "Nombre", "Nota", "Estado");
+		System.out.printf("|%-16s | %-8s | %-12s|%n", "Nombre", "Nota", "Estado");
 		System.out.println("|------------------------------------|");
 
 		for (int i = 0; i < alumnos.length; i++) {
@@ -25,7 +25,7 @@ public class AnalizarNotasAlumnos {
 				System.out.println("Nota incorrecta del alumno " + alumnos[i]);
 				return;
 			}
-			System.out.printf("|%-10s | %-8.1f | %-12s|%n", alumnos[i], notas[i],
+			System.out.printf("|%-16s | %-8.1f | %-12s|%n", alumnos[i], notas[i],
 					(nota >= 11 ? "Aprobado" : "Desaprobado"));
 
 			sumaNotas += notas[i];
