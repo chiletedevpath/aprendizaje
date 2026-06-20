@@ -43,7 +43,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             //Basic abc123
         }
 
-        //Bearer xjhsbjuxcaksl
+        // Formato esperado: Bearer <token>
         //xjhsbjuxcaksl
         String token = tokenExtraidoHeader.substring(7);
         String username = jwtService.extractUserName(token);
