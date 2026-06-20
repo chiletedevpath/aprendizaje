@@ -1,9 +1,9 @@
-﻿public class EjecutarJerarquiaPersonas {
+public class EjecutarJerarquiaPersonas {
 
 	public static void main(String[] args) {
 		// Valida la jerarquia Persona -> Cliente, Empleado y Directivo.
 		Cliente cliente1 = new Cliente("00000001", "Cliente Ejemplo", "000000000");
-		Directivo directivo1 = new Directivo("00000002", "Directivo Ejemplo", 10000.50, "Docente");
+		Directivo directivo1 = new Directivo("00000002", "Directivo Ejemplo", 10000.50, "Categoria Demo");
 
 		Empleado empleado1 = new Empleado("00000003", "Empleado Ejemplo", 2500.00);
 		directivo1.addSubordinado(empleado1);

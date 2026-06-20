@@ -1,4 +1,4 @@
-﻿import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EjecutarRegistroEstudiantes {
@@ -11,10 +11,10 @@ public class EjecutarRegistroEstudiantes {
 				new DatosDelEstudiante<>("Apellido Ejemplo"), new DatosDelEstudiante<>(20.0), new DatosDelEstudiante<>(5.9));
 
 		Estudiante<String, Double> estudiante2 = new Estudiante<>(new DatosDelEstudiante<>("Estudiante Dos"),
-				new DatosDelEstudiante<>("Lozano Leon"), new DatosDelEstudiante<>(9.0), new DatosDelEstudiante<>(13.3));
+				new DatosDelEstudiante<>("Apellido Demo"), new DatosDelEstudiante<>(9.0), new DatosDelEstudiante<>(13.3));
 
-		Estudiante<String, Double> estudiante3 = new Estudiante<>(new DatosDelEstudiante<>("Pancho"),
-				new DatosDelEstudiante<>("Paredes Cruz"), new DatosDelEstudiante<>(17.5),
+		Estudiante<String, Double> estudiante3 = new Estudiante<>(new DatosDelEstudiante<>("Aprendiz DevPath"),
+				new DatosDelEstudiante<>("Usuario Chilete"), new DatosDelEstudiante<>(17.5),
 				new DatosDelEstudiante<>(19.3));
 
 		// CREO UNA LISTA PARA ALMACENAR LOS OBJETOS DE TIPO ESTUDIANTE

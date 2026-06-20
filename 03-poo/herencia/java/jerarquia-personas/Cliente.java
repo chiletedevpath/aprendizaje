@@ -1,4 +1,4 @@
-﻿public class Cliente extends Persona {
+public class Cliente extends Persona {
 	private String nroTelefono;
 
 	public Cliente(String dni, String nombre, String nroTelefono) {

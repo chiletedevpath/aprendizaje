@@ -1,4 +1,4 @@
-﻿public class Empleado extends Persona {
+public class Empleado extends Persona {
 	private double sueldoBruto;
 
 	public Empleado(String dni, String nombre, double sueldoBruto) {

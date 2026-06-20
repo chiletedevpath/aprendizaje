@@ -1,4 +1,4 @@
-﻿public class Persona {
+public class Persona {
 	private String dni;
 	private String nombre;
 
