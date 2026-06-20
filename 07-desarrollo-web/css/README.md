@@ -4,11 +4,12 @@ Ejercicios sobre estilos, layout y presentacion visual de paginas web.
 
 ## Contenido
 
-- Enlace entre HTML y CSS.
-- Selectores basicos.
-- Propiedades visuales.
-- Practica de CSS3.
-- Maquetacion inicial.
+| Carpeta | Enfoque |
+|---|---|
+| `fundamentos-css` | Enlace entre HTML y CSS, selectores y propiedades visuales. |
+| `flexbox-layout` | Maquetacion responsive usando Flexbox. |
+| `menu-restaurante` | Tarjetas visuales, imagenes y grilla de productos. |
+| `tabla-precios` | Presentacion de planes o precios usando HTML y CSS. |
 
 ## Proposito
 

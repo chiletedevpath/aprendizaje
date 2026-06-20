@@ -1,4 +1,4 @@
-# La Cafeteria Asincrona
+# Cafeteria asincrona
 
 Practica desarrollada en JavaScript puro para reforzar programacion asincrona usando Promesas, `async/await`, `setTimeout` y manejo de errores.
 
@@ -15,14 +15,6 @@ Simular el flujo de pedidos de una cafeteria donde cada operacion toma tiempo y 
 - `try/catch`
 - `setTimeout`
 - Manejo de errores asincronos
-
-## Estructura
-
-```txt
-reto2-cafeteria-asincrona/
-|-- app.js
-`-- README.md
-```
 
 ## Ejecucion
 
@@ -42,4 +34,8 @@ node app.js
 
 ## Estado
 
-Ejercicio formativo de Tecsup conservado dentro de `aprendizaje/07-desarrollo-web/frontend-retos`.
+Ejercicio formativo conservado dentro de `aprendizaje/07-desarrollo-web/javascript/asincronia`.
+
+## Criterio Chilete DevPath
+
+Puede publicarse como guia si se reescribe con enunciado propio, explicacion del flujo asincrono y casos de prueba.

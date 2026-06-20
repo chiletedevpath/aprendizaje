@@ -1,6 +1,6 @@
 # Desarrollo web
 
-Esta seccion organiza ejercicios de fundamentos web: estructura HTML, estilos CSS, primeras practicas de interfaz, JavaScript inicial y PHP aplicado a formularios.
+Esta seccion organiza ejercicios de fundamentos web: estructura HTML, estilos CSS, JavaScript inicial y PHP aplicado a formularios.
 
 ## Objetivo
 
@@ -16,23 +16,21 @@ Comprender como se construye una pagina web desde sus bases: contenido, presenta
 
 1. Revisar `html` para practicar estructura de documentos.
 2. Continuar con `css` para aplicar estilos y maquetacion.
-3. Explorar `practica-ui` para ejercicios visuales pequenos.
-4. Revisar `frontend-retos` como practicas integradas de HTML, CSS y JavaScript inicial.
-5. Avanzar a `php` para conectar formularios y procesamiento basico del lado del servidor.
+3. Revisar `javascript` para practicar interaccion y asincronia basica.
+4. Avanzar a `php` para conectar formularios y procesamiento basico del lado del servidor.
 
 ## Contenido actual
 
 | Carpeta | Enfoque |
 |---|---|
 | `html` | Estructura de paginas y plantilla academica de CV web con datos ficticios. |
-| `css` | Aplicacion de propiedades CSS3 y maquetacion visual. |
-| `frontend-retos` | Retos pequenos de frontend desarrollados como practica formativa de Tecsup. |
+| `css` | Selectores, propiedades visuales, Flexbox, menu y tabla de precios. |
+| `javascript` | Ejercicios iniciales de interaccion y programacion asincrona. |
 | `php` | Formularios, ciclos, arreglos y procesamiento inicial con PHP. |
-| `practica-ui` | Ejercicios pequenos de interfaz y layout. |
 
 ## Criterio Chilete DevPath
 
-Los ejercicios se conservan como practica de aprendizaje. Para llevarlos a una futura web, deben seleccionarse los ejemplos mas claros y transformarse en guias con enunciado, explicacion y resultado esperado.
+Los ejercicios se conservan como practica de aprendizaje. Para llevarlos a una futura web, deben seleccionarse los ejemplos mas claros y transformarse en guias propias con enunciado, explicacion y resultado esperado.
 
 ## Autoria y fuentes
 

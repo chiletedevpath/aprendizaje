@@ -15,7 +15,7 @@ function recibirPedido(producto) {
       if (menu.includes(producto)) {
         resolve(`Pedido recibido: ${producto}`);
       } else {
-        reject(`No tenemos ${producto} en el menú`);
+        reject(`No tenemos ${producto} en el menu`);
       }
     }, 3000);
   });
@@ -32,12 +32,12 @@ function prepararCafe(mensajePrevio) {
       const falla = Math.random() < 0.2;
 
       if (falla) {
-        reject("La máquina está rota, no se pudo preparar el café");
+        reject("La maquina esta rota, no se pudo preparar el cafe");
       } else {
         /* Extrae el nombre del producto */
         const producto = mensajePrevio.split(": ")[1];
 
-        resolve(`Café listo: ${producto}`);
+        resolve(`Cafe listo: ${producto}`);
       }
     }, 3000);
   });
@@ -69,10 +69,10 @@ async function procesarPedido(producto) {
    PRUEBAS
 ========================================= */
 
-/* Producto válido */
+/* Producto valido */
 procesarPedido("latte");
 
-/* Producto inválido */
+/* Producto invalido */
 /*
 procesarPedido("te helado");
 */

@@ -104,7 +104,7 @@ body {
   /* Espacio entre elementos */
   gap: 50px;
 
-  /* Permite salto de línea en pantallas pequeñas */
+  /* Permite salto de linea en pantallas pequenas */
   flex-wrap: wrap;
 }
 
@@ -116,7 +116,7 @@ body {
   flex: 1;
 }
 
-/* Título */
+/* Titulo */
 .hero-text h1 {
   font-size: 3.5rem;
 
@@ -130,7 +130,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* Botón */
+/* Boton */
 .hero-text button {
   padding: 14px 30px;
 
@@ -147,7 +147,7 @@ body {
   transition: 0.3s;
 }
 
-/* Hover botón */
+/* Hover boton */
 .hero-text button:hover {
   background-color: #1d4ed8;
 }
@@ -189,7 +189,7 @@ body {
   padding: 80px 10%;
 }
 
-/* Título sección */
+/* Titulo seccion */
 .cards-section h2 {
   text-align: center;
 
@@ -209,13 +209,13 @@ body {
   /* Espacio entre tarjetas */
   gap: 25px;
 
-  /* Permite múltiples líneas */
+  /* Permite multiples lineas */
   flex-wrap: wrap;
 
   /* Centra horizontalmente */
   justify-content: center;
 
-  /* Alinea líneas flex verticalmente */
+  /* Alinea lineas flex verticalmente */
   align-content: center;
 }
 
@@ -248,7 +248,7 @@ body {
    FLEX GROW
 ========================= */
 
-/* Esta card crece más */
+/* Esta card crece mas */
 .card-grow {
   flex-grow: 2;
 }
@@ -266,7 +266,7 @@ body {
    ALIGN SELF
 ========================= */
 
-/* Alineación individual */
+/* Alineacion individual */
 .card-align {
   align-self: flex-end;
 }
@@ -275,7 +275,7 @@ body {
    FLEX BASIS
 ========================= */
 
-/* Tamaño inicial flexible */
+/* Tamano inicial flexible */
 .card-basis {
   flex-basis: 350px;
 }
@@ -353,7 +353,7 @@ body {
 }
 
 /* =========================
-   DESCRIPCIÓN
+   DESCRIPCION
 ========================= */
 
 .footer-description {
@@ -361,7 +361,7 @@ body {
 }
 
 /* =========================
-   FILOSOFÍA
+   FILOSOFIA
 ========================= */
 
 .footer-phrase {
@@ -432,7 +432,7 @@ body {
     flex-direction: column;
   }
 
-  /* Título responsive */
+  /* Titulo responsive */
   .hero-text h1 {
     font-size: 2.5rem;
   }
