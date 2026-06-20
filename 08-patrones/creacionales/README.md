@@ -5,6 +5,7 @@ Ejercicios sobre patrones orientados a controlar la creacion de objetos.
 ## Contenido
 
 - `builder`: construccion paso a paso de objetos.
+- `abstract-factory`: creacion de familias de componentes relacionados.
 - `factory`: creacion de familias de objetos sin acoplar el cliente a clases concretas.
 - `prototype`: clonacion de objetos base.
 - `singleton`: control de una unica instancia compartida.

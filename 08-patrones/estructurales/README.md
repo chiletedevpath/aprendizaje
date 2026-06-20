@@ -6,6 +6,8 @@ Ejercicios sobre patrones orientados a organizar relaciones entre clases, objeto
 
 - `adapter`: adaptacion entre interfaces incompatibles.
 - `facade`: simplificacion de acceso a un conjunto de subsistemas.
+- `java/adapter/servicio-email`: caso practico de adaptacion de un servicio de correo.
+- `java/facade/subsistemas-juego`: caso practico de fachada para subsistemas de juego.
 - `spring-boot`: ejemplos aplicados en proyectos Spring Boot.
 
 ## Proposito

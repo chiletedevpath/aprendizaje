@@ -12,7 +12,7 @@ Comprender como los principios y patrones ayudan a organizar codigo, reducir aco
 2. Continuar con `creacionales` para estudiar formas de crear objetos.
 3. Avanzar a `estructurales` para entender adaptacion, composicion y simplificacion de subsistemas.
 4. Revisar `practica-integrada` para observar combinaciones de principios y patrones.
-5. Mantener `evaluaciones` solo como evidencia academica, no como material comunitario directo.
+5. Usar los casos practicos como refuerzo tecnico antes de crear guias para comunidad.
 
 ## Contenido actual
 
@@ -22,19 +22,18 @@ Comprender como los principios y patrones ayudan a organizar codigo, reducir aco
 | `creacionales` | Builder, Factory, Prototype y Singleton. |
 | `estructurales` | Adapter y Facade. |
 | `practica-integrada` | Casos que combinan principios SOLID y patrones. |
-| `evaluaciones` | Practicas calificadas y evaluaciones academicas. |
 
 ## Convencion
 
 - `java`: ejercicios de clase, laboratorio o practica tecnica.
 - `spring-boot`: ejemplos implementados como proyectos Spring Boot.
-- `evaluaciones`: contenido de evidencia academica; no debe publicarse como banco de ejercicios para comunidad sin adaptacion.
+- `casos-practicos`: ejercicios reorganizados por concepto para reforzar principios y patrones sin formato de actividad academica.
 
 ## Criterio Chilete DevPath
 
 Los ejemplos generales pueden alimentar futuras guias si se convierten en casos propios con explicacion del problema, patron aplicado, decision de diseno y resultado.
 
-Las evaluaciones no deben usarse en la web como bloque completo. Si algun ejercicio se reutiliza, debe transformarse en un caso original de Chilete DevPath, redactado con palabras propias y sin exponer formato de evaluacion.
+Los casos practicos pueden reutilizarse en la web solo si se convierten en guias originales de Chilete DevPath, con enunciado propio, explicacion tecnica y contexto de aprendizaje.
 
 ## Autoria y fuentes
 

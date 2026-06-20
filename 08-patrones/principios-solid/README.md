@@ -6,6 +6,7 @@ Ejercicios sobre principios de diseno orientado a objetos.
 
 - `b_ocp`: principio abierto/cerrado.
 - `c_lsp`: principio de sustitucion de Liskov.
+- `casos-practicos`: ejercicios reorganizados por problema de diseno.
 
 ## Proposito
 
