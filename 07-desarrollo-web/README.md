@@ -17,8 +17,9 @@ Comprender como se construye una pagina web desde sus bases: contenido, presenta
 1. Revisar `html` para practicar estructura de documentos.
 2. Continuar con `css` para aplicar estilos y maquetacion.
 3. Explorar `practica-ui` para ejercicios visuales pequenos.
-4. Usar `javascript` como espacio para futuras practicas de comportamiento en navegador.
-5. Avanzar a `php` para conectar formularios y procesamiento basico del lado del servidor.
+4. Revisar `frontend-retos` como practicas integradas de HTML, CSS y JavaScript inicial.
+5. Usar `javascript` como espacio para futuras practicas de comportamiento en navegador.
+6. Avanzar a `php` para conectar formularios y procesamiento basico del lado del servidor.
 
 ## Contenido actual
 
@@ -26,6 +27,7 @@ Comprender como se construye una pagina web desde sus bases: contenido, presenta
 |---|---|
 | `html` | Estructura de paginas y plantilla academica de CV web con datos ficticios. |
 | `css` | Aplicacion de propiedades CSS3 y maquetacion visual. |
+| `frontend-retos` | Retos pequenos de frontend desarrollados como practica formativa de Tecsup. |
 | `javascript` | Espacio reservado para ejercicios de interaccion en navegador. |
 | `php` | Formularios, ciclos, arreglos y procesamiento inicial con PHP. |
 | `practica-ui` | Ejercicios pequenos de interfaz y layout. |
