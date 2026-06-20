@@ -1,6 +1,6 @@
 public class BusquedaBinaria {
 
-	// METODO DE ORDENAMIENTO POR INSERCIÓN
+	// Ordena el arreglo con insercion directa.
 	static void ordenamientoPorInsercion(int[] arreglo) {
 		for (int i = 1; i < arreglo.length; i++) {
 			int valorActual = arreglo[i];
@@ -13,16 +13,16 @@ public class BusquedaBinaria {
 		}
 	}
 
-	// MÉTODO DE BÚSQUEDA BINARIA
+	// Busca una clave dividiendo el rango de busqueda.
 	static int busquedaBinaria(int[] arreglo, int clave, int inicio, int fin) {
 		if (inicio > fin) {
-			return -1; // NO FUE ENCONTRADO
+			return -1;
 		}
 
 		int medio = inicio + (fin - inicio) / 2;
 
 		if (arreglo[medio] == clave) {
-			return medio; // FUE ENCONTRADO
+			return medio;
 		} else if (arreglo[medio] > clave) {
 			return busquedaBinaria(arreglo, clave, inicio, medio - 1);
 		} else {
@@ -33,15 +33,14 @@ public class BusquedaBinaria {
 	public static void main(String[] args) {
 		int[] valores = { 19, 14, 12, 22, 9, 25, 8, 27, 5, 28, 7, 33, 4, 37, 17, 2 };
 
-		System.out.println("EJERCICIO 02:");
-		System.out.println("ORDENAMIENTO POR INSERCIÓN + BÚSQUEDA BINARIA\n");
+		System.out.println("Ejercicio 02:");
+		System.out.println("Ordenamiento por insercion + busqueda binaria\n");
 
 		System.out.print("Arreglo original: ");
 		for (int num : valores) {
 			System.out.print(num + " ");
 		}
 
-		// SE ORDENA EL ARREGLO
 		ordenamientoPorInsercion(valores);
 
 		System.out.print("\nArreglo ordenado: ");
@@ -49,15 +48,13 @@ public class BusquedaBinaria {
 			System.out.print(num + " ");
 		}
 
-		// SE BUSCA EL 22
 		int clave = 22;
 		int posicion = busquedaBinaria(valores, clave, 0, valores.length - 1);
 
-		// MOSTRAR RESULTADOS
 		if (posicion != -1) {
-			System.out.println("\n\nEl número " + clave + " se encuentra en la posición: " + posicion);
+			System.out.println("\n\nEl numero " + clave + " se encuentra en la posicion: " + posicion);
 		} else {
-			System.out.println("\n\nEl número " + clave + " NO se encuentra en el arreglo.");
+			System.out.println("\n\nEl numero " + clave + " no se encuentra en el arreglo.");
 		}
 	}
 }

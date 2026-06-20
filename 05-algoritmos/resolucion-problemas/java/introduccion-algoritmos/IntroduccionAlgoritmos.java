@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class IntroduccionAlgoritmos {
 
-	// DISEÑAR UN ALGORITMO PARA DETERMINAR SI UN NUMERO ES PRIMO
-
+	// Determina si un numero es primo.
 	public static void main(String[] args) {
 
 		try (Scanner teclado = new Scanner(System.in)) {
@@ -17,7 +16,6 @@ public class IntroduccionAlgoritmos {
 				boolean esPrimo = true;
 
 				for (int i = 2; i <= Math.sqrt(numero); i++) {
-
 					if (numero % i == 0) {
 						esPrimo = false;
 						break;
@@ -28,10 +26,8 @@ public class IntroduccionAlgoritmos {
 					System.out.println("\nEl numero " + numero + " si es primo");
 				} else {
 					System.out.println("\nEl numero " + numero + " no es primo");
-
 				}
 			}
-
 		}
 	}
 }

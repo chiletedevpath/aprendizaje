@@ -6,7 +6,7 @@ public class ShellSort {
 
 		try (Scanner teclado = new Scanner(System.in)) {
 
-			System.out.println("IMPLEMENTACION DEL METODO SHELL SORT\n");
+			System.out.println("Implementacion del metodo Shell Sort\n");
 
 			System.out.print("Ingrese la cantidad de numeros a ordenar: ");
 			int cantidadNumeros = teclado.nextInt();
@@ -36,16 +36,15 @@ public class ShellSort {
 					System.out.print(", ");
 				}
 			}
-
 		}
 	}
 
 	static void metodoShell(int[] serieIngresada) {
-		int tamañoSerie = serieIngresada.length;
-		int salto = tamañoSerie / 2;
+		int tamanoSerie = serieIngresada.length;
+		int salto = tamanoSerie / 2;
 
 		while (salto > 0) {
-			for (int i = salto; i < tamañoSerie; i++) {
+			for (int i = salto; i < tamanoSerie; i++) {
 				int valorTemporal = serieIngresada[i];
 				int j = i;
 
