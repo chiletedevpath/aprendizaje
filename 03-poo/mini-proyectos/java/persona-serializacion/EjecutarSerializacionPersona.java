@@ -1,4 +1,4 @@
-﻿import java.io.*;
+import java.io.*;
 
 //ESTA CLASE CONTIENE EL METODO MAIN, DONDE REALIZO
 //LA SERIALIZACION Y LA DESERIALIZACION DEL OBJETO PERSONA.
@@ -6,7 +6,7 @@ public class EjecutarSerializacionPersona {
 
 	public static void main(String[] args) {
 
-		// AQUI CREO EL OBJETO PERSONA CON MIS DATOS PERSONALES.
+		// Crea una persona con datos ficticios para practicar serializacion.
 		PersonaSerial persona = new PersonaSerial("NOMBRE", "EJEMPLO", "00000000", "MASCULINO",
 				"INGENIERIA DE SISTEMAS E INFORMATICA");
 

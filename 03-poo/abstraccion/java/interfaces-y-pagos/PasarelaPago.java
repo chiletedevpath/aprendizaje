@@ -1,6 +1,6 @@
 package poo.abstraccion.pagos;
 
-public interface CoreTicketMaster {
+public interface PasarelaPago {
     void pagar(double monto);
 }
 

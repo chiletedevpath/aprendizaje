@@ -9,3 +9,5 @@ node_modules/
 # Archivos temporales locales
 *.log
 *.tmp
+*.class
+*.dat

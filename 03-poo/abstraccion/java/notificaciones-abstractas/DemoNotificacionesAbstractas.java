@@ -8,11 +8,11 @@ public class DemoNotificacionesAbstractas {
         List<Notificacion> notificaciones = new ArrayList<>();
 
         // Cada subclase implementa el envio manteniendo una interfaz comun.
-        notificaciones.add(new NotificacionWSP("Sistema WSP"));
-        notificaciones.add(new NotificacionEmail("Sistema EMAIL"));
-        notificaciones.add(new NotificacionSMS("Sistema SMS"));
+        notificaciones.add(new NotificacionMensajeria("Canal instantaneo"));
+        notificaciones.add(new NotificacionEmail("Canal email"));
+        notificaciones.add(new NotificacionSMS("Canal SMS"));
 
-        for(Notificacion lista: notificaciones){
+        for (Notificacion lista : notificaciones) {
             lista.enviar("Mensaje 1");
         }
     }

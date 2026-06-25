@@ -37,6 +37,23 @@ Antes de iniciar este modulo, conviene poder:
 - `mini-proyectos`: ejercicios integradores.
 - `uml`: diagramas de clases y modelado.
 
+## Material de apoyo
+
+- `glosario.md`: terminos esenciales de POO explicados desde la practica.
+- `ejercicios-comunidad.md`: retos propuestos para practicar modelado y codigo.
+
+## Organizacion interna
+
+| Tema | Contenido principal |
+|---|---|
+| `clases-objetos` | Clases simples, objetos, constructores, genericos y enumeraciones. |
+| `encapsulamiento` | Atributos privados, metodos de acceso y validaciones internas. |
+| `herencia` | Jerarquias basicas entre personas, clientes, empleados y roles. |
+| `abstraccion` | Clases abstractas, interfaces, pagos y notificaciones genericas. |
+| `polimorfismo` | Figuras, publicaciones y notificaciones tratadas desde contratos comunes. |
+| `mini-proyectos` | Ejercicios integradores con comprobantes, listas, serializacion y juego simple. |
+| `uml` | Diagramas de clases como apoyo visual para conectar modelado y codigo. |
+
 ## Ruta sugerida
 
 1. Empieza con `clases-objetos`.

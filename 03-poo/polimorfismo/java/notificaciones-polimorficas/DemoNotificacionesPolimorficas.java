@@ -9,11 +9,11 @@ public class DemoNotificacionesPolimorficas {
 
         notificaciones.add(new Email());
         notificaciones.add(new SMS());
-        notificaciones.add(new WhatsApp());
+        notificaciones.add(new MensajeriaInstantanea());
 
         // El mismo mensaje se procesa con diferentes implementaciones.
-        for (Notificacion n : notificaciones){
-            n.enviar("Hola, este es una notificacion importante");
+        for (Notificacion n : notificaciones) {
+            n.enviar("Hola, esta es una notificacion importante");
         }
     }
 }
