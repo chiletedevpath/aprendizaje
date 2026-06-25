@@ -1,13 +1,13 @@
 package edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones;
 
-import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter.AdaptadorWhatsApp;
+import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter.AdaptadorMensajeria;
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter.Notificador;
-import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter.ServicioWhatsAppExterno;
+import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter.ServicioMensajeriaExterno;
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.model.Pedido;
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.observer.ObservadorCliente;
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.observer.ObservadorLog;
+import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.observer.ObservadorMensajeria;
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.observer.ObservadorPedido;
-import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.observer.ObservadorWhatsApp;
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.service.GestorPedidos;
 
 public class Principal {
@@ -22,13 +22,13 @@ public class Principal {
         ObservadorPedido cliente = new ObservadorCliente();
 
         // Adapta el servicio externo al contrato interno de notificacion.
-        ServicioWhatsAppExterno servicioExterno = new ServicioWhatsAppExterno();
-        Notificador adaptador = new AdaptadorWhatsApp(servicioExterno);
-        ObservadorPedido whatsapp = new ObservadorWhatsApp(adaptador);
+        ServicioMensajeriaExterno servicioExterno = new ServicioMensajeriaExterno();
+        Notificador adaptador = new AdaptadorMensajeria(servicioExterno);
+        ObservadorPedido mensajeria = new ObservadorMensajeria(adaptador);
 
         gestor.agregarObservador(log);
         gestor.agregarObservador(cliente);
-        gestor.agregarObservador(whatsapp);
+        gestor.agregarObservador(mensajeria);
 
         Pedido pedido1 = new Pedido(1, "Chilete DevPath", 150.00);
         Pedido pedido2 = new Pedido(2, "Comunidad DevPath", 220.50);

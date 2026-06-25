@@ -3,11 +3,11 @@ package edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaci
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.adapter.Notificador;
 import edu.pe.utp.patrones_diseno.casos_integradores.gestion_pedidos_notificaciones.model.Pedido;
 
-public class ObservadorWhatsApp implements ObservadorPedido{
+public class ObservadorMensajeria implements ObservadorPedido {
 
     private final Notificador notificador;
 
-    public ObservadorWhatsApp(Notificador notificador) {
+    public ObservadorMensajeria(Notificador notificador) {
         this.notificador = notificador;
     }
 

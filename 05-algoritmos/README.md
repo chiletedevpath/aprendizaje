@@ -6,6 +6,30 @@ Esta seccion organiza ejercicios de aprendizaje sobre busqueda, ordenamiento, re
 
 Desarrollar criterio algoritmico: entender el problema, elegir una estrategia, implementar una solucion y revisar su comportamiento con datos de prueba.
 
+## Publico objetivo
+
+Este modulo esta dirigido a:
+
+- estudiantes que ya practican estructuras de datos;
+- personas que necesitan comparar estrategias de busqueda y ordenamiento;
+- miembros de la comunidad Chilete DevPath que quieren resolver problemas con criterio;
+- estudiantes que buscan pasar de "hacer que funcione" a analizar como funciona.
+
+## Prerrequisitos recomendados
+
+Antes de iniciar este modulo, conviene poder:
+
+- recorrer arreglos y listas;
+- usar metodos y recursion basica;
+- interpretar indices, condiciones y ciclos;
+- probar soluciones con casos normales y casos limite;
+- explicar por que una estrategia funciona.
+
+## Material de apoyo
+
+- `glosario.md`: terminos esenciales de analisis y estrategias algoritmicas.
+- `ejercicios-comunidad.md`: retos propuestos para practicar busqueda, ordenamiento, recursion y resolucion de problemas.
+
 ## Ruta sugerida
 
 1. Revisar `busqueda` para comparar busqueda lineal y binaria.
@@ -21,6 +45,17 @@ Desarrollar criterio algoritmico: entender el problema, elegir una estrategia, i
 | `ordenamiento` | Mezcla directa, fusion natural, Shell Sort y Fibonacci. |
 | `recursion` | Recursion basica, backtracking, laberinto, ocho reinas y recorrido del caballo. |
 | `resolucion-problemas` | Organizacion secuencial, indices, bloques y archivos indexados. |
+
+## Criterio de avance
+
+Este modulo se considera logrado cuando puedes:
+
+- comparar busqueda lineal y binaria;
+- explicar por que algunos algoritmos requieren datos ordenados;
+- implementar un ordenamiento y describir sus pasos;
+- reconocer un caso base en recursion;
+- identificar cuando un problema necesita backtracking;
+- justificar la estrategia usada antes de escribir codigo.
 
 ## Criterio Chilete DevPath
 

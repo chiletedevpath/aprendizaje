@@ -6,6 +6,30 @@ Esta seccion organiza practicas sobre principios SOLID, patrones de diseno y cas
 
 Comprender como los principios y patrones ayudan a organizar codigo, reducir acoplamiento, mejorar extensibilidad y resolver problemas comunes de diseno de software.
 
+## Publico objetivo
+
+Este modulo esta dirigido a:
+
+- estudiantes que ya trabajan POO y estructuras de datos;
+- personas que quieren entender patrones sin memorizarlos;
+- miembros de la comunidad Chilete DevPath que buscan mejorar criterio de diseno;
+- estudiantes que quieren preparar proyectos con mejor organizacion tecnica.
+
+## Prerrequisitos recomendados
+
+Antes de iniciar este modulo, conviene poder:
+
+- crear clases, interfaces y jerarquias simples;
+- explicar encapsulamiento, herencia, abstraccion y polimorfismo;
+- reconocer responsabilidades dentro de una clase;
+- detectar duplicacion o acoplamiento excesivo;
+- leer un flujo de clases relacionadas.
+
+## Material de apoyo
+
+- `glosario.md`: terminos esenciales de principios y patrones.
+- `ejercicios-comunidad.md`: retos propuestos para practicar decisiones de diseno.
+
 ## Ruta sugerida
 
 1. Revisar `principios-solid` para reforzar bases de diseno orientado a objetos.
@@ -23,6 +47,17 @@ Comprender como los principios y patrones ayudan a organizar codigo, reducir aco
 | `estructurales` | Adapter y Facade. |
 | `casos-integradores` | Casos que combinan principios SOLID y patrones en un flujo completo. |
 
+## Criterio de avance
+
+Este modulo se considera logrado cuando puedes:
+
+- explicar que problema resuelve un patron;
+- justificar por que aplicar o no aplicar un patron;
+- diferenciar principios SOLID de patrones de diseno;
+- reconocer acoplamiento, cohesion y responsabilidad unica;
+- adaptar un ejemplo sin copiar nombres de marcas externas;
+- convertir un caso en una guia propia con decision tecnica.
+
 ## Convencion
 
 - `java`: ejercicios de clase, laboratorio o practica tecnica.
@@ -35,6 +70,8 @@ Comprender como los principios y patrones ayudan a organizar codigo, reducir aco
 Los ejemplos generales pueden alimentar futuras guias si se convierten en casos propios con explicacion del problema, patron aplicado, decision de diseno y resultado.
 
 Los casos practicos pueden reutilizarse en la web solo si se convierten en guias originales de Chilete DevPath, con enunciado propio, explicacion tecnica y contexto de aprendizaje.
+
+Evitar nombres de marcas externas cuando no sean necesarios. Para canales de mensajes, pagos o servicios de terceros, usar nombres genericos como `MensajeriaExterna`, `PasarelaPago` o `ServicioExterno`.
 
 ## Autoria y fuentes
 
