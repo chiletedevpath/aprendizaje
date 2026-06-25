@@ -37,6 +37,11 @@ Antes de iniciar este modulo, conviene poder:
 - `cadenas`: manipulacion de texto.
 - `arreglos`: arreglos, matrices y recorridos.
 
+## Material de apoyo
+
+- `glosario.md`: terminos esenciales para estudiar los ejercicios.
+- `ejercicios-comunidad.md`: banco breve de retos propuestos para practicar por tema.
+
 ## Organizacion interna
 
 Algunas carpetas tienen subcarpetas por lenguaje o tipo de practica:
@@ -44,8 +49,11 @@ Algunas carpetas tienen subcarpetas por lenguaje o tipo de practica:
 | Tema | Contenido principal |
 |---|---|
 | `variables` | Calculos basicos y entrada/salida en Java. |
+| `tipos-datos` | Tipos primitivos, conversiones, casting y representacion de datos. |
 | `condicionales` | Decisiones basicas, juegos simples, `switch` y operador ternario. |
 | `bucles` | Ejercicios introductorios, bucles basicos, series numericas y validaciones. |
+| `funciones` | Metodos para separar operaciones, validaciones y conversiones. |
+| `cadenas` | Busqueda, normalizacion, validacion y reportes con `String`. |
 | `arreglos` | Arreglos basicos, arreglos paralelos, matrices, metodos y utilidades de arrays. |
 
 ## Ruta sugerida

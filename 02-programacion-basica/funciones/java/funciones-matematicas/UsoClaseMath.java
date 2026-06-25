@@ -44,7 +44,7 @@ public class UsoClaseMath {
 			} else {
 				System.out.println("No es numero positivo");
 			}
-			promedio = Math.round(numberOne + numberTwo / 2);
+			promedio = Math.round((numberOne + numberTwo) / 2);
 			System.out.printf("El promedio redondeado de %.2f y %.2f es %.2f", numberOne, numberTwo, promedio);
 		}
 	}
