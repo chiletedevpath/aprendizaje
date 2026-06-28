@@ -1,11 +1,8 @@
 # Aprendizaje
 
-Repositorio para organizar ejercicios, prácticas, laboratorios y apuntes de programación como una ruta progresiva de aprendizaje.
+Ruta práctica de Chilete DevPath para aprender programación paso a paso: primero entender, luego practicar, después construir y finalmente publicar con criterio.
 
-Este espacio está pensado para dos objetivos:
-
-- Registrar mi avance técnico de forma ordenada.
-- Crear contenido útil para estudiantes y comunidad: ejercicios propuestos, ejercicios resueltos, laboratorios y guías breves.
+Este repositorio reúne ejercicios, laboratorios, glosarios y guías breves que ayudan a estudiar desde fundamentos hasta temas cercanos a producción. La idea no es acumular carpetas, sino dejar material que pueda revisarse, resolverse y reutilizarse con orden.
 
 ## Estructura
 
@@ -20,14 +17,19 @@ Este espacio está pensado para dos objetivos:
 - `08-patrones`: principios SOLID y patrones de diseño.
 - `09-backend`: prácticas de backend y Spring Boot.
 - `10-frontend`: prácticas enfocadas en frontend moderno.
+- `11-publicacion-y-produccion`: publicación, despliegue, configuración segura y checklist antes de mostrar un proyecto.
 
-## Criterio
+## Cómo usar esta ruta
 
-Este repositorio guarda contenido de aprendizaje. Los proyectos académicos completos o entregables deben vivir en repositorios independientes o registrarse en `academia`.
+1. Empieza por la carpeta que corresponda a tu nivel actual.
+2. Lee el README del módulo para entender qué se practica.
+3. Resuelve primero los ejercicios propuestos cuando existan.
+4. Revisa los ejercicios resueltos después de intentarlo.
+5. Usa glosarios y guías como apoyo, no como reemplazo de la práctica.
 
-## Formato recomendado por módulo
+## Contenido esperado por módulo
 
-Cada módulo puede crecer con esta estructura cuando el contenido lo necesite:
+Cada módulo puede crecer con esta estructura solo cuando el contenido lo justifique:
 
 - `README.md`: objetivo del módulo, temas y criterio de avance.
 - `ejercicios-propuestos/`: problemas para resolver sin mirar la solución.
@@ -35,7 +37,7 @@ Cada módulo puede crecer con esta estructura cuando el contenido lo necesite:
 - `laboratorios/`: prácticas integradoras.
 - `notas/`: apuntes breves cuando aporten contexto.
 
-No todos los módulos necesitan todas las carpetas desde el inicio. La estructura debe crecer según el contenido real.
+No todos los módulos necesitan todas las carpetas. Si una carpeta no aporta contenido real, no se crea.
 
 ## Ruta sugerida
 
@@ -50,6 +52,7 @@ No todos los módulos necesitan todas las carpetas desde el inicio. La estructur
 9. Principios SOLID y patrones de diseño.
 10. Backend.
 11. Frontend moderno.
+12. Publicación y producción básica.
 
 ## Relación con otros repositorios
 

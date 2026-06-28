@@ -63,21 +63,17 @@ Este modulo se considera logrado cuando puedes:
 - probar servicios con casos normales y casos limite;
 - explicar cuando una integracion externa no debe publicarse sin revision legal o contractual.
 
-## Criterio Chilete DevPath
+## Buenas prácticas del módulo
 
-Los proyectos backend pueden exponer configuraciones sensibles si no se revisan correctamente. En este repositorio los valores actuales deben mantenerse como variables de entorno o placeholders seguros.
+En backend no basta con que un endpoint responda. También debes cuidar configuración, errores y datos de prueba:
 
-Antes de publicar contenido en una futura web, se debe revisar:
+- usa variables de entorno para tokens, claves y contraseñas;
+- evita subir credenciales en `application.properties`;
+- separa controladores, servicios, repositorios y modelos;
+- maneja errores sin mostrar información interna;
+- usa datos ficticios cuando el ejercicio necesite nombres, documentos o correos;
+- revisa las condiciones de uso si consumes una API externa.
 
-- historial Git;
-- tokens o claves que pudieron existir antes;
-- archivos `application.properties`;
-- integraciones externas;
-- datos personales usados como entrada de prueba;
-- condiciones de uso de APIs externas.
+## Autoría y fuentes
 
-Los proyectos que consulten servicios externos, documentos o datos personales deben publicarse solo como practica tecnica y sin tokens reales. Si un proveedor tiene terminos de uso restrictivos, el contenido debe quedar como referencia local o explicarse sin exponer llamadas reales.
-
-## Autoria y fuentes
-
-El contenido corresponde a ejercicios desarrollados por Adrian Pisco durante su proceso de aprendizaje. Si algun ejercicio futuro se adapta desde una fuente externa, debe indicarse la referencia antes de publicarlo.
+El contenido corresponde a ejercicios desarrollados por Adrián Pisco durante su proceso de aprendizaje. Si algún ejercicio futuro se adapta desde una fuente externa, debe indicarse la referencia.
