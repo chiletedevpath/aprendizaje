@@ -1,130 +1,159 @@
 # Ejercicios Resueltos
 
-Las soluciones no buscan ser la única respuesta correcta. Su objetivo es mostrar una forma clara de razonar.
+Estas respuestas muestran un enfoque posible. Compáralas con tu razonamiento: una redacción diferente también puede ser válida si respeta el problema y justifica sus decisiones.
 
-## Nota de autoría
+## Solución 1: Del dato a la información
 
-Soluciones creadas para Chilete DevPath con apoyo de IA para estructuración y redacción, a partir de los ejercicios propuestos de este módulo. La revisión editorial final corresponde a Adrian Pisco.
+Los valores no indican qué representan, por eso todavía son datos sin contexto.
 
-## Solución 1: Entrada, proceso y salida
+Contexto posible: notas de cinco prácticas de un curso con escala de 0 a 20.
 
-Actividad: calcular el costo de una compra.
-
-- Entrada: precio de cada producto y cantidad comprada.
-- Proceso: multiplicar precio por cantidad y sumar los resultados.
-- Salida: total a pagar.
-
-Aprendizaje: casi todo programa puede explicarse como entrada, proceso y salida.
-
-## Solución 2: Pasos para resolver un problema
-
-Problema: calcular gasto semanal según gasto diario promedio.
-
-Pasos:
-
-1. Identificar el gasto diario promedio.
-2. Identificar que una semana tiene 7 días.
-3. Multiplicar gasto diario por 7.
-4. Mostrar el gasto semanal.
-
-Fórmula:
+Información obtenida:
 
 ```txt
-gasto_semanal = gasto_diario * 7
+promedio = (12 + 18 + 15 + 10 + 20) / 5 = 15
 ```
 
-Aprendizaje: antes de programar, conviene identificar la regla principal del problema.
+Decisión posible: el promedio es aprobatorio si la nota mínima es 13.
 
-## Solución 3: Casos de prueba
+La decisión solo es válida después de conocer la escala y la regla de aprobación.
 
-- Caso normal: gasto diario 10, resultado esperado 70.
-- Caso con gasto cero: gasto diario 0, resultado esperado 0.
-- Caso inválido: gasto diario -5, debe rechazarse porque el gasto no puede ser negativo.
+## Solución 2: Delimitar una necesidad
 
-Aprendizaje: probar solo el caso normal no es suficiente.
+Preguntas posibles:
 
-## Solución 4: Nombre profesional de carpetas
+- ¿Qué actividades necesita organizar?
+- ¿Qué problema ocurre con el método actual?
+- ¿Con qué frecuencia olvida o retrasa una actividad?
+- ¿Necesita fechas, prioridades o recordatorios?
+- ¿Usará la solución una sola persona?
 
-Nombres recomendados:
+Necesidad delimitada:
 
-- `variables-basicas`
-- `condicionales-simples`
-- `bucles-basicos`
-- `arreglos-introduccion`
-- `poo-clases-objetos`
+> Un estudiante registra tareas en mensajes y notas separadas, por lo que pierde fechas importantes. Necesita consultar sus tareas por curso, fecha límite y estado. La primera versión permitirá registrar y ordenar tareas, pero no enviará recordatorios automáticos.
 
-Aprendizaje: el nombre de una carpeta debe explicar su contenido sin abrirla.
+La nueva versión permite reconocer el problema, el objetivo y el alcance inicial.
 
-## Solución 5: Bitácora breve
+## Solución 3: Requisitos y límites
 
-Ejemplo:
+1. **Requisito:** registrar la fecha es una capacidad esperada.
+2. **Regla:** la disponibilidad determina si el préstamo se autoriza.
+3. **Restricción de alcance:** las notificaciones quedan fuera de la primera versión.
+4. **Supuesto:** se acepta temporalmente que los códigos ya existen y son únicos.
 
-```md
-## Tema practicado
+Un supuesto debería comprobarse antes de depender de él en una solución real.
 
-Entrada, proceso y salida.
+## Solución 4: Descomponer una reserva
 
-## Qué intenté hacer
+Partes posibles:
 
-Separar un problema cotidiano en datos de entrada, pasos de proceso y resultado final.
+1. Identificar a la persona.
+2. Elegir especialidad o tipo de atención.
+3. Consultar profesionales disponibles.
+4. Consultar fechas y horarios.
+5. Seleccionar un horario.
+6. Verificar que continúe disponible.
+7. Registrar la reserva.
+8. Mostrar la confirmación.
 
-## Error encontrado
+La confirmación depende de que el horario siga disponible. La falta de datos de la persona, un horario ocupado o una fecha inválida pueden impedir la reserva.
 
-Al inicio confundí proceso con salida.
+## Solución 5: Elegir lo relevante
 
-## Cómo lo corregí
+Necesarios:
 
-Revisé qué acción transforma los datos y qué resultado se obtiene al final.
+- peso;
+- destino;
+- tipo de entrega.
 
-## Aprendizaje
+Posiblemente necesarios:
 
-La salida no es el cálculo; la salida es el resultado que se muestra.
-```
+- dimensiones;
+- nivel de urgencia.
 
-Aprendizaje: documentar ayuda a reconocer qué se corrigió.
+Irrelevantes para el cálculo planteado:
 
-## Solución 6: Lectura de errores
+- color de la caja;
+- nombre de quien preparó el paquete.
 
-Error:
+Falta conocer las tarifas y reglas aplicables. Sin ellas no se puede afirmar qué dato determina el precio.
+
+## Solución 6: Entrada, proceso y salida
+
+- Entradas: tres notas y nota mínima aprobatoria.
+- Validaciones: todas las notas deben existir y pertenecer al rango permitido.
+- Proceso: sumar las tres notas, dividir entre tres y comparar el promedio con la nota mínima.
+- Salida: promedio y condición de aprobado o no aprobado.
+- Reglas: la aprobación ocurre cuando el promedio alcanza la nota mínima.
+- Supuesto por confirmar: las tres notas tienen el mismo peso.
+
+Si las notas tuvieran porcentajes distintos, el proceso tendría que cambiar.
+
+## Solución 7: Diseñar casos de prueba
+
+| Tipo | Entrada | Resultado esperado |
+|---|---:|---|
+| Normal | S/ 125 | Envío gratuito |
+| Normal | S/ 80 | Envío con costo |
+| Límite | S/ 100 | Envío gratuito |
+| Inválido | S/ -10 | Rechazar el total |
+| Inválido | sin valor | Solicitar o informar el dato faltante |
+
+El caso de S/ 100 comprueba el significado de “igual o mayor”.
+
+## Solución 8: Encontrar el error lógico
+
+Existe un error lógico y de secuencia. Dividir solo la primera nota no equivale a dividir la suma completa.
+
+Orden correcto:
+
+1. Obtener las tres notas.
+2. Sumar las notas.
+3. Dividir la suma entre tres.
+4. Mostrar el promedio.
+
+Caso de prueba:
 
 ```txt
-Variable no definida: total
+Notas: 12, 15, 18
+Suma: 45
+Promedio esperado: 15
 ```
 
-Posibles causas:
+## Solución 9: Revisar una solución incompleta
 
-- La variable `total` nunca fue creada.
-- El nombre fue escrito de forma distinta.
-- La variable existe, pero fuera del alcance donde se usa.
+Validaciones de datos:
 
-Primer lugar para revisar:
+- el monto debe existir;
+- debe ser numérico;
+- debe ser mayor que cero.
 
-- La línea exacta del error y las líneas cercanas.
+Reglas del negocio:
 
-Cambio inicial:
+- el saldo debe ser suficiente;
+- el monto debe respetar las denominaciones disponibles;
+- podría existir un límite diario;
+- la cuenta debe estar habilitada.
 
-- Verificar que `total` esté declarada antes de usarla.
+Resultados posibles:
 
-Aprendizaje: un error debe leerse antes de corregirse.
+- retiro aprobado;
+- saldo insuficiente;
+- monto inválido;
+- límite excedido;
+- operación no disponible.
 
-## Solución 7: Uso responsable de IA
+La secuencia original asume que todo retiro es válido y puede dejar un saldo incorrecto.
 
-Ejemplo de nota:
+## Solución 10: Explicar una práctica
 
-```md
-Nota: redacción revisada con apoyo de IA. El contenido fue comprendido y validado antes de publicarse.
-```
+Ejemplo usando el ejercicio 7:
 
-Aprendizaje: usar IA con transparencia fortalece la confianza de la comunidad.
+- Problema: decidir si una compra recibe envío gratuito.
+- Decisión: comparar el total válido con el límite de S/ 100.
+- Supuesto: el total ya está expresado en soles.
+- Dificultad: interpretar si exactamente S/ 100 recibe el beneficio.
+- Corrección: considerar la expresión “igual o mayor”.
+- Aprendizaje: un caso límite permite verificar una regla que podría interpretarse mal.
 
-## Solución 8: Bienestar durante el estudio
-
-Ejemplo de sesión de 60 minutos:
-
-- Minutos 0 a 10: leer el problema y definir entrada, proceso y salida.
-- Minutos 10 a 30: resolver dos ejercicios.
-- Minutos 30 a 35: pausa activa, estirar y descansar la vista.
-- Minutos 35 a 50: comparar con la solución y corregir.
-- Minutos 50 a 60: escribir evidencia breve.
-
-Aprendizaje: una sesión ordenada incluye práctica, revisión y descanso.
+La evidencia explica el razonamiento y la corrección; no se limita a afirmar que el ejercicio fue completado.

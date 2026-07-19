@@ -1,81 +1,80 @@
 # Laboratorios
 
-Los laboratorios son prácticas pequeñas que integran varios fundamentos. No buscan velocidad: buscan comprensión, evidencia y hábitos sostenibles.
+Los laboratorios integran los fundamentos en situaciones más completas. Cada uno debe terminar con una explicación revisable, no con código.
 
-## Recomendaciones
+## Laboratorio 1: Sistema de turnos de atención
 
-- Trabaja un laboratorio por sesión.
-- Usa `../plantilla-evidencia.md` para documentar.
-- Haz una pausa si la sesión supera 45 minutos.
-- No publiques una respuesta que no puedas explicar.
+Una oficina atiende personas por orden de llegada, pero prioriza emergencias justificadas.
 
-## Nota de autoría
+Construye un análisis que incluya:
 
-Laboratorios creados para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco.
+1. problema y objetivo;
+2. personas involucradas;
+3. datos necesarios;
+4. requisitos y reglas;
+5. restricciones y supuestos;
+6. descomposición del proceso;
+7. entrada, proceso y salida;
+8. cinco casos de prueba;
+9. posibles errores o situaciones no resueltas.
 
-## Laboratorio 1: Bitácora de aprendizaje
+### Resultado esperado
 
-Crea una bitácora personal de una práctica técnica.
+Un documento breve que permita a otra persona entender cómo debería funcionar la atención y qué preguntas todavía necesitan respuesta.
 
-Debe incluir:
+## Laboratorio 2: Revisión de una solución defectuosa
 
-- Tema practicado.
-- Problema trabajado.
-- Pasos realizados.
-- Error encontrado.
-- Cómo se corrigió.
-- Aprendizaje final.
-- Nota de autoría, si usaste IA o una fuente externa.
+Se quiere controlar el acceso a una actividad con aforo máximo de 30 personas. Alguien propone:
 
-Resultado esperado:
+1. Registrar a la persona.
+2. Aumentar el número de asistentes.
+3. Comprobar si el número es mayor que 30.
+4. Si es mayor, cancelar el registro.
 
-- Una evidencia breve y clara de tu avance.
+Analiza:
 
-## Laboratorio 2: Análisis de un ejercicio
+- qué problema tiene el orden;
+- qué ocurriría con la persona número 31;
+- qué datos deben validarse;
+- cómo evitar registros duplicados;
+- qué pasos propondrías;
+- qué casos demostrarían que la solución funciona.
 
-Elige un ejercicio de cualquier módulo futuro y documenta antes de resolverlo:
+### Resultado esperado
 
-- Entrada.
-- Proceso.
-- Salida.
-- Reglas.
-- Casos normales.
-- Casos límite.
-- Posibles errores.
+Una versión corregida de la secuencia y una tabla con casos de prueba.
 
-Resultado esperado:
+## Laboratorio 3: Propuesta de una solución pequeña
 
-- Un análisis previo que ayude a resolver con más claridad.
+Elige una situación cercana, por ejemplo:
 
-## Laboratorio 3: Mini guía para la comunidad
+- controlar préstamos personales de libros;
+- organizar tareas de estudio;
+- registrar gastos semanales;
+- llevar asistencia de un grupo pequeño.
 
-Escribe una guía breve para otra persona que está empezando.
+Desarrolla:
 
-Debe responder:
+1. descripción del problema;
+2. alcance de una primera solución;
+3. datos e información que producirá;
+4. requisitos, reglas, restricciones y supuestos;
+5. descomposición en partes;
+6. secuencia principal;
+7. escenarios normales, límite e inválidos;
+8. criterio para saber si la solución cumple su objetivo.
 
-- Qué debe hacer primero.
-- Qué error común debe evitar.
-- Cómo saber si ya entendió el tema.
-- Cuándo conviene descansar o pausar.
+### Resultado esperado
 
-La guía debe ser clara, corta y útil.
+Una especificación inicial de una página que pueda transformarse en pseudocódigo en el siguiente módulo.
 
-Resultado esperado:
+## Revisión final
 
-- Una explicación que otra persona pueda leer y aplicar.
+Antes de cerrar un laboratorio, comprueba:
 
-## Laboratorio 4: Sesión saludable de aprendizaje
-
-Diseña y ejecuta una sesión de estudio de 60 minutos.
-
-Debe incluir:
-
-- Objetivo técnico.
-- Ejercicio o práctica.
-- Pausa activa.
-- Revisión de errores.
-- Evidencia final.
-
-Resultado esperado:
-
-- Una sesión completa sin descuidar descanso ni documentación.
+- ¿El problema está delimitado?
+- ¿Las reglas fueron declaradas?
+- ¿Los pasos respetan sus dependencias?
+- ¿Los casos de prueba tienen resultado esperado?
+- ¿La explicación puede entenderla otra persona?
+- ¿Se identifican las dudas pendientes en lugar de ocultarlas?

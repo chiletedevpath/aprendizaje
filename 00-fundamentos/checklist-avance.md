@@ -1,65 +1,61 @@
 # Checklist de Avance
 
-Este checklist ayuda a revisar si ya tienes una base suficiente para pasar al módulo `01-pseudocodigo`.
+Usa esta lista después de resolver los ejercicios y al menos un laboratorio. No es necesario marcar todo en una sola sesión.
 
-No es un examen. Es una guía de autoevaluación para estudiar con honestidad y detectar qué falta reforzar.
+## Comprensión
 
-## Comprensión del problema
+- [ ] Puedo diferenciar un dato de la información que se obtiene al interpretarlo.
+- [ ] Puedo reescribir una necesidad imprecisa como un problema delimitado.
+- [ ] Puedo definir un objetivo y un resultado esperado.
+- [ ] Puedo reconocer información faltante antes de proponer una solución.
 
-- [ ] Puedo explicar un problema simple con mis propias palabras.
-- [ ] Puedo identificar qué datos entran al problema.
-- [ ] Puedo describir qué proceso transforma esos datos.
-- [ ] Puedo definir qué resultado debe obtenerse.
-- [ ] Puedo reconocer al menos un caso que podría fallar.
+## Criterio
 
-## Organización del trabajo
+- [ ] Distingo requisito, regla, restricción y supuesto.
+- [ ] Declaro los supuestos en lugar de presentarlos como hechos.
+- [ ] Puedo decidir qué detalles son relevantes para un objetivo.
+- [ ] Puedo indicar qué queda fuera del alcance de una primera solución.
 
-- [ ] Uso nombres claros para carpetas y archivos.
-- [ ] Evito nombres genéricos como `nuevo`, `prueba` o `final-final`.
-- [ ] Puedo separar ejercicios propuestos, soluciones y evidencias.
-- [ ] Puedo registrar una práctica usando `plantilla-evidencia.md`.
+## Organización de la solución
 
-## Lectura de errores
+- [ ] Puedo dividir un problema en partes pequeñas.
+- [ ] Reconozco cuándo un paso depende de otro.
+- [ ] Identifico entrada, validación, proceso y salida.
+- [ ] Ordeno una secuencia sin saltar comprobaciones necesarias.
 
-- [ ] Leo el mensaje de error antes de cambiar el código.
-- [ ] Busco archivo, línea y contexto del error.
-- [ ] Formulo una hipótesis antes de modificar.
-- [ ] Cambio una cosa a la vez para comprobar si resuelve el problema.
+## Comprobación
 
-## Ética, fuentes e IA
+- [ ] Diseño casos normales con resultado esperado.
+- [ ] Incluyo al menos un caso límite.
+- [ ] Incluyo datos inválidos o ausentes cuando corresponda.
+- [ ] Uso una prueba para demostrar una corrección.
+- [ ] Reconozco errores de comprensión, datos, lógica y secuencia.
 
-- [ ] Distingo contenido propio, adaptado y basado en fuentes externas.
-- [ ] Cito fuentes cuando uso material externo.
-- [ ] No publico evaluaciones privadas completas.
-- [ ] Declaro el apoyo de IA cuando corresponde.
-- [ ] Puedo explicar una solución sin depender de la IA.
+## Comunicación y evidencia
 
-## Bienestar
-
-- [ ] Planifico sesiones con inicio y cierre.
-- [ ] Hago pausas si estudio durante mucho tiempo.
-- [ ] Reconozco cuándo el cansancio afecta mi comprensión.
-- [ ] No trato el agotamiento como requisito para aprender.
+- [ ] Explico por qué elegí una solución.
+- [ ] Registro una dificultad y la corrección realizada.
+- [ ] Otra persona puede seguir mi razonamiento.
+- [ ] Cito una fuente externa cuando la utilizo.
+- [ ] Declaro el apoyo de IA cuando influye en el contenido publicado.
 
 ## Evidencia mínima
 
-Antes de pasar a `01-pseudocodigo`, deberías tener:
+Antes de pasar a `01-pseudocodigo`, completa:
 
-- [ ] al menos un ejercicio propuesto resuelto
-- [ ] al menos una evidencia documentada
-- [ ] al menos una comparación con una solución resuelta
-- [ ] una nota breve sobre qué aprendiste
+- [ ] los ejercicios propuestos con un primer intento propio;
+- [ ] un laboratorio documentado;
+- [ ] una comparación razonada con las soluciones;
+- [ ] una revisión final usando este checklist.
 
-## Resultado esperado
+## Señal de avance
 
-Puedes avanzar a `01-pseudocodigo` cuando seas capaz de explicar:
+Puedes continuar cuando recibas un problema sencillo y seas capaz de:
 
-- qué problema resolviste
-- cómo lo analizaste
-- qué aprendiste
-- qué corregiste
-- qué harías distinto en una siguiente práctica
+1. formular preguntas antes de asumir;
+2. delimitar qué debe resolverse;
+3. ordenar los pasos;
+4. anticipar casos que podrían fallar;
+5. explicar y revisar tu respuesta.
 
-## Nota de autoría
-
-Contenido creado para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.
+No necesitas memorizar todas las definiciones. Necesitas saber aplicarlas.

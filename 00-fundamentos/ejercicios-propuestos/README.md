@@ -1,109 +1,153 @@
 # Ejercicios Propuestos
 
-Estos ejercicios están pensados para practicar fundamentos antes de entrar a pseudocódigo y programación formal.
+Estos ejercicios permiten comprobar si puedes analizar un problema antes de escribir pseudocódigo. Responde con tus propias palabras y justifica tus decisiones.
 
-Resuélvelos primero con tus propias palabras. Luego compara tu respuesta con `ejercicios-resueltos/`.
+No revises `../ejercicios-resueltos/` hasta terminar un primer intento.
 
-## Recomendaciones
+## Bloque 1: Comprender el problema
 
-- Tiempo sugerido por sesión: 30 a 45 minutos.
-- No busques la solución antes de intentarlo.
-- Si te bloqueas, escribe qué no entiendes.
-- Haz una pausa si pierdes concentración.
-- Documenta al menos un ejercicio usando `../plantilla-evidencia.md`.
+### Ejercicio 1: Del dato a la información
 
-## Nota de autoría
-
-Ejercicios creados para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco.
-
-## Nivel 1: Comprensión básica
-
-### Ejercicio 1: Entrada, proceso y salida
-
-Elige una actividad diaria y sepárala en:
-
-- Entrada.
-- Proceso.
-- Salida.
-
-Ejemplos de actividad:
-
-- preparar una compra
-- calcular un pasaje
-- organizar una tarea
-- planificar una sesión de estudio
-
-### Ejercicio 2: Pasos para resolver un problema
-
-Describe en pasos cómo resolverías este problema:
-
-Una persona quiere calcular cuánto gastará en una semana si conoce su gasto diario promedio.
-
-No escribas código todavía. Solo explica el razonamiento.
-
-### Ejercicio 3: Casos de prueba
-
-Para el problema anterior, define tres casos:
-
-- Caso normal.
-- Caso con gasto cero.
-- Caso con un dato inválido.
-
-## Nivel 2: Organización profesional
-
-### Ejercicio 4: Nombre profesional de carpetas
-
-Propón nombres correctos para carpetas de práctica sobre:
-
-- Variables.
-- Condicionales.
-- Bucles.
-- Arreglos.
-- POO.
-
-Evita nombres como `nuevo`, `prueba`, `ejercicio-final-final` o `cosas`.
-
-### Ejercicio 5: Bitácora breve
-
-Escribe una bitácora corta de una práctica imaginaria.
-
-Debe incluir:
-
-- Tema practicado.
-- Qué intentaste hacer.
-- Qué error apareció.
-- Cómo lo corregiste.
-- Qué aprendiste.
-
-## Nivel 3: Criterio técnico inicial
-
-### Ejercicio 6: Lectura de errores
-
-Imagina que un programa muestra este error:
+Una lista contiene estos valores:
 
 ```txt
-Variable no definida: total
+12, 18, 15, 10, 20
 ```
 
 Responde:
 
-- Qué podría significar.
-- Dónde buscarías primero.
-- Qué cambio probarías.
+- ¿Por qué estos valores, sin contexto, son solo datos?
+- Agrega un contexto que permita interpretarlos.
+- Obtén una información útil a partir de ellos.
+- Indica una decisión que podría tomarse con esa información.
 
-### Ejercicio 7: Uso responsable de IA
+### Ejercicio 2: Delimitar una necesidad
 
-Imagina que usaste IA para mejorar la redacción de una explicación.
+Lee esta frase:
 
-Redacta una nota breve de autoría indicando ese apoyo.
+> Necesito una aplicación para organizarme mejor.
 
-### Ejercicio 8: Bienestar durante el estudio
+Formula al menos cinco preguntas que permitan descubrir el problema real. Después, reescribe la necesidad indicando:
 
-Diseña una sesión de estudio de 60 minutos.
+- situación actual;
+- persona afectada;
+- objetivo;
+- resultado esperado;
+- aspecto que quedará fuera de la primera solución.
 
-Debe incluir:
+### Ejercicio 3: Requisitos y límites
 
-- objetivo de la sesión
-- práctica principal
-- pausa activa
-- cierre con evidencia
+Una biblioteca desea registrar préstamos de libros. Clasifica cada afirmación como requisito, regla, restricción o supuesto:
+
+1. El sistema debe registrar la fecha del préstamo.
+2. Solo se presta un libro si existe una copia disponible.
+3. La primera versión no enviará notificaciones.
+4. Se considera que cada libro ya tiene un código único.
+
+Explica por qué elegiste cada categoría.
+
+## Bloque 2: Organizar una solución
+
+### Ejercicio 4: Descomponer una reserva
+
+Una persona quiere reservar una cita en un centro de salud.
+
+Divide el problema en partes pequeñas desde la solicitud hasta la confirmación. Identifica qué pasos dependen de otros y qué podría impedir la reserva.
+
+### Ejercicio 5: Elegir lo relevante
+
+Para calcular el precio de entrega de un paquete se conocen:
+
+- peso;
+- destino;
+- tipo de entrega;
+- color de la caja;
+- nombre de quien preparó el paquete;
+- dimensiones;
+- nivel de urgencia.
+
+Clasifica los datos en:
+
+- necesarios;
+- posiblemente necesarios;
+- irrelevantes para este cálculo.
+
+Explica qué información adicional necesitarías antes de decidir.
+
+### Ejercicio 6: Entrada, proceso y salida
+
+Analiza un sistema que determina si una persona aprueba un curso usando tres notas y una nota mínima aprobatoria.
+
+Identifica:
+
+- entradas;
+- validaciones;
+- proceso;
+- salida;
+- reglas;
+- supuesto que debería confirmarse.
+
+No escribas código ni pseudocódigo.
+
+## Bloque 3: Comprobar el razonamiento
+
+### Ejercicio 7: Diseñar casos de prueba
+
+Una tienda aplica envío gratuito cuando el total de la compra es igual o mayor a S/ 100.
+
+Propón:
+
+- dos casos normales;
+- un caso límite;
+- dos casos inválidos;
+- el resultado esperado para cada caso.
+
+### Ejercicio 8: Encontrar el error lógico
+
+Se propone esta secuencia para calcular el promedio de tres notas:
+
+1. Dividir la primera nota entre tres.
+2. Sumar las otras dos notas.
+3. Mostrar el resultado.
+
+Responde:
+
+- ¿Qué tipo de error existe?
+- ¿Por qué la secuencia no representa el cálculo correcto?
+- ¿Cómo debería ordenarse?
+- ¿Con qué caso de prueba demostrarías la corrección?
+
+### Ejercicio 9: Revisar una solución incompleta
+
+Una solución para retirar dinero de un cajero indica:
+
+1. Leer el monto solicitado.
+2. Restar el monto del saldo.
+3. Entregar el dinero.
+
+Identifica al menos cuatro condiciones que faltan. Diferencia entre validaciones de datos, reglas del negocio y posibles resultados.
+
+## Bloque 4: Dejar evidencia
+
+### Ejercicio 10: Explicar una práctica
+
+Elige uno de los ejercicios anteriores y registra:
+
+- problema con tus palabras;
+- decisiones tomadas;
+- supuesto utilizado;
+- caso que reveló una dificultad;
+- corrección realizada;
+- aprendizaje final.
+
+Usa `../plantilla-evidencia.md` solo si te ayuda a ordenar la respuesta.
+
+## Criterio de revisión
+
+Una respuesta está bien desarrollada cuando:
+
+- no inventa reglas sin declararlas;
+- diferencia datos, pasos y resultados;
+- explica el porqué de cada decisión;
+- considera más de un escenario;
+- puede entenderse sin conocer la respuesta de antemano.

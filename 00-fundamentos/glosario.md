@@ -1,60 +1,79 @@
 # Glosario de Fundamentos
 
-Este glosario reúne términos básicos que aparecen en la ruta de aprendizaje de Chilete DevPath.
+Consulta este glosario cuando un término impida comprender una explicación o ejercicio. Cada definición está orientada al uso que tendrá dentro de la ruta.
 
-No busca reemplazar documentación técnica. Su objetivo es ayudar a estudiantes que están empezando a entender el lenguaje mínimo antes de avanzar a pseudocódigo y programación.
-
-## Términos base
+## Análisis de problemas
 
 | Término | Significado |
 |---|---|
-| Aprendizaje técnico | Proceso de practicar, equivocarse, corregir, documentar y mejorar una habilidad relacionada con tecnología. |
-| Problema | Situación que necesita una solución clara. En programación, suele tener datos de entrada, reglas y un resultado esperado. |
-| Entrada | Dato que recibe un proceso. Puede ser un número, texto, selección, archivo o información ingresada por una persona. |
-| Proceso | Conjunto de pasos que transforma una entrada en una salida. |
-| Salida | Resultado que se obtiene después de aplicar un proceso. |
-| Regla | Condición que debe cumplirse para resolver correctamente un problema. |
-| Caso de prueba | Situación usada para comprobar si una solución funciona como se espera. |
-| Caso límite | Caso especial que puede revelar errores, por ejemplo valores vacíos, cero, negativos o muy grandes. |
-| Error | Señal de que algo no funciona como se esperaba. Puede aparecer por sintaxis, lógica, datos incorrectos o mal uso de una herramienta. |
-| Depuración | Proceso de buscar, entender y corregir errores. |
-| Evidencia | Registro que demuestra qué se practicó, qué se aprendió y qué resultado se obtuvo. |
-| Bitácora | Nota breve que documenta una sesión de práctica, errores encontrados y aprendizajes. |
-| Fuente | Recurso externo usado para aprender, inspirar o construir contenido. Puede ser documentación, libro, curso, video o repositorio. |
+| Problema | Situación que necesita comprenderse, cambiarse o resolverse bajo ciertas condiciones. |
+| Objetivo | Cambio o resultado que se busca alcanzar. |
+| Alcance | Límite de lo que una solución cubrirá en una etapa determinada. |
+| Dato | Representación básica de un hecho, como una cantidad, fecha, nombre o estado. |
+| Información | Datos organizados e interpretados dentro de un contexto. |
+| Requisito | Capacidad o condición que la solución debe cumplir. |
+| Regla | Condición que determina cómo debe comportarse una solución. |
+| Restricción | Límite que condiciona las alternativas disponibles. |
+| Supuesto | Condición aceptada temporalmente como verdadera y que debe declararse o confirmarse. |
+
+## Pensamiento computacional
+
+| Término | Significado |
+|---|---|
+| Descomposición | División de un problema en partes más pequeñas y manejables. |
+| Patrón | Similitud que se repite y permite reconocer un enfoque reutilizable. |
+| Abstracción | Selección de los datos y reglas relevantes, dejando fuera detalles que no afectan el objetivo actual. |
+| Secuencia | Orden en que deben realizarse acciones relacionadas. |
+| Dependencia | Relación en la que un paso necesita el resultado de otro para poder ejecutarse. |
+| Algoritmo | Secuencia finita y ordenada de pasos para alcanzar un resultado. |
+
+## Datos y comprobación
+
+| Término | Significado |
+|---|---|
+| Entrada | Dato que recibe una solución. |
+| Proceso | Operaciones y reglas que transforman entradas. |
+| Salida | Resultado producido por el proceso. |
+| Validación | Comprobación de que un dato cumple las condiciones necesarias. |
+| Caso de prueba | Conjunto de entradas y resultado esperado usado para comprobar una solución. |
+| Caso normal | Escenario habitual con datos válidos. |
+| Caso límite | Escenario ubicado exactamente en un valor mínimo, máximo o frontera de una regla. |
+| Caso inválido | Escenario con datos que deben rechazarse o tratarse de forma controlada. |
+| Resultado esperado | Comportamiento que debería observarse para un caso definido. |
+
+## Errores y revisión
+
+| Término | Significado |
+|---|---|
+| Error de comprensión | Interpretación incorrecta o incompleta de la necesidad. |
+| Error de datos | Uso de información ausente, duplicada, inconsistente o fuera del rango permitido. |
+| Error lógico | Secuencia o regla que produce un resultado incorrecto. |
+| Error de secuencia | Ejecución de un paso antes de disponer de la información necesaria. |
+| Hipótesis | Explicación provisional que puede comprobarse mediante una observación o prueba. |
+| Depuración | Proceso ordenado de localizar, entender y corregir un error. |
+
+## Organización del aprendizaje
+
+| Término | Significado |
+|---|---|
+| Evidencia | Registro verificable de la práctica, las decisiones, las pruebas y el aprendizaje. |
+| Bitácora | Nota cronológica breve sobre una sesión de trabajo. |
+| Laboratorio | Práctica que integra varios conceptos y produce un resultado revisable. |
+| Fuente | Recurso externo utilizado para aprender, contrastar o adaptar contenido. |
 | Autoría | Reconocimiento de quién creó, adaptó o revisó un contenido. |
-| IA | Herramienta de inteligencia artificial usada como apoyo para explicar, revisar, organizar o proponer ideas. |
-| Pausa activa | Descanso breve para moverse, estirar, relajar la vista o recuperar concentración. |
+| Control de versiones | Registro de cambios realizados en archivos a lo largo del tiempo. |
+| Commit | Registro identificado de un conjunto concreto de cambios en Git. |
 
-## Términos de organización
+## Relación entre términos
 
-| Término | Significado |
-|---|---|
-| Carpeta | Espacio usado para agrupar archivos relacionados. |
-| Archivo | Documento, código, imagen u otro recurso guardado con un nombre específico. |
-| README | Archivo que explica qué contiene una carpeta o proyecto y cómo usarlo. |
-| Módulo | Sección de aprendizaje enfocada en un tema específico. |
-| Laboratorio | Práctica integradora que combina varios conceptos. |
-| Checklist | Lista de verificación para revisar si se cumplieron criterios mínimos. |
+Una práctica completa sigue esta relación:
 
-## Términos de Git y GitHub
-
-| Término | Significado |
-|---|---|
-| Git | Herramienta para registrar cambios en archivos y proyectos. |
-| GitHub | Plataforma para publicar repositorios, colaborar y mostrar evidencia de trabajo. |
-| Repositorio | Proyecto gestionado con Git. |
-| Commit | Registro de un cambio concreto en un repositorio. |
-| Rama | Línea de trabajo dentro de un repositorio. |
-| Remoto | Versión del repositorio alojada en una plataforma como GitHub. |
-| Push | Acción de subir commits locales al repositorio remoto. |
-| Pull | Acción de traer cambios desde el repositorio remoto. |
-
-## Cómo usar este glosario
-
-- Consulta un término antes de resolver un ejercicio.
-- Agrega ejemplos propios cuando un concepto todavía no quede claro.
-- Revisa este glosario antes de pasar a `01-pseudocodigo`.
-
-## Nota de autoría
-
-Contenido creado para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.
+```txt
+problema
+  -> objetivo y alcance
+  -> requisitos, reglas, restricciones y supuestos
+  -> descomposición
+  -> entrada, validación, proceso y salida
+  -> casos de prueba
+  -> revisión y evidencia
+```

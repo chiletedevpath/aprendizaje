@@ -1,139 +1,114 @@
 # Guía de Estudio
 
-Esta guía propone una forma simple de estudiar desarrollo de software sin acumular archivos sueltos, copiar soluciones sin entenderlas ni convertir el aprendizaje en jornadas agotadoras.
+Esta guía propone una forma de trabajar cada práctica de fundamentos. El objetivo no es responder rápido, sino construir una explicación que pueda revisarse y mejorarse.
 
-## 1. Prepara tu sesión
+## Antes de comenzar
 
-Antes de empezar, define:
-
-- Qué tema vas a practicar.
-- Cuánto tiempo aproximado dedicarás.
-- Qué resultado esperas obtener.
-- Qué evidencia dejarás al final.
-
-Ejemplo:
+Define una sesión concreta:
 
 ```txt
-Tema: entrada, proceso y salida
-Tiempo estimado: 30 minutos
-Resultado esperado: resolver 2 ejercicios
-Evidencia: notas breves y casos de prueba
+Tema: descomposición de problemas
+Práctica: ejercicio 4
+Tiempo estimado: 40 minutos
+Resultado: secuencia explicada y tres casos de prueba
 ```
 
-## 2. Entiende el problema
+Lee primero `base-conceptual.md`. Usa el glosario para aclarar términos, no para memorizar definiciones aisladas.
 
-Antes de escribir código, responde:
+## Método de seis pasos
 
-- Qué datos tengo.
-- Qué resultado necesito.
-- Qué reglas debo respetar.
-- Qué casos pueden fallar.
+### 1. Comprender
 
-Si no puedes explicar el problema, todavía no estás listo para resolverlo.
+Reescribe el problema con tus palabras.
 
-## 3. Divide el trabajo
+Pregúntate:
 
-Un problema grande se vuelve manejable cuando se separa en pasos pequeños.
+- ¿Qué sucede?
+- ¿Qué resultado se necesita?
+- ¿Qué información falta?
+- ¿Qué no debería asumir?
 
-Ejemplo:
+### 2. Delimitar
 
-1. Leer datos.
-2. Validar datos.
-3. Procesar datos.
-4. Mostrar resultado.
-5. Probar con casos simples y casos límite.
+Identifica:
 
-## 4. Practica con evidencia
+- objetivo;
+- requisitos;
+- reglas;
+- restricciones;
+- supuestos;
+- aspectos fuera del alcance.
 
-Cada práctica debe dejar una evidencia útil:
+Si inventas una regla para poder continuar, declárala como supuesto.
 
-- Código fuente, si corresponde.
-- Explicación corta del problema.
-- Pasos de solución.
-- Error encontrado.
-- Cómo se corrigió.
-- Aprendizaje final.
+### 3. Descomponer
 
-Usa `plantilla-evidencia.md` como base.
+Divide el problema en partes pequeñas. Ordena las dependencias: primero deben ocurrir los pasos que producen información necesaria para los siguientes.
 
-## 5. Aprende a leer errores
+### 4. Representar
 
-Cuando aparezca un error:
+Describe:
 
-1. Copia el mensaje exacto.
-2. Identifica archivo y línea.
-3. Lee una línea antes y una línea después.
-4. Formula una hipótesis.
-5. Cambia una sola cosa y vuelve a probar.
+- entrada;
+- validaciones;
+- proceso;
+- salida.
 
-No corrijas muchas cosas al mismo tiempo. Eso dificulta saber qué cambio resolvió el problema.
+Todavía no necesitas código. Una tabla, lista numerada o diagrama sencillo puede ser suficiente.
 
-## 6. Usa Git como bitácora
+### 5. Comprobar
 
-Un commit debe explicar un avance concreto.
+Prepara casos con entrada y resultado esperado:
 
-Ejemplos correctos:
+- normal;
+- límite;
+- inválido;
+- ausente, cuando corresponda.
 
-- `docs: agrega evidencia de fundamentos`
-- `feat: resuelve ejercicios de entrada y salida`
-- `fix: corrige validacion de datos vacios`
+Si un caso falla, no ocultes el resultado. Explica qué supuesto o paso debe corregirse.
 
-Evita commits genéricos como:
+### 6. Comunicar
 
-- `cambios`
-- `avance`
-- `update`
+Cierra la práctica indicando:
 
-## 7. Usa IA con criterio
+- decisión principal;
+- dificultad encontrada;
+- corrección realizada;
+- aprendizaje que puedes reutilizar.
 
-Puedes usar IA para:
+Una explicación clara demuestra más comprensión que una respuesta extensa sin justificación.
 
-- pedir una explicación alternativa
-- revisar redacción
-- comparar enfoques
-- detectar errores de lógica
-- generar ideas de práctica
+## Cómo comparar una solución
 
-Pero antes de publicar o guardar una solución, verifica:
+Cuando revises `ejercicios-resueltos/`, no preguntes solamente si tu respuesta es igual.
 
-- que entiendes la respuesta
-- que puedes explicarla con tus palabras
-- que no contiene datos inventados
-- que no usa material privado o ajeno sin referencia
-- que declaras el apoyo de IA cuando corresponde
+Compara:
 
-## 8. Trabaja con ética
+- ¿Ambas soluciones entienden el mismo problema?
+- ¿Declaraste reglas que la referencia no consideró?
+- ¿Alguna solución usa supuestos ocultos?
+- ¿Tus pasos respetan las dependencias?
+- ¿Tus casos de prueba podrían revelar un error?
 
-Antes de publicar contenido, verifica:
+Una solución distinta puede ser válida si cumple el objetivo y explica sus decisiones.
 
-- si el ejercicio es propio
-- si está inspirado en una fuente externa
-- si pertenece a una clase, curso o evaluación privada
-- si necesita referencias
-- si puedes explicarlo con tus propias palabras
+## Cómo investigar una duda
 
-Cuando uses una fuente externa, agrega una sección de `Fuentes` o `Referencias`.
+1. Formula una pregunta concreta.
+2. Revisa primero el material del módulo.
+3. Consulta documentación o una fuente identificable.
+4. Contrasta la respuesta con el problema.
+5. Registra la fuente si utilizaste contenido externo.
 
-## 9. Cuida tu bienestar
+Si usas IA, no aceptes una respuesta solo porque parece segura. Pide razones, verifica los datos y conserva únicamente lo que puedas explicar.
 
-Aprender no significa estudiar sin parar.
+## Cómo cerrar la sesión
 
-Durante sesiones largas:
+Responde brevemente:
 
-- levántate de la silla
-- estira cuello, hombros, espalda y manos
-- descansa la vista
-- toma agua
-- cierra la sesión si el cansancio te impide comprender
+- ¿Qué pude explicar hoy?
+- ¿Qué caso cambió mi primera respuesta?
+- ¿Qué duda continúa abierta?
+- ¿Cuál es el siguiente paso?
 
-La pausa también es parte del aprendizaje.
-
-## 10. Cierra la sesión
-
-Antes de terminar, responde:
-
-- Qué entendí hoy.
-- Qué me falta practicar.
-- Qué error corregí.
-- Qué evidencia dejé.
-- Qué haré en la siguiente sesión.
+Haz una pausa cuando el cansancio reduzca tu capacidad de comprender o revisar. Acumular tiempo no equivale a aprender.

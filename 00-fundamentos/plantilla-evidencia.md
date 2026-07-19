@@ -1,54 +1,58 @@
-# Plantilla de Evidencia
+# Registro de Práctica
 
-Esta plantilla ayuda a documentar una práctica de forma breve y profesional.
+Usa esta plantilla cuando necesites documentar una práctica o laboratorio. Elimina los campos que no aporten al caso.
 
-## Datos generales
+## Identificación
 
 - Tema:
+- Práctica:
 - Fecha:
-- Tiempo aproximado:
-- Nivel: básico
 
-## Problema trabajado
+## Problema
 
-Describe el problema con tus propias palabras.
+Explica la situación con tus palabras.
+
+## Objetivo y alcance
+
+- Objetivo:
+- Resultado esperado:
+- Fuera del alcance:
 
 ## Análisis
 
-- Entrada:
+- Entradas:
+- Validaciones:
 - Proceso:
-- Salida:
+- Salidas:
 - Reglas:
-- Casos que pueden fallar:
+- Restricciones:
+- Supuestos:
 
-## Desarrollo
+## Descomposición
 
-Explica los pasos seguidos.
+1.
+2.
+3.
 
-- Paso 1:
-- Paso 2:
-- Paso 3:
+## Casos de prueba
 
-## Errores o dificultades
+| Caso | Entrada | Resultado esperado | Resultado observado |
+|---|---|---|---|
+| Normal |  |  |  |
+| Límite |  |  |  |
+| Inválido |  |  |  |
 
-Registra qué problema apareció y cómo lo corregiste.
+## Revisión
 
-## Aprendizaje final
+- Dificultad encontrada:
+- Hipótesis:
+- Corrección realizada:
+- Qué falta comprobar:
 
-Escribe una conclusión corta.
+## Aprendizaje
 
-## Fuentes
+Explica qué decisión o criterio podrías reutilizar en otro problema.
 
-Indica si usaste una fuente externa.
+## Fuentes y apoyo
 
-- No aplica. Ejercicio creado para Chilete DevPath.
-
-## Nota de autoría
-
-Indica si usaste apoyo de IA, una fuente externa o una adaptación.
-
-Ejemplo:
-
-```md
-Contenido desarrollado como práctica propia. Redacción revisada con apoyo de IA.
-```
+Indica las fuentes externas consultadas y cómo utilizaste la IA, si corresponde. Si no usaste apoyo externo, escribe `No aplica`.
