@@ -3,7 +3,7 @@ import java.util.Scanner;
 /* EJERCICIO 1: ESCRIBIR UN PROGRAMA QUE CALCULE EL ÁREA DE UNA FIGURA GEOMÉTRICA CUALQUIERA. 
  * EJEMPLO AREA DEL CUADRADO Y TRIANGULO */
 
-public class CalcularAreasFiguras {
+public class CalcularAreaFigura {
 
 	public static void main(String[] args) {
 

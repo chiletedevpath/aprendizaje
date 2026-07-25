@@ -63,10 +63,16 @@ public class EncuestaSaboresHelado {
 					acumuladorIncorrecta++;
 				}
 			}
-			porcentajeVainilla = (acumuladorVainilla * 100) / respuestasTotal;
-			porcentajeChocolate = (acumuladorChocolate * 100) / respuestasTotal;
-			porcentajeFresa = (acumuladorFresa * 100) / respuestasTotal;
-			porcentajeIncorrecto = (acumuladorIncorrecta * 100) / respuestasTotal;
+			if (respuestasTotal == 0) {
+				System.out.println("No se registraron respuestas válidas.");
+				return;
+			}
+
+			int totalIntentos = respuestasTotal + acumuladorIncorrecta;
+			porcentajeVainilla = (acumuladorVainilla * 100.0) / respuestasTotal;
+			porcentajeChocolate = (acumuladorChocolate * 100.0) / respuestasTotal;
+			porcentajeFresa = (acumuladorFresa * 100.0) / respuestasTotal;
+			porcentajeIncorrecto = (acumuladorIncorrecta * 100.0) / totalIntentos;
 
 			String saborPopular = "Empate";
 

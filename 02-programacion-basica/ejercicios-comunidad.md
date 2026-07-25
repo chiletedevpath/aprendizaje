@@ -1,55 +1,99 @@
-# Ejercicios para la comunidad
+# Retos de programación básica
 
-Estos ejercicios complementan la practica existente de `02-programacion-basica`. Estan pensados para resolver antes de revisar una solucion.
+Esta práctica acompaña la ruta de `02-programacion-basica`. Cada bloque enlaza
+un ejercicio resuelto del repositorio y propone un reto que aplica el mismo
+concepto sin copiar la solución.
 
-## Variables y tipos de datos
+## Cómo trabajar
 
-1. Crear una ficha de aprendiz con nombre, edad, promedio y estado activo.
-2. Convertir minutos totales a horas y minutos.
-3. Calcular el promedio de tres notas y mostrar si el estudiante aprueba.
-4. Convertir un valor `double` a `int` y explicar que informacion se pierde.
+1. Ejecuta el ejercicio resuelto e identifica entrada, proceso y salida.
+2. Explica por qué se eligió cada estructura.
+3. Resuelve el reto en un archivo nuevo fuera del repositorio.
+4. Prueba todos los casos indicados.
+5. Compara tu solución con el ejercicio de referencia y anota una mejora.
 
-## Condicionales
+## 1. Variables y tipos
 
-1. Validar si una edad permite registrarse en una plataforma educativa.
-2. Clasificar una nota como deficiente, regular, buena o excelente.
-3. Mostrar recomendaciones segun el nivel de avance de un aprendiz.
-4. Calcular descuento segun el tipo de usuario.
+Ejercicios resueltos:
 
-## Bucles
+- `variables/java/calculos-basicos/CalcularAreaTrapecio.java`
+- `tipos-datos/java/tipos-datos-basicos/ConversionesTiposDatos.java`
 
-1. Mostrar una tabla de multiplicar.
-2. Sumar numeros pares dentro de un rango.
-3. Pedir notas hasta ingresar un valor valido.
-4. Contar cuantas veces aparece un caracter en una palabra.
+Reto: registra el precio y la cantidad de un producto, calcula subtotal, IGV y
+total. Rechaza valores negativos.
 
-## Funciones
+Casos: `precio=10, cantidad=2`; `precio=0, cantidad=5`; `precio=-2`.
 
-1. Crear una calculadora con metodos para sumar, restar, multiplicar y dividir.
-2. Crear un metodo que valide si una edad es aceptada.
-3. Crear un metodo que convierta grados Celsius a Fahrenheit.
-4. Crear un metodo que devuelva un mensaje segun el progreso del estudiante.
+## 2. Condicionales
 
-## Cadenas
+Ejercicios resueltos:
 
-1. Normalizar un nombre quitando espacios y capitalizando el texto.
-2. Validar si un correo de practica pertenece al dominio `chiletedevpath.test`.
-3. Contar vocales en una frase.
-4. Crear un reporte formateado con nombre, curso y avance.
+- `condicionales/java/condicionales-basicos/EvaluarRangoSueldo.java`
+- `condicionales/java/switch-y-ternario/ClasificarCalificacionSwitch.java`
 
-## Arreglos
+Reto: recibe una nota de 0 a 20 y un porcentaje de asistencia. Determina si el
+estudiante aprueba, desaprueba por nota o desaprueba por asistencia.
 
-1. Guardar cinco notas y calcular promedio.
-2. Buscar el valor mayor dentro de un arreglo.
-3. Mostrar productos con stock menor a un limite.
-4. Registrar nombres y puntajes en arreglos paralelos.
+Casos: `15 y 90`; `9 y 90`; `18 y 60`; nota fuera de rango.
 
-## Criterio para resolver
+## 3. Bucles
 
-Antes de escribir codigo:
+Ejercicios resueltos:
 
-1. Define entrada, proceso y salida.
-2. Escribe dos casos normales.
-3. Escribe un caso limite.
-4. Implementa la solucion.
-5. Explica que aprendiste y que mejorarias.
+- `bucles/java/bucles-basicos/ConvertirDecimalBinario.java`
+- `bucles/java/bucles-basicos/PromediarNotasConCentinela.java`
+
+Reto: solicita números hasta recibir cero. Muestra cantidad, suma, promedio,
+mayor y menor de los valores anteriores al centinela.
+
+Casos: `4, 8, 2, 0`; `-3, -7, 0`; `0`.
+
+## 4. Funciones
+
+Ejercicios resueltos:
+
+- `funciones/java/funciones-basicas/CalculadoraDevPath.java`
+- `funciones/java/funciones-basicas/ConversorTemperaturaDevPath.java`
+
+Reto: separa en métodos el cálculo de subtotal, descuento y total de una compra.
+El método de descuento debe recibir el subtotal y devolver el importe descontado.
+
+Casos: compra sin descuento, compra en el límite y compra con descuento.
+
+## 5. Cadenas
+
+Ejercicios resueltos:
+
+- `cadenas/java/cadenas-basicas/NormalizarNombreDevPath.java`
+- `cadenas/java/cadenas-basicas/ValidadorCorreoDevPath.java`
+
+Reto: normaliza el nombre de un curso y genera un código con las tres primeras
+letras, sin espacios, en mayúsculas. Rechaza textos con menos de tres letras.
+
+Casos: `"  Java básico  "`; `"Redes"`; `""`; `"BD"`.
+
+## 6. Arreglos
+
+Ejercicios resueltos:
+
+- `arreglos/java/ejercicios-basicos/AnalizarNotasAlumnos.java`
+- `arreglos/java/matrices/MatrizTranspuesta.java`
+
+Reto: guarda nombres y puntajes en arreglos paralelos. Muestra el promedio,
+quién obtuvo el mayor puntaje y cuántos superaron el promedio.
+
+Casos: puntajes distintos, empate en el mayor y un solo participante.
+
+## 7. Cierre integrado
+
+Resuelve `laboratorio-integrador.md`. La implementación de referencia está en
+`practica-integrada/java/registro-aprendices/RegistroAprendices.java`; consúltala
+solo después de completar tu primera versión.
+
+## Criterios de logro
+
+- las entradas inválidas no producen resultados engañosos;
+- cada variable y método tiene una responsabilidad comprensible;
+- los casos normales, límites e inválidos fueron ejecutados;
+- puedes explicar la solución sin leer el código línea por línea;
+- el reto conserva los fundamentos y no adelanta POO ni colecciones.

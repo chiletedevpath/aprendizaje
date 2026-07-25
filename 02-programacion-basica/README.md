@@ -40,7 +40,8 @@ Antes de iniciar este modulo, conviene poder:
 ## Material de apoyo
 
 - `glosario.md`: terminos esenciales para estudiar los ejercicios.
-- `ejercicios-comunidad.md`: banco breve de retos propuestos para practicar por tema.
+- `ejercicios-comunidad.md`: retos graduados, casos de prueba y ejercicios resueltos de referencia.
+- `laboratorio-integrador.md`: practica final que combina los temas del modulo.
 
 ## Organizacion interna
 
@@ -55,6 +56,7 @@ Algunas carpetas tienen subcarpetas por lenguaje o tipo de practica:
 | `funciones` | Metodos para separar operaciones, validaciones y conversiones. |
 | `cadenas` | Busqueda, normalizacion, validacion y reportes con `String`. |
 | `arreglos` | Arreglos basicos, arreglos paralelos, matrices, metodos y utilidades de arrays. |
+| `practica-integrada` | Ejercicios que combinan varios fundamentos en un solo flujo. |
 
 ## Ruta sugerida
 
@@ -65,6 +67,11 @@ Algunas carpetas tienen subcarpetas por lenguaje o tipo de practica:
 5. Usa `funciones` para separar responsabilidades.
 6. Trabaja texto en `cadenas`.
 7. Cierra con `arreglos` y matrices.
+8. Resuelve el `laboratorio-integrador.md` sin consultar primero la implementacion de referencia.
+
+En cada etapa sigue este orden: revisa un ejemplo resuelto, modifica un caso,
+resuelve el reto equivalente y comprueba los casos indicados en
+`ejercicios-comunidad.md`.
 
 ## Criterio de marca y datos de ejemplo
 

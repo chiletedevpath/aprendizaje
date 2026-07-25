@@ -24,10 +24,10 @@ public class ArreglosParalelosAlumnos {
 		System.out.print("Ingrese la cantidad de alumnos a ingresar: ");
 		int cantAlumnos = teclado.nextInt();
 
-		String[] nombreAlum = new String[cantAlumnos];
-		double[] notaAlum = new double[cantAlumnos];
-
 		if (cantAlumnos >= 1 && cantAlumnos <= 20) {
+			String[] nombreAlum = new String[cantAlumnos];
+			double[] notaAlum = new double[cantAlumnos];
+
 			for (int i = 0; i < cantAlumnos; i++) {
 				teclado.nextLine();
 				System.out.println("\n--------------------------------------\n");
@@ -36,8 +36,12 @@ public class ArreglosParalelosAlumnos {
 
 				System.out.printf("Ingrese la nota del alumno %s: ", nombreAlum[i]);
 				notaAlum[i] = teclado.nextDouble();
+
+				while (notaAlum[i] < 0 || notaAlum[i] > 20) {
+					System.out.print("La nota debe estar entre 0 y 20. Ingrese nuevamente: ");
+					notaAlum[i] = teclado.nextDouble();
+				}
 			}
-			teclado.close();
 
 			double mayorNota = notaAlum[0];
 			int indiceMayor = 0;
@@ -54,10 +58,10 @@ public class ArreglosParalelosAlumnos {
 			System.out.println("\n--------------------------------------\n");
 			System.out.println("El alumno " + nombreAlum[indiceMayor] + " obtuvo la mejor nota con un " + mayorNota);
 
-		} else if (cantAlumnos <= 0) {
-			System.out.println("La cantidad debe ser mayor que 0");
-		} else  {
-			System.out.println("La cantidad debe ser mayor que 20");
+		} else {
+			System.out.println("La cantidad de alumnos debe estar entre 1 y 20.");
 		}
+
+		teclado.close();
 	}
 }

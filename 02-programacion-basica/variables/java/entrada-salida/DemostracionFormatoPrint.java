@@ -4,36 +4,25 @@ public class DemostracionFormatoPrint {
 
 	public static void main(String[] args) {
 
-		// PRACTICA DE System.out.println()
+		// Secuencias de escape con println.
+		System.out.println("Primera linea\nSegunda linea");
+		System.out.println("\tTexto con tabulacion");
+		System.out.println("\"Chilete DevPath\"");
+		System.out.println("Ruta de ejemplo: C:\\aprendizaje\\java");
 
-		System.out.println("\n\t\"Steve Jobs\" announced the \niPhone in 2007.");
-		System.out.println("");
-
-		System.out.println("\\Hola Mundo, esto es una prueba funciono?");
-		System.out.println("");
-
-		// OJO: ESTE FUNCIONALIDAD PUEDE QUE NO FUNCIONE EN EL IDE PERO SI EN CMD
-		System.out.println("Hola Mundo\r, esto es una prueba ... funciono si o\r no?");
-		System.out.println("");
-
-		System.out.println("Hola Mundo\n, esto es una prueba ... funciono si o\n no?");
-		System.out.println("");
-
-		// PRACTICA DE System.out.printf()
+		// Formatos con printf.
 
 		double value = 142587.250478;
 		LocalDateTime today = LocalDateTime.now();
 
-		System.out.printf("%%%n");
-		System.out.println("");
+		System.out.printf("Simbolo de porcentaje: %%%n");
 
 		/*
 		 * %x CONVIERTE UN NÚMERO ENTERO A SU REPRESENTACIÓN HEXADECIMAL %n
 		 * ESPECIFICADOR DE SALTO DE LÍNEA
 		 */
 
-		System.out.printf("%x%n", (int) value);
-		System.out.println("");
+		System.out.printf("Parte entera en hexadecimal: %x%n", (int) value);
 
 		/*
 		 * OJO: PARA IMPRIMIR LA FECHA Y HORA LOCAL, SE DEBE IMPORTAR LA LIBRERIA Date
@@ -42,23 +31,17 @@ public class DemostracionFormatoPrint {
 		 * HH:MM:SS
 		 */
 
-		System.out.printf("%tD - %tT%n", today, today);
-		System.out.println("");
+		System.out.printf("Fecha y hora: %tD - %tT%n", today, today);
 
 		/*
 		 * %o CONVIERTE UN NÚMERO ENTERO A SU REPRESENTACIÓN OCTAL
 		 */
-		System.out.printf("%o%n", (int) value);
-		System.out.println("");
+		System.out.printf("Parte entera en octal: %o%n", (int) value);
 
 		// %f IMPRIME UN NÚMERO DE PUNTO FLOTANTE (NÚMEROS CON DECIMALES, COMO FLOAT O
 		// DOUBLE
 
-		System.out.printf("%f%n", value);
-		System.out.println("");
-		
-		
-		
+		System.out.printf("Valor decimal con dos cifras: %.2f%n", value);
 
 	}
 

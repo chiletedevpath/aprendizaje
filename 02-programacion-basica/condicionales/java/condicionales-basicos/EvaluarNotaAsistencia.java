@@ -25,7 +25,7 @@ public class EvaluarNotaAsistencia {
 			if (attendance >= 0 && attendance <= 100) {
 				if (attendance >= 75) {
 					if (note >= 60) {
-						System.out.println("APROBADO... ERES UN DIGNO UTEPINO");
+						System.out.println("APROBADO POR NOTA Y ASISTENCIA");
 					} else {
 						System.out.println("DESAPROBADO POR MALA NOTA");
 					}

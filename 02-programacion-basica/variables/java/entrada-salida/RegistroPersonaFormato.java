@@ -24,8 +24,7 @@ public class RegistroPersonaFormato {
 			System.out.println("Ingrese su altura");
 			altura = teclado.nextDouble();
 
-			System.out.printf("La persona se llama %s Apellido Ejemplo, tiene %d anios y mide %.2f metros", nombre,
-					edad, altura);
+			System.out.printf("La persona se llama %s, tiene %d anios y mide %.2f metros%n", nombre, edad, altura);
 		}
 	}
 }

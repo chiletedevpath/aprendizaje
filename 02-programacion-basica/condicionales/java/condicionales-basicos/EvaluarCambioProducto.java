@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CalcularTipoCambio {
+public class EvaluarCambioProducto {
 	/*
 	 * UNA TIENDA ACEPTA CAMBIO DE PRODUCTOS EN LOS SIGUIENTES CASOS: SI EL PRODUCTO
 	 * TIENE UN PRECIO ENTRE 50 Y 80 SOLES Y FUE COMPRADO EL DÍA LUNES (DÍA 1) O SI

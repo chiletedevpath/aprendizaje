@@ -4,10 +4,11 @@ public class ConversionesTiposDatos {
 
         // Conversion explicita: puede perder informacion si el tipo destino es menor.
         byte numeroConvertido = (byte) numero;
-        System.out.println(numeroConvertido);
+        System.out.println("Valor original (int): " + numero);
+        System.out.println("Conversion explicita a byte: " + numeroConvertido);
 
         // Conversion implicita: Java la permite cuando el tipo destino tiene mayor capacidad.
         double numeroDecimal = numero;
-        System.out.println(numeroDecimal);
+        System.out.println("Conversion implicita a double: " + numeroDecimal);
     }
 }

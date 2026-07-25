@@ -25,7 +25,11 @@ public class EjecutarOperadorArreglos {
 		System.out.print("Ingrese el valor a eliminar: ");
 		int valorIngresado = teclado.nextInt();
 		
-		opArreglos.eliminarVarlor(valorIngresado);
+		boolean eliminado = opArreglos.eliminarValor(valorIngresado);
+
+		if (!eliminado) {
+			System.out.println("El valor ingresado no está en el arreglo.");
+		}
 		
 		System.out.println("\nArreglo final: " + Arrays.toString(opArreglos.arregloUnaLinea()) + "\n");
 

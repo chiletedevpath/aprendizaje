@@ -3,58 +3,43 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidarExpresionAB {
-	/*
-	 * ESCRIBIR UN PROGRAMA QUE SOLICITE UNA EXPRESIÓN DE LA FORMA AB=N DONDE A Y B
-	 * SON CARACTERES A MOSTRAR EN CADA FILA DE FORMA ALTERNA, Y N ES EL NÚMERO DE
-	 * FILAS A GENERAR. UTILIZAR UNA ESTRUCTURA DO-WHILE PARA VALIDAR QUE LA
-	 * EXPRESIÓN CUMPLA CON EL FORMATO ESTABLECIDO. COMPROBAR EL FORMATO HACIENDO
-	 * USO DE LAS CLASES PATTERN & MATCHER.
-	 */
 
 	public static void main(String[] args) {
+		Pattern patronExpresion = Pattern.compile("^([A-Za-z])([A-Za-z])=([1-9]\\d*)$");
 
 		try (Scanner teclado = new Scanner(System.in)) {
-			String expresion;
-			boolean esValidada;
+			Matcher evaluadorExpresion;
 
 			do {
-				System.out.println("Ingrese la expresion a validar (AB=N): ");
-				expresion = teclado.nextLine();
+				System.out.print("Ingrese la expresión con el formato AB=N: ");
+				String expresion = teclado.nextLine().trim();
+				evaluadorExpresion = patronExpresion.matcher(expresion);
 
-				Pattern patronExpresion = Pattern.compile("^(?!([a-z])\\1).{2}=\\d+$");
-				Matcher evaluadorExpresion = patronExpresion.matcher(expresion);
-
-				if (evaluadorExpresion.matches()) {
-					char a = expresion.charAt(0);
-					char b = expresion.charAt(1);
-					int n = Integer.parseInt(expresion.substring(3));
-
-					int filas = 1;
-
-					do {
-						String cadenaFilas = "";
-						int j = 0;
-
-						do {
-							if (j % 2 == 0) {
-								cadenaFilas += a;
-							} else {
-								cadenaFilas += b;
-							}
-							j++;
-						} while (j < filas);
-
-						System.out.println(cadenaFilas);
-						filas++;
-					} while (filas <= n);
-					esValidada = true;
-
-				} else {
-					esValidada = false;
-
-					System.out.println("Formato incorrecto, usar formato AB=N");
+				if (!evaluadorExpresion.matches()) {
+					System.out.println("Formato incorrecto. Use dos letras y un número positivo, por ejemplo AB=4.");
+				} else if (evaluadorExpresion.group(1).equalsIgnoreCase(evaluadorExpresion.group(2))) {
+					System.out.println("Las dos letras deben ser diferentes.");
+					evaluadorExpresion = patronExpresion.matcher("");
 				}
-			} while (!esValidada);
+			} while (!evaluadorExpresion.matches());
+
+			char primerCaracter = evaluadorExpresion.group(1).charAt(0);
+			char segundoCaracter = evaluadorExpresion.group(2).charAt(0);
+			int cantidadFilas = Integer.parseInt(evaluadorExpresion.group(3));
+			int fila = 1;
+
+			do {
+				String cadenaFila = "";
+				int posicion = 0;
+
+				do {
+					cadenaFila += posicion % 2 == 0 ? primerCaracter : segundoCaracter;
+					posicion++;
+				} while (posicion < fila);
+
+				System.out.println(cadenaFila);
+				fila++;
+			} while (fila <= cantidadFilas);
 		}
 	}
 }

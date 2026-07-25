@@ -10,17 +10,20 @@ public class CalcularDistanciaLuz {
 
 	public static void main(String[] args) {
 
-		final long VELOCIDADLUZ = 299792458;
-		final long SEGUNDOSDIAS = 86400;
+		final long VELOCIDAD_LUZ_METROS_POR_SEGUNDO = 299_792_458L;
+		final long SEGUNDOS_POR_DIA = 86_400L;
 
 		System.out.println("Ingrese la cantidad de dias: ");
 		try (Scanner teclado = new Scanner(System.in)) {
-			int dia = teclado.nextInt();
+			int dias = teclado.nextInt();
 
-			long segundosTotales = dia * SEGUNDOSDIAS;
-			long distanciaFinal = segundosTotales * VELOCIDADLUZ;
-
-			System.out.printf("La distancia que recorrio la luz en %d dias es: %d metros", dia, distanciaFinal);
+			if (dias >= 0) {
+				long segundosTotales = dias * SEGUNDOS_POR_DIA;
+				long distanciaFinal = segundosTotales * VELOCIDAD_LUZ_METROS_POR_SEGUNDO;
+				System.out.printf("La distancia que recorre la luz en %d dias es: %,d metros%n", dias, distanciaFinal);
+			} else {
+				System.out.println("La cantidad de dias no puede ser negativa.");
+			}
 
 		}
 

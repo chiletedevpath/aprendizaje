@@ -39,11 +39,18 @@ public class ReporteProductosTienda {
 
 				teclado.nextLine();
 
+				if (cantidadesElegidas[i] < 0) {
+					System.out.println("La cantidad no puede ser negativa.");
+					i--;
+					continue;
+				}
+
 				totalProductos += cantidadesElegidas[i];
 
-				if (cantidadesElegidas[i] > cantidadesElegidas[masVenta]) {
+				if (i == 0 || cantidadesElegidas[i] > cantidadesElegidas[masVenta]) {
 					masVenta = i;
-				} else if (cantidadesElegidas[i] < cantidadesElegidas[menosVenta]) {
+				}
+				if (i == 0 || cantidadesElegidas[i] < cantidadesElegidas[menosVenta]) {
 					menosVenta = i;
 				}
 			}

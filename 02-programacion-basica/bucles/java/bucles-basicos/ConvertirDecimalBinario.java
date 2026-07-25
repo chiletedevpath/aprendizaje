@@ -1,37 +1,32 @@
 import java.util.Scanner;
 
 public class ConvertirDecimalBinario {
-	/*
-	 * ESCRIBIR UN PROGRAMA EN JAVA PARA CONVERTIR UN NÚMERO DE BASE DECIMAL A
-	 * BINARIO, APLICANDO EL MÉTODO DE DIVISIONES SUCESIVAS.
-	 */
 
 	public static void main(String[] args) {
-
 		try (Scanner teclado = new Scanner(System.in)) {
+			System.out.print("Ingrese un número decimal no negativo: ");
+			int numeroDecimal = teclado.nextInt();
 
-			do {
-				System.out.println("Ingrese el numero con base decimal a convertir a binario: ");
-				int numberBaseDecimal = teclado.nextInt();
+			if (numeroDecimal < 0) {
+				System.out.println("El número debe ser mayor o igual que cero.");
+				return;
+			}
 
-				if (numberBaseDecimal == 0) {
-					System.out.println("El numero binario es: 0");
-				} else {
-					int guardadorBinario = numberBaseDecimal;
-					String numberBinario = "";
+			if (numeroDecimal == 0) {
+				System.out.println("El número binario es: 0");
+				return;
+			}
 
-					while (numberBaseDecimal > 0) {
-						int residuo = numberBaseDecimal % 2;
+			int cociente = numeroDecimal;
+			String numeroBinario = "";
 
-						numberBinario = residuo + numberBinario;
-						numberBaseDecimal = numberBaseDecimal / 2;
-					}
-					System.out.printf("El numero %d (base decimal) convertido a base binario es: %s%n",
-							guardadorBinario, numberBinario);
+			while (cociente > 0) {
+				int residuo = cociente % 2;
+				numeroBinario = residuo + numeroBinario;
+				cociente /= 2;
+			}
 
-					System.out.println("");
-				}
-			} while (true);
+			System.out.printf("%d en binario es %s.%n", numeroDecimal, numeroBinario);
 		}
 	}
 }

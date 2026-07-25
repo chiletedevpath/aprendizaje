@@ -19,6 +19,12 @@ public class ValidadorCorreoDevPath {
 
     static boolean esCorreoDevPath(String correo) {
         String correoNormalizado = correo.trim().toLowerCase();
-        return correoNormalizado.contains("@") && correoNormalizado.endsWith(DOMINIO_PRACTICA);
+        int posicionArroba = correoNormalizado.indexOf("@");
+        int inicioDominio = correoNormalizado.length() - DOMINIO_PRACTICA.length();
+
+        return correoNormalizado.endsWith(DOMINIO_PRACTICA)
+                && posicionArroba > 0
+                && posicionArroba == inicioDominio
+                && !correoNormalizado.contains(" ");
     }
 }

@@ -31,21 +31,24 @@ public class UsoClaseMath {
 			potencia = Math.pow(numberOne, numberTwo);
 			System.out.printf("El numero %.2f elevado al %.2f es %.2f%n", numberOne, numberTwo, potencia);
 
-			if (numberOne > 0) {
+			if (numberOne >= 0) {
 				double raizCuadradaOne = Math.sqrt(numberOne);
 				System.out.printf("La raiz cuadrada de %.2f es %.2f%n", numberOne, raizCuadradaOne);
 			} else {
 				System.out.println("No es numero positivo");
 			}
 
-			if (numberTwo > 0) {
+			if (numberTwo >= 0) {
 				double raizCuadradaTwo = Math.sqrt(numberTwo);
 				System.out.printf("La raiz cuadrada de %.2f es %.2f%n", numberTwo, raizCuadradaTwo);
 			} else {
 				System.out.println("No es numero positivo");
 			}
+			System.out.printf("El valor absoluto de %.2f es %.2f%n", numberOne, Math.abs(numberOne));
+			System.out.printf("El valor absoluto de %.2f es %.2f%n", numberTwo, Math.abs(numberTwo));
+
 			promedio = Math.round((numberOne + numberTwo) / 2);
-			System.out.printf("El promedio redondeado de %.2f y %.2f es %.2f", numberOne, numberTwo, promedio);
+			System.out.printf("El promedio redondeado de %.2f y %.2f es %.0f%n", numberOne, numberTwo, promedio);
 		}
 	}
 }

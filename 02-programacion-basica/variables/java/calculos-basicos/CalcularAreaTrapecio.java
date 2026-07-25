@@ -22,12 +22,11 @@ public class CalcularAreaTrapecio {
 			System.out.println("Ingrese la medida de la altura: ");
 			double altura = scanner.nextDouble();
 					
-			double areaTrapecio = ((baseMayor + baseMenor) / 2) * altura;
-			
 			if (baseMayor > 0 && baseMenor > 0 && altura > 0) {
+				double areaTrapecio = ((baseMayor + baseMenor) / 2) * altura;
 				System.out.println("El area del trapecio es: " + areaTrapecio);	
 			} else {
-				System.out.println("Ingrese medida correctas");	
+				System.out.println("Las tres medidas deben ser mayores que cero.");
 			}
 		}
 	}

@@ -12,19 +12,21 @@ public class BuscarPalabraContains {
 
 	public static void main(String[] args) {
 
-		Scanner teclado = new Scanner(System.in);
+		try (Scanner teclado = new Scanner(System.in)) {
+			System.out.println("Ingrese una frase:");
+			String frase = teclado.nextLine();
 
-		System.out.println("Ingrese una frase:");
-		String frase = teclado.nextLine();
+			System.out.println("Ingrese la palabra a buscar:");
+			String palabra = teclado.nextLine().trim();
 
-		System.out.println("Ingrese la palabra a buscar:");
-		String palabra = teclado.nextLine();
+			if (palabra.isEmpty()) {
+				System.out.println("La palabra buscada no puede estar vacía.");
+				return;
+			}
 
-		boolean resultado = frase.toLowerCase().contains(palabra.toLowerCase());
-
-		System.out.println(resultado);
-
-		teclado.close();
+			boolean encontrada = frase.toLowerCase().contains(palabra.toLowerCase());
+			System.out.println(encontrada ? "La palabra está contenida en la frase." : "La palabra no está en la frase.");
+		}
 
 	}
 

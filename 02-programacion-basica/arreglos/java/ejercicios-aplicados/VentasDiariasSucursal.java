@@ -22,6 +22,11 @@ public class VentasDiariasSucursal {
 			for (int j = 0; j < dias; j++) {
 				System.out.printf("Ingrese la venta del dia %d: ", (j + 1));
 				ventaDiaria[i][j] = teclado.nextDouble();
+
+				while (ventaDiaria[i][j] < 0) {
+					System.out.print("La venta no puede ser negativa. Ingrese nuevamente: ");
+					ventaDiaria[i][j] = teclado.nextDouble();
+				}
 			}
 		}
 		teclado.close();

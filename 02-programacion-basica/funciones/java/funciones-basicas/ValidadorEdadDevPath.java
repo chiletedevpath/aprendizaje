@@ -10,7 +10,9 @@ public class ValidadorEdadDevPath {
             System.out.print("Ingrese su edad: ");
             int edad = teclado.nextInt();
 
-            if (puedeRegistrarse(edad)) {
+            if (edad < 0) {
+                System.out.println("La edad no puede ser negativa.");
+            } else if (puedeRegistrarse(edad)) {
                 System.out.println("Registro permitido para la comunidad.");
             } else {
                 System.out.println("Registro no permitido por edad minima.");

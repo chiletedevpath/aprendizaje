@@ -29,7 +29,7 @@ public class OperadorArreglos {
 		return copiaArreglo;
 	}
 
-	public void eliminarVarlor(int valor) {
+	public boolean eliminarValor(int valor) {
 		// -1 SIGNIFICA QUE EL VALOR NO HA SIDO ENCONTRADO
 		int indiceValor = -1;
 
@@ -54,8 +54,9 @@ public class OperadorArreglos {
 					arreglo[i] = 0;
 				}
 			}
+			return true;
 		} else {
-			System.out.print("El valor ingresado no esta en el arreglo");
+			return false;
 		}
 	}
 }

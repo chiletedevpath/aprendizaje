@@ -8,6 +8,11 @@ public class ConversorTemperaturaDevPath {
             System.out.print("Ingrese grados Celsius: ");
             double celsius = teclado.nextDouble();
 
+            if (celsius < -273.15) {
+                System.out.println("La temperatura no puede ser menor que el cero absoluto.");
+                return;
+            }
+
             double fahrenheit = convertirAFahrenheit(celsius);
             double kelvin = convertirAKelvin(celsius);
 
