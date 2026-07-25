@@ -1,4 +1,4 @@
-﻿public class EjecutarCajaGenerica {
+public class EjecutarCajaGenerica {
 
 	public static void main(String[] args) {
 

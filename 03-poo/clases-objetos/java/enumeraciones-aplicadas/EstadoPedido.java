@@ -2,7 +2,7 @@ package poo.enumeraciones;
 
 public enum EstadoPedido {
     PENDIENTE(1,"Pedido registrado"),
-    PROCESAnDO(2,"Pedido en reparacion"),
+    PROCESANDO(2, "Pedido en preparación"),
     ENVIADO(3,"Pedido enviado al cliente"),
     CANCELADO(4, "Pedido cancelado");
 
@@ -24,9 +24,11 @@ public enum EstadoPedido {
 
     public static EstadoPedido fromCodigo(int codigo) {
         for(EstadoPedido e : values()){
-            if(e.getCodigo()==codigo) return e;
+            if (e.getCodigo() == codigo) {
+                return e;
+            }
         }
-        return null;
+        throw new IllegalArgumentException("Código de estado desconocido: " + codigo);
     }
 }
 

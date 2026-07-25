@@ -1,11 +1,11 @@
-﻿public class Circulo implements Figura, Rotable, Dibujable {
+public final class Circulo implements Figura, Rotable, Dibujable {
 	private double radio;
 
 	public Circulo() {
 	}
 
 	public Circulo(double radio) {
-		this.radio = radio;
+		setRadio(radio);
 	}
 
 	public double getRadio() {
@@ -13,6 +13,9 @@
 	}
 
 	public void setRadio(double radio) {
+		if (radio <= 0) {
+			throw new IllegalArgumentException("El radio debe ser mayor que cero.");
+		}
 		this.radio = radio;
 	}
 

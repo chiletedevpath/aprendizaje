@@ -8,21 +8,20 @@ public class EjecutarObjetosBasicos {
 				true);
 
 		String reporteHtmlAnimal = """
-				                <tr>
-				                    <td>
-				                        <figure class="image is-64x64">
-				                            <span>%s</span>
-				                        </figure>
-				                    </td>
-				                    </td>
-				<td valign="center">%s</td>
-				                <td>%d</td> <!-- Edad -->
-				                <td>%s</td> <!-- Especie -->
-				                <td>%.2f</td>
-				                <td>%s</td>
-				                <td>%s</td>
-				    </tr>
-				                """;
+				<tr>
+				    <td>
+				        <figure class="image is-64x64">
+				            <span>%s</span>
+				        </figure>
+				    </td>
+				    <td valign="center">%s</td>
+				    <td>%d</td> <!-- Edad -->
+				    <td>%s</td> <!-- Especie -->
+				    <td>%.2f</td>
+				    <td>%s</td>
+				    <td>%s</td>
+				</tr>
+				""";
 
 		System.out.printf(reporteHtmlAnimal, animal.getFoto(), animal.getNombre(), animal.getEdad(),
 				animal.getEspecie(), animal.getPeso(), animal.getColor(), animal.raza());
@@ -34,21 +33,20 @@ public class EjecutarObjetosBasicos {
 		Casa casa = new Casa("sin-imagen", true, "Direccion de ejemplo", 3, 2, false, 10.5);
 
 		String reporteHtmlCasa = """
-				            <tr>
-				                <td>
-				                    <figure class="image is-64x64">
-				                        <span>%s</span>
-				                    </figure>
-				                </td>
-				                </td>
-				<td>%s</td>
-				<td>%s</td>
-				<td>%d</td>
-				<td>%d</td>
-				<td>%s</td>
-				<td>%.2f</td>
+				<tr>
+				    <td>
+				        <figure class="image is-64x64">
+				            <span>%s</span>
+				        </figure>
+				    </td>
+				    <td>%s</td>
+				    <td>%s</td>
+				    <td>%d</td>
+				    <td>%d</td>
+				    <td>%s</td>
+				    <td>%.2f</td>
 				</tr>
-				            """;
+				""";
 		System.out.printf(reporteHtmlCasa, casa.getFoto(), casa.materialNoble(), casa.getDirreccion(),
 				casa.getCantHabitacion(), casa.getCantPiso(), casa.disponible(), casa.getTamano());
 
@@ -60,21 +58,20 @@ public class EjecutarObjetosBasicos {
 				"Motorola", 8, 50);
 
 		String reporteHtmlCelular = """
-				            <tr>
-				                <td>
-				                    <figure class="image is-64x64">
-				                        <span>%s</span>
-				                    </figure>
-				                </td>
-				                </td>
-				<td>%s</td>
-				<td>%s</td>
-				<td>%s</td>
-				<td>%s</td>
-				<td>%d</td>
-				<td>%d</td>
+				<tr>
+				    <td>
+				        <figure class="image is-64x64">
+				            <span>%s</span>
+				        </figure>
+				    </td>
+				    <td>%s</td>
+				    <td>%s</td>
+				    <td>%s</td>
+				    <td>%s</td>
+				    <td>%d</td>
+				    <td>%d</td>
 				</tr>
-				            """;
+				""";
 
 		System.out.printf(reporteHtmlCelular, celular.getFoto(), celular.getImei(), celular.getColor(),
 				celular.getModelo(), celular.getMarca(), celular.getRam(), celular.getCamara());
@@ -93,21 +90,20 @@ public class EjecutarObjetosBasicos {
 		estudiante.setPromedio(17.8);
 
 		String reporteHtmlEstudiante = """
-				            <tr>
-				                <td>
-				                    <figure class="image is-64x64">
-				                        <span>%s</span>
-				                    </figure>
-				                </td>
-				                </td>
-				<td>%d</td>
-				<td>%s</td>
-				<td>%s</td>
-				<td>%d</td>
-				<td>%s</td>
-				<td>%.2f</td>
+				<tr>
+				    <td>
+				        <figure class="image is-64x64">
+				            <span>%s</span>
+				        </figure>
+				    </td>
+				    <td>%d</td>
+				    <td>%s</td>
+				    <td>%s</td>
+				    <td>%d</td>
+				    <td>%s</td>
+				    <td>%.2f</td>
 				</tr>
-				            """;
+				""";
 
 		System.out.printf(reporteHtmlEstudiante, estudiante.getFoto(), estudiante.getId(), estudiante.getNombre(),
 				estudiante.getApellido(), estudiante.getGrado(), estudiante.getGenero(), estudiante.getPromedio());

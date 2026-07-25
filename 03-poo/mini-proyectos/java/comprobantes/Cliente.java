@@ -1,14 +1,19 @@
 public class Cliente {
+	private String dni;
 
-	public void setDNI(String DNI) throws Exception {
-		if (esDNIValido(DNI)) {
-		} else {
-			throw new Exception("DNI no es valido");
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		if (!esDniValido(dni)) {
+			throw new IllegalArgumentException("El DNI ficticio debe contener 8 dígitos.");
 		}
-	}
-	private boolean esDNIValido(String DNI) {
-		return DNI.matches("\\d{8}");
+		this.dni = dni;
 	}
 
+	private boolean esDniValido(String dni) {
+		return dni != null && dni.matches("\\d{8}");
+	}
 }
 

@@ -7,7 +7,7 @@ public class Directivo extends Empleado {
 
 	public Directivo(String dni, String nombre, double sueldoBruto, String categoria) {
 		super(dni, nombre, sueldoBruto);
-		this.categoria = categoria;
+		this.categoria = validarCategoria(categoria);
 		this.subordinados = new ArrayList<>();
 	}
 
@@ -16,16 +16,25 @@ public class Directivo extends Empleado {
 	}
 
 	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+		this.categoria = validarCategoria(categoria);
+	}
+
+	private static String validarCategoria(String categoria) {
+		if (categoria == null || categoria.isBlank()) {
+			throw new IllegalArgumentException("La categoría es obligatoria.");
+		}
+		return categoria.trim();
 	}
 
 	public void addSubordinado(Empleado empleado) {
-		// Registra empleados bajo la responsabilidad del directivo.
+		if (empleado == null) {
+			throw new IllegalArgumentException("El empleado subordinado es obligatorio.");
+		}
 		subordinados.add(empleado);
 	}
 
 	public List<Empleado> getSubordinados() {
-		return subordinados;
+		return List.copyOf(subordinados);
 	}
 
 	@Override

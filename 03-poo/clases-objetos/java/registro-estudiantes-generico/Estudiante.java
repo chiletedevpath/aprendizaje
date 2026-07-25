@@ -1,7 +1,7 @@
 // CLASE GENERICA PARA MANEJAR LOS DATOS DEL ESTUDIANTE: TRABAJA CON DOS TIPOS DE DATOS DIFERENTES (T Y A)
 // SE UTILIZA T PARA DATOS DE TEXTO (NOMBRE Y APELLIDO) Y A PARA DATOS NUMERICOS (NOTAS)
 
-public class Estudiante<T, A> {
+public class Estudiante<T, A extends Number> {
 
 	private DatosDelEstudiante<T> nombre;
 	private DatosDelEstudiante<T> apellido;
@@ -51,9 +51,9 @@ public class Estudiante<T, A> {
 
 	// METODO GENERICO PARA CALCULAR EL PROMEDIO DE LAS NOTAS
 	// SE RESTRINGE EL TIPO A U EXTENDIENDO DE NUMBER PARA PODER CONVERTIR A double
-	public <U extends Number> double promedio() {
-		double nota1 = ((Number) notaOne.getDato()).doubleValue();
-		double nota2 = ((Number) notaTwo.getDato()).doubleValue();
+	public double calcularPromedio() {
+		double nota1 = notaOne.getDato().doubleValue();
+		double nota2 = notaTwo.getDato().doubleValue();
 		return (nota1 + nota2) / 2;
 	}
 }

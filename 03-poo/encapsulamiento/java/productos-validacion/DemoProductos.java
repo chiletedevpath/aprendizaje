@@ -7,18 +7,19 @@ public class DemoProductos {
 
         productos.add(new Producto("Arroz", 4.50));
         productos.add(new Producto("Atun", 6.00));
-        productos.add(new Producto("Gaseosa", -3.00));
+        try {
+            productos.add(new Producto("Gaseosa", -3.00));
+        } catch (IllegalArgumentException error) {
+            System.out.println("Producto rechazado: " + error.getMessage());
+        }
 
         double total = 0;
 
-        // Valida que solo los productos con precio correcto formen parte del total.
         for (Producto p : productos) {
-            if (p.getPrecio() > 0) {
-                p.mostrar();
-                total += p.getPrecio();
-            }
+            p.mostrar();
+            total += p.getPrecio();
         }
 
-        System.out.println("Total: S/ " + total);
+        System.out.printf("Total: S/ %.2f%n", total);
     }
 }

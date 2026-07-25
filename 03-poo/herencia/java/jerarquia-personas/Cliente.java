@@ -3,7 +3,7 @@ public class Cliente extends Persona {
 
 	public Cliente(String dni, String nombre, String nroTelefono) {
 		super(dni, nombre);
-		this.nroTelefono = nroTelefono;
+		this.nroTelefono = validarTelefono(nroTelefono);
 	}
 
 	public String getNroTelefono() {
@@ -11,7 +11,14 @@ public class Cliente extends Persona {
 	}
 
 	public void setNroTelefono(String nroTelefono) {
-		this.nroTelefono = nroTelefono;
+		this.nroTelefono = validarTelefono(nroTelefono);
+	}
+
+	private static String validarTelefono(String nroTelefono) {
+		if (nroTelefono == null || !nroTelefono.matches("\\d{9}")) {
+			throw new IllegalArgumentException("El teléfono ficticio debe contener 9 dígitos.");
+		}
+		return nroTelefono;
 	}
 
 	@Override

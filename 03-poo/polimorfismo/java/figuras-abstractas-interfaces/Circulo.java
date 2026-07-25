@@ -1,4 +1,4 @@
-﻿// AQUI APLICO HERENCIA SIMPLE (EXTENDS) Y HERENCIA MULTIPLE (IMPLEMENTS ROTABLE Y DIBUJABLE)
+// AQUI APLICO HERENCIA SIMPLE (EXTENDS) Y HERENCIA MULTIPLE (IMPLEMENTS ROTABLE Y DIBUJABLE)
 public class Circulo extends Figura implements Rotable, Dibujable {
 
 	// ATRIBUTO
@@ -6,6 +6,9 @@ public class Circulo extends Figura implements Rotable, Dibujable {
 
 	// CONSTRUCTOR PARA INICIALIZAR EL RADIO.
 	public Circulo(double radio) {
+		if (radio <= 0) {
+			throw new IllegalArgumentException("El radio debe ser mayor que cero.");
+		}
 		this.radio = radio;
 	}
 

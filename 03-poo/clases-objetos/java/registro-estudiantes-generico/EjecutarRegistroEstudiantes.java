@@ -42,7 +42,7 @@ public class EjecutarRegistroEstudiantes {
 					+ student.getNotaOne().getDato() + ", " + student.getNotaTwo().getDato());
 
 			System.out.println("El promedio de las notas del alumno(a) " + student.getNombre().getDato() + " es: "
-					+ student.promedio());
+					+ student.calcularPromedio());
 
 			System.out.println("----------------------------------------------------------------------\n");
 		}

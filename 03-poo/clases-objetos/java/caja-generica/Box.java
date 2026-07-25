@@ -1,4 +1,4 @@
-﻿// CREACION DE UNA CLASE GENERICA
+// CREACION DE UNA CLASE GENERICA
 public class Box<T> {
 
 	private T content; // POR CONVENCION SE USA T

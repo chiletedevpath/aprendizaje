@@ -1,4 +1,4 @@
-﻿public class Plantilla<T, A> {
+public class Plantilla<T, A> {
 
 	private T color;
 	private T marca;

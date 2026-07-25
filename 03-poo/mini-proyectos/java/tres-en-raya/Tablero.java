@@ -76,7 +76,7 @@ public class Tablero {
 		tablero[fila][columna] = 'X';
 	}
 
-	boolean verificadorDelGanador(char jugador) {
+	boolean verificarGanador(char jugador) {
 
 		// TRES EN RAYAS EN FILAS
 		if (tablero[0][0] == jugador && tablero[0][1] == jugador && tablero[0][2] == jugador) {
@@ -104,7 +104,7 @@ public class Tablero {
 		}
 	}
 
-	boolean tableroLLeno() {
+	boolean hayEspaciosDisponibles() {
 		for (int i = 0; i < tablero.length; i++) {
 			for (int j = 0; j < tablero.length; j++) {
 				if (tablero[i][j] == '-') {

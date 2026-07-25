@@ -3,11 +3,7 @@ public class Empleado extends Persona {
 
 	public Empleado(String dni, String nombre, double sueldoBruto) {
 		super(dni, nombre);
-		this.sueldoBruto = sueldoBruto;
-	}
-
-	public void calcularSalario() {
-		System.out.println("El salario es: ");
+		this.sueldoBruto = validarSueldo(sueldoBruto);
 	}
 
 	public double getSueldoBruto() {
@@ -15,7 +11,14 @@ public class Empleado extends Persona {
 	}
 
 	public void setSueldoBruto(double sueldoBruto) {
-		this.sueldoBruto = sueldoBruto;
+		this.sueldoBruto = validarSueldo(sueldoBruto);
+	}
+
+	private static double validarSueldo(double sueldoBruto) {
+		if (sueldoBruto < 0) {
+			throw new IllegalArgumentException("El sueldo no puede ser negativo.");
+		}
+		return sueldoBruto;
 	}
 
 	@Override

@@ -9,7 +9,7 @@ public class EjecutarComprobante {
 
         System.out.printf("Subtotal: %9.2f\n", comprobante1.getSubtotal());
         System.out.printf("IGV     : %9.2f\n", comprobante1.getIgv());
-        System.out.printf("Total   : %9.2f", comprobante1.getTotal());
+        System.out.printf("Total   : %9.2f%n", comprobante1.getTotal());
     }
 
 }

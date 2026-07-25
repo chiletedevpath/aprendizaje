@@ -1,4 +1,4 @@
-﻿// LA CLASE CUADRADO TAMBIEN HEREDA DE FIGURA (ESPECIALIZACION)
+// LA CLASE CUADRADO TAMBIEN HEREDA DE FIGURA (ESPECIALIZACION)
 // ADEMAS IMPLEMENTA LA INTERFAZ DIBUJABLE
 public class Cuadrado extends Figura implements Dibujable {
 
@@ -7,6 +7,9 @@ public class Cuadrado extends Figura implements Dibujable {
 
 	// CONSTRUCTOR PARA INICIALIZAR EL LADO
 	public Cuadrado(double lado) {
+		if (lado <= 0) {
+			throw new IllegalArgumentException("El lado debe ser mayor que cero.");
+		}
 		this.lado = lado;
 	}
 

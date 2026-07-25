@@ -3,16 +3,8 @@ public class Persona {
 	private String nombre;
 
 	public Persona(String dni, String nombre) {
-		this.dni = dni;
-		this.nombre = nombre;
-	}
-
-	public void comer() {
-		System.out.println("La persona esta comiendo");
-	}
-
-	public void calcularEdad() {
-		System.out.println("La edad es: ");
+		this.dni = validarDni(dni);
+		this.nombre = validarNombre(nombre);
 	}
 
 	public String getDni() {
@@ -20,7 +12,14 @@ public class Persona {
 	}
 
 	public void setDni(String dni) {
-		this.dni = dni;
+		this.dni = validarDni(dni);
+	}
+
+	private static String validarDni(String dni) {
+		if (dni == null || !dni.matches("\\d{8}")) {
+			throw new IllegalArgumentException("El DNI ficticio debe contener 8 dígitos.");
+		}
+		return dni;
 	}
 
 	public String getNombre() {
@@ -28,7 +27,14 @@ public class Persona {
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = validarNombre(nombre);
+	}
+
+	private static String validarNombre(String nombre) {
+		if (nombre == null || nombre.isBlank()) {
+			throw new IllegalArgumentException("El nombre es obligatorio.");
+		}
+		return nombre.trim();
 	}
 
 	@Override

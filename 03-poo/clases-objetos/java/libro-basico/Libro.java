@@ -1,17 +1,16 @@
-﻿public class Libro {
+public class Libro {
 
 	private String titulo;
 	private String autor;
 	private int stock;
-	public long ISBN;
+	private long isbn;
 	private double precio;
 
-	public Libro(String titulo, String autor, int stock, long iSBN, double precio) {
-		super();
+	public Libro(String titulo, String autor, int stock, long isbn, double precio) {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.stock = stock;
-		ISBN = iSBN;
+		this.isbn = isbn;
 		this.precio = precio;
 	}
 
@@ -39,12 +38,12 @@
 		this.stock = stock;
 	}
 
-	public long getISBN() {
-		return ISBN;
+	public long getIsbn() {
+		return isbn;
 	}
 
-	public void setISBN(long iSBN) {
-		ISBN = iSBN;
+	public void setIsbn(long isbn) {
+		this.isbn = isbn;
 	}
 
 	public double getPrecio() {

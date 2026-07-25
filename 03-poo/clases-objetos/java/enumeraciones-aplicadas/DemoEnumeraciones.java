@@ -35,27 +35,26 @@ public class DemoEnumeraciones {
 
         System.out.println("========================= EJERCICIO 5========================");
 
-        int code = 409;
+        int code = 404;
 
-        HttpStatus status = HttpStatus.fromCode(code);
-
-        if(status != null){
+        try {
+            HttpStatus status = HttpStatus.fromCode(code);
             System.out.println("Code: "+ status.getCode());
             System.out.println("Status "+ status);
             System.out.println("Descripcion: "+ status.getDescripcion());
-        }else {
-            System.out.println("Codigo invalido " + code);
+        } catch (IllegalArgumentException error) {
+            System.out.println(error.getMessage());
         }
 
         System.out.println("============================================");
         int code2 = 3;
-        EstadoPedido estado = EstadoPedido.fromCodigo(code2);
-        if(estado!=null){
+        try {
+            EstadoPedido estado = EstadoPedido.fromCodigo(code2);
             System.out.println("Nombre del estado :" + estado);
             System.out.println("Codigo del estado :" + estado.getCodigo());
             System.out.println("Descripcion :" + estado.getDescripcion());
-        }else {
-            System.out.println("Error");
+        } catch (IllegalArgumentException error) {
+            System.out.println(error.getMessage());
         }
     }
 }

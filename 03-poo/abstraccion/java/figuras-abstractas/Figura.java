@@ -1,4 +1,4 @@
-﻿public abstract class Figura {
+public abstract class Figura {
 	protected double x;
 	protected double y;
 

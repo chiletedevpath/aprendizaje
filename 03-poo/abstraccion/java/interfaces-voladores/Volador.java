@@ -1,8 +1,7 @@
-package poo.abstraccion.pagos;
+package poo.abstraccion.voladores;
 
 public interface Volador {
     void volar();
-    void volar2();
 }
 
 

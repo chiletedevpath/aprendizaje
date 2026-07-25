@@ -1,4 +1,4 @@
-﻿public class EjecutarFigurasConInterfaces {
+public class EjecutarFigurasConInterfaces {
 
 	public static void main(String[] args) {
 		// Polimorfismo usando la interfaz Figura como tipo comun.

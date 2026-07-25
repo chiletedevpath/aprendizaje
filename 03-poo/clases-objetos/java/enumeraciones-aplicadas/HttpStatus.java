@@ -24,9 +24,11 @@ public enum HttpStatus {
 
     public static HttpStatus fromCode(int code){
         for (HttpStatus s : values()){
-            if(s.code == code) return s;
+            if (s.code == code) {
+                return s;
+            }
         }
-        return null; // o Lanzar una Exepcion
+        throw new IllegalArgumentException("Código HTTP desconocido: " + code);
     }
 
 }

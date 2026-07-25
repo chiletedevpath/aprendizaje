@@ -1,42 +1,54 @@
 public class Comprobante {
-	 private final double _PORCENTAJE_IGV_ = 0.18;
+    private static final double PORCENTAJE_IGV = 0.18;
 
-	    private String[] productos;
-	    private double[] precios;
-	    private int[] unidades;
+    private final String[] productos;
+    private final double[] precios;
+    private final int[] unidades;
+    private double subtotal;
+    private double igv;
+    private double total;
 
-	    private double subtotal, igv, total;
+    public Comprobante(String[] productos, double[] precios, int[] unidades) {
+        validarDatos(productos, precios, unidades);
+        this.productos = productos.clone();
+        this.precios = precios.clone();
+        this.unidades = unidades.clone();
+        calcularMontos();
+    }
 
-	    public double getSubtotal() {
-	        return subtotal;
-	    }
+    public double getSubtotal() {
+        return subtotal;
+    }
 
-	    public double getIgv() {
-	        return igv;
-	    }
+    public double getIgv() {
+        return igv;
+    }
 
-	    public double getTotal() {
-	        return total;
-	    }
+    public double getTotal() {
+        return total;
+    }
 
-	    public Comprobante(String[] productos, double[] precios, int[] unidaddes) {
-	        this.productos = productos;
-	        this.precios = precios;
-	        this.unidades = unidaddes;
-	        subtotal = igv = total = 0;
+    private void validarDatos(String[] productos, double[] precios, int[] unidades) {
+        if (productos == null || precios == null || unidades == null) {
+            throw new IllegalArgumentException("Los arreglos del comprobante son obligatorios.");
+        }
+        if (productos.length == 0 || productos.length != precios.length || productos.length != unidades.length) {
+            throw new IllegalArgumentException("Los arreglos deben tener la misma longitud y no estar vacíos.");
+        }
 
-	        calculaMontos();
-	    }
+        for (int i = 0; i < productos.length; i++) {
+            if (productos[i] == null || productos[i].isBlank() || precios[i] <= 0 || unidades[i] <= 0) {
+                throw new IllegalArgumentException("Datos inválidos en el producto de posición " + i + ".");
+            }
+        }
+    }
 
-	    private void calculaMontos() {
-	        for (int i = 0; i < productos.length; i++) {
-	            subtotal += unidades[i] * precios[i];
-	        }
+    private void calcularMontos() {
+        for (int i = 0; i < productos.length; i++) {
+            subtotal += unidades[i] * precios[i];
+        }
 
-	        igv = subtotal * _PORCENTAJE_IGV_;
-	        total = subtotal / igv * 100.0;
-	    }
-
-
+        igv = subtotal * PORCENTAJE_IGV;
+        total = subtotal + igv;
+    }
 }
-

@@ -1,4 +1,4 @@
-﻿public class EjecutarFigurasAbstractas {
+public class EjecutarFigurasAbstractas {
 
 	public static void main(String[] args) {
 		// Cada subclase implementa su propio calculo de area.

@@ -1,49 +1,89 @@
-# Ejercicios para la comunidad
+# Retos de programación orientada a objetos
 
-Estos retos complementan los ejercicios existentes de `03-poo`. Estan pensados para practicar modelado antes de revisar una solucion.
+Cada bloque conecta un ejemplo resuelto con un reto nuevo. Modela primero en
+papel o UML y consulta la referencia únicamente después de intentar tu solución.
 
-## Clases y objetos
+## 1. Clases y objetos
 
-1. Crear una clase `Aprendiz` con nombre, ruta, avance y un metodo que muestre su perfil.
-2. Crear una clase `Curso` con titulo, duracion y nivel.
-3. Crear una clase `Recurso` que represente un apunte, video o ejercicio.
+Referencias:
 
-## Encapsulamiento
+- `clases-objetos/java/rectangulo-basico`
+- `clases-objetos/java/libro-basico`
 
-1. Crear una clase `CuentaPractica` que no permita saldo negativo.
-2. Crear una clase `ProductoAcademico` que valide nombre y precio antes de registrar datos.
-3. Crear una clase `ProgresoAprendiz` que solo acepte avances entre 0 y 100.
+Reto: crea una clase `Curso` con título, duración y nivel, más un método que
+devuelva su ficha. Prueba dos objetos con datos diferentes.
 
-## Herencia
+Casos: duración normal, duración mínima y valores inválidos que luego protegerás
+en encapsulamiento.
 
-1. Crear una clase padre `UsuarioComunidad` y clases hijas `Aprendiz` y `Mentor`.
-2. Crear una clase `Material` y especializarla en `Guia`, `Ejercicio` y `Proyecto`.
-3. Crear una jerarquia simple de `Persona`, `Estudiante` y `Docente`.
+## 2. Encapsulamiento
 
-## Abstraccion e interfaces
+Referencia: `encapsulamiento/java/productos-validacion`.
 
-1. Crear una interfaz `Evaluable` con el metodo `calcularPuntaje`.
-2. Crear una clase abstracta `Actividad` con datos comunes y comportamiento especializado.
-3. Crear distintas formas de notificacion usando una misma interfaz.
+Reto: crea `ProgresoAprendiz` y garantiza que el avance siempre esté entre 0 y
+100. El constructor y cualquier actualización deben respetar la misma regla.
 
-## Polimorfismo
+Casos: `0`, `50`, `100`, `-1` y `101`.
 
-1. Procesar una lista de actividades y ejecutar `mostrarDetalle` en cada una.
-2. Crear varios tipos de material y mostrarlos desde una referencia comun.
-3. Comparar dos implementaciones de una misma interfaz y explicar la diferencia.
+## 3. Herencia
 
-## Integracion
+Referencia: `herencia/java/jerarquia-personas`.
 
-1. Modelar una pequena ruta de aprendizaje con cursos, recursos y progreso.
-2. Crear un sistema simple de registro de ejercicios resueltos.
-3. Diseniar un diagrama UML antes de implementar un ejercicio integrador.
+Reto: modela `UsuarioComunidad` como clase base y especialízala en `Aprendiz` y
+`Mentor`. Sobrescribe un método que describa la responsabilidad de cada tipo.
 
-## Criterio para resolver
+Casos: procesa ambos objetos desde referencias `UsuarioComunidad` y explica qué
+miembros se heredan.
 
-Antes de programar:
+## 4. Abstracción
 
-1. Identifica las clases principales.
-2. Define atributos y metodos.
-3. Decide que datos deben estar encapsulados.
-4. Revisa si necesitas herencia, abstraccion o interfaz.
-5. Implementa una version pequena y explicala con tus palabras.
+Referencias:
+
+- `abstraccion/java/figuras-abstractas`
+- `abstraccion/java/interfaces-y-pagos`
+- `abstraccion/java/interfaces-voladores`
+
+Reto: crea una clase abstracta `Actividad` y una interfaz `Evaluable`. Implementa
+una actividad teórica y otra práctica con distinto cálculo de puntaje.
+
+Casos: puntaje mínimo, máximo y dato fuera de rango.
+
+## 5. Polimorfismo
+
+Referencias:
+
+- `polimorfismo/java/notificaciones-polimorficas`
+- `polimorfismo/java/publicaciones-feed`
+- `polimorfismo/java/figuras-abstractas-interfaces`
+
+Reto: guarda distintas actividades en un arreglo del tipo común y ejecuta el
+mismo método en todas. No uses `if` para elegir el comportamiento.
+
+Casos: al menos dos implementaciones y una tercera agregada sin modificar el
+bucle que las procesa.
+
+## 6. Enumeraciones y genéricos
+
+Referencias:
+
+- `clases-objetos/java/enumeraciones-aplicadas`
+- `clases-objetos/java/caja-generica`
+
+Reto: crea `NivelDificultad` como enum y una `Caja<T>` que pueda guardar un
+recurso de cualquier tipo manteniendo seguridad de tipos.
+
+Casos: caja de texto, caja de número e intento de asignar un tipo incompatible.
+
+## 7. Cierre integrado
+
+Resuelve `laboratorio-integrador.md`. La implementación de referencia está en
+`mini-proyectos/java/seguimiento-aprendizaje`.
+
+## Criterios de logro
+
+- cada clase tiene una responsabilidad concreta;
+- el objeto nunca queda en un estado inválido;
+- la herencia representa una relación “es un” justificable;
+- las interfaces expresan capacidades y no datos;
+- el polimorfismo evita decisiones basadas en el tipo concreto;
+- puedes defender el modelo y sus límites sin leer el código línea por línea.

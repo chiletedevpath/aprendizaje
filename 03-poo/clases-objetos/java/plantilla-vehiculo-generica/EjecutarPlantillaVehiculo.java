@@ -1,4 +1,4 @@
-﻿public class EjecutarPlantillaVehiculo {
+public class EjecutarPlantillaVehiculo {
 
 	public static void main(String[] args) {
 

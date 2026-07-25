@@ -4,46 +4,46 @@ public class JuegoTresEnRaya {
 
 	public static void main(String[] args) {
 
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("JUEGO DE TRES EN RAYA EN CONSOLA\n");
+		try (Scanner teclado = new Scanner(System.in)) {
+			System.out.println("JUEGO DE TRES EN RAYA EN CONSOLA\n");
 
-		System.out.println("Usuario: O");
-		System.out.println("Computadora: X\n");
+			System.out.println("Usuario: O");
+			System.out.println("Computadora: X\n");
 
-		Tablero juego = new Tablero();
+			Tablero juego = new Tablero();
 
-		System.out.println("QUE GANE EL MEJOR\n");
-		juego.crearTablero();
-		juego.mostrarTablero();
-		
-
-		do {
-			System.out.println("");
-			juego.jugadaDelUsuario(teclado);
+			System.out.println("QUE GANE EL MEJOR\n");
+			juego.crearTablero();
 			juego.mostrarTablero();
 
-			boolean resultadoDelJuego = juego.verificadorDelGanador('O');
-			if (resultadoDelJuego == true) {
-				System.out.println("El ganador es el usuario");
-				break;
-			}
-			
-			resultadoDelJuego = juego.tableroLLeno();
-			if (resultadoDelJuego == false) {
-				System.out.println("Hay empate");
-				break;
-			}
-				
-			System.out.println("");
-			juego.jugadaDeLaComputadora();
-			juego.mostrarTablero();
-			resultadoDelJuego = juego.verificadorDelGanador('X');
-			if (resultadoDelJuego == true) {
-				System.out.println("El ganador es la computadora");
-				break;
-			}
+			boolean juegoTerminado = false;
 
-		} while (true);
+			while (!juegoTerminado) {
+				System.out.println();
+				juego.jugadaDelUsuario(teclado);
+				juego.mostrarTablero();
+
+				if (juego.verificarGanador('O')) {
+					System.out.println("El ganador es el usuario.");
+					juegoTerminado = true;
+				} else if (!juego.hayEspaciosDisponibles()) {
+					System.out.println("Hay empate.");
+					juegoTerminado = true;
+				} else {
+					System.out.println();
+					juego.jugadaDeLaComputadora();
+					juego.mostrarTablero();
+
+					if (juego.verificarGanador('X')) {
+						System.out.println("El ganador es la computadora.");
+						juegoTerminado = true;
+					} else if (!juego.hayEspaciosDisponibles()) {
+						System.out.println("Hay empate.");
+						juegoTerminado = true;
+					}
+				}
+			}
+		}
 	}
 }
 

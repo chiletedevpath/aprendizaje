@@ -1,11 +1,11 @@
-﻿public class Cuadrado implements Figura, Dibujable {
+public final class Cuadrado implements Figura, Dibujable {
 	private double lado;
 
 	public Cuadrado() {
 	}
 
 	public Cuadrado(double lado) {
-		this.lado = lado;
+		setLado(lado);
 	}
 
 	public double getLado() {
@@ -13,6 +13,9 @@
 	}
 
 	public void setLado(double lado) {
+		if (lado <= 0) {
+			throw new IllegalArgumentException("El lado debe ser mayor que cero.");
+		}
 		this.lado = lado;
 	}
 

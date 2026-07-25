@@ -41,6 +41,7 @@ Antes de iniciar este modulo, conviene poder:
 
 - `glosario.md`: terminos esenciales de POO explicados desde la practica.
 - `ejercicios-comunidad.md`: retos propuestos para practicar modelado y codigo.
+- `laboratorio-integrador.md`: practica final con composicion, abstraccion y polimorfismo.
 
 ## Organizacion interna
 
@@ -56,13 +57,18 @@ Antes de iniciar este modulo, conviene poder:
 
 ## Ruta sugerida
 
-1. Empieza con `clases-objetos`.
-2. Continua con `encapsulamiento`.
-3. Practica reutilizacion con `herencia`.
-4. Avanza a `abstraccion`.
-5. Refuerza comportamiento flexible con `polimorfismo`.
-6. Integra conceptos en `mini-proyectos`.
-7. Revisa `uml` para conectar modelado y codigo.
+1. Empieza con `clases-objetos/java/rectangulo-basico` y `libro-basico`.
+2. Modela más entidades en `objetos-basicos` y `perfil-estudiante`.
+3. Continúa con `encapsulamiento` para proteger estados válidos.
+4. Practica especialización con `herencia`.
+5. Avanza a clases abstractas e interfaces en `abstraccion`.
+6. Refuerza comportamiento flexible con `polimorfismo`.
+7. Revisa enumeraciones y genéricos como ampliación de tipos.
+8. Integra conceptos en `mini-proyectos` y en `laboratorio-integrador.md`.
+9. Usa `uml` antes o después del código para contrastar el modelo.
+
+En cada etapa ejecuta primero un ejemplo resuelto, explica sus decisiones,
+resuelve el reto equivalente y prueba los casos de `ejercicios-comunidad.md`.
 
 ## Criterio de marca y datos de ejemplo
 

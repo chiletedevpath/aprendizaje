@@ -1,4 +1,4 @@
-﻿public interface Rotable {
+public interface Rotable {
 	void rotar();
 }
 
