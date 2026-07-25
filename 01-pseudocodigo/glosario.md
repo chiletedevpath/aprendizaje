@@ -16,7 +16,11 @@ Este glosario reúne términos básicos para estudiar pseudocódigo antes de pas
 | Constante | Valor que no cambia durante la ejecución del algoritmo. |
 | Tipo de dato | Clasificación de un valor, por ejemplo entero, real, carácter o lógico. |
 | Operador | Símbolo o palabra que permite realizar una operación. |
+| Operador aritmético | Operador usado para calcular, como suma, resta, multiplicación, división o módulo. |
+| Operador relacional | Operador que compara valores y produce un resultado lógico. |
+| Operador lógico | Operador que combina o niega condiciones, como `Y`, `O` y `NO`. |
 | Expresión | Combinación de valores, variables y operadores que produce un resultado. |
+| Asignación | Instrucción que guarda un valor en una variable. |
 
 ## Estructuras de control
 
@@ -40,6 +44,7 @@ Este glosario reúne términos básicos para estudiar pseudocódigo antes de pas
 | Bandera | Variable lógica usada para indicar si ocurrió o no una condición. |
 | Promedio | Resultado de dividir una suma entre la cantidad de datos. |
 | Validación | Revisión que confirma si un dato cumple una regla. |
+| Estructura anidada | Estructura de control incluida dentro de otra estructura. |
 
 ## Pruebas
 
@@ -49,7 +54,4 @@ Este glosario reúne términos básicos para estudiar pseudocódigo antes de pas
 | Caso normal | Situación esperada en la que el algoritmo debería funcionar sin problemas. |
 | Caso límite | Situación extrema o especial que puede revelar errores. |
 | Error lógico | Error donde el algoritmo ejecuta, pero produce un resultado incorrecto. |
-
-## Nota de autoría
-
-Contenido creado para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.
+| Prueba de escritorio | Seguimiento manual de variables e instrucciones para comprobar el comportamiento del algoritmo. |

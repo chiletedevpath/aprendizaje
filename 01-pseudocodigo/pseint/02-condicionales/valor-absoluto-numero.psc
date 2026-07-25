@@ -1,19 +1,19 @@
 Algoritmo Valor_Absoluto_Numero
-//Eres un programador y estás trabajando en una función que necesita calcular el valor absoluto de un número. 
-//Te solicitan crear un algoritmo en pseudocódigo que tome como entrada un número y devuelva su valor absoluto.
-//Por ejemplo, si ingresa 5, devuelve 5. Si ingresa -5, devuelve sólo 5.
-	
-Definir num, valabs Como Real		
+//Eres un programador y estÃ¡s trabajando en una funciÃ³n que necesita calcular el valor absoluto de un nÃºmero.
+//Te solicitan crear un algoritmo en pseudocÃ³digo que tome como entrada un nÃºmero y devuelva su valor absoluto.
+//Por ejemplo, si ingresa 5, devuelve 5. Si ingresa -5, devuelve sÃ³lo 5.
 
-Escribir "*****   VALOR ABSOLUTO DE UN NÚMERO   *****"
+Definir num, valabs Como Real
+
+Escribir "*****   VALOR ABSOLUTO DE UN NÃšMERO   *****"
 Escribir " "
 
-Escribir "Ingrese el número: " Sin Saltar
+Escribir "Ingrese el nÃºmero: " Sin Saltar
 Leer num
 
 valabs = abs(num)
 
 Escribir "El valor absoluto de ",num," es: ", valabs
-	
-	
+
+
 FinAlgoritmo

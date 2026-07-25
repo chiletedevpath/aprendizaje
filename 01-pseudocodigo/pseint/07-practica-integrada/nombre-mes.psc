@@ -1,15 +1,15 @@
 Algoritmo Nombre_mes
-     // Eres un programador y estás trabajando en una función que necesita convertir 
-     //	un número de mes en el nombre del mes correspondiente para un sistema de gestión de ventas. 
-     //	Necesitas crear un programa que tome como entrada el número del mes e imprima en pantalla 
-     //	el nombre del mes correspondiente. Si el usuario ingresa un valor fuera del rango de [1-12], el 
-     //	programa debe mostrar una advertencia  utiliza Condicional Múltiple.	
-	
+     // Eres un programador y estÃ¡s trabajando en una funciÃ³n que necesita convertir
+     //	un nÃºmero de mes en el nombre del mes correspondiente para un sistema de gestiÃ³n de ventas.
+     //	Necesitas crear un programa que tome como entrada el nÃºmero del mes e imprima en pantalla
+     //	el nombre del mes correspondiente. Si el usuario ingresa un valor fuera del rango de [1-12], el
+     //	programa debe mostrar una advertencia  utiliza Condicional MÃºltiple.
+
 	 Definir mes Como Entero
-	
+
 	 Escribir "Ingrese el numero del mes: " Sin Saltar
 	 Leer mes
-	
+
 	Si 1<= mes Entonces
 		Segun mes Hacer
 			1: Escribir " El nombre del mes es Enero"
@@ -21,13 +21,13 @@ Algoritmo Nombre_mes
 			7: Escribir " El nombre del mes es Julio"
 			8: Escribir " El nombre del mes es Agosto"
 			9: Escribir " El nombre del mes es Setiembre"
-			10: Escribir " El nombre del mes es Octumbre"
+			10: Escribir " El nombre del mes es Octubre"
 			11: Escribir " El nombre del mes es Noviembre"
 			12: Escribir " El nombre del mes es Diciembre"
 			De Otro Modo:
-				Escribir "¡¡¡NUMERO DE MES NO EXISTE!!!"				
+				Escribir "Â¡Â¡Â¡NUMERO DE MES NO EXISTE!!!"
 		 FinSegun
-	 Sino 
-		 Escribir "¡¡¡NUMERO DE MES NO EXISTE!!!"
+	 Sino
+		 Escribir "Â¡Â¡Â¡NUMERO DE MES NO EXISTE!!!"
 	FinSi
 FinAlgoritmo

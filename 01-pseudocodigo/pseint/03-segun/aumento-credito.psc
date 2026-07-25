@@ -1,29 +1,29 @@
 Algoritmo Aumento_Credito
-     // El banco "Préstamo fácil" ha decidido aumentar el límite de crédito de las tarjetas de sus clientes. Para
-     // esto, se considera la siguiente información:
-     // Si tiene tarjeta tipo 1, el aumento será de 20 %
-     // Si tiene tipo 2, el aumento será de 30 %
-     // Si tiene tipo 3 el aumento será de 40 %
-	 // Para cualquier otro tipo, el aumento será de 45 %.
-	 // Si la persona tiene deuda con el banco solo se le dará la mitad de incremento si es tipo 1 y 2, el resto de
-	 // tipos de tarjeta no tendrá incremento si tiene deuda.
-	 // ¿Qué hacer?
-	 // Realice un pseudocódigo para determinar el nuevo límite de crédito que tendrá una persona en su tarjeta.
-		
+     // El banco "PrÃ©stamo fÃ¡cil" ha decidido aumentar el lÃ­mite de crÃ©dito de las tarjetas de sus clientes. Para
+     // esto, se considera la siguiente informaciÃ³n:
+     // Si tiene tarjeta tipo 1, el aumento serÃ¡ de 20 %
+     // Si tiene tipo 2, el aumento serÃ¡ de 30 %
+     // Si tiene tipo 3 el aumento serÃ¡ de 40 %
+	 // Para cualquier otro tipo, el aumento serÃ¡ de 45 %.
+	 // Si la persona tiene deuda con el banco solo se le darÃ¡ la mitad de incremento si es tipo 1 y 2, el resto de
+	 // tipos de tarjeta no tendrÃ¡ incremento si tiene deuda.
+	 // Â¿QuÃ© hacer?
+	 // Realice un pseudocÃ³digo para determinar el nuevo lÃ­mite de crÃ©dito que tendrÃ¡ una persona en su tarjeta.
+
 	 Definir tipo Como Entero
 	 Definir deuda Como Logico
 	 Definir cred, aume,nuevo_cred Como Real
-	
+
 	 Escribir "*****  Banco Prestamo Facil  *****"
 	 Escribir " "
-	
-	 Escribir "Ingrese su tipo de tarjeta (1,2,3 u otra" Sin Saltar
+
+	 Escribir "Ingrese su tipo de tarjeta (1, 2, 3 u otra): " Sin Saltar
 	 Leer tipo
-	 Escribir "¿Tiene deuda?" Sin Saltar
+	 Escribir "Â¿Tiene deuda?" Sin Saltar
 	 Leer deuda
 	 Escribir "Ingrese su limite de credito" Sin Saltar
 	 Leer cred
-	
+
 	Segun tipo Hacer
 		1: Si deuda Entonces
 				aume = 0.10
@@ -43,15 +43,15 @@ Algoritmo Aumento_Credito
 		De Otro Modo:
 			Si deuda Entonces
 				aume = 0.00
-			Sino 
+			Sino
 				aume = 0.45
-				
+
 			FinSi
-		
+
 	FinSegun
-	
+
 	nuevo_cred = cred+(cred*aume)
 	Escribir "El nuevo limite de credito es: S/.",nuevo_cred " nuevos soles"
-	
-	
+
+
 FinAlgoritmo

@@ -1,6 +1,6 @@
-# PSeInt
+# Banco resuelto de PSeInt
 
-Esta carpeta contiene ejercicios de pseudocódigo desarrollados con PSeInt.
+Esta carpeta contiene 52 ejercicios de pseudocódigo ya desarrollados con PSeInt. Su función es ofrecer ejemplos ejecutables y evidencia académica; los retos que deben resolverse sin mirar una respuesta se encuentran en `../practica/retos.md`.
 
 Los ejercicios están organizados por estructura lógica para facilitar el avance progresivo.
 
@@ -16,13 +16,16 @@ Los ejercicios están organizados por estructura lógica para facilitar el avanc
 | `06-bucles-repetir` | Repeticiones condicionadas al final. |
 | `07-practica-integrada` | Ejercicios que combinan varias estructuras. |
 
+La secuencia avanza desde operaciones directas hasta problemas que requieren validaciones, acumuladores, decisiones y más de una estructura de control.
+
 ## Ruta sugerida de práctica
 
-1. Empieza por `01-secuenciales`.
-2. Continúa con `02-condicionales`.
-3. Practica selección múltiple en `03-segun`.
-4. Avanza a bucles en este orden: `Para`, `Mientras`, `Repetir`.
-5. Cierra con `07-practica-integrada`.
+1. Estudia el bloque correspondiente en `../guia-didactica.md`.
+2. Ejecuta el ejemplo guiado indicado.
+3. Revisa uno o dos algoritmos adicionales de la misma carpeta.
+4. Explica sus variables, estructura y resultado.
+5. Resuelve el reto del bloque sin copiar este banco.
+6. Regresa al banco cuando necesites comparar enfoques.
 
 ## Recomendaciones
 
@@ -31,6 +34,7 @@ Los ejercicios están organizados por estructura lógica para facilitar el avanc
 - Ejecuta el algoritmo en PSeInt.
 - Prueba datos normales y casos límite.
 - Corrige errores de uno en uno.
+- Registra qué dato provocó el error y cómo comprobaste la corrección.
 - Haz pausas si una sesión se vuelve larga.
 
 ## Adaptación para Chilete DevPath
@@ -46,6 +50,4 @@ Estos nombres son solo datos de práctica. No deben reemplazar la lógica del ej
 
 ## Nota de fuente
 
-Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. Se conservan como evidencia de aprendizaje y práctica académica dentro de Chilete DevPath.
-
-Los comentarios o enunciados internos deben tratarse como contexto de práctica. Si este contenido pasa a la web, deben redactarse con palabras propias y como recurso educativo de Chilete DevPath.
+Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. Se conservan como evidencia de aprendizaje y práctica académica dentro de Chilete DevPath, no como material oficial de la institución.

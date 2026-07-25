@@ -1,71 +1,73 @@
-Algoritmo Biblioteca_De_libros
-	// Como experto en algoritmos, te solicitan crear un algoritmo en pseudocódigo que debe solicitar
-	// al usuario que ingrese el número de préstamos "n" del día. Luego, para cada préstamo, debes solicitar 
-	// al usuario que ingrese 4 datos: el ID del libro, los días de préstamo, la categoría del libro
-	// (1: Ficción, 2: No ficción, 3: Referencia) y si el usuario es estudiante (S/N). 
-	//Calcula el costo del préstamo (Ficción: $0.5/día, No ficción: $0.75/día, Referencia: $1/día, con 20% de 
-	// descuento para estudiantes), y al final, muestra el total recaudado y el número de libros prestados por categoría.
-	// Consideraciones:
-	//	Se debe validar que el ID del libro sea un número positivo.
-	// Los días de préstamo deben estar entre 1 y 30.
-	//	La categoría debe ser 1, 2 o 3.
-	// La respuesta de si es estudiante debe ser 'S' o 'N'.
-	//	No se debe interrumpir la ejecución si un valor es erróneo, se debe volver a pedir.
-	
-	Definir num, i, ID, dias, categoria, acumulador Como Entero
-	Definir costoxdia, descuento, totalRecaudado Como Real
+Algoritmo Biblioteca_De_Libros
+	// Registra los prestamos del dia, calcula su costo y resume las categorias atendidas.
+
+	Definir numeroPrestamos, i, idLibro, dias, categoria Como Entero
+	Definir librosFiccion, librosNoFiccion, librosReferencia Como Entero
+	Definir costoPorDia, costoPrestamo, descuento, totalRecaudado Como Real
 	Definir estudiante Como Caracter
-	
-	Escribir "Ingrese el número a prestar del día: " Sin Saltar
-	Leer num
-	
-	acumulador <- 0
-	Para i = 1 Hasta num Hacer
-		
+
+	Repetir
+		Escribir "Ingrese el numero de prestamos del dia: " Sin Saltar
+		Leer numeroPrestamos
+	Hasta Que numeroPrestamos > 0
+
+	librosFiccion = 0
+	librosNoFiccion = 0
+	librosReferencia = 0
+	totalRecaudado = 0
+
+	Para i = 1 Hasta numeroPrestamos Hacer
+		Escribir " "
+		Escribir "Prestamo ", i
+
 		Repetir
-			Escribir "Ingrese el ID del libro ", i " :" Sin Saltar
-			Leer ID	
-			
-			Repetir
-				Escribir "Ingrese la cantidad de dias a prestar: " Sin Saltar
-				Leer dias
-				
-				Repetir
-						Escribir "Ingrese la categoria del libro a prestar: " Sin Saltar
-						Leer categoria
-						
-						Segun categoria Hacer
-							1: Escribir "Libro de Ficción" 
-								costoxdia = dias * 0.5
-							2: Escribir "Libro de No ficción"
-								costoxdia = dias * 0.75
-							3: Escribir "Libro de Referencia"
-								costoxdia = dias * 1
-						FinSegun
-					Hasta Que 1 <= categoria y categoria <= 3
-					
-			Hasta Que 1 <= dias y dias <= 30
-			
-			Repetir
-				Escribir "¿Es estudiante (Responda con S o N)?" Sin Saltar
-				Leer estudiante	
-			Hasta Que estudiante = "S" O estudiante = "N" O estudiante = "s" O estudiante = "n"
-			
-			Si estudiante = "S" o estudiante = "s" Entonces
-				descuento = costoxdia * 0.20
-			SiNo
-				Si estudiante = "N" o estudiante = "n" Entonces
-					descuento = 0
-				FinSi
-			FinSi
-			
-		Hasta Que ID > 0
-		
-		acumulador <- categoria + 1
-		totalRecaudado = costoxdia - descuento
-		Escribir "Numero de libros prestados por categoria ", categoria " es: ", acumulador			
+			Escribir "Ingrese el ID del libro: " Sin Saltar
+			Leer idLibro
+		Hasta Que idLibro > 0
+
+		Repetir
+			Escribir "Ingrese los dias de prestamo (1 a 30): " Sin Saltar
+			Leer dias
+		Hasta Que dias >= 1 Y dias <= 30
+
+		Repetir
+			Escribir "Ingrese la categoria (1: Ficcion, 2: No ficcion, 3: Referencia): " Sin Saltar
+			Leer categoria
+		Hasta Que categoria >= 1 Y categoria <= 3
+
+		Repetir
+			Escribir "Es estudiante (S/N): " Sin Saltar
+			Leer estudiante
+		Hasta Que estudiante = "S" O estudiante = "s" O estudiante = "N" O estudiante = "n"
+
+		Segun categoria Hacer
+			1:
+				costoPorDia = 0.50
+				librosFiccion = librosFiccion + 1
+			2:
+				costoPorDia = 0.75
+				librosNoFiccion = librosNoFiccion + 1
+			3:
+				costoPorDia = 1
+				librosReferencia = librosReferencia + 1
+		FinSegun
+
+		costoPrestamo = dias * costoPorDia
+		Si estudiante = "S" O estudiante = "s" Entonces
+			descuento = costoPrestamo * 0.20
+		SiNo
+			descuento = 0
+		FinSi
+
+		costoPrestamo = costoPrestamo - descuento
+		totalRecaudado = totalRecaudado + costoPrestamo
+		Escribir "Costo del prestamo: S/ ", costoPrestamo
 	FinPara
-		
-	Escribir "El total recaudado es: ", totalRecaudado
-	
+
+	Escribir " "
+	Escribir "Libros de ficcion: ", librosFiccion
+	Escribir "Libros de no ficcion: ", librosNoFiccion
+	Escribir "Libros de referencia: ", librosReferencia
+	Escribir "Total recaudado: S/ ", totalRecaudado
+
 FinAlgoritmo

@@ -1,12 +1,12 @@
 Proceso Calcular_Minutos
-//Te han contratado para trabajar en una fábrica de chocolate empacando los productos. La empresa, brinda el monto de pago,
-//pero no por horas o días, sino por minutos. Por ello, necesitas calcular el número de minutos que hay en un determinado 
-//número de días.Se te solicita construir un pseudocódigo que calcule y muestre el número de minutos que hay en un determinado 
-//número de días.
-//Por ejemplo, si se indica 2 días, debe mostrar que hay 2880 minutos.
+//Te han contratado para trabajar en una fÃ¡brica de chocolate empacando los productos. La empresa, brinda el monto de pago,
+//pero no por horas o dÃ­as, sino por minutos. Por ello, necesitas calcular el nÃºmero de minutos que hay en un determinado
+//nÃºmero de dÃ­as.Se te solicita construir un pseudocÃ³digo que calcule y muestre el nÃºmero de minutos que hay en un determinado
+//nÃºmero de dÃ­as.
+//Por ejemplo, si se indica 2 dÃ­as, debe mostrar que hay 2880 minutos.
 
 Definir dias Como Entero
-Definir cantminut Como Entero	
+Definir cantminut Como Entero
 
 Escribir "*** PAGO ***"
 Escribir " "

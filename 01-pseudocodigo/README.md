@@ -1,6 +1,6 @@
 # Pseudocódigo
 
-Este módulo reúne ejercicios de lógica de programación desarrollados en pseudocódigo con PSeInt.
+Este módulo enseña lógica de programación mediante una guía conceptual, práctica autónoma y un banco de 52 algoritmos desarrollados con PSeInt. El recorrido avanza desde instrucciones secuenciales hasta problemas que combinan validaciones, decisiones y repeticiones.
 
 Los ejercicios actuales corresponden a prácticas trabajadas en el curso **Principios de Algoritmos** de la **Universidad Tecnológica del Perú (UTP)**. En Chilete DevPath se conservan como evidencia de aprendizaje académico y como base para fortalecer el razonamiento lógico antes de pasar a un lenguaje de programación.
 
@@ -27,21 +27,27 @@ Antes de iniciar este módulo, conviene poder:
 - documentar una práctica breve
 - explicar una solución con palabras propias
 
-## Contenido
+## Qué encontrarás
 
-- `pseint/`: ejercicios desarrollados con PSeInt, organizados por estructura lógica.
+- `guia-didactica.md`: explicación progresiva, ejemplos guiados, pruebas de escritorio y errores frecuentes.
+- `pseint/`: banco de 52 ejercicios resueltos y organizados por estructura lógica.
+- `practica/retos.md`: siete problemas que deben intentarse antes de consultar una solución.
+- `practica/soluciones-retos/`: soluciones ejecutables para comparar después del primer intento.
+- `practica/laboratorio-integrador.md`: evidencia final que combina las estructuras del módulo.
 - `glosario.md`: términos clave de pseudocódigo.
 - `checklist-avance.md`: autoevaluación para saber si puedes avanzar a programación básica.
 
 ## Ruta sugerida
 
-1. Revisa el glosario.
-2. Lee el README de `pseint/`.
-3. Ejecuta primero ejercicios secuenciales.
-4. Continúa con condicionales y selección múltiple.
-5. Practica bucles `Para`, `Mientras` y `Repetir`.
-6. Revisa la práctica integrada.
-7. Completa el checklist de avance.
+1. Consulta el glosario cuando necesites aclarar un término.
+2. Trabaja cada bloque de `guia-didactica.md`.
+3. Ejecuta el ejemplo guiado y realiza su prueba de escritorio.
+4. Explora otros ejercicios resueltos del mismo bloque en `pseint/`.
+5. Resuelve el reto correspondiente de `practica/retos.md`.
+6. Prueba casos normales, límite e inválidos.
+7. Compara tu intento con `practica/soluciones-retos/`.
+8. Desarrolla el laboratorio integrador.
+9. Completa el checklist de avance.
 
 ## Criterio de avance
 
@@ -55,26 +61,17 @@ Este módulo se considera logrado cuando puedes:
 - probar un algoritmo con casos normales y casos límite
 - pasar de pseudocódigo a un lenguaje de programación sin perder la lógica
 
-## Criterio de marca y datos de ejemplo
+## Uso responsable del contenido
 
-Los ejercicios pueden usar nombres o mensajes personalizados cuando ayuden a dar identidad al material. Para mantener el contenido seguro y reutilizable:
+Los ejercicios conservan su intención académica y pueden adaptar mensajes o datos ficticios cuando eso no cambie la lógica. Para mantener el material seguro y reutilizable:
 
 - usa nombres ficticios como `Usuario Chilete`, `Aprendiz DevPath` o `Cliente Chilete`;
 - usa mensajes de bienvenida como `Bienvenido a Chilete DevPath` cuando el ejercicio lo permita;
 - evita datos reales de personas, teléfonos, correos, DNI o direcciones;
 - evita marcas externas si no son necesarias para la lógica del problema;
-- conserva el objetivo técnico del ejercicio aunque se adapte el contexto.
-
-## Políticas aplicables
-
-Este módulo se rige por las políticas centrales de Chilete DevPath:
-
-- [Política Editorial](https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_EDITORIAL.md)
-- [Política de Uso Responsable de IA](https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_USO_RESPONSABLE_IA.md)
-- [Política de Bienestar en el Aprendizaje Técnico](https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_BIENESTAR_APRENDIZAJE.md)
+- conserva el objetivo técnico del ejercicio aunque se adapte el contexto;
+- revisa el resultado en PSeInt antes de considerarlo completado.
 
 ## Nota de autoría y fuentes
 
-Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. En Chilete DevPath se documentan como práctica académica propia y evidencia de aprendizaje, no como material oficial de la institución.
-
-La documentación de organización del módulo fue creada para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.
+Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. En Chilete DevPath se documentan como práctica académica y evidencia de aprendizaje; no representan material oficial de la institución.

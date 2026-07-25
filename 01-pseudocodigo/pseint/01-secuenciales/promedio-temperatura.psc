@@ -1,5 +1,5 @@
 Algoritmo CalcularPromedioDeTemperatura
-	
+
 Definir lun, mar, mie, jue, vie Como Entero
 Definir promediotemp Como real
 
@@ -7,27 +7,27 @@ Escribir "*****  ALERTA DE TEMPERATURA  *****"
 Escribir " "
 Escribir "NOTA: La temperatura es medida en grados celsius"
 Escribir " "
-Escribir "Ingrese la temperatura del día lunes" Sin Saltar 
+Escribir "Ingrese la temperatura del dÃ­a lunes" Sin Saltar
 Leer lun
 
-Escribir "Ingrese la temperatura del día martes" Sin Saltar
+Escribir "Ingrese la temperatura del dÃ­a martes" Sin Saltar
 Leer mar
 
-Escribir "Ingrese la temperatura del día miercoles" Sin Saltar
+Escribir "Ingrese la temperatura del dÃ­a miercoles" Sin Saltar
 Leer mie
 
-Escribir "Ingrese la temperatura del día jueves" Sin Saltar
+Escribir "Ingrese la temperatura del dÃ­a jueves" Sin Saltar
 Leer jue
 
-Escribir "Ingrese la temperatura del día viernes" Sin Saltar
+Escribir "Ingrese la temperatura del dÃ­a viernes" Sin Saltar
 Leer vie
 
-promediotemp = (lun+mar+mie+jue+vie)/4
-	
+promediotemp = (lun+mar+mie+jue+vie)/5
+
 Si promediotemp>18 Entonces
 	Escribir "ALERTA por ola de calor"
-SiNo 
+SiNo
 	Escribir "Temperatura normal"
 FinSi
-	
+
 FinAlgoritmo

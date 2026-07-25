@@ -32,12 +32,12 @@ Este checklist ayuda a revisar si ya tienes una base suficiente de pseudocódigo
 - [ ] Puedo probar un algoritmo con casos límite.
 - [ ] Puedo detectar errores lógicos simples.
 - [ ] Puedo explicar qué cambio hice para corregir un error.
+- [ ] Puedo realizar una prueba de escritorio y seguir el valor de las variables.
 
-## Ética, fuentes e IA
+## Procedencia y explicación
 
 - [ ] Reconozco que los ejercicios actuales provienen de prácticas del curso Principios de Algoritmos de UTP.
 - [ ] No presento material académico como si fuera creado desde cero por Chilete DevPath.
-- [ ] Declaro el apoyo de IA cuando uso IA para estructurar, explicar o revisar documentación.
 - [ ] Puedo explicar las soluciones con mis propias palabras.
 
 ## Marca y datos ficticios
@@ -63,6 +63,13 @@ Puedes avanzar a programación básica cuando seas capaz de:
 - probar la solución
 - explicar el razonamiento sin depender de una solución copiada
 
-## Nota de autoría
+## Evidencia mínima del módulo
 
-Contenido creado para Chilete DevPath con apoyo de IA para estructuración y redacción. La revisión editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.
+Antes de avanzar, conserva:
+
+- [ ] una prueba de escritorio por cada tipo de estructura;
+- [ ] un intento propio de los siete retos;
+- [ ] casos normales, límite e inválidos para cada reto;
+- [ ] una comparación razonada con las soluciones de referencia;
+- [ ] el laboratorio integrador ejecutado en PSeInt;
+- [ ] una explicación de al menos un error y su corrección.

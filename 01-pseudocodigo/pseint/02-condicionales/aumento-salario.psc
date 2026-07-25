@@ -4,7 +4,7 @@ Escribir "*****   AUMENTO DE SALARIO   *****"
 Escribir " "
 
 Definir nom Como Caracter
-Definir eda, hij Como Entero 
+Definir eda, hij Como Entero
 Definir sal, aum1, aum2, montaum, salfinal Como Real
 
 Escribir "Ingrese su nombre: " Sin Saltar
@@ -23,12 +23,14 @@ Si eda > 50 Y hij <> 0 Entonces
 	aum2 = ((sal * 4)/100)
 	salfinal = (aum1 + aum2)
 	montaum = (500 + aum2)
-	Escribir "¡¡¡ Aumento exitoso!!!"
+	Escribir "Aumento aplicado correctamente"
 	Escribir "Nombre del empleado: ",nom
-	Escribir "Edad del empleado:", eda " años."
-	Escribir "Sueldo mensual inicial: $", sal," nuevos soles."
-	Escribir "Sueldo mensual final: $", salfinal," nuevos soles."
-	Escribir "Se le realizo un aumento de: $",montaum " nuevos soles."
+	Escribir "Edad del empleado:", eda " aÃ±os."
+	Escribir "Sueldo mensual inicial: S/ ", sal
+	Escribir "Sueldo mensual final: S/ ", salfinal
+	Escribir "Monto del aumento: S/ ",montaum
+SiNo
+	Escribir "El empleado no cumple los criterios para recibir el aumento."
 FinSi
 
 FinAlgoritmo

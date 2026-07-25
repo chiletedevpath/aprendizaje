@@ -1,46 +1,46 @@
 Algoritmo Costo_seguro_auto
-	// Una agencia de seguros necesita calcular el costo mensual del seguro de auto para los clientes en funciÛn de su sexo y edad.
-	// Las reglas son: los varones menores de 25 aÒos pagan 1000 soles, los de 25 a m·s pagan 700 soles.
-	// Las mujeres de 21 aÒos o menos pagan 500 y las que tienen m·s de 21 aÒos pagan 300 soles.
-	// Te solicitan crear un algoritmo en pseudocÛdigo que tome como entrada la edad y el sexo del
-	// cliente, calcule el costo mensual del seguro y luego muestre este costo en pantalla.	
-	
-	
+	// Una agencia de seguros necesita calcular el costo mensual del seguro de auto para los clientes en funci√≥n de su sexo y edad.
+	// Las reglas son: los varones menores de 25 a√±os pagan 1000 soles, los de 25 a m√°s pagan 700 soles.
+	// Las mujeres de 21 a√±os o menos pagan 500 y las que tienen m√°s de 21 a√±os pagan 300 soles.
+	// Te solicitan crear un algoritmo en pseudoc√≥digo que tome como entrada la edad y el sexo del
+	// cliente, calcule el costo mensual del seguro y luego muestre este costo en pantalla.
+
+
 	Definir edad Como Entero
 	Definir sexo Como Caracter
 	Definir pago Como Real
-	
+
 	Escribir "Ingrese su edad: " Sin Saltar
 	Leer edad
-	
+
 	Escribir "V = varon y M = mujer"
     Escribir "Ingrese su sexo : " Sin Saltar
 	Leer sexo
-	
+
 	Segun sexo Hacer
 		"V":
 			Si edad < 25 Entonces
 				pago = 1000
 				Escribir " "
 				Escribir "El pago es: S/. ",pago
-			Sino 
+			Sino
 				pago = 700
 				Escribir " "
 				Escribir "El pago es: S/. ",pago
 			FinSi
-		"M": 
+		"M":
 			Si edad <= 21 Entonces
-				pago = 500 
+				pago = 500
 				Escribir " "
 				Escribir "El pago es: S/. ",pago
-			Sino 
-				pago = 300 
+			Sino
+				pago = 300
 				Escribir " "
 				Escribir "El pago es: S/. ",pago
 			FinSi
 		De Otro Modo:
 			Escribir " "
-			Escribir "°°° ERROR !!!"
+			Escribir "¬°¬°¬° ERROR !!!"
 	FinSegun
-	
+
 FinAlgoritmo

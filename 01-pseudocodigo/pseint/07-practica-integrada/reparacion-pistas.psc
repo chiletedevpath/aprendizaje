@@ -1,39 +1,39 @@
 Algoritmo Reparacion_Pistas
-	//La municipalidad de Pueblo Libre piensa invertir cierto monto de dinero en la reparaciÛn de las 
-	//pistas en las avenidas principales. En ese sentido se le solicita desarrollar un pseudocÛdigo que 
-	//permita ingresar un monto de inversiÛn en soles y lo reparta en la refacciÛn de cinco avenidas 
+	//La municipalidad de Pueblo Libre piensa invertir cierto monto de dinero en la reparaci√≥n de las
+	//pistas en las avenidas principales. En ese sentido se le solicita desarrollar un pseudoc√≥digo que
+	//permita ingresar un monto de inversi√≥n en soles y lo reparta en la refacci√≥n de cinco avenidas
 	//de la siguiente manera:
 	//a. Avenida La Mar - 35% del monto
 	//b. Avenida Abancay - 25% del monto
 	//c. Avenida 28 de Julio - 10% del monto
-	//d. Avenida AviaciÛn - 15% del monto
+	//d. Avenida Aviaci√≥n - 15% del monto
 	//e. Avenida Tacna - restante del monto
-	//Luego, mostrar en pantalla cu·nto le corresponde a cada avenida.
+	//Luego, mostrar en pantalla cu√°nto le corresponde a cada avenida.
 	//Por ejemplo:
 	// Si el monto ingresado es 1000 soles, se debe mostrar lo siguiente:
-	// La avenida La mar recibir· S/ 350
-	//La avenida Abancay recibir· S/ 250
-	//La avenida 28 de Julio recibir· S/ 100
-	// La avenida AviaciÛn recibir· S/ 150
-	//La avenida Tacna recibir· S/ 150
-	
-	
+	// La avenida La mar recibir√° S/ 350
+	//La avenida Abancay recibir√° S/ 250
+	//La avenida 28 de Julio recibir√° S/ 100
+	// La avenida Aviaci√≥n recibir√° S/ 150
+	//La avenida Tacna recibir√° S/ 150
+
+
 	Definir monto,a,b,c,d,e Como Real
-	
+
 	Escribir "Ingrese el monto de inversion: S/."
 	Leer monto
-	
+
 	Escribir " "
 	a=(monto*0.35)
-	Escribir "a. La avenida La mar recibir· S/. ", a " nuevos soles"
+	Escribir "a. La avenida La mar recibir√° S/. ", a " nuevos soles"
 	b=(monto*0.25)
-	Escribir "b. La avenida Abancay recibir· S/. ", b " nuevos soles"
+	Escribir "b. La avenida Abancay recibir√° S/. ", b " nuevos soles"
 	c=(monto*0.10)
-	Escribir "c. La avenida 28 de Julio recibir· S/. ", c " nuevos soles"
-	d=(monto*0.10)
-	Escribir "d. La avenida AviaciÛn recibir· S/. ", d " nuevos soles"
+	Escribir "c. La avenida 28 de Julio recibir√° S/. ", c " nuevos soles"
+	d=(monto*0.15)
+	Escribir "d. La avenida Aviaci√≥n recibir√° S/. ", d " nuevos soles"
 	e=(monto-(a+b+c+d))
-	Escribir "d. La avenida Tacna recibir· S/. ", e " nuevos soles"
+	Escribir "e. La avenida Tacna recibir√° S/. ", e " nuevos soles"
 
-	
+
 FinAlgoritmo

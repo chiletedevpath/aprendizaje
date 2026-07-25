@@ -1,13 +1,12 @@
 Proceso Ganancias_Socios
 //Una empresa que tiene tres socios: A, B y C. La empresa ha obtenido ciertas ganancias y necesitas repartir estas ganancias entre los socios
-//de acuerdo a una tabla, como practicante de ingeniería económica, se te solicita construir un pseudocódigo que permita ingresar un monto de dinero 
-//y, luego, mostrar cuánto le toca a cada socio según la siguiente tabla: socio A: 30%; socio B: 20%; socio C: 50%.
+//de acuerdo a una tabla, como practicante de ingenierÃ­a econÃ³mica, se te solicita construir un pseudocÃ³digo que permita ingresar un monto de dinero
+//y, luego, mostrar cuÃ¡nto le toca a cada socio segÃºn la siguiente tabla: socio A: 30%; socio B: 20%; socio C: 50%.
 // Por ejemplo, si el monto es 1000 soles: A recibe 300 soles; B recibe 200 soles; C recibe 500 soles
-	
-Definir moto Como Real
-Definir A, B Como Real
 
-Escribir "*** Caso: Repartición de ganancias entre socios ***"
+Definir monto, A, B, C Como Real
+
+Escribir "*** Caso: ReparticiÃ³n de ganancias entre socios ***"
 Escribir " "
 
 Escribir "Ingrese la ganancia obtenida: " Sin Saltar

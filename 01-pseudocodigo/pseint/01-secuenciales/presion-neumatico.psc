@@ -1,14 +1,14 @@
 Proceso Presion_Neumatico
-//Eres un practicante de ingenier韆 mec醤ica y tienes un avi髇 cuya presi髇 de sus neum醫icos se encuentra en bares.
-//Sin embargo, tu equipo solo mide en psi (libras por pulgada cuadrada). Necesitas convertir la presi髇 de bares a psi 
-//para poder trabajar con tu equipo. Se te solicita construir un pseudoc骴igo que permite ingresar la presi髇 de un neum醫ico
+//Eres un practicante de ingenier铆a mec谩nica y tienes un avi贸n cuya presi贸n de sus neum谩ticos se encuentra en bares.
+//Sin embargo, tu equipo solo mide en psi (libras por pulgada cuadrada). Necesitas convertir la presi贸n de bares a psi
+//para poder trabajar con tu equipo. Se te solicita construir un pseudoc贸digo que permite ingresar la presi贸n de un neum谩tico
 //en bares y devuelva el valor en psi (libra por pulgada cuadrada).
 //Dato: 1 bar es aproximadamente 14.504 psi.
-	
+
 Definir neuma,bar Como Real
 Definir cantpsi Como Real
-	
-Escribir "*** Caso: Presi髇 de un neum醫ico ***"
+
+Escribir "*** Caso: Presi贸n de un neum谩tico ***"
 Escribir " "
 
 Escribir "Ingrese la presion de su neumatico en bar: " Sin Saltar
