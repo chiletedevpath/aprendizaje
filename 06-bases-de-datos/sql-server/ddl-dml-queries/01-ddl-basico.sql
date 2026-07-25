@@ -1,130 +1,78 @@
---*********************************************************************************************
---                              SEMANA 06 - SESION 01 
---*********************************************************************************************
+/*
+ * SQL Server - preparación del entorno de práctica
+ *
+ * Ejecutar en SQL Server Management Studio con una instancia local.
+ * El script crea EMPRESAVENTAS y reconstruye solamente sus tablas de práctica.
+ * No debe ejecutarse sobre una base con información real.
+ */
 
-
------------------------------------------------------------------------------------------------
---                                   DDL (CREATE)
------------------------------------------------------------------------------------------------
--- CREAR NUESTRA BASE DE DATOS
-CREATE DATABASE EMPRESAVENTAS;
+USE master;
 GO
------------------------------------------------------------------------------------------------
 
+IF DB_ID(N'EMPRESAVENTAS') IS NULL
+BEGIN
+    CREATE DATABASE EMPRESAVENTAS;
+END;
+GO
 
------------------------------------------------------------------------------------------------
--- USAMOS EL FOCO DE NUESTRA BASE DE DATOS
 USE EMPRESAVENTAS;
 GO
------------------------------------------------------------------------------------------------
 
+DROP TABLE IF EXISTS dbo.Items_pedido;
+DROP TABLE IF EXISTS dbo.Pedidos;
+DROP TABLE IF EXISTS dbo.Clientes;
+GO
 
------------------------------------------------------------------------------------------------
--- CREAR TABLA CLIENTES Y PEDIDOS
-CREATE TABLE Clientes (
-ID_cliente INT PRIMARY KEY,
-Nombre VARCHAR (50) NOT NULL,
-Correo VARCHAR (40) NOT NULL,
-Telefono VARCHAR (20)
+CREATE TABLE dbo.Clientes (
+    ID_cliente INT NOT NULL,
+    Nombre_cliente VARCHAR(50) NOT NULL,
+    Correo VARCHAR(100) NOT NULL,
+    Telefono VARCHAR(20) NULL,
+    Fecha_registro DATE NOT NULL
+        CONSTRAINT DF_Clientes_FechaRegistro DEFAULT CAST(GETDATE() AS DATE),
+    CONSTRAINT PK_Clientes PRIMARY KEY (ID_cliente),
+    CONSTRAINT UQ_Clientes_Correo UNIQUE (Correo)
 );
 GO
 
-CREATE TABLE Pedidos (
-ID_pedido INT PRIMARY KEY,
-Fecha DATETIME DEFAULT GETDATE(),
-ID_cliente INT NOT NULL,
-CONSTRAINT FK_Pedidos_Clientes FOREIGN KEY (ID_cliente) REFERENCES Clientes (ID_cliente)
+CREATE TABLE dbo.Pedidos (
+    ID_pedido INT NOT NULL,
+    ID_cliente INT NOT NULL,
+    Fecha DATETIME2(0) NOT NULL
+        CONSTRAINT DF_Pedidos_Fecha DEFAULT SYSDATETIME(),
+    Estado VARCHAR(20) NOT NULL
+        CONSTRAINT DF_Pedidos_Estado DEFAULT 'Pendiente',
+    CONSTRAINT PK_Pedidos PRIMARY KEY (ID_pedido),
+    CONSTRAINT CK_Pedidos_Estado
+        CHECK (Estado IN ('Pendiente', 'Enviado', 'Entregado')),
+    CONSTRAINT FK_Pedidos_Clientes
+        FOREIGN KEY (ID_cliente) REFERENCES dbo.Clientes(ID_cliente)
 );
 GO
------------------------------------------------------------------------------------------------
 
-
-
---*********************************************************************************************
---                              SEMANA 06 - SESION 02
---*********************************************************************************************
-
------------------------------------------------------------------------------------------------
-CREATE TABLE Detalles_Pedido (
-ID_detalle INT PRIMARY KEY,
-ID_pedido INT NOT NULL,
-Producto VARCHAR (100) NOT NULL,
-Cantidad INT NOT NULL,
-Precio DECIMAL (10,2),
-CONSTRAINT FK_DetallesPedido_Pedidos FOREIGN KEY (ID_pedido) REFERENCES Pedidos (ID_pedido)
+CREATE TABLE dbo.Items_pedido (
+    ID_detalle INT NOT NULL,
+    ID_pedido INT NOT NULL,
+    Producto VARCHAR(100) NOT NULL,
+    Cantidad INT NOT NULL,
+    Precio DECIMAL(10, 2) NOT NULL,
+    CONSTRAINT PK_ItemsPedido PRIMARY KEY (ID_detalle),
+    CONSTRAINT CK_ItemsPedido_Cantidad CHECK (Cantidad > 0),
+    CONSTRAINT CK_ItemsPedido_Precio CHECK (Precio >= 0),
+    CONSTRAINT FK_ItemsPedido_Pedidos
+        FOREIGN KEY (ID_pedido) REFERENCES dbo.Pedidos(ID_pedido)
 );
 GO
------------------------------------------------------------------------------------------------
 
-
------------------------------------------------------------------------------------------------
---                               DDL (ALTER / DROP)
------------------------------------------------------------------------------------------------
---AGREGAR UNA COLUMNA A LA TABLA PEDIDOS
-ALTER TABLE Pedidos ADD Estado VARCHAR (20) DEFAULT 'Pendiente';
+SELECT
+    tabla.name AS tabla,
+    columna.name AS columna,
+    tipo.name AS tipo,
+    columna.max_length,
+    columna.is_nullable
+FROM sys.tables AS tabla
+INNER JOIN sys.columns AS columna ON columna.object_id = tabla.object_id
+INNER JOIN sys.types AS tipo ON tipo.user_type_id = columna.user_type_id
+WHERE tabla.name IN ('Clientes', 'Pedidos', 'Items_pedido')
+ORDER BY tabla.name, columna.column_id;
 GO
------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------
--- CAMBIAR EL TIPO DE DATO DE TELEFONO EN LA TABLA CLIENTES
-ALTER TABLE Clientes ALTER COLUMN Telefono INT;
------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------
--- AGREGAR COLUMNA A TABLA DE CLIENTES
-ALTER TABLE Clientes ADD Fecha_registro DATE DEFAULT GETDATE();
-GO
------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------
--- VAMOS A COLOCAR UNA RESTRICCION A LA COLUMNA ESTADO EN LA TABLA PEDIDOS
-ALTER TABLE Pedidos ADD CONSTRAINT CK_Estado CHECK (Estado IN ('Pendiente','Enviado', 'Entregado'));
-GO
------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------
--- RENOMBRAR COLUMNA Nombre -> Nombre_cliente EN LA TABLA CLIENTES
-EXEC sp_rename 'Clientes.Nombre', 'Nombre_cliente', 'COLUMN';
-GO
------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------
--- RENOMBRAR EL NOMBRE A LA TABLA Detalles_Pedido
-EXEC sp_rename 'Detalles_Pedido','Items_pedido';
-GO
------------------------------------------------------------------------------------------------
-
-
--- **************************** FIN DE LA CLASE DDL *******************************************
-
-
------------------------------------------------------------------------------------------------
--- ELIMINAR LA COLUMNA TELEFONO DE CLIENTE
-ALTER TABLE Clientes DROP COLUMN Telefono;
-GO
------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------
--- DDL (DROP) ELIMINAR TABLAS Y DB
-DROP TABLE Items_pedido;
-GO
-
--- ANTES DE BORRAR LA BASE DE DATOS, SE CAMBIA EL FOCO
-USE MASTER;
-GO
-
-DROP DATABASE EMPRESAVENTAS;
-GO
-
--- CODIGO ADICIONAL EN CASO NO QUIERA SOLTAR LA BASE DE DATOS
-ALTER DATABASE EMPRESAVENTAS SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-
-DROP DATABASE EMPRESAVENTAS;
-GO
------------------------------------------------------------------------------------------------

@@ -1,38 +1,42 @@
-# Ejercicios para la comunidad
+# Retos de bases de datos
 
-Estos retos complementan los ejercicios existentes de `06-bases-de-datos`.
+Estos retos se realizan después de estudiar prácticas validadas del motor elegido.
 
-## Modelado
+## Reto 1: modelado relacional
 
-1. Modelar una biblioteca con libros, autores y prestamos.
-2. Modelar una ruta de aprendizaje con temas, recursos y avances.
-3. Identificar entidades, atributos y relaciones antes de crear tablas.
+Modela una ruta de aprendizaje con temas, recursos, prerrequisitos y avances.
 
-## SQL basico
+- identifica entidades y cardinalidades;
+- resuelve las relaciones muchos a muchos;
+- justifica claves y restricciones;
+- señala qué datos no deberían duplicarse.
 
-1. Crear una tabla con clave primaria.
-2. Insertar datos ficticios.
-3. Consultar registros filtrando por una condicion.
-4. Actualizar un dato y validar el resultado.
+## Reto 2: SQL con dialecto declarado
 
-## Relaciones
+Implementa el modelo en SQL Server, PostgreSQL u Oracle Database.
 
-1. Crear una relacion uno a muchos.
-2. Crear una relacion muchos a muchos con tabla intermedia.
-3. Consultar informacion combinando dos tablas.
+- declara motor y versión;
+- crea datos ficticios;
+- incluye consultas con filtros, uniones y agregaciones;
+- registra qué sintaxis no sería portable a los otros motores.
 
-## Seguridad educativa
+## Reto 3: transacción y permisos
 
-1. Revisar un script y marcar instrucciones destructivas.
-2. Reemplazar datos reales por datos ficticios antes de compartir.
-3. Explicar por que no se deben publicar respaldos con informacion sensible.
+Simula una actualización que modifique dos tablas relacionadas.
 
-## Criterio para resolver
+- demuestra confirmación y reversión;
+- crea un usuario de lectura con privilegio mínimo;
+- elimina el usuario al terminar;
+- ejecuta todo en una base de práctica.
 
-Antes de ejecutar SQL:
+## Reto 4: MongoDB
 
-1. Lee todo el script.
-2. Identifica si crea, modifica o elimina estructuras.
-3. Confirma que los datos sean ficticios.
-4. Ejecuta en una base de practica.
-5. Documenta que resultado esperas obtener.
+Este reto se habilitará cuando exista una práctica MongoDB recibida y validada. Deberá incluir diseño documental, consultas, agregación, índices y una decisión argumentada sobre datos embebidos o referenciados.
+
+## Reto 5: Cassandra
+
+Este reto se habilitará cuando exista una práctica Cassandra recibida y validada. Deberá partir de consultas conocidas, definir claves de partición y clustering, y explicar por qué no se modela como una base relacional.
+
+## Evidencia mínima
+
+Cada solución debe indicar propósito, motor, versión, contexto de ejecución, datos editables, comandos destructivos, resultado esperado, resultado obtenido y fuentes.

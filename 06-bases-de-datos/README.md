@@ -1,65 +1,76 @@
 # Bases de datos
 
-Esta seccion organiza ejercicios de aprendizaje sobre modelado de datos, SQL y practicas introductorias con motores relacionales.
+Esta sección desarrolla modelado, bases de datos relacionales y bases de datos NoSQL. La ruta separa los conceptos comunes de las particularidades de cada motor.
 
 ## Objetivo
 
-Comprender como se representa la informacion en una base de datos: desde el modelo conceptual hasta tablas, relaciones, restricciones y consultas SQL.
+Diseñar modelos coherentes, implementar estructuras, consultar y modificar datos, aplicar controles básicos de seguridad y elegir una tecnología según el problema.
 
-## Publico objetivo
+## Límite de publicación
 
-Este modulo esta dirigido a:
+Que una tecnología aparezca en la ruta no significa que su contenido ya esté aprobado. Los materiales recibidos deben pasar por revisión de autoría, seguridad, sintaxis, ejecución y valor didáctico antes de declararse publicables.
 
-- estudiantes que empiezan modelado y SQL;
-- personas que necesitan practicar tablas, relaciones y consultas;
-- miembros de la comunidad Chilete DevPath que quieren entender datos antes de backend;
-- estudiantes que buscan documentar modelos sin exponer informacion sensible.
+Consulta `estado-publicacion.md` para conocer el estado verificable de cada bloque.
 
-## Prerrequisitos recomendados
+## Prerrequisitos
 
-Antes de iniciar este modulo, conviene poder:
-
-- identificar entidades y atributos;
-- reconocer relaciones entre conceptos;
-- leer instrucciones SQL basicas;
-- diferenciar datos de ejemplo y datos reales;
-- revisar un script antes de ejecutarlo.
-
-## Material de apoyo
-
-- `glosario.md`: terminos esenciales de modelado y SQL.
-- `ejercicios-comunidad.md`: retos propuestos para practicar modelos y consultas.
+- reconocer entidades, atributos y relaciones;
+- comprender claves primarias y foráneas;
+- diferenciar datos ficticios de información real;
+- identificar instrucciones destructivas antes de ejecutar un script;
+- utilizar una instancia local o una base exclusiva de práctica.
 
 ## Ruta sugerida
 
-1. Revisar `modelado` para entender entidades, relaciones y modelos logicos.
-2. Continuar con `sql-server` para practicar DDL, DML, consultas, permisos e indices.
-3. Usar `mysql` y `postgresql` como espacios reservados para futuras practicas especificas por motor.
+1. `modelado`: modelo entidad-relación y transformación al modelo lógico.
+2. `sql-server`: DDL, DML, consultas, permisos, índices y procedimientos en T-SQL.
+3. `postgresql`: prácticas específicas de PostgreSQL, después de ser recibidas y validadas.
+4. `oracle`: prácticas específicas de Oracle Database, después de ser recibidas y validadas.
+5. `mongodb`: documentos, consultas y agregaciones, después de ser recibidos y validados.
+6. `cassandra`: modelado orientado a consultas y CQL, después de ser recibido y validado.
+7. Comparación: justificar cuándo conviene un modelo relacional, documental o de columnas anchas.
 
-## Contenido actual
+## SQL y NoSQL
 
-| Carpeta | Enfoque |
-|---|---|
-| `modelado` | Diagramas entidad-relacion y modelos logico-relacionales. |
-| `sql-server` | Creacion de estructuras, manipulacion de datos, consultas y ejercicios de clase. |
-| `mysql` | Espacio para futuras practicas de MySQL. |
-| `postgresql` | Espacio para futuras practicas de PostgreSQL. |
+| Familia | Tecnología | Enfoque esperado | Estado |
+|---|---|---|---|
+| SQL | SQL Server | T-SQL, restricciones, consultas, seguridad e índices | Validado localmente; en evaluación editorial |
+| SQL | PostgreSQL | SQL, esquemas, funciones, vistas e índices | Pendiente de contenido |
+| SQL | Oracle Database | SQL, secuencias, PL/SQL y objetos del esquema | Pendiente de contenido |
+| NoSQL documental | MongoDB | documentos, índices y agregaciones | Pendiente de contenido |
+| NoSQL de columnas anchas | Apache Cassandra | particiones, clustering y CQL | Pendiente de contenido |
 
-## Criterio de avance
+SQL Server, PostgreSQL y Oracle comparten fundamentos relacionales, pero no todos sus comandos son intercambiables. MongoDB y Cassandra tampoco deben agruparse como si utilizaran el mismo modelo.
 
-Este modulo se considera logrado cuando puedes:
+## Material actual
 
-- convertir un enunciado en entidades y relaciones;
-- crear tablas con claves primarias y foraneas;
-- insertar datos ficticios y consultarlos;
-- diferenciar DDL, DML y consultas;
-- detectar instrucciones destructivas antes de ejecutar un script;
-- explicar por que una relacion necesita una tabla intermedia.
+- `glosario.md`: conceptos compartidos y diferencias esenciales.
+- `ejercicios-comunidad.md`: retos propios posteriores a los ejemplos resueltos.
+- `modelado`: diagramas y modelos lógico-relacionales.
+- `sql-server/README.md`: contexto, orden de ejecución y evidencia de validación.
+- `sql-server/ddl-dml-queries`: secuencia ejecutable de prácticas T-SQL.
+- `estado-publicacion.md`: inventario de contenido validado y pendiente.
 
-## Criterio Chilete DevPath
+## Secuencia de SQL Server
 
-Los scripts se mantienen como practicas educativas. Antes de ejecutar archivos SQL, se debe revisar si contienen instrucciones destructivas como `DROP TABLE` o `DROP DATABASE`.
+1. `01-ddl-basico.sql`
+2. `02-dml-basico.sql`
+3. `03-seguridad-indices.sql`
+4. `04-procedimientos-errores.sql`
+5. `99-limpieza-opcional.sql`, únicamente si se desea eliminar la base de práctica.
 
-## Autoria y fuentes
+## Criterio de logro
 
-El contenido corresponde a ejercicios desarrollados por Adrian Pisco durante su proceso de aprendizaje. Si algun ejercicio futuro se adapta desde una fuente externa, debe indicarse la referencia antes de publicarlo.
+Puedes avanzar cuando logres:
+
+- convertir un problema en un modelo con cardinalidades justificadas;
+- crear restricciones que protejan la integridad;
+- consultar relaciones sin depender de `SELECT *`;
+- explicar el efecto de una transacción, un permiso y un índice;
+- reconocer diferencias de dialecto entre motores SQL;
+- justificar el modelo NoSQL desde sus patrones de acceso;
+- ejecutar solo sobre datos ficticios y entornos controlados.
+
+## Autoría y fuentes
+
+El material publicable debe ser propio o estar correctamente atribuido. Los contenidos académicos deben convertirse en explicaciones y prácticas propias cuando el enunciado original no pueda compartirse.

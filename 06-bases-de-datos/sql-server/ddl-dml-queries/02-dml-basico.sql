@@ -1,396 +1,109 @@
---*********************************************************************************************
---                                   SEMANA 07 - SESION 01 
---*********************************************************************************************
+/*
+ * SQL Server - DML y consultas
+ *
+ * Prerrequisito: ejecutar 01-ddl-basico.sql.
+ * Los datos son ficticios y reservados para esta práctica.
+ */
 
-
------------------------------------------------------------------------------------------------
---                              DML (INSER, UPDATE, SELECT Y DELETE)
------------------------------------------------------------------------------------------------
--- USAMOS EL FOCO DE NUESTRA BASE DE DATOS
 USE EMPRESAVENTAS;
 GO
------------------------------------------------------------------------------------------------
 
-
------------------------------------------------------------------------------------------------
--- INSERT:
---		INSERTA REGISTROS EN LAS TABLAS DE LA BASE DE DATOS
-
--- VERIFICAR CONTENIDO DE LAS TABLAS DE MI BD
-SELECT * FROM Items_pedido;
-GO
-
--- INSERTAR REGISTROS EN LA TABLA CLIENTES
-INSERT INTO Clientes(ID_cliente, Nombre_cliente, Correo, Telefono)
+INSERT INTO dbo.Clientes (ID_cliente, Nombre_cliente, Correo, Telefono)
 VALUES
-(1, 'Cliente Uno', 'cliente.uno@example.test', 900000001),
-(2, 'Cliente Dos', 'cliente.dos@example.test', 900000002),
-(3, 'Cliente Tres', 'cliente.tres@example.test', 900000003);
+    (1, 'Cliente Uno', 'cliente.uno@example.test', '900000001'),
+    (2, 'Cliente Dos', 'cliente.dos@example.test', '900000002'),
+    (3, 'Cliente Tres', 'cliente.tres@example.test', '900000003'),
+    (4, 'Cliente Cuatro', 'cliente.cuatro@example.test', NULL);
 GO
 
--- INSERTAR REGISTROS EN LA TABLA Pedidos
-INSERT INTO Pedidos(ID_pedido, ID_cliente, Estado)
+INSERT INTO dbo.Pedidos (ID_pedido, ID_cliente, Estado)
 VALUES
-(101,1, 'Pendiente'),
-(102,2, 'Enviado'),
-(103,3, 'Pendiente');
+    (101, 1, 'Pendiente'),
+    (102, 2, 'Enviado'),
+    (103, 3, 'Pendiente'),
+    (104, 2, 'Pendiente');
 GO
 
-INSERT INTO Pedidos(ID_pedido, ID_cliente, Estado)
+INSERT INTO dbo.Items_pedido
+    (ID_detalle, ID_pedido, Producto, Cantidad, Precio)
 VALUES
-(104,2, 'Pendiente');
+    (1001, 101, 'Laptop de práctica', 1, 2500.00),
+    (1002, 102, 'Mouse inalámbrico', 2, 75.50),
+    (1003, 103, 'Impresora de demostración', 1, 1500.00),
+    (1004, 104, 'Teclado inalámbrico', 2, 220.00);
 GO
 
--- INSERTAR REGISTROS EN LA TABLA Items_pedidos 
-INSERT INTO Items_pedido(ID_detalle, ID_pedido, Producto, Cantidad, Precio)
-VALUES 
-(1001, 101, 'Laptop Chilete DevPath', 1, 2500.00),
-(1002, 102, 'Mouse Inalambrico', 2, 75.50),
-(1003, 103, 'Impresora Demo', 1, 1500.00), 
-(1004, 104, 'Teclado Inalambrico', 2, 440.00);
-GO
------------------------------------------------------------------------------------------------
+-- Lectura básica y filtros.
+SELECT ID_cliente, Nombre_cliente, Correo, Telefono
+FROM dbo.Clientes
+ORDER BY ID_cliente;
 
-
------------------------------------------------------------------------------------------------
--- UPDATE:
---		MODIFICA LOS DATOS EXISTENTES EN LAS TABLAS DE LA BASE DE DATOS	
-
--- VERIFICAR CONTENIDO DE LAS TABLAS DE MI BD
-SELECT*FROM Items_pedido;
-GO
-
--- ACTUALIZAR UN TELEFONO DE LA TABLA CLIENTES
-UPDATE Clientes 
-SET Telefono = 900000004
-WHERE ID_cliente = 2;
-GO
-
--- ACTUALIZAR UN ESTADO DE LA TABLA PEDIDOS
-UPDATE Pedidos 
-SET Estado = 'Entregado'
-WHERE ID_pedido = 101;
-GO
------------------------------------------------------------------------------------------------
-
------------------------------------------------------------------------------------------------
---	CONSULTAS BASICAS:
-
--- A) EL COMODIN "*" MUESTRA TODOS LOS DATOS DE LAS TABLAS
-
--- EJECUTA LAS TABLAS DE LA BASE DE DATOS UNA POR UNA 
-SELECT*FROM Clientes;
-SELECT*FROM Items_pedido;
-SELECT*FROM Pedidos;
-GO
-
--- B) sp_helpconstraint AYUDA PARA VER LAS RESTRICCIONES DE LAS TABLAS
-EXEC sp_helpconstraint 'Clientes';
-EXEC sp_helpconstraint 'Items_pedido';
-EXEC sp_helpconstraint 'Pedidos';
-GO
------------------------------------------------------------------------------------------------
-
-
-
---*********************************************************************************************
---                                   SEMANA 07 - SESION 02
---*********************************************************************************************
-
--- C) SELECT PARA CONSULTAR ALGUNAS COLUMNAS
-SELECT Producto, Precio
-FROM Items_pedido;
-GO
-
-SELECT Nombre_cliente, Telefono
-FROM Clientes;
-GO
------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------
---	OTROS COMODINES
-
--- A) COMODIN "%"
-
--- TODOS LOS DATOS DE LA COLUMNA NOMBRE DE CLIENTE QUE INICIEN CON C
-SELECT ID_Cliente, Nombre_cliente, Correo
-FROM Clientes
-WHERE Nombre_cliente LIKE 'C%';
-GO
-
--- TODOS LOS DATOS DE LA COLUMNA NOMBRE DE CLIENTE QUE TERMINEN CON Z
-SELECT Nombre_cliente, Correo
-FROM Clientes
-WHERE Nombre_cliente LIKE '%Z';
-GO
-
-
--- B) COMODIN "[]%": BUSCA NOMBRES QUE COMIENCEN CON LAS LETRAS A O L.
-SELECT ID_Cliente, Nombre_cliente, Correo
-FROM Clientes
-WHERE Nombre_cliente LIKE '[AL]%';
-GO
-
-
--- C) COMODIN "[-]%": BUSCA NOMBRES QUE COMIENCEN CON CUALQUIER LETRA ENTRE A Y L (INCLUYENDO AMBAS)
-SELECT ID_Cliente, Nombre_cliente, Correo
-FROM Clientes
-WHERE Nombre_cliente LIKE '[C-L]%';
-GO 
-
-
--- D) CONSULTA POR FECHA DE REGISTRO DE LA TABLA DE CLIENTES
-
--- INSERTO UN NUEVO REGISTRO EN LA TABLA CLIENTES
-INSERT INTO Clientes(ID_cliente, Nombre_cliente, Correo, Telefono)
-VALUES
-(4, 'Cliente Cuatro', 'cliente.cuatro@example.test', 900000004);
-GO
+SELECT ID_cliente, Nombre_cliente
+FROM dbo.Clientes
+WHERE Nombre_cliente LIKE 'Cliente T%';
 
 SELECT ID_cliente, Nombre_cliente, Fecha_registro
-FROM Clientes
-WHERE Fecha_registro = '2025-11-12';
+FROM dbo.Clientes
+WHERE Fecha_registro = CAST(GETDATE() AS DATE);
 GO
 
--- E) "^": ESPECIFICA CARACTERES QUE NO DEBEN COINCIDIR
-SELECT ID_Cliente, Nombre_cliente, Correo
-FROM Clientes
-WHERE Nombre_cliente LIKE '[^L]%';
+-- Consulta relacional con total calculado.
+SELECT
+    pedido.ID_pedido,
+    cliente.Nombre_cliente,
+    pedido.Estado,
+    SUM(item.Cantidad * item.Precio) AS total_pedido
+FROM dbo.Pedidos AS pedido
+INNER JOIN dbo.Clientes AS cliente
+    ON cliente.ID_cliente = pedido.ID_cliente
+INNER JOIN dbo.Items_pedido AS item
+    ON item.ID_pedido = pedido.ID_pedido
+GROUP BY pedido.ID_pedido, cliente.Nombre_cliente, pedido.Estado
+ORDER BY pedido.ID_pedido;
 GO
 
--- F) "%e%": BUSCAR UN CARACTER EN CUALQUIER POSICION
-SELECT ID_Cliente, Nombre_cliente, Correo
-FROM Clientes
-WHERE Nombre_cliente LIKE '%c%';
+-- Actualización controlada y verificación.
+UPDATE dbo.Clientes
+SET Telefono = '900000020'
+WHERE ID_cliente = 2;
+
+UPDATE dbo.Pedidos
+SET Estado = 'Entregado'
+WHERE ID_pedido = 101;
+
+SELECT ID_cliente, Nombre_cliente, Telefono
+FROM dbo.Clientes
+WHERE ID_cliente = 2;
+
+SELECT ID_pedido, Estado
+FROM dbo.Pedidos
+WHERE ID_pedido = 101;
 GO
------------------------------------------------------------------------------------------------
 
-
------------------------------------------------------------------------------------------------
--- DELETE:
---		ELIMINA FILAS DE UNA TABLA	
-
--- BORRAR UN CLIENTE NO REFERENCIADO 
-DELETE FROM Clientes
+-- Eliminación de un registro sin dependencias.
+DELETE FROM dbo.Clientes
 WHERE ID_cliente = 4;
-GO
------------------------------------------------------------------------------------------------
 
------------------------------------------------------------------------------------------------
--- BORRAR UN CLIENTE REFERENCIADO (INICIALMENTE NO SE PUEDE PORQUE NO ESTA EN DELETE CASCADE
-DELETE FROM Clientes
+SELECT ID_cliente, Nombre_cliente
+FROM dbo.Clientes
+ORDER BY ID_cliente;
+GO
+
+-- Demostración segura: la transacción se revierte.
+BEGIN TRANSACTION;
+
+DELETE FROM dbo.Items_pedido
+WHERE ID_pedido = 103;
+
+DELETE FROM dbo.Pedidos
+WHERE ID_pedido = 103;
+
+DELETE FROM dbo.Clientes
 WHERE ID_cliente = 3;
-GO
 
--- 1.- MODIFICAR LAS RESTRICCIONES DE LA TABLA ITEMS_PEDIDO PARA PODER ELIMINAR EL CLIENTE CON ID 3
-ALTER TABLE Items_pedido 
-DROP CONSTRAINT FK_DetallesPedido_Pedidos;
-GO
+SELECT ID_cliente, Nombre_cliente
+FROM dbo.Clientes
+ORDER BY ID_cliente;
 
-ALTER TABLE Items_pedido
-ADD CONSTRAINT FK_DetallesPedido_Pedidos
-FOREIGN KEY(ID_pedido)
-REFERENCES Pedidos(ID_Pedido)
-ON DELETE CASCADE;
-GO
-
-EXEC sp_helpconstraint 'Items_pedido';
-
-
--- 2.- MODIFICAR LAS RESTRICCIONES DE LA TABLA PEDIDOS PARA PODER ELIMINAR EL CLIENTE CON ID 3
-ALTER TABLE Pedidos 
-DROP CONSTRAINT FK_Pedidos_Clientes;
-GO
-
-ALTER TABLE Pedidos
-ADD CONSTRAINT FK_Pedidos_Clientes
-FOREIGN KEY(ID_cliente)
-REFERENCES Clientes(ID_cliente)
-ON DELETE CASCADE;
-GO
-
-EXEC sp_helpconstraint 'Pedidos';
-
--- SE VUELVER A EJECUTAR EL BORRADO DEL ID_CLIENTE 3 PORQUE YA ESTA EN DELETE CASCADE
-DELETE FROM Clientes
-WHERE ID_cliente = 3;
-GO
------------------------------------------------------------------------------------------------
-
-
-
------------------------------------------------------------------------------------------------
---									  DCL (GRANT Y REVOKE)
-
--- VER USUARIOS A NIVEL DE BASE DE DATOS
-SELECT name AS Usuario, type_desc AS Tipo
-FROM sys.database_principals
-WHERE type in ('S','U','G');
-GO
-
--- VER USUARIOS A NIVEL DE SERVIDOR
-SELECT name AS LoginName, type_desc, create_date
-FROM sys.server_principals
-WHERE type in ('S','U','G');
-GO
-
--- SIMULAR USUARIOS PARA GRANT Y REVOKE
-SELECT USER_NAME ();
-GO
-
-USE EMPRESAVENTAS;
-GO
-
--- CREAR UN USUARIO SIMULADO
-CREATE USER Usuario_demo WITHOUT LOGIN;
-GO
-
--- PONERLO EN EJECUCION
-EXECUTE AS USER = 'Usuario_demo';
-GO
-
--- BUSQUEDA: NO CORRE PORQUE NO TIENE PERMISOS
-SELECT * FROM Clientes;
-GO
-
--- PARA DAR PERMISOS DEBO REGRESAR A MI USUARIO PRINCIPAL
-REVERT;
-GO
-
--- AHORA SI DOY PRIVILEGIOS DE LECTURA SOBRE LA TABLA CLIENTES
-GRANT SELECT ON Clientes TO Usuario_demo
-GO
-
--- PONERLO EN EJECUCION NUEVAMENTE 
-EXECUTE AS USER = 'Usuario_demo';
-GO
-
-SELECT USER_NAME();
-
--- BUSQUEDA CON EL GRANT DE BUSQUEDA PERMITIDO
-SELECT * FROM Clientes;
-GO
-
--- PARA QUITAR PERMISOS DEBO REGRESAR A MI USUARIO PRINCIPAL
-REVERT;
-GO
-
--- REVOCAR EL PRIVILEGIO CONCEDIDO
-REVOKE SELECT ON Clientes FROM Usuario_demo;
-GO
-
--- PARA ELIMINAR MI USUARIO SIMULADO "USUARIO_DEMO"
-REVERT;
-GO
-
-DROP USER Usuario_demo;
-GO
------------------------------------------------------------------------------------------------
-
-
-
---*********************************************************************************************
---                             SEMANA 08 - SESION 01 | PARTE 1
---*********************************************************************************************
-
-
------------------------------------------------------------------------------------------------
--- GESTION DE INDICES
---		HAZ CLIC EN "INCLUDE ACTUAL EXECUTION PLAN! ( O PRESIONA CTRL + M) ANTES DE EJECUTAR LA CONSULTA 
---		LUEGO EJECUTA LA CONSULTA Y VERAS UNA PESTAÑA ADICIONAL LLAMADA EXECUTION PLAN.
-
--- 1ra. FORMA
-
--- EJECUTAR LA CONSULTA
-SELECT *
-FROM Clientes
-WHERE Nombre_cliente LIKE 'A%';
-GO
-
---Crear el índice
-CREATE NONCLUSTERED INDEX IX_Clientes_Nombre
-ON Clientes (Nombre_cliente);
-GO
-
---Consulta CON índice
-SELECT *
-FROM Clientes
-WHERE Nombre_cliente LIKE 'A%';
-GO
-
------------------
---2DA FORMA
-----------------
-
---Ver tiempo de ejecución, Antes de ejecutar tu consulta, activa las opciones:
-
---Comparar con y sin índice
---Primero sin índice:
-
-DROP INDEX IF EXISTS IX_Clientes_Nombre ON Clientes;
-GO
-
-SET STATISTICS TIME ON;   -- Muestra el tiempo de ejecución
-SET STATISTICS IO ON;     -- Muestra la cantidad de lecturas de disco
-GO
-
-SELECT *
-FROM Clientes
-WHERE Nombre_cliente LIKE 'A%';
-GO
-
---Luego con índice:
-
-CREATE NONCLUSTERED INDEX IX_Clientes_Nombre
-ON Clientes (Nombre_cliente);
-GO
-
-SELECT *
-FROM Clientes
-WHERE Nombre_cliente LIKE 'A%';
-GO
-
---------------
---3 FORMA:
---------------
-
--- Activar estadísticas
-SET STATISTICS TIME ON;
-SET STATISTICS IO ON;
-GO
-
--- ==================================
--- 1. CONSULTA SIN ÍNDICE
--- ==================================
--- Eliminar índice si existe
-DROP INDEX IF EXISTS IX_Clientes_Nombre ON Clientes;
-GO
-
-
-
-PRINT '---- CONSULTA SIN ÍNDICE ----';
-SELECT *
-FROM Clientes
-WHERE Nombre_cliente LIKE 'A%';
-GO
-
--- ==================================
--- 2. CONSULTA CON ÍNDICE
--- ==================================
--- Crear índice
-CREATE NONCLUSTERED INDEX IX_Clientes_Nombre
-ON Clientes (Nombre_cliente);
-GO
-
-PRINT ''
-PRINT '-----------------------------'
-PRINT '---- CONSULTA CON ÍNDICE ----';
-SELECT *
-FROM Clientes
-WHERE Nombre_cliente LIKE 'A%';
-GO
-
-SELECT *
-FROM Clientes
+ROLLBACK TRANSACTION;
 GO
