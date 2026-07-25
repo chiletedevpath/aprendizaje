@@ -1,0 +1,112 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class ListaInversaSimple {
+	private final List<ArchivoSimple> asc;
+
+	public ListaInversaSimple() {
+		asc = new ArrayList<>();
+	}
+
+	public void cargarDatosIniciales() {
+		asc.clear();
+		asc.add(new ArchivoSimple(8, 600, "Cliente D"));
+		asc.add(new ArchivoSimple(17, 480, "Cliente E"));
+		asc.add(new ArchivoSimple(23, 120, "Cliente C"));
+		asc.add(new ArchivoSimple(45, 240, "Cliente G"));
+		asc.add(new ArchivoSimple(87, 360, "Cliente H"));
+		asc.add(new ArchivoSimple(94, 0, "Cliente F"));
+	}
+
+	private List<ArchivoSimple> construirDescendente() {
+		List<ArchivoSimple> desc = new ArrayList<>(asc);
+		Collections.reverse(desc);
+		return desc;
+	}
+
+	public void mostrarTablaFormatted() {
+		List<ArchivoSimple> desc = construirDescendente();
+
+		System.out.println();
+		System.out.println("\tArchivo de Claves\t\t\tArchivo Principal");
+		System.out.println("Indice\tClave\tUbicacion\tPuntero\t\tClave\tNombre");
+		System.out.println("----------------------------------------------------------------------");
+
+		int filas = Math.max(asc.size(), desc.size());
+		for (int i = 0; i < filas; i++) {
+			String claveIzq = "Null";
+			String ubicIzq = "Null";
+
+			if (i < asc.size()) {
+				ArchivoSimple a = asc.get(i);
+				claveIzq = String.valueOf(a.getClave());
+				ubicIzq = String.valueOf(a.getUbicacion());
+			}
+
+			String claveDer = "Null";
+			String nombreDer = "Null";
+			if (i < desc.size()) {
+				ArchivoSimple b = desc.get(i);
+				claveDer = String.valueOf(b.getClave());
+				nombreDer = b.getNombre();
+			}
+
+			String puntero = "Null";
+			if (i < asc.size()) {
+				int clave = asc.get(i).getClave();
+				int posEnDesc = -1;
+				for (int j = 0; j < desc.size(); j++) {
+					if (desc.get(j).getClave() == clave) {
+						posEnDesc = j;
+						break;
+					}
+				}
+				puntero = (posEnDesc == -1) ? "Null" : String.valueOf(posEnDesc);
+			}
+
+			System.out.printf("%d\t%s\t%s\t\t%s\t\t%s\t%s%n", i, claveIzq, ubicIzq, puntero, claveDer, nombreDer);
+		}
+
+		System.out.println("\tAscendente\t\t\t\tDescendente\n");
+	}
+
+	public boolean agregar(int clave, int ubicacion, String nombre) {
+		if (clave < 0 || ubicacion < 0 || nombre == null || nombre.isBlank()) {
+			throw new IllegalArgumentException("Clave, ubicación y nombre deben ser válidos.");
+		}
+		int pos = 0;
+		while (pos < asc.size() && asc.get(pos).getClave() < clave) {
+			pos++;
+		}
+
+		if (pos < asc.size() && asc.get(pos).getClave() == clave) {
+			System.out.printf("La clave %d ya existe (no se agrega).%n", clave);
+			return false;
+		}
+
+		asc.add(pos, new ArchivoSimple(clave, ubicacion, nombre.trim()));
+		System.out.printf("Agregado: clave=%d, ubic=%d, nombre=%s (pos asc %d)%n", clave, ubicacion, nombre, pos);
+		return true;
+	}
+
+	public boolean eliminar(int clave, String nombre) {
+		int pos = -1;
+		for (int i = 0; i < asc.size(); i++) {
+			ArchivoSimple a = asc.get(i);
+			if (a.getClave() == clave && a.getNombre().equalsIgnoreCase(nombre)) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos == -1) {
+			System.out.printf("No se encontro (clave=%d, nombre=%s).%n", clave, nombre);
+			return false;
+		}
+
+		ArchivoSimple eliminado = asc.remove(pos);
+		System.out.printf("Eliminado: clave=%d, nombre=%s (pos asc %d)%n", eliminado.getClave(),
+				eliminado.getNombre(), pos);
+		return true;
+	}
+}

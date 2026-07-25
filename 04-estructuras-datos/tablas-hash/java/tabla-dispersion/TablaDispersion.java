@@ -2,19 +2,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TablaDispersion {
-    private List<Integer>[] tabla;
+    private final List<Integer>[] tabla;
 
     @SuppressWarnings("unchecked")
     public TablaDispersion(int tamano) {
-        tabla = (List<Integer>[]) new ArrayList[tamano];
+        if (tamano <= 0) {
+            throw new IllegalArgumentException("El tamaño de la tabla debe ser positivo.");
+        }
+        tabla = (List<Integer>[]) new List<?>[tamano];
 
         for (int i = 0; i < tamano; i++) {
             tabla[i] = new ArrayList<>();
         }
     }
 
-    public void insertar(int clave, int indice) {
+    public boolean insertar(int clave, int indice) {
+        if (indice < 0 || indice >= tabla.length) {
+            throw new IndexOutOfBoundsException("Índice fuera de la tabla: " + indice);
+        }
+        if (tabla[indice].contains(clave)) {
+            return false;
+        }
         tabla[indice].add(clave);
+        return true;
     }
 
     public void mostrar() {

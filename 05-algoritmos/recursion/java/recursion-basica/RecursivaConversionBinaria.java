@@ -11,15 +11,20 @@ import java.util.Scanner;
 public class RecursivaConversionBinaria {
 
 	public static String conversionBinariaRecursiva(int z) {
-
-		// CASO BASE:
 		if (z == 0) {
-			return "";
+			return "0";
 		}
+		if (z < 0) {
+			return "-" + convertirPositivo(-(long) z);
+		}
+		return convertirPositivo(z);
+	}
 
-		// CASO RECURSIVO:
-		return conversionBinariaRecursiva(z / 2) + (z % 2);
-
+	private static String convertirPositivo(long numero) {
+		if (numero < 2) {
+			return Long.toString(numero);
+		}
+		return convertirPositivo(numero / 2) + (numero % 2);
 	}
 
 	public static void main(String[] args) {
@@ -33,7 +38,7 @@ public class RecursivaConversionBinaria {
 			System.out.print("a) Ingrese el numero entero (z) a convertir en binario: ");
 			int z = scanner.nextInt();
 
-			String resultadoBinario = (z == 0) ? "0" : conversionBinariaRecursiva(z);
+			String resultadoBinario = conversionBinariaRecursiva(z);
 
 			System.out.println("\nEl número " + z + " en binario (usando recursividad) es: " + resultadoBinario);
 		}

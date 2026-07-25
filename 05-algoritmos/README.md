@@ -1,66 +1,59 @@
 # Algoritmos
 
-Esta seccion organiza ejercicios de aprendizaje sobre busqueda, ordenamiento, recursion, backtracking y estrategias para resolver problemas.
+Esta sección enseña a diseñar, comparar y verificar estrategias que procesan datos.
 
-## Objetivo
+## Diferencia entre las secciones 04 y 05
 
-Desarrollar criterio algoritmico: entender el problema, elegir una estrategia, implementar una solucion y revisar su comportamiento con datos de prueba.
+| Sección | Pregunta principal | Ejemplos |
+|---|---|---|
+| `04-estructuras-datos` | ¿Cómo organizo y relaciono los datos? | listas, tablas hash, árboles e índices |
+| `05-algoritmos` | ¿Qué pasos sigo para resolver el problema? | buscar, ordenar, recorrer, optimizar y retroceder |
 
-## Publico objetivo
+Una estructura puede ofrecer una operación `buscar`, pero en 04 se estudia como parte de su interfaz. En 05 se analizan la estrategia, sus precondiciones, su corrección y su costo.
 
-Este modulo esta dirigido a:
+## Prerrequisitos
 
-- estudiantes que ya practican estructuras de datos;
-- personas que necesitan comparar estrategias de busqueda y ordenamiento;
-- miembros de la comunidad Chilete DevPath que quieren resolver problemas con criterio;
-- estudiantes que buscan pasar de "hacer que funcione" a analizar como funciona.
-
-## Prerrequisitos recomendados
-
-Antes de iniciar este modulo, conviene poder:
-
-- recorrer arreglos y listas;
-- usar metodos y recursion basica;
-- interpretar indices, condiciones y ciclos;
-- probar soluciones con casos normales y casos limite;
-- explicar por que una estrategia funciona.
-
-## Material de apoyo
-
-- `glosario.md`: terminos esenciales de analisis y estrategias algoritmicas.
-- `ejercicios-comunidad.md`: retos propuestos para practicar busqueda, ordenamiento, recursion y resolucion de problemas.
+- arreglos, ciclos, métodos y clases;
+- colecciones y estructuras básicas;
+- pruebas con casos normales y casos límite;
+- lectura de trazas de ejecución.
 
 ## Ruta sugerida
 
-1. Revisar `busqueda` para comparar busqueda lineal y binaria.
-2. Continuar con `ordenamiento` para estudiar como reorganizar datos.
-3. Practicar `recursion` para comprender casos base y llamadas repetidas.
-4. Avanzar a `resolucion-problemas` para aplicar estrategias sobre ejercicios mas completos.
+1. `fundamentos`: entrada, proceso, salida y validación mediante números primos.
+2. `busqueda`: lineal sobre datos desordenados; binaria, por bloques e indexada sobre datos ordenados.
+3. `ordenamiento`: Shell Sort, Merge Sort recursivo y fusión natural.
+4. `recursion`: caso base, reducción del problema y retorno.
+5. `backtracking`: elegir, explorar, deshacer y probar otra alternativa.
+6. `grafos`: BFS, DFS, caminos mínimos y alcanzabilidad.
+7. `laboratorio-integrador.md`: selección razonada de algoritmos para una ruta de aprendizaje.
 
-## Contenido actual
+## Ejercicios resueltos
 
-| Carpeta | Enfoque |
+Los archivos Java son ejemplos ejecutables. Cada grupo aborda una estrategia concreta:
+
+| Tema | Resultado esperado |
 |---|---|
-| `busqueda` | Busqueda lineal, busqueda binaria y ordenamiento previo. |
-| `ordenamiento` | Mezcla directa, fusion natural, Shell Sort y Fibonacci. |
-| `recursion` | Recursion basica, backtracking, laberinto, ocho reinas y recorrido del caballo. |
-| `resolucion-problemas` | Organizacion secuencial, indices, bloques y archivos indexados. |
+| Búsqueda | distinguir cuándo ordenar es obligatorio y cuándo sería trabajo innecesario |
+| Ordenamiento | reconocer división y mezcla, tramos naturales y saltos decrecientes |
+| Recursión | identificar caso base y demostrar que cada llamada se acerca a él |
+| Backtracking | observar el retroceso después de una elección que no conduce a solución |
+| Grafos | diferenciar recorrido, distancia mínima y alcanzabilidad |
 
-## Criterio de avance
+## Retos
 
-Este modulo se considera logrado cuando puedes:
+`ejercicios-comunidad.md` contiene problemas sin una única implementación obligatoria. Deben resolverse después de ejecutar y explicar los ejemplos.
 
-- comparar busqueda lineal y binaria;
-- explicar por que algunos algoritmos requieren datos ordenados;
-- implementar un ordenamiento y describir sus pasos;
-- reconocer un caso base en recursion;
-- identificar cuando un problema necesita backtracking;
-- justificar la estrategia usada antes de escribir codigo.
+## Criterio de logro
 
-## Criterio Chilete DevPath
+Puedes avanzar cuando logres:
 
-Los ejercicios se conservan como practicas de aprendizaje. Para convertirlos en material comunitario, cada ejercicio debe contar con enunciado propio, datos de prueba, explicacion paso a paso y solucion comentada.
+- declarar las precondiciones de cada algoritmo;
+- justificar la estrategia antes de programarla;
+- demostrar el resultado con casos normales, vacíos, ausentes y no alcanzables;
+- explicar una diferencia de costo sin limitarte a decir cuál “es más rápido”;
+- distinguir claramente una estructura de datos del algoritmo que opera sobre ella.
 
-## Autoria y fuentes
+## Autoría y fuentes
 
-El contenido corresponde a ejercicios desarrollados por Adrian Pisco durante su proceso de aprendizaje. Si algun ejercicio futuro se adapta desde una fuente externa, debe registrarse la referencia antes de publicarlo.
+El contenido corresponde a ejercicios desarrollados por Adrian Pisco durante su proceso de aprendizaje. Toda adaptación futura debe registrar su fuente antes de publicarse.

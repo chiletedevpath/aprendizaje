@@ -1,0 +1,88 @@
+import java.util.Arrays;
+
+public class Dijkstra {
+
+	// Ejecuta Dijkstra desde un nodo de origen.
+	public static int[] calcularDistancias(int[][] grafo, int origen) {
+		validarGrafo(grafo, origen);
+
+		int n = grafo.length; // Numero de nodos.
+
+		int[] distancia = new int[n]; // Distancias minimas acumuladas.
+		boolean[] visitado = new boolean[n]; // Nodos ya procesados.
+
+		// Inicializa todas las distancias como no alcanzadas.
+		Arrays.fill(distancia, Integer.MAX_VALUE);
+
+		distancia[origen] = 0; // El origen siempre vale 0.
+
+		// Repite n-1 veces para mejorar las rutas disponibles.
+		for (int i = 0; i < n - 1; i++) {
+
+			// Busca el nodo no visitado con menor distancia acumulada.
+			int min = -1;
+			for (int j = 0; j < n; j++) {
+				if (!visitado[j] && (min == -1 || distancia[j] < distancia[min])) {
+					min = j;
+				}
+			}
+
+			if (min == -1 || distancia[min] == Integer.MAX_VALUE) {
+				break;
+			}
+			visitado[min] = true; // Marca el nodo como procesado.
+
+			// Actualiza vecinos si se encuentra una distancia menor.
+			for (int j = 0; j < n; j++) {
+				if (!visitado[j] && grafo[min][j] > 0
+						&& distancia[min] <= Integer.MAX_VALUE - grafo[min][j]
+						&& distancia[min] + grafo[min][j] < distancia[j]) {
+					distancia[j] = distancia[min] + grafo[min][j];
+				}
+			}
+		}
+		return distancia;
+	}
+
+	private static void validarGrafo(int[][] grafo, int origen) {
+		if (grafo == null || grafo.length == 0 || origen < 0 || origen >= grafo.length) {
+			throw new IllegalArgumentException("El grafo y el origen deben ser validos.");
+		}
+		for (int[] fila : grafo) {
+			if (fila == null || fila.length != grafo.length) {
+				throw new IllegalArgumentException("La matriz debe ser cuadrada.");
+			}
+			for (int peso : fila) {
+				if (peso < 0) {
+					throw new IllegalArgumentException("Dijkstra no admite pesos negativos.");
+				}
+			}
+		}
+	}
+
+	public static void imprimirDistancias(int[] distancia, int origen) {
+		System.out.println("Distancias minimas desde el nodo " + origen + ":");
+		for (int i = 0; i < distancia.length; i++) {
+			String valor = distancia[i] == Integer.MAX_VALUE ? "inalcanzable" : Integer.toString(distancia[i]);
+			System.out.println("A " + i + " = " + valor);
+		}
+	}
+
+	// Programa principal para probar el algoritmo de Dijkstra.
+	public static void main(String[] args) {
+
+		// Matriz de adyacencia con pesos.
+		int[][] grafo = { { 0, 6, 0, 10, 0, 0, 8, 0, 0 }, // A
+				{ 6, 0, 11, 0, 15, 0, 0, 13, 0 }, // B
+				{ 0, 11, 0, 0, 0, 0, 0, 4, 0 }, // C
+				{ 10, 0, 0, 0, 6, 0, 0, 0, 0 }, // D
+				{ 0, 15, 0, 6, 0, 2, 6, 0, 0 }, // E
+				{ 0, 0, 0, 0, 2, 0, 4, 0, 6 }, // F
+				{ 8, 0, 0, 0, 6, 4, 0, 5, 5 }, // G
+				{ 0, 13, 4, 0, 0, 0, 5, 0, 7 }, // H
+				{ 0, 0, 0, 0, 0, 6, 5, 7, 0 } // I
+		};
+
+		imprimirDistancias(calcularDistancias(grafo, 0), 0); // 0 representa A.
+	}
+}

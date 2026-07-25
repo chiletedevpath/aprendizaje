@@ -1,41 +1,66 @@
-# Ejercicios para la comunidad
+# Retos de estructuras de datos
 
-Estos retos complementan los ejercicios existentes de `04-estructuras-datos`. Estan pensados para practicar eleccion de estructura, implementacion y explicacion.
+Cada bloque parte de una estructura resuelta y propone un reto equivalente. El
+objetivo es justificar cómo organizar los datos, no diseñar todavía algoritmos
+de búsqueda u ordenamiento.
 
-## Arreglos y listas indexadas
+## 1. Colecciones lineales
 
-1. Registrar cinco recursos de aprendizaje y mostrarlos en orden.
-2. Actualizar el nombre de un recurso segun su posicion.
-3. Eliminar un recurso y mostrar como cambia la lista.
-4. Buscar un recurso por nombre y mostrar su posicion.
+Referencias:
 
-## Listas enlazadas y colecciones
+- `colecciones-lineales/java/array-list`
+- `colecciones-lineales/java/listas-de-objetos`
 
-1. Comparar una lista de estudiantes usando `ArrayList` y `LinkedList`.
-2. Insertar un elemento al inicio, al centro y al final de una lista.
-3. Recorrer una coleccion con indice y luego con `for-each`.
-4. Explicar en que caso conviene una lista basada en arreglo o una lista enlazada.
+Reto: registra recursos de aprendizaje conservando el orden de ingreso. Permite
+agregar al final, retirar el primero y mostrar los elementos restantes.
 
-## Tablas hash
+Casos: lista vacía, un elemento, varios elementos y retiro hasta vaciarla.
 
-1. Insertar claves ficticias en una tabla y mostrar en que indice quedan.
-2. Provocar una colision y explicar como se resuelve.
-3. Buscar una clave existente y una inexistente.
-4. Eliminar una clave y validar el estado final de la tabla.
+## 2. Tablas hash
 
-## Grafos
+Referencias:
 
-1. Modelar una ruta de aprendizaje como grafo de temas.
-2. Recorrer el grafo con BFS y DFS.
-3. Representar una red de cursos con una matriz de adyacencia.
-4. Calcular un camino minimo con pesos simples y datos ficticios.
+- `tablas-hash/java/tabla-dispersion`
+- `tablas-hash/java/doble-hashing`
 
-## Criterio para resolver
+Reto: almacena códigos ficticios en una tabla y define una política explícita
+para colisiones y duplicados.
 
-Antes de programar:
+Casos: clave positiva, clave negativa, duplicada, colisión, búsqueda ausente y
+tabla llena.
 
-1. Define que datos necesitas guardar.
-2. Elige una estructura y justifica por que.
-3. Identifica operaciones principales: insertar, buscar, eliminar o recorrer.
-4. Prueba con un caso normal y un caso limite.
-5. Explica que estructura no usarias y por que.
+## 3. Árboles binarios
+
+Referencia: `arboles-binarios/java/arbol-binario-tickets`.
+
+Reto: representa una jerarquía de categorías con una raíz y hasta dos hijos por
+nodo. Muestra la estructura respetando niveles.
+
+Casos: árbol vacío, solo raíz, una rama y dos ramas.
+
+El recorrido sirve aquí para observar los enlaces del árbol. Comparar BFS, DFS,
+caminos mínimos o alcanzabilidad pertenece a `05-algoritmos/grafos`.
+
+## 4. Índices y registros simulados
+
+Referencia: `indices-y-archivos-simulados/java/listas-indexadas`.
+
+Reto: relaciona clave, registro y ubicación mediante índices auxiliares.
+Actualiza los punteros después de insertar o eliminar.
+
+Casos: clave existente, duplicada, ausente y eliminación que obligue a
+recalcular posiciones.
+
+## 5. Cierre integrado
+
+Resuelve `laboratorio-integrador.md`. La implementación de referencia está en
+`practica-integrada/java/catalogo-indexado`.
+
+## Criterios de logro
+
+- la estructura elegida responde al tipo de relación entre los datos;
+- tamaños, índices, claves y referencias inválidas se controlan;
+- la política de duplicados y colisiones es explícita;
+- puedes explicar el estado antes y después de cada operación;
+- distingues una operación de la estructura de un algoritmo que la utiliza;
+- puedes justificar por qué otra estructura sería menos adecuada.

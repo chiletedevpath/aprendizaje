@@ -10,20 +10,22 @@ import java.util.Scanner;
 
 public class RecursivaDePotencia {
 
-	public static double metodoPotenciaRecursiva(double x, double y) {
+	public static double calcularPotencia(double base, int exponente) {
 
 		// CASO BASE:
-		if (y == 0) {
+		if (exponente == 0) {
 			return 1;
 		}
 
-		// CASO RECURSIVO POSITIVO:
-		if (y > 0) {
-			return x * metodoPotenciaRecursiva(x, y - 1);
+		if (base == 0 && exponente < 0) {
+			throw new IllegalArgumentException("Cero no admite exponentes negativos.");
 		}
 
-		// CASO RECURSIVO NEGATIVO:
-		return 1.0 / metodoPotenciaRecursiva(x, -y);
+		if (exponente > 0) {
+			return base * calcularPotencia(base, exponente - 1);
+		}
+
+		return 1.0 / calcularPotencia(base, -(exponente + 1)) / base;
 	}
 
 	public static void main(String[] args) {
@@ -38,11 +40,11 @@ public class RecursivaDePotencia {
 			double x = scanner.nextDouble();
 
 			System.out.print("\nb)Ingrese el valor de y (exponente): ");
-			double y = scanner.nextDouble();
+			int y = scanner.nextInt();
 
-			double resultadoPotenciaRecursiva = metodoPotenciaRecursiva(x, y);
+			double resultadoPotenciaRecursiva = calcularPotencia(x, y);
 
-			System.out.printf("\nLa potencia de " + x + " elevado a " + y + " usando recursividad es: "
+			System.out.println("\nLa potencia de " + x + " elevado a " + y + " usando recursividad es: "
 					+ resultadoPotenciaRecursiva);
 		}
 	}

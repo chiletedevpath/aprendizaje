@@ -1,24 +1,24 @@
 # Glosario de algoritmos
 
-Este glosario resume conceptos usados en los ejercicios de `05-algoritmos`.
-
-| Termino | Significado practico |
+| Término | Significado práctico |
 |---|---|
-| Algoritmo | Secuencia finita de pasos para resolver un problema. |
-| Entrada | Datos que recibe el algoritmo. |
-| Proceso | Operaciones que transforman la entrada. |
-| Salida | Resultado producido por el algoritmo. |
-| Busqueda lineal | Revision elemento por elemento hasta encontrar un valor. |
-| Busqueda binaria | Busqueda sobre datos ordenados dividiendo el rango en mitades. |
-| Ordenamiento | Proceso de reorganizar datos bajo un criterio. |
-| Recursion | Tecnica donde una funcion se llama a si misma. |
-| Caso base | Condicion que detiene una llamada recursiva. |
-| Backtracking | Estrategia que prueba caminos, retrocede y descarta opciones invalidas. |
-| Complejidad | Forma de estimar cuanto crece el costo de un algoritmo. |
-| Caso limite | Situacion extrema que ayuda a revelar errores. |
-| Dato de prueba | Entrada preparada para comprobar el comportamiento de la solucion. |
-| Indice | Posicion usada para ubicar un dato dentro de una estructura. |
+| Algoritmo | Secuencia finita y no ambigua de pasos para resolver un problema. |
+| Precondición | Condición que debe cumplirse antes de ejecutar el algoritmo. |
+| Poscondición | Propiedad que debe cumplirse cuando el algoritmo termina correctamente. |
+| Invariante | Propiedad que permanece verdadera durante una iteración o fase. |
+| Corrección | Argumento y evidencia de que el algoritmo produce el resultado esperado. |
+| Complejidad | Forma de expresar cómo crecen tiempo o memoria respecto al tamaño de entrada. |
+| Búsqueda lineal | Revisión elemento por elemento; no requiere orden previo. |
+| Búsqueda binaria | División repetida de un rango; requiere datos ordenados por el mismo criterio. |
+| Búsqueda por bloques | Salto entre límites de bloques y revisión lineal del bloque candidato. |
+| Ordenamiento | Reorganización de datos conforme a un criterio explícito. |
+| Recursión | Técnica en la que un método resuelve una versión menor del mismo problema. |
+| Caso base | Condición que detiene las llamadas recursivas. |
+| Backtracking | Estrategia que elige, explora, deshace y prueba otra alternativa. |
+| BFS | Recorrido por amplitud mediante una cola. |
+| DFS | Recorrido por profundidad mediante una pila o recursión. |
+| Dijkstra | Caminos mínimos desde un origen cuando no existen pesos negativos. |
+| Warshall | Cálculo de alcanzabilidad entre todos los pares de vértices. |
+| Caso límite | Entrada extrema, vacía o mínima que puede revelar defectos. |
 
-## Criterio de uso
-
-Un algoritmo esta bien aprendido cuando puedes explicar sus pasos, sus restricciones y un caso donde no conviene usarlo.
+Una operación de una estructura responde “qué puede hacer”; un algoritmo explica “qué pasos usa y bajo qué condiciones”.

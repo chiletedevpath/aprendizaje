@@ -1,10 +1,25 @@
 # Estructuras de datos
 
-Esta seccion reune ejercicios de aprendizaje sobre formas de organizar datos en memoria, recorrerlos, buscarlos y relacionarlos.
+Esta seccion estudia cómo representar, almacenar y relacionar datos en memoria.
+Las operaciones de insertar, consultar, recorrer y eliminar se usan para
+comprobar el comportamiento de cada estructura.
 
 ## Objetivo
 
-Comprender como elegir y aplicar estructuras de datos segun el problema: listas para colecciones ordenadas, tablas hash para busquedas por clave y grafos para representar relaciones o caminos.
+Comprender como elegir y aplicar estructuras de datos segun el problema: colecciones lineales para secuencias, tablas hash para busquedas por clave, arboles para jerarquias e indices auxiliares para organizar registros.
+
+## Diferencia con `05-algoritmos`
+
+| `04-estructuras-datos` | `05-algoritmos` |
+|---|---|
+| Decide cómo se organizan los datos. | Decide qué pasos resuelven el problema. |
+| Estudia listas, tablas hash, árboles e índices. | Estudia búsqueda, ordenamiento, recursión, backtracking y algoritmos de grafos. |
+| Pregunta: “¿Dónde y cómo guardo cada dato?”. | Pregunta: “¿Cómo proceso los datos y por qué funciona?”. |
+| Usa operaciones básicas para observar la estructura. | Compara estrategias, precondiciones y eficiencia. |
+
+Una tabla hash puede ofrecer `buscar()` en esta sección porque consultar es una
+operación propia de la estructura. Comparar búsqueda lineal, binaria o indexada,
+demostrar sus pasos y analizar sus requisitos corresponde a la sección 5.
 
 ## Publico objetivo
 
@@ -29,32 +44,35 @@ Antes de iniciar este modulo, conviene poder:
 
 - `glosario.md`: terminos esenciales de estructuras de datos.
 - `ejercicios-comunidad.md`: retos propuestos para practicar seleccion e implementacion.
+- `laboratorio-integrador.md`: práctica final para combinar una secuencia y un índice por clave.
 
 ## Ruta sugerida
 
-1. Revisar `arreglos` para reforzar operaciones con listas indexadas.
-2. Continuar con `listas-enlazadas` para comparar `ArrayList` y `LinkedList`.
-3. Estudiar `tablas-hash` para practicar dispersion, colisiones y busqueda.
-4. Avanzar a `grafos` para trabajar recorridos BFS, DFS y caminos alcanzables.
+1. Revisar `colecciones-lineales` para comparar operaciones con `ArrayList` y `LinkedList`.
+2. Estudiar `tablas-hash` para practicar dispersion, colisiones y busqueda.
+3. Continuar con `arboles-binarios` para representar jerarquias mediante nodos.
+4. Avanzar a `indices-y-archivos-simulados` para relacionar claves, registros y ubicaciones.
+5. Resolver `laboratorio-integrador.md` justificando cada estructura elegida.
 
 ## Contenido actual
 
 | Carpeta | Enfoque |
 |---|---|
-| `arreglos` | Creacion, insercion, actualizacion, eliminacion y revision de orden en listas indexadas. |
-| `listas-enlazadas` | Uso de `ArrayList`, `LinkedList`, recorridos y colecciones de objetos. |
+| `colecciones-lineales` | Uso de `ArrayList`, `LinkedList`, operaciones indexadas y colecciones de objetos. |
 | `tablas-hash` | Insercion, busqueda, eliminacion, dispersion, colisiones y doble hashing. |
-| `grafos` | Grafos dirigidos/no dirigidos, BFS, DFS, Dijkstra y Warshall. |
+| `arboles-binarios` | Nodos, raiz, relaciones izquierda/derecha y arbol aplicado a tickets. |
+| `indices-y-archivos-simulados` | Estructuras auxiliares de claves, clientes y ubicaciones sin persistencia real. |
 
 ## Criterio de avance
 
 Este modulo se considera logrado cuando puedes:
 
-- elegir entre arreglo, lista, tabla hash o grafo segun el problema;
+- elegir entre coleccion lineal, tabla hash, arbol o indice auxiliar segun el problema;
 - explicar el costo practico de insertar, buscar o eliminar datos;
 - representar datos relacionados sin forzar una estructura incorrecta;
 - interpretar una colision en una tabla hash;
-- leer una matriz o lista de adyacencia en un grafo;
+- reconocer raiz, nodos y ramas de un arbol binario;
+- explicar como un indice auxiliar permite localizar registros;
 - probar una estructura con casos normales y casos limite.
 
 ## Criterio Chilete DevPath

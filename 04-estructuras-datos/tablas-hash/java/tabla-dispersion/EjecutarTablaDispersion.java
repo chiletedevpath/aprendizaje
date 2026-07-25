@@ -1,7 +1,7 @@
 public class EjecutarTablaDispersion {
     public static void main(String[] args) {
         int tamanoTabla = 20;
-        int[] claves = { 20, 5, 10, 8, 35, 60, 16, 44 };
+        int[] claves = { 20, 5, -10, 8, 35, 60, 16, 44, 20 };
 
         FuncionesDispersion funciones = new FuncionesDispersion();
 
