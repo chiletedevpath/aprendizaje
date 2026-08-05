@@ -17,8 +17,13 @@ Este glosario resume conceptos usados en los ejercicios de `08-patrones`.
 | Singleton | Patron que restringe una clase a una unica instancia controlada. |
 | Prototype | Patron que crea objetos copiando una instancia base. |
 | Adapter | Patron que adapta una interfaz externa a un contrato interno. |
+| Bridge | Patron que separa una abstraccion de su implementacion para que ambas evolucionen sin depender directamente. |
 | Facade | Patron que simplifica el acceso a un subsistema complejo. |
+| Proxy | Patron que usa un intermediario para controlar el acceso a un objeto real. |
 | Observer | Patron donde varios observadores reaccionan a cambios de un sujeto. |
+| State | Patron que permite cambiar el comportamiento de un objeto segun su estado interno. |
+| Command | Patron que encapsula una accion como objeto para ejecutarla, reemplazarla o almacenarla. |
+| Memento | Patron que guarda y restaura el estado de un objeto sin exponer sus detalles internos. |
 
 ## Criterio de uso
 

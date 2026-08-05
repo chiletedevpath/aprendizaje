@@ -35,8 +35,9 @@ Antes de iniciar este modulo, conviene poder:
 1. Revisar `principios-solid` para reforzar bases de diseno orientado a objetos.
 2. Continuar con `creacionales` para estudiar formas de crear objetos.
 3. Avanzar a `estructurales` para entender adaptacion, composicion y simplificacion de subsistemas.
-4. Revisar `casos-integradores` para observar combinaciones de principios y patrones.
-5. Usar los casos practicos como refuerzo tecnico antes de crear guias para comunidad.
+4. Continuar con `comportamiento` para estudiar comunicacion, estados, comandos e historial de cambios.
+5. Revisar `casos-integradores` para observar combinaciones de principios y patrones.
+6. Usar los casos practicos como refuerzo tecnico antes de crear guias para comunidad.
 
 ## Contenido actual
 
@@ -44,7 +45,8 @@ Antes de iniciar este modulo, conviene poder:
 |---|---|
 | `principios-solid` | Ejercicios sobre OCP, LSP y principios relacionados. |
 | `creacionales` | Builder, Factory, Prototype y Singleton. |
-| `estructurales` | Adapter y Facade. |
+| `estructurales` | Adapter, Bridge, Facade y Proxy. |
+| `comportamiento` | Command, Memento, Observer y State. |
 | `casos-integradores` | Casos que combinan principios SOLID y patrones en un flujo completo. |
 
 ## Criterio de avance
@@ -63,6 +65,7 @@ Este modulo se considera logrado cuando puedes:
 - `java`: ejercicios de clase, laboratorio o practica tecnica.
 - `spring-boot`: ejemplos implementados como proyectos Spring Boot.
 - `casos-practicos`: ejercicios reorganizados por concepto para reforzar principios y patrones sin formato de actividad academica.
+- `comportamiento`: patrones que organizan comunicacion, cambios de estado, acciones y recuperacion de informacion.
 - `casos-integradores`: casos de mayor alcance donde se combinan varios principios y patrones.
 
 ## Criterio Chilete DevPath
