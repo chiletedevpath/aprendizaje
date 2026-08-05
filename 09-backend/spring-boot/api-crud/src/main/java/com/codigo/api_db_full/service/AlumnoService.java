@@ -22,7 +22,7 @@ public class AlumnoService {
 
         //DataIntegrityViolationException
         if (alumnoRepo.existsByEmail(req.email())) throw new BusinessConflictException("Alumno con Email ya existe: " + req.email());
-        if (alumnoRepo.existsByTelefono(req.telefono())) throw new BusinessConflictException("Alumno con Telfono ya existe: " + req.telefono());
+        if (alumnoRepo.existsByPerfilTelefono(req.telefono())) throw new BusinessConflictException("Alumno con Telfono ya existe: " + req.telefono());
 
         try {
             Alumno a = new Alumno();

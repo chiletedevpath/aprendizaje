@@ -74,13 +74,13 @@ public class AlumnoService {
     List<String> nombres = List.of("Ana", "Luis", "Pedro");
     Stream<String> stream = nombres.stream();
 
-    Fuente -> Operaciones intermedias -> operaciones terminal
-    nombres.stream()  -> (map(), filter(), sorted(), distinct()) -> toList(), forEach(), findFirts(), count()
+    // Fuente -> operaciones intermedias -> operación terminal
+    // nombres.stream() -> map(), filter(), sorted(), distinct() -> toList(), forEach(), findFirst(), count()
 
-    Collecion -> caja con datos
-    Stream -> cinta transportadora
-    map/filter -> maquinas
-    toList() -> caja final lista para enviarse}
+    // Colección -> caja con datos
+    // Stream -> cinta transportadora
+    // map/filter -> máquinas
+    // toList() -> caja final lista para enviarse
 
 
 }

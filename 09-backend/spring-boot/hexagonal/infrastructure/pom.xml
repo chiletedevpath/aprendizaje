@@ -8,15 +8,12 @@
         <groupId>com.codigo</groupId>
         <artifactId>ms-register-hexa</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>infrastructure</artifactId>
     <version>14.0.0</version>
     <packaging>jar</packaging>
-
-    <properties>
-        <spring-cloud.version>2025.1.1</spring-cloud.version>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -47,15 +44,4 @@
             <artifactId>spring-cloud-starter-vault-config</artifactId>
         </dependency>
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>
