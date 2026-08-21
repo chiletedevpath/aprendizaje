@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Landing page responsive de naturaleza y viajes." />
+
+    <title>Explora | Naturaleza y aventura</title>
+
+    <link rel="preconnect" href="https://images.unsplash.com" />
+
+    <link rel="preconnect" href="https://videos.pexels.com" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header" id="inicio">
+      <div class="container nav-wrap">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">EXPLORA</a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="main-nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#destinos">Destinos</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+    <main>
+      <!-- =========================
+             HERO
+        ========================== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-bg"
+          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=82"
+          srcset="
+            https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=700&q=78   700w,
+            https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80 1200w,
+            https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=82 1800w
+          "
+          sizes="100vw"
+          alt="Montañas iluminadas por la luz del atardecer"
+          fetchpriority="high"
+        />
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+          <p class="eyebrow">Naturaleza · Aventura · Libertad</p>
+
+          <h1 id="hero-title">Descubre lugares que vale la pena recordar</h1>
+
+          <p class="hero-text">
+            Una experiencia visual simple para inspirarte a salir, explorar y conectar con la
+            naturaleza
+          </p>
+
+          <a class="button" href="#destinos">Explorar destinos</a>
+        </div>
+      </section>
+
+      <!-- =========================
+             DESTINOS
+        ========================== -->
+      <section class="section" id="destinos" aria-labelledby="destinos-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Destinos</p>
+
+            <h2 id="destinos-title">Tres formas de desconectarte</h2>
+
+            <p>
+              Montaña, agua y paisajes abiertos reunidos en una galería adaptable a cualquier tamaño
+              de pantalla.
+            </p>
+          </div>
+
+          <div class="cards">
+            <!-- Tarjeta 1 -->
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1748499429963-85c58cb2b95e?auto=format&fit=crop&w=900&q=80"
+                alt="Lago entre montañas bajo un cielo despejado"
+                loading="lazy"
+              />
+
+              <div class="card-body">
+                <span class="tag">Montaña</span>
+
+                <h3>Rutas abiertas</h3>
+
+                <p>Senderos, aire limpio y espacios amplios para cambiar el ritmo de la rutina.</p>
+              </div>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1742845918430-c6093f93f740?auto=format&fit=crop&w=900&q=80"
+                alt="Lago helado rodeado de montañas y árboles"
+                loading="lazy"
+              />
+
+              <div class="card-body">
+                <span class="tag">Paisaje</span>
+
+                <h3>Momentos tranquilos</h3>
+
+                <p>Escenarios naturales donde el silencio y la luz transforman la experiencia.</p>
+              </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="card card-highlight">
+              <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80"
+                alt="Persona observando un paisaje montañoso"
+                loading="lazy"
+              />
+
+              <div class="card-body">
+                <span class="tag">Aventura</span>
+
+                <h3>Nuevas perspectivas</h3>
+
+                <p>
+                  Explorar también significa detenerse un momento y mirar el camino desde otro
+                  lugar.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             EXPERIENCIA RESPONSIVE
+        ========================== -->
+      <section class="section section-soft" id="experiencia" aria-labelledby="experiencia-title">
+        <div class="container experience-grid">
+          <!-- Explicación -->
+          <div class="experience-copy">
+            <p class="eyebrow dark">Aplicación responsive</p>
+
+            <h2 id="experiencia-title">¿Cómo adapté esta sección a diferentes dispositivos?</h2>
+
+            <p>
+              En esta parte de la web aplico diseño responsivo para que el contenido se adapte
+              correctamente a celulares, tablets, laptops y pantallas grandes. El video cambia su
+              tamaño automáticamente sin deformarse y la distribución se reorganiza según el espacio
+              disponible.
+            </p>
+
+            <ul class="feature-list">
+              <li>
+                <strong>Mobile first:</strong>
+                parto de una estructura pensada para pantallas pequeñas y posteriormente la adapto
+                para resoluciones mayores.
+              </li>
+
+              <li>
+                <strong>CSS Grid:</strong>
+                lo utilizo para distribuir el contenido en columnas cuando existe suficiente espacio
+                disponible.
+              </li>
+
+              <li>
+                <strong>Video responsive:</strong>
+                mantengo su proporción y hago que se adapte automáticamente al ancho de su
+                contenedor.
+              </li>
+
+              <li>
+                <strong>Media queries:</strong>
+                las utilizo para modificar la distribución, tamaños y comportamiento de algunos
+                elementos dependiendo del ancho de la pantalla.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Video -->
+          <div class="video-card">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1748499429963-85c58cb2b95e?auto=format&fit=crop&w=800&q=80"
+              aria-label="Video de paisaje natural"
+            >
+              <source
+                src="https://videos.pexels.com/video-files/30070489/12897604_1080_1920_50fps.mp4"
+                type="video/mp4"
+              />
+
+              Tu navegador no admite la reproducción de video HTML5.
+            </video>
+
+            <p class="media-credit">Video de naturaleza alojado en Pexels.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             LLAMADO A LA ACCIÓN
+        ========================== -->
+      <section class="cta" id="contacto" aria-labelledby="cta-title">
+        <div class="container cta-inner">
+          <div>
+            <p class="eyebrow">Siguiente destino</p>
+
+            <h2 id="cta-title">La próxima ruta empieza con una decisión.</h2>
+          </div>
+
+          <a class="button button-light" href="#inicio">Volver al inicio</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+      <div class="container footer-main">
+        <div>
+          <a class="brand footer-brand" href="#inicio">EXPLORA</a>
+
+          <p>Práctica web responsive de demostración.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#destinos">Destinos</a>
+
+          <a href="#experiencia">Experiencia</a>
+
+          <a href="#inicio">Inicio</a>
+
+          <a href="FUENTES.md">Fuentes visuales</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>Práctica educativa, 2026.</span>
+
+        <span>
+          Práctica desarrollada por
+          <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">
+            Chilete DevPath
+          </a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="script.js"></script>
+  </body>
+</html>

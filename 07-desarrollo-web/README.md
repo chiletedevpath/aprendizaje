@@ -1,6 +1,6 @@
 # Desarrollo web
 
-Esta seccion organiza ejercicios de fundamentos web: estructura HTML, estilos CSS, JavaScript inicial y PHP aplicado a formularios.
+Esta sección organiza fundamentos web: estructura HTML, estilos CSS, JavaScript en el navegador, prácticas integradoras y PHP aplicado a formularios.
 
 ## Objetivo
 
@@ -25,8 +25,10 @@ Este modulo esta dirigido a:
 
 1. Revisar `html` para practicar estructura de documentos.
 2. Continuar con `css` para aplicar estilos y maquetacion.
-3. Revisar `javascript` para practicar interaccion y asincronia basica.
-4. Avanzar a `php` para conectar formularios y procesamiento basico del lado del servidor.
+3. Revisar `javascript` para practicar lenguaje, DOM, eventos, módulos y asincronía básica.
+4. Estudiar `practicas-integradoras` para observar la integración de HTML, CSS y JavaScript.
+5. Resolver `javascript/laboratorio-integrador.md` sin copiar una solución.
+6. Avanzar a `php` para conectar formularios y procesamiento básico del lado del servidor.
 
 ## Material de apoyo
 
@@ -39,8 +41,22 @@ Este modulo esta dirigido a:
 |---|---|
 | `html` | Estructura de paginas y plantilla academica de CV web con datos ficticios. |
 | `css` | Selectores, propiedades visuales, Flexbox, menu y tabla de precios. |
-| `javascript` | Ejercicios iniciales de interaccion y programacion asincrona. |
+| `javascript` | Retos propios, interacción, módulos, errores y programación asíncrona. |
 | `php` | Formularios, ciclos, arreglos y procesamiento inicial con PHP. |
+| `practicas-integradoras` | Landings de práctica que integran estructura, estilos e interacción. |
+
+## Prácticas integradoras incorporadas
+
+- `practicas-integradoras/landing-explora`: landing responsive con HTML semántico, CSS, menú móvil y recursos remotos de Unsplash y Pexels. Su procedencia se registra en `FUENTES.md` porque contiene varias referencias visuales externas.
+- `practicas-integradoras/landing-eventos`: landing responsive con datos totalmente ficticios y fotografías remotas de Unsplash. La referencia de licencia se conserva en este README.
+
+`anime-legends-bootstrap` no forma parte del contenido publicable: permanece ignorado localmente porque sus imágenes de franquicias comerciales no tienen licencia de redistribución documentada. Los ZIP duplicados tampoco se versionan.
+
+## Fuentes externas de esta ampliación
+
+- Brais Moure: [Curso completo de JavaScript desde cero para principiantes](https://www.youtube.com/watch?v=1glVfFxj8a4). Se utilizó como referencia temática; los retos fueron reescritos para Chilete DevPath.
+- [Licencia de Unsplash](https://unsplash.com/license), aplicada a las fotografías remotas de las landings.
+- [Licencia de Pexels](https://www.pexels.com/license/), aplicada al video remoto de Explora.
 
 ## Criterio de avance
 
@@ -50,6 +66,8 @@ Este modulo se considera logrado cuando puedes:
 - aplicar estilos con CSS sin romper la lectura del contenido;
 - usar Flexbox para organizar elementos;
 - agregar interaccion basica con JavaScript;
+- manipular el DOM con eventos y validaciones accesibles;
+- explicar la procedencia de recursos externos y sus límites de uso;
 - procesar formularios simples con PHP;
 - diferenciar una practica web de un proyecto frontend moderno.
 

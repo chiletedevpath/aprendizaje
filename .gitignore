@@ -11,3 +11,7 @@ node_modules/
 *.tmp
 *.class
 *.dat
+
+# Material local pendiente de revisión editorial o licencias
+*.zip
+/anime-legends-bootstrap/

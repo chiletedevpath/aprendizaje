@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Práctica educativa de una landing responsive para eventos ficticios." />
+    <title>Party Night | Práctica educativa</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#inicio" aria-label="Ir al inicio">PARTY NIGHT</a>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#eventos">Eventos</a>
+        <a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+        <h1 id="titulo-principal">Vive la mejor noche</h1>
+        <p>Explora una cartelera ficticia creada para practicar una interfaz responsive.</p>
+        <a href="#eventos" class="boton">Ver eventos</a>
+      </section>
+      <section class="eventos" id="eventos" aria-labelledby="titulo-eventos">
+        <h2 id="titulo-eventos">Próximos eventos</h2>
+        <p class="descripcion">Todos los nombres, lugares y fechas son demostrativos.</p>
+        <div class="contenedor-eventos">
+          <article class="evento">
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Escenario iluminado durante un festival" />
+            <div class="evento-info"><h3>Festival Neon</h3><p><strong>Fecha ficticia:</strong> 22 de agosto</p><p><strong>Lugar ficticio:</strong> Centro de Eventos</p><p>Música, luces y una composición visual para esta práctica.</p></div>
+          </article>
+          <article class="evento">
+            <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=800&q=80" alt="Público frente a un escenario de música" />
+            <div class="evento-info"><h3>Summer Party</h3><p><strong>Fecha ficticia:</strong> 29 de agosto</p><p><strong>Lugar ficticio:</strong> Club Paradise</p><p>Tarjeta demostrativa para practicar jerarquía y contraste.</p></div>
+          </article>
+          <article class="evento">
+            <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80" alt="Concierto visto desde el público" />
+            <div class="evento-info"><h3>Night Concert</h3><p><strong>Fecha ficticia:</strong> 5 de septiembre</p><p><strong>Lugar ficticio:</strong> Arena Music</p><p>Contenido ficticio para comprobar una cuadrícula adaptable.</p></div>
+          </article>
+        </div>
+      </section>
+      <section class="nosotros" id="nosotros" aria-labelledby="titulo-nosotros">
+        <h2 id="titulo-nosotros">Sobre la práctica</h2>
+        <p>Party Night aplica HTML semántico, CSS responsive y componentes visuales. No representa una empresa ni anuncia eventos reales.</p>
+      </section>
+      <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <p>Sección demostrativa: no recibe solicitudes ni contiene datos de contacto reales.</p>
+      </section>
+    </main>
+    <footer><p>Práctica educativa creada para Chilete DevPath.</p><p class="desarrollado">Desarrollada por <strong>Adrian Pisco</strong>.</p></footer>
+  </body>
+</html>

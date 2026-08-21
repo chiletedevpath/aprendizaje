@@ -16,9 +16,12 @@ Estos retos complementan los ejercicios existentes de `07-desarrollo-web`.
 
 ## JavaScript
 
-1. Mostrar u ocultar una seccion al hacer clic.
-2. Validar un formulario antes de enviarlo.
-3. Simular una carga asincrona de recursos.
+La progresión completa está en `javascript/retos`. Antes de avanzar al laboratorio:
+
+1. Mostrar u ocultar una sección conservando `aria-expanded`.
+2. Validar un formulario y asociar cada error con su campo.
+3. Simular una carga asíncrona con estado de espera, éxito y error.
+4. Separar el modelo, la interfaz y la persistencia en módulos.
 
 ## PHP
 

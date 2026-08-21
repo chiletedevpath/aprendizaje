@@ -1,0 +1,32 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #111827; color: #fff; font-family: Arial, sans-serif; line-height: 1.5; }
+header { align-items: center; background: #0b1120; display: flex; justify-content: space-between; padding: 20px 8%; }
+.logo { color: #e879f9; font-size: 26px; font-weight: 700; text-decoration: none; }
+nav a { color: #fff; margin-left: 25px; text-decoration: none; }
+a:focus-visible { outline: 3px solid #f0abfc; outline-offset: 4px; }
+nav a:hover { color: #e879f9; }
+.hero { align-items: center; background: linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 75%)), url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80") center / cover; display: flex; flex-direction: column; justify-content: center; min-height: 500px; padding: 30px; text-align: center; }
+.hero h1 { font-size: clamp(2.4rem, 7vw, 3.5rem); margin-bottom: 15px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 650px; }
+.boton { background: #c026d3; border-radius: 8px; color: #fff; font-weight: 700; padding: 14px 30px; text-decoration: none; }
+.boton:hover { background: #a21caf; }
+.eventos, .contacto { padding: 60px 8%; }
+.eventos h2, .contacto h2 { font-size: 2.1rem; margin-bottom: 10px; text-align: center; }
+.descripcion, .contacto { text-align: center; }
+.descripcion { color: #cbd5e1; margin-bottom: 40px; }
+.contenedor-eventos { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
+.evento { background: #1f2937; border-radius: 12px; overflow: hidden; transition: transform 180ms ease; width: min(100%, 320px); }
+.evento:hover { transform: translateY(-5px); }
+.evento img { display: block; height: 210px; object-fit: cover; width: 100%; }
+.evento-info { padding: 20px; }
+.evento-info h3 { color: #f0abfc; font-size: 1.4rem; margin-bottom: 12px; }
+.evento-info p, .contacto p { color: #d1d5db; margin-bottom: 8px; }
+.nosotros { background: #1f2937; padding: 60px max(8%, 24px); text-align: center; }
+.nosotros h2 { font-size: 2.1rem; margin-bottom: 20px; }
+.nosotros p { color: #d1d5db; line-height: 1.7; margin-inline: auto; max-width: 760px; }
+footer { background: #080d18; color: #94a3b8; padding: 25px; text-align: center; }
+.desarrollado { color: #64748b; font-size: 14px; margin-top: 8px; }
+.desarrollado strong { color: #e879f9; }
+@media (max-width: 700px) { header { flex-direction: column; gap: 15px; } nav { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; } nav a { margin: 0; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .evento { transition: none; } }
