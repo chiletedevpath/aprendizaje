@@ -25,10 +25,11 @@ Este modulo esta dirigido a:
 
 1. Revisar `html` para practicar estructura de documentos.
 2. Continuar con `css` para aplicar estilos y maquetacion.
-3. Revisar `javascript` para practicar lenguaje, DOM, eventos, módulos y asincronía básica.
-4. Estudiar `practicas-integradoras` para observar la integración de HTML, CSS y JavaScript.
-5. Resolver `javascript/laboratorio-integrador.md` sin copiar una solución.
-6. Avanzar a `php` para conectar formularios y procesamiento básico del lado del servidor.
+3. Continuar con `css/bootstrap` después de dominar CSS responsive, Flexbox y Grid.
+4. Revisar `javascript` para practicar lenguaje, DOM, eventos, módulos y asincronía básica.
+5. Estudiar `practicas-integradoras` para observar la integración de HTML, CSS, JavaScript y, cuando corresponda, Bootstrap.
+6. Resolver `javascript/laboratorio-integrador.md` sin copiar una solución.
+7. Avanzar a `php` para conectar formularios y procesamiento básico del lado del servidor.
 
 ## Material de apoyo
 
@@ -40,7 +41,7 @@ Este modulo esta dirigido a:
 | Carpeta | Enfoque |
 |---|---|
 | `html` | Estructura de paginas y plantilla academica de CV web con datos ficticios. |
-| `css` | Selectores, propiedades visuales, Flexbox, menu y tabla de precios. |
+| `css` | Selectores, propiedades visuales, Flexbox, componentes responsive y fundamentos de Bootstrap. |
 | `javascript` | Retos propios, interacción, módulos, errores y programación asíncrona. |
 | `php` | Formularios, ciclos, arreglos y procesamiento inicial con PHP. |
 | `practicas-integradoras` | Landings de práctica que integran estructura, estilos e interacción. |
@@ -50,7 +51,7 @@ Este modulo esta dirigido a:
 - `practicas-integradoras/landing-explora`: landing responsive con HTML semántico, CSS, menú móvil y recursos remotos de Unsplash y Pexels. Su procedencia se registra en `FUENTES.md` porque contiene varias referencias visuales externas.
 - `practicas-integradoras/landing-eventos`: landing responsive con datos totalmente ficticios y fotografías remotas de Unsplash. La referencia de licencia se conserva en este README.
 
-`anime-legends-bootstrap` no forma parte del contenido publicable: permanece ignorado localmente porque sus imágenes de franquicias comerciales no tienen licencia de redistribución documentada. Los ZIP duplicados tampoco se versionan.
+`practicas-integradoras/catalogo-anime` aplica Bootstrap en una práctica completa y se conserva localmente en revisión. Todavía no forma parte del contenido publicable porque sus imágenes de franquicias comerciales no tienen licencia de redistribución documentada. Los ZIP duplicados tampoco se versionan.
 
 ## Fuentes externas de esta ampliación
 

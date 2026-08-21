@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Práctica resuelta de fundamentos de Bootstrap para Chilete DevPath."
+    />
+    <title>Fundamentos de Bootstrap | Chilete DevPath</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-body-tertiary">
+    <header class="bg-primary text-white py-5">
+      <div class="container">
+        <p class="text-uppercase fw-semibold mb-2">CSS · Frameworks</p>
+        <h1 class="display-5 fw-bold">Fundamentos de Bootstrap</h1>
+        <p class="lead mb-0">
+          Práctica resuelta para reconocer contenedores, rejilla, utilidades y componentes.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <section class="mb-5" aria-labelledby="antes-title">
+        <h2 id="antes-title">Antes de empezar</h2>
+        <p>
+          Bootstrap no reemplaza el aprendizaje de CSS. Conviene utilizarlo después de comprender
+          el modelo de caja, Flexbox, Grid y diseño responsive.
+        </p>
+      </section>
+
+      <section class="mb-5" aria-labelledby="grid-title">
+        <h2 id="grid-title">1. Contenedor y rejilla responsive</h2>
+        <p>
+          La clase <code>container</code> limita el ancho del contenido. La combinación
+          <code>row</code> y <code>col-*</code> organiza una rejilla de doce columnas.
+        </p>
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="h5 card-title">HTML semántico</h3>
+                <p class="card-text">La estructura sigue perteneciendo al documento HTML.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="h5 card-title">Clases de Bootstrap</h3>
+                <p class="card-text">Las clases aplican reglas CSS ya preparadas.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="h5 card-title">CSS propio</h3>
+                <p class="card-text">Se añade solamente cuando el diseño necesita personalización.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5" aria-labelledby="utilities-title">
+        <h2 id="utilities-title">2. Utilidades</h2>
+        <p>
+          Clases como <code>p-3</code>, <code>mb-3</code>, <code>text-center</code> y
+          <code>d-flex</code> resuelven ajustes frecuentes sin crear una regla nueva para cada caso.
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3 p-3 border rounded bg-white">
+          <button class="btn btn-primary" type="button">Acción principal</button>
+          <button class="btn btn-outline-secondary" type="button">Acción secundaria</button>
+        </div>
+      </section>
+
+      <section aria-labelledby="component-title">
+        <h2 id="component-title">3. Componente interactivo</h2>
+        <p>
+          Algunos componentes necesitan el JavaScript de Bootstrap. El botón siguiente controla un
+          bloque colapsable mediante atributos <code>data-bs-*</code>.
+        </p>
+        <button
+          class="btn btn-success"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#explicacion"
+          aria-expanded="false"
+          aria-controls="explicacion"
+        >
+          Mostrar explicación
+        </button>
+        <div class="collapse mt-3" id="explicacion">
+          <div class="alert alert-success mb-0">
+            Bootstrap administra la interacción; el contenido continúa siendo HTML accesible.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>
