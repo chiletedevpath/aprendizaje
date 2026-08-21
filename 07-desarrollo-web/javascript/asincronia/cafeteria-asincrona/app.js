@@ -1,78 +1,57 @@
-/* =========================================
-   MENU DISPONIBLE
-========================================= */
-
 const menu = ["espresso", "cappuccino", "latte", "americano"];
+const TIEMPO_SIMULADO_MS = 500;
 
-/* =========================================
-   PASO 1 - RECIBIR PEDIDO
-========================================= */
-
-function recibirPedido(producto) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      /* Verifica si el producto existe */
-      if (menu.includes(producto)) {
-        resolve(`Pedido recibido: ${producto}`);
-      } else {
-        reject(`No tenemos ${producto} en el menu`);
-      }
-    }, 3000);
+function esperar() {
+  return new Promise((resolve) => {
+    setTimeout(resolve, TIEMPO_SIMULADO_MS);
   });
 }
 
-/* =========================================
-   PASO 2 - PREPARAR CAFE
-========================================= */
+async function recibirPedido(producto) {
+  await esperar();
 
-function prepararCafe(mensajePrevio) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      /* 20% de probabilidad de error */
-      const falla = Math.random() < 0.2;
+  if (!menu.includes(producto)) {
+    throw new Error(`El producto "${producto}" no está disponible`);
+  }
 
-      if (falla) {
-        reject("La maquina esta rota, no se pudo preparar el cafe");
-      } else {
-        /* Extrae el nombre del producto */
-        const producto = mensajePrevio.split(": ")[1];
-
-        resolve(`Cafe listo: ${producto}`);
-      }
-    }, 3000);
-  });
+  return {
+    producto,
+    estado: "recibido"
+  };
 }
 
-/* =========================================
-   PASO 3 - PROCESAR PEDIDO
-========================================= */
+async function prepararCafe(pedido, maquinaOperativa = true) {
+  await esperar();
 
-async function procesarPedido(producto) {
+  if (!maquinaOperativa) {
+    throw new Error("La máquina no está operativa");
+  }
+
+  return {
+    ...pedido,
+    estado: "preparado"
+  };
+}
+
+async function procesarPedido(producto, maquinaOperativa = true) {
+  console.log(`\nPedido solicitado: ${producto}`);
+
   try {
-    console.log("Procesando pedido...");
+    const pedidoRecibido = await recibirPedido(producto);
+    console.log(`Estado: ${pedidoRecibido.estado}`);
 
-    /* Espera el pedido */
-    const resultado1 = await recibirPedido(producto);
-
-    console.log(resultado1);
-
-    /* Espera preparar el cafe */
-    const resultado2 = await prepararCafe(resultado1);
-
-    console.log(`Entregado: ${resultado2}`);
+    const pedidoPreparado = await prepararCafe(pedidoRecibido, maquinaOperativa);
+    console.log(`Estado: ${pedidoPreparado.estado}`);
+    console.log(`Pedido entregado: ${pedidoPreparado.producto}`);
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Pedido cancelado: ${error.message}`);
   }
 }
 
-/* =========================================
-   PRUEBAS
-========================================= */
+async function ejecutarCasosDePrueba() {
+  await procesarPedido("latte");
+  await procesarPedido("té helado");
+  await procesarPedido("espresso", false);
+}
 
-/* Producto valido */
-procesarPedido("latte");
-
-/* Producto invalido */
-/*
-procesarPedido("te helado");
-*/
+ejecutarCasosDePrueba();

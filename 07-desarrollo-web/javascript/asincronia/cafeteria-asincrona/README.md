@@ -1,22 +1,32 @@
-# Cafeteria asincrona
+# Cafetería asíncrona
 
-Practica desarrollada en JavaScript puro para reforzar programacion asincrona usando Promesas, `async/await`, `setTimeout` y manejo de errores.
+Práctica resuelta en JavaScript para comprender un flujo asíncrono antes de trabajar con peticiones HTTP o servicios externos.
 
 ## Objetivo
 
-Simular el flujo de pedidos de una cafeteria donde cada operacion toma tiempo y puede fallar.
+Simular la recepción y preparación de pedidos de una cafetería mediante operaciones que necesitan tiempo y pueden producir errores.
 
 ## Conceptos aplicados
 
-- `Promise`
-- `resolve` y `reject`
-- `.then()` y `.catch()`
-- `async/await`
-- `try/catch`
-- `setTimeout`
-- Manejo de errores asincronos
+- creación y consumo de Promesas;
+- `async` y `await`;
+- espera simulada con `setTimeout`;
+- propagación de datos entre operaciones;
+- errores con `throw` y `Error`;
+- manejo de errores con `try/catch`;
+- ejecución secuencial de casos de prueba.
 
-## Ejecucion
+## Flujo
+
+1. `recibirPedido` comprueba si el producto pertenece al menú.
+2. La función devuelve un objeto que conserva el producto y su estado.
+3. `prepararCafe` recibe ese objeto y comprueba si la máquina está operativa.
+4. `procesarPedido` coordina ambas operaciones con `await`.
+5. Si una etapa falla, `catch` cancela el pedido y muestra la causa.
+
+La falla de la máquina se controla mediante un parámetro. No se utiliza un valor aleatorio porque los mismos datos de prueba deben producir siempre el mismo resultado.
+
+## Ejecución
 
 Desde esta carpeta:
 
@@ -24,18 +34,12 @@ Desde esta carpeta:
 node app.js
 ```
 
-## Flujo del programa
+## Casos incluidos
 
-1. El cliente realiza un pedido.
-2. El sistema valida si el producto existe en el menu.
-3. El cafe entra en preparacion.
-4. La maquina puede fallar de forma simulada.
-5. El pedido se entrega o se muestra un error controlado.
+- `latte`: pedido válido que llega a entregarse.
+- `té helado`: producto inexistente que se rechaza al recibirlo.
+- `espresso` con la máquina inoperativa: producto válido que falla durante la preparación.
 
-## Estado
+## Reto
 
-Ejercicio formativo conservado dentro de `aprendizaje/07-desarrollo-web/javascript/asincronia`.
-
-## Criterio Chilete DevPath
-
-Puede publicarse como guia si se reescribe con enunciado propio, explicacion del flujo asincrono y casos de prueba.
+Agrega un precio a cada producto y muestra el total solamente cuando el pedido llegue al estado `preparado`.
