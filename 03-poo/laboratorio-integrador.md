@@ -46,5 +46,5 @@ La ruta debe mostrar cada resultado y calcular el porcentaje global obtenido.
 ## Referencia
 
 Compara tu primera versión con
-`mini-proyectos/java/seguimiento-aprendizaje`. No busques que el código sea
+`practicas-integradoras/java/seguimiento-aprendizaje`. No busques que el código sea
 idéntico: verifica responsabilidades, estados válidos y sustitución polimórfica.

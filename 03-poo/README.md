@@ -34,7 +34,7 @@ Antes de iniciar este modulo, conviene poder:
 - `herencia`: reutilizacion y especializacion de clases.
 - `abstraccion`: clases abstractas e interfaces.
 - `polimorfismo`: comportamiento variable segun el tipo de objeto.
-- `mini-proyectos`: ejercicios integradores.
+- `practicas-integradoras`: ejercicios que combinan varios conceptos de POO.
 - `uml`: diagramas de clases y modelado.
 
 ## Material de apoyo
@@ -52,7 +52,7 @@ Antes de iniciar este modulo, conviene poder:
 | `herencia` | Jerarquias basicas entre personas, clientes, empleados y roles. |
 | `abstraccion` | Clases abstractas, interfaces, pagos y notificaciones genericas. |
 | `polimorfismo` | Figuras, publicaciones y notificaciones tratadas desde contratos comunes. |
-| `mini-proyectos` | Ejercicios integradores con comprobantes, listas, serializacion y juego simple. |
+| `practicas-integradoras` | Practicas integradoras con comprobantes, listas, serializacion y juego simple. |
 | `uml` | Diagramas de clases como apoyo visual para conectar modelado y codigo. |
 
 ## Ruta sugerida
@@ -64,11 +64,26 @@ Antes de iniciar este modulo, conviene poder:
 5. Avanza a clases abstractas e interfaces en `abstraccion`.
 6. Refuerza comportamiento flexible con `polimorfismo`.
 7. Revisa enumeraciones y genéricos como ampliación de tipos.
-8. Integra conceptos en `mini-proyectos` y en `laboratorio-integrador.md`.
+8. Integra conceptos en `practicas-integradoras` y en `laboratorio-integrador.md`.
 9. Usa `uml` antes o después del código para contrastar el modelo.
 
 En cada etapa ejecuta primero un ejemplo resuelto, explica sus decisiones,
 resuelve el reto equivalente y prueba los casos de `ejercicios-comunidad.md`.
+
+## Lenguajes incorporados
+
+El modulo se organiza primero por concepto de POO y despues por lenguaje. No se crean carpetas para lenguajes que aun no cuentan con practicas verificables.
+
+| Tema | Java | Scala | Python |
+|---|---|---|---|
+| Clases y objetos | Disponible | No incorporado | No incorporado |
+| Encapsulamiento | Disponible | No incorporado | No incorporado |
+| Herencia | Disponible | No incorporado | No incorporado |
+| Abstraccion e interfaces | Disponible | No incorporado | No incorporado |
+| Polimorfismo | Disponible | No incorporado | No incorporado |
+| Practicas integradoras | Disponible | No incorporado | No incorporado |
+
+Cuando exista evidencia de POO en Scala o Python, debe incorporarse dentro del concepto correspondiente. Por ejemplo, una practica de clases y objetos en Scala vivira en `clases-objetos/scala`; no se creara una ruta paralela en la raiz.
 
 ## Criterio de marca y datos de ejemplo
 

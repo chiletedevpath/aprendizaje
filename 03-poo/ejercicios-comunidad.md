@@ -77,7 +77,7 @@ Casos: caja de texto, caja de número e intento de asignar un tipo incompatible.
 ## 7. Cierre integrado
 
 Resuelve `laboratorio-integrador.md`. La implementación de referencia está en
-`mini-proyectos/java/seguimiento-aprendizaje`.
+`practicas-integradoras/java/seguimiento-aprendizaje`.
 
 ## Criterios de logro
 
