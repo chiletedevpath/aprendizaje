@@ -42,4 +42,4 @@ ese análisis corresponde a `05-algoritmos`.
 ## Referencia
 
 Después de resolver tu versión, compárala con
-`practica-integrada/java/catalogo-indexado`.
+`practicas-integradoras/java/catalogo-indexado`.

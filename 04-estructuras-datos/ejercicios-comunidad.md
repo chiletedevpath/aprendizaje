@@ -54,7 +54,7 @@ recalcular posiciones.
 ## 5. Cierre integrado
 
 Resuelve `laboratorio-integrador.md`. La implementación de referencia está en
-`practica-integrada/java/catalogo-indexado`.
+`practicas-integradoras/java/catalogo-indexado`.
 
 ## Criterios de logro
 

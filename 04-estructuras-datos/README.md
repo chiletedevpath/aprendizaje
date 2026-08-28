@@ -52,7 +52,8 @@ Antes de iniciar este modulo, conviene poder:
 2. Estudiar `tablas-hash` para practicar dispersion, colisiones y busqueda.
 3. Continuar con `arboles-binarios` para representar jerarquias mediante nodos.
 4. Avanzar a `indices-y-archivos-simulados` para relacionar claves, registros y ubicaciones.
-5. Resolver `laboratorio-integrador.md` justificando cada estructura elegida.
+5. Revisar `practicas-integradoras/java/catalogo-indexado` como ejemplo de combinación de estructuras.
+6. Resolver `laboratorio-integrador.md` justificando cada estructura elegida.
 
 ## Contenido actual
 
@@ -62,6 +63,21 @@ Antes de iniciar este modulo, conviene poder:
 | `tablas-hash` | Insercion, busqueda, eliminacion, dispersion, colisiones y doble hashing. |
 | `arboles-binarios` | Nodos, raiz, relaciones izquierda/derecha y arbol aplicado a tickets. |
 | `indices-y-archivos-simulados` | Estructuras auxiliares de claves, clientes y ubicaciones sin persistencia real. |
+| `practicas-integradoras` | Catalogo en memoria que combina una colección lineal con un índice por clave. |
+
+## Lenguajes incorporados
+
+El modulo se organiza primero por estructura de datos y despues por lenguaje. No se crean carpetas para lenguajes que aun no cuentan con practicas verificables.
+
+| Tema | Java | Scala | Python |
+|---|---|---|---|
+| Colecciones lineales | Disponible | No incorporado | No incorporado |
+| Tablas hash | Disponible | No incorporado | No incorporado |
+| Arboles binarios | Disponible | No incorporado | No incorporado |
+| Indices simulados | Disponible | No incorporado | No incorporado |
+| Practicas integradoras | Disponible | No incorporado | No incorporado |
+
+Cuando exista evidencia en Scala o Python, debe incorporarse dentro de la estructura correspondiente. Por ejemplo, una practica real de listas en Python vivira en `colecciones-lineales/python`; no se creara una carpeta paralela en la raiz.
 
 ## Criterio de avance
 
