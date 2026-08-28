@@ -5,6 +5,7 @@ dist/
 out/
 node_modules/
 .idea/
+.bsp/
 
 # Archivos temporales locales
 *.log
@@ -15,3 +16,6 @@ node_modules/
 # Material local pendiente de revisión editorial o licencias
 *.zip
 /07-desarrollo-web/practicas-integradoras/catalogo-anime/
+
+# Workspace original de Scala conservado localmente tras organizar sus fuentes
+/scala/

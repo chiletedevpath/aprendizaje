@@ -1,6 +1,6 @@
 # Programacion Basica
 
-Este modulo reune ejercicios de fundamentos de programacion, principalmente en Java.
+Este modulo reune ejercicios de fundamentos de programacion, principalmente en Java, y primeras practicas secuenciales en Scala.
 
 Su proposito es practicar la transicion desde pseudocodigo hacia codigo real, aplicando variables, tipos de datos, condicionales, bucles, funciones, cadenas y arreglos.
 
@@ -49,7 +49,7 @@ Algunas carpetas tienen subcarpetas por lenguaje o tipo de practica:
 
 | Tema | Contenido principal |
 |---|---|
-| `variables` | Calculos basicos y entrada/salida en Java. |
+| `variables` | Calculos basicos y entrada/salida en Java y Scala. |
 | `tipos-datos` | Tipos primitivos, conversiones, casting y representacion de datos. |
 | `condicionales` | Decisiones basicas, juegos simples, `switch` y operador ternario. |
 | `bucles` | Ejercicios introductorios, bucles basicos, series numericas y validaciones. |
@@ -72,6 +72,26 @@ Algunas carpetas tienen subcarpetas por lenguaje o tipo de practica:
 En cada etapa sigue este orden: revisa un ejemplo resuelto, modifica un caso,
 resuelve el reto equivalente y comprueba los casos indicados en
 `ejercicios-comunidad.md`.
+
+Las practicas de Scala viven en `variables/scala/practicas-porcentajes` porque trabajan entrada, variables y operaciones secuenciales. Todavia no representan una ruta de programacion funcional.
+
+## Lenguajes incorporados
+
+El modulo se organiza primero por concepto y despues por lenguaje. Un lenguaje aparece solamente en los temas que ya cuentan con practicas verificables.
+
+| Tema | Java | Scala | Python |
+|---|---|---|---|
+| Variables y operaciones | Disponible | Inicial | No incorporado |
+| Tipos de datos | Disponible | No incorporado | No incorporado |
+| Condicionales | Disponible | No incorporado | No incorporado |
+| Bucles | Disponible | No incorporado | No incorporado |
+| Funciones | Disponible | No incorporado | No incorporado |
+| Cadenas | Disponible | No incorporado | No incorporado |
+| Arreglos y colecciones basicas | Disponible | No incorporado | No incorporado |
+
+`Inicial` significa que existe una primera evidencia ejecutable, pero todavia no una secuencia completa del lenguaje. `No incorporado` no implica desconocimiento futuro: indica que aun no existe contenido estudiado y comprobado dentro de la ruta.
+
+Cuando se agregue un lenguaje nuevo, se incorpora dentro del tema correspondiente. Por ejemplo, una practica futura de condicionales en Python debe vivir en `condicionales/python`; no se crea una carpeta `python` en la raiz ni se generan carpetas vacias para temas pendientes.
 
 ## Criterio de marca y datos de ejemplo
 
