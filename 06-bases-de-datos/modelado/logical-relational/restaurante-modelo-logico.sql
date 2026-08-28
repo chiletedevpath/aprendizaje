@@ -1,5 +1,5 @@
 -- =============================================
--- MODELO LÓGICO RELACIONAL (SQL Server - SSMS 21)
+-- MODELO LÃ“GICO RELACIONAL (SQL Server - SSMS 21)
 -- SISTEMA DE RESERVAS DE RESTAURANTE
 -- =============================================
 
@@ -48,7 +48,7 @@ CREATE TABLE Platillo (
 GO
 
 -- ================================
--- RELACIÓN: Reserva
+-- RELACIÃ“N: Reserva
 -- ================================
 CREATE TABLE Reserva (
   id_reserva      INT IDENTITY(1,1) PRIMARY KEY,
@@ -62,7 +62,7 @@ CREATE TABLE Reserva (
 GO
 
 -- ================================
--- RELACIÓN: Pedido
+-- RELACIÃ“N: Pedido
 -- ================================
 CREATE TABLE Pedido (
   id_pedido     INT IDENTITY(1,1) PRIMARY KEY,
@@ -73,7 +73,7 @@ CREATE TABLE Pedido (
 GO
 
 -- ================================
--- RELACIÓN N:M: Pedido_Platillo
+-- RELACIÃ“N N:M: Pedido_Platillo
 -- ================================
 CREATE TABLE Pedido_Platillo (
   id_pedido    INT NOT NULL,

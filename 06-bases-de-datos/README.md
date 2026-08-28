@@ -12,6 +12,22 @@ Que una tecnología aparezca en la ruta no significa que su contenido ya esté a
 
 Consulta `estado-publicacion.md` para conocer el estado verificable de cada bloque.
 
+## Estructura
+
+```text
+06-bases-de-datos/
+├── modelado/
+├── sql/
+│   ├── sql-server/
+│   ├── postgresql/
+│   └── oracle/
+└── nosql/
+    ├── mongodb/
+    └── cassandra/
+```
+
+`modelado` permanece como base común porque el análisis de entidades, relaciones y patrones de acceso ocurre antes de elegir un motor.
+
 ## Prerrequisitos
 
 - reconocer entidades, atributos y relaciones;
@@ -23,11 +39,11 @@ Consulta `estado-publicacion.md` para conocer el estado verificable de cada bloq
 ## Ruta sugerida
 
 1. `modelado`: modelo entidad-relación y transformación al modelo lógico.
-2. `sql-server`: DDL, DML, consultas, permisos, índices y procedimientos en T-SQL.
-3. `postgresql`: prácticas específicas de PostgreSQL, después de ser recibidas y validadas.
-4. `oracle`: prácticas específicas de Oracle Database, después de ser recibidas y validadas.
-5. `mongodb`: documentos, consultas y agregaciones, después de ser recibidos y validados.
-6. `cassandra`: modelado orientado a consultas y CQL, después de ser recibido y validado.
+2. `sql/sql-server`: DDL, DML, consultas, permisos, índices y procedimientos en T-SQL.
+3. `sql/postgresql`: laboratorio inicial propio; debe ejecutarse y documentarse antes de ampliar el bloque.
+4. `sql/oracle`: prácticas específicas de Oracle Database, después de ser recibidas y validadas.
+5. `nosql/mongodb`: laboratorio documental inicial; debe ejecutarse y documentarse antes de ampliar el bloque.
+6. `nosql/cassandra`: modelado orientado a consultas y CQL, después de ser recibido y validado.
 7. Comparación: justificar cuándo conviene un modelo relacional, documental o de columnas anchas.
 
 ## SQL y NoSQL
@@ -35,20 +51,26 @@ Consulta `estado-publicacion.md` para conocer el estado verificable de cada bloq
 | Familia | Tecnología | Enfoque esperado | Estado |
 |---|---|---|---|
 | SQL | SQL Server | T-SQL, restricciones, consultas, seguridad e índices | Validado localmente; en evaluación editorial |
-| SQL | PostgreSQL | SQL, esquemas, funciones, vistas e índices | Pendiente de contenido |
+| SQL | PostgreSQL | Esquema, integridad, consultas, vista, índice y transacción | En desarrollo; ejecución local pendiente |
 | SQL | Oracle Database | SQL, secuencias, PL/SQL y objetos del esquema | Pendiente de contenido |
-| NoSQL documental | MongoDB | documentos, índices y agregaciones | Pendiente de contenido |
+| NoSQL documental | MongoDB | documentos, CRUD, índice y agregación | En desarrollo; ejecución local pendiente |
 | NoSQL de columnas anchas | Apache Cassandra | particiones, clustering y CQL | Pendiente de contenido |
 
-SQL Server, PostgreSQL y Oracle comparten fundamentos relacionales, pero no todos sus comandos son intercambiables. MongoDB y Cassandra tampoco deben agruparse como si utilizaran el mismo modelo.
+SQL Server, PostgreSQL y Oracle comparten fundamentos relacionales, pero no todos sus comandos son intercambiables. MongoDB y Cassandra pertenecen a la familia no relacional, pero tampoco deben agruparse como si utilizaran el mismo modelo: MongoDB es documental y Cassandra utiliza columnas anchas con modelado orientado a consultas.
+
+La clasificación `sql` y `nosql` organiza familias de bases de datos, no lenguajes de programación. SQL Server, PostgreSQL y Oracle son relacionales. MongoDB es documental y Cassandra utiliza columnas anchas con modelado orientado a consultas.
+
+SQL es además el lenguaje común de los motores relacionales, pero cada motor tiene su propio dialecto y herramientas. T-SQL, PL/SQL, CQL y el lenguaje de consultas de MongoDB deben estudiarse dentro del motor al que pertenecen.
 
 ## Material actual
 
 - `glosario.md`: conceptos compartidos y diferencias esenciales.
 - `ejercicios-comunidad.md`: retos propios posteriores a los ejemplos resueltos.
 - `modelado`: diagramas y modelos lógico-relacionales.
-- `sql-server/README.md`: contexto, orden de ejecución y evidencia de validación.
-- `sql-server/ddl-dml-queries`: secuencia ejecutable de prácticas T-SQL.
+- `sql/sql-server/README.md`: contexto, orden de ejecución y evidencia de validación.
+- `sql/sql-server/ddl-dml-queries`: secuencia ejecutable de prácticas T-SQL.
+- `sql/postgresql/01-inventario-academico.sql`: primer laboratorio didáctico propio de PostgreSQL.
+- `nosql/mongodb/01-inventario-documental.mongodb.js`: primer laboratorio didáctico propio de MongoDB.
 - `estado-publicacion.md`: inventario de contenido validado y pendiente.
 
 ## Secuencia de SQL Server

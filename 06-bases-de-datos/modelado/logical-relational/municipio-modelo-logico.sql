@@ -1,6 +1,6 @@
 
 -- =============================================
--- MODELO L覩ICO RELACIONAL (SQL Server - SSMS 21)
+-- MODELO L脫GICO RELACIONAL (SQL Server - SSMS 21)
 -- SISTEMA DE MUNICIPIO
 -- =============================================
 USE Ejercicio02_Municipio;
@@ -16,7 +16,7 @@ GO
 -- TABLA CIUDAD
 -- ==============================
 CREATE TABLE CIUDAD (
-    Cod_Ciu INT PRIMARY KEY,               -- C骴igo 鷑ico de la ciudad
+    Cod_Ciu INT PRIMARY KEY,               -- C贸digo 煤nico de la ciudad
     Nombre NVARCHAR(100) NOT NULL,         -- Nombre de la ciudad
     Tipo_Zona NVARCHAR(50),                -- Tipo de zona (urbana, rural, etc.)
     Zonas_Urbanas NVARCHAR(50)             -- Detalle de zona urbana
@@ -25,26 +25,26 @@ GO
 
 -- ==============================
 -- TABLA MUNICIPIO
--- Relaci髇 1:1 con CIUDAD
+-- Relaci贸n 1:1 con CIUDAD
 -- ==============================
 CREATE TABLE MUNICIPIO (
-    Cod_Mun INT PRIMARY KEY,               -- C骴igo 鷑ico del municipio
-    Descripcion NVARCHAR(200),             -- Descripci髇 del municipio
-    Cod_Ciu INT UNIQUE,                    -- Relaci髇 1:1 con CIUDAD
+    Cod_Mun INT PRIMARY KEY,               -- C贸digo 煤nico del municipio
+    Descripcion NVARCHAR(200),             -- Descripci贸n del municipio
+    Cod_Ciu INT UNIQUE,                    -- Relaci贸n 1:1 con CIUDAD
     FOREIGN KEY (Cod_Ciu) REFERENCES CIUDAD(Cod_Ciu)
 );
 GO
 
 -- ==============================
 -- TABLA CIUDADANO
--- Relaci髇 N:1 con CIUDAD
+-- Relaci贸n N:1 con CIUDAD
 -- ==============================
 CREATE TABLE CIUDADANO (
     DNI CHAR(8) PRIMARY KEY,               -- DNI del ciudadano
     Nombres NVARCHAR(100) NOT NULL,        -- Nombre completo
-    Direccion NVARCHAR(200),               -- Direcci髇 del ciudadano
+    Direccion NVARCHAR(200),               -- Direcci贸n del ciudadano
     Zona_Urbana NVARCHAR(50),              -- Zona urbana donde vive
-    Telefono NVARCHAR(15),                 -- Tel閒ono
+    Telefono NVARCHAR(15),                 -- Tel茅fono
     Cod_Ciu INT NOT NULL,                  -- Ciudad de residencia
     FOREIGN KEY (Cod_Ciu) REFERENCES CIUDAD(Cod_Ciu)
 );
@@ -52,10 +52,10 @@ GO
 
 -- ==============================
 -- TABLA OBRAS
--- Relaci髇 N:1 con MUNICIPIO
+-- Relaci贸n N:1 con MUNICIPIO
 -- ==============================
 CREATE TABLE OBRAS (
-    Cod_Obra INT PRIMARY KEY,              -- C骴igo 鷑ico de la obra
+    Cod_Obra INT PRIMARY KEY,              -- C贸digo 煤nico de la obra
     Zona_Urbana NVARCHAR(50),              -- Zona donde se ejecuta
     Residente NVARCHAR(100),               -- Responsable residente
     Financiamiento NVARCHAR(100),          -- Fuente de financiamiento

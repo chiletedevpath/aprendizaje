@@ -1,5 +1,5 @@
 -- =============================================
--- MODELO LÓGICO RELACIONAL (SQL Server - SSMS 21)
+-- MODELO LÃ“GICO RELACIONAL (SQL Server - SSMS 21)
 -- =============================================
 USE ESCUELADB;
 GO

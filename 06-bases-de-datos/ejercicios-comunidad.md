@@ -31,7 +31,7 @@ Simula una actualización que modifique dos tablas relacionadas.
 
 ## Reto 4: MongoDB
 
-Este reto se habilitará cuando exista una práctica MongoDB recibida y validada. Deberá incluir diseño documental, consultas, agregación, índices y una decisión argumentada sobre datos embebidos o referenciados.
+Después de ejecutar `nosql/mongodb/01-inventario-documental.mongodb.js`, diseña una colección diferente que incluya consultas, agregación, índices y una decisión argumentada sobre datos embebidos o referenciados. No copies el inventario de referencia.
 
 ## Reto 5: Cassandra
 
