@@ -40,6 +40,21 @@ Los archivos Java son ejemplos ejecutables. Cada grupo aborda una estrategia con
 | Backtracking | observar el retroceso después de una elección que no conduce a solución |
 | Grafos | diferenciar recorrido, distancia mínima y alcanzabilidad |
 
+## Lenguajes incorporados
+
+El modulo se organiza primero por estrategia algoritmica y despues por lenguaje. No se crean carpetas para lenguajes que aun no cuentan con implementaciones verificables.
+
+| Tema | Java | Scala | Python |
+|---|---|---|---|
+| Fundamentos | Disponible | No incorporado | No incorporado |
+| Busqueda | Disponible | No incorporado | No incorporado |
+| Ordenamiento | Disponible | No incorporado | No incorporado |
+| Recursion | Disponible | No incorporado | No incorporado |
+| Backtracking | Disponible | No incorporado | No incorporado |
+| Grafos | Disponible | No incorporado | No incorporado |
+
+Cuando exista evidencia en Scala o Python, debe incorporarse dentro del algoritmo correspondiente. Por ejemplo, una implementacion comprobada de busqueda binaria en Python vivira en `busqueda/python`; no se creara una carpeta paralela en la raiz.
+
 ## Retos
 
 `ejercicios-comunidad.md` contiene problemas sin una única implementación obligatoria. Deben resolverse después de ejecutar y explicar los ejemplos.
