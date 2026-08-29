@@ -13,16 +13,21 @@ tema/
 │   ├── ejemplos/
 │   ├── practicas/
 │   └── soluciones/
-└── scala/
+├── scala/
     ├── ejemplos/
     ├── practicas/
     └── soluciones/
+└── javascript/        # solo cuando exista material estudiado
+    ├── practicas/
+    └── retos/
 ```
 
 - **Ejemplos:** código pequeño para aprender un concepto. Los comentarios explican comportamientos técnicos importantes.
 - **Prácticas:** programas completos que aplican lo aprendido. Aquí también se conservan ejercicios desarrollados durante el proceso académico.
 - **Reto:** aparece al final del `README.md` de cada tema y se intenta sin mirar la respuesta.
 - **Soluciones:** implementaciones de referencia del reto para comparar después de resolverlo.
+
+No se crean carpetas vacías para completar una plantilla. Si se incorpora JavaScript, Python u otro lenguaje, sus archivos se ubican dentro del tema que enseñan y solo aparecen cuando existe contenido real.
 
 ## Cómo ejecutar el código
 

@@ -14,13 +14,13 @@ public class EncuestaMarcaFavorita {
 		int votosOpcionB = 0;
 		int votosOpcionC = 0;
 		int totalVotos = 0;
-		
+
 		System.out.println("Opciones a elegir: Opcion A, Opcion B, Opcion C");
 
 		while (totalVotos < VOTOS_TOTALES) {
 			System.out.print("Ingrese su opcion favorita: ");
 			String voto = teclado.nextLine();
-			
+
 			if (voto.equalsIgnoreCase("opcion a")) {
 				votosOpcionA++;
 				totalVotos++;

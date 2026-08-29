@@ -1,4 +1,3 @@
-// Entrada por consola
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -6,11 +5,10 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("Ingrese su peso en kg: ", (peso) => {
-  rl.question("Ingrese su altura en metros: ", (altura) => {
-    // Convertir a número
-    peso = parseFloat(peso);
-    altura = parseFloat(altura);
+rl.question("Ingrese su peso en kg: ", (pesoIngresado) => {
+  rl.question("Ingrese su altura en metros: ", (alturaIngresada) => {
+    const peso = Number.parseFloat(pesoIngresado);
+    const altura = Number.parseFloat(alturaIngresada);
 
     if (!Number.isFinite(peso) || !Number.isFinite(altura) || peso <= 0 || altura <= 0) {
       console.error("El peso y la altura deben ser números mayores que cero.");
@@ -18,10 +16,7 @@ rl.question("Ingrese su peso en kg: ", (peso) => {
       return;
     }
 
-    // Calcular IMC
     const imc = peso / (altura * altura);
-
-    // Clasificar IMC
     let clasificacion;
 
     if (imc < 18.5) {
@@ -34,10 +29,8 @@ rl.question("Ingrese su peso en kg: ", (peso) => {
       clasificacion = "Obesidad";
     }
 
-    // Mostrar resultado
-    console.log("\nIMC: " + imc.toFixed(2));
-    console.log("Clasificación: " + clasificacion);
-
+    console.log(`\nIMC: ${imc.toFixed(2)}`);
+    console.log(`Clasificación: ${clasificacion}`);
     rl.close();
   });
 });
