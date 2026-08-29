@@ -1,4 +1,8 @@
 Algoritmo CasoMientras_LanzamientoDatos
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Mientras
+	// Objetivo: Practicar repeticiones condicionadas al inicio: Lanzamiento dados mientras.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Imagina que estás creando un juego en el que el jugador lanza un dado hasta que obtiene un 6.
 	// Te solicitan crear un algoritmo en pseudocódigo que haga la simulación de este proceso, permitiendo al usuario
 	// ingresar el valor que ha sacado un jugador y siga pidiendo un valor hasta que obtenga 6. En ese momento muestre el mensaje

@@ -1,4 +1,8 @@
 Algoritmo Aumento_del_66
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Práctica integrada
+	// Objetivo: Integrar varias estructuras de control: Aumento del 66.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 // Caso: Aumento del 66%
 // 	Una empresa de ventas de mantequilla está en proceso de buscar una nueva estrategia de

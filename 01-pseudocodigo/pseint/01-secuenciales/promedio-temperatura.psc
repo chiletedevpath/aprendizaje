@@ -1,4 +1,8 @@
 Algoritmo CalcularPromedioDeTemperatura
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Secuencias, variables y expresiones
+	// Objetivo: Practicar una solución secuencial: Promedio temperatura.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 Definir lun, mar, mie, jue, vie Como Entero
 Definir promediotemp Como real

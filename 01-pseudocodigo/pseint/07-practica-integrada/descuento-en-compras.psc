@@ -1,4 +1,8 @@
 Algoritmo Descuento_en_compras
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Práctica integrada
+	// Objetivo: Integrar varias estructuras de control: Descuento en compras.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 // El gerente de una tienda de ropa está organizando una venta especial. Los clientes que gasten 150
 // 	soles o más recibirán un descuento del 12%. Te solicitan crear un algoritmo en pseudocódigo que
 // 	tome como entrada el importe de la compra, aplique el descuento si corresponde, y luego muestre

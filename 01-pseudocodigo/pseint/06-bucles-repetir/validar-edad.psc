@@ -1,4 +1,8 @@
 Algoritmo Repetir_validar_edad
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Repetir
+	// Objetivo: Practicar repeticiones condicionadas al final: Validar edad.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	Definir edad Como Entero
 
 	Repetir

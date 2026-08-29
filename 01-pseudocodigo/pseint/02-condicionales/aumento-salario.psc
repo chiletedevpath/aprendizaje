@@ -1,4 +1,8 @@
 Algoritmo Aumento_Salario
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Decisiones con Si
+	// Objetivo: Practicar decisiones y validaciones: Aumento salario.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 Escribir "*****   AUMENTO DE SALARIO   *****"
 Escribir " "

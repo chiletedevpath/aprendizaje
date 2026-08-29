@@ -1,4 +1,8 @@
 Algoritmo Control_Inventario
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Reto de práctica autónoma
+	// Objetivo: Solución de referencia: 07 control inventario.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Solucion de referencia del reto 7.
 
 	Definir stock, cantidadMovimientos, i, opcion, cantidad Como Entero

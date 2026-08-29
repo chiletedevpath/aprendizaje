@@ -1,4 +1,8 @@
 Algoritmo Para_Numero_Menor
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Numero menor.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 // Construir un pseudocódigo para calcular el menor número de "n" números enteros (el valor "n" se ingresa por teclado).
 // Luego mostrar el valor requerido.
 

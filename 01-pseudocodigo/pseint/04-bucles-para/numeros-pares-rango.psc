@@ -1,4 +1,8 @@
 Algoritmo CasoReto_NumeroPares
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Numeros pares rango.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 	Definir num1, num2, i Como Entero
 

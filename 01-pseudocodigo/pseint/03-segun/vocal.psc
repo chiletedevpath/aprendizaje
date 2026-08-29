@@ -1,4 +1,8 @@
 Algoritmo Vocal
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Vocal.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
      // Realizar un pseudocódigo que al ingresar una vocal nos devuelva una palabra
      // que comience con esa letra siguiendo la tabla:
 

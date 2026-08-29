@@ -1,4 +1,8 @@
-Proceso Presupuesto_Hospital
+Algoritmo Presupuesto_Hospital
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Secuencias, variables y expresiones
+	// Objetivo: Practicar una solución secuencial: Presupuesto hospital.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 Definir presupuesto,gine,traumo,pedia Como Real
 
@@ -15,4 +19,4 @@ Escribir "El area de Traumotologia recibira: S/",traumo
 pedia = presupuesto*0.3
 Escribir "El area de Pediatria recibira: S/",pedia
 
-FinProceso
+FinAlgoritmo

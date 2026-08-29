@@ -14,7 +14,7 @@ Para cada bloque:
 6. prueba un caso normal, uno límite y uno inválido;
 7. explica por qué elegiste esa estructura.
 
-Las soluciones de los retos están separadas en `practica/soluciones-retos/`. Deben consultarse después de realizar y probar un primer intento.
+Las soluciones de los retos están separadas en `practica/soluciones/`. Deben consultarse después de realizar y probar un primer intento.
 
 ## 1. Secuencia, variables y expresiones
 
@@ -65,7 +65,7 @@ La suma de los pesos debe ser 100 %. Si los pesos cambiaran, también tendría q
 - aplicar porcentajes como si fueran números enteros;
 - mostrar una variable que todavía no fue calculada.
 
-Reto: `practica/retos.md`, bloque 1.
+Reto: [`practica/retos/01-conversion-duracion.md`](practica/retos/01-conversion-duracion.md).
 
 ## 2. Decisiones con `Si`
 
@@ -111,7 +111,7 @@ El último caso muestra que ejecutar no significa necesariamente que el algoritm
 - validar después de procesar un dato;
 - crear variables distintas para resultados que representan lo mismo.
 
-Reto: `practica/retos.md`, bloque 2.
+Reto: [`practica/retos/02-tarifa-estacionamiento.md`](practica/retos/02-tarifa-estacionamiento.md).
 
 ## 3. Selección múltiple con `Segun`
 
@@ -152,7 +152,7 @@ Casos mínimos:
 - olvidar validaciones particulares dentro de una opción;
 - mezclar caracteres y números al leer la opción.
 
-Reto: `practica/retos.md`, bloque 3.
+Reto: [`practica/retos/03-menu-conversiones.md`](practica/retos/03-menu-conversiones.md).
 
 ## 4. Repetición conocida con `Para`
 
@@ -194,7 +194,7 @@ Después del bucle, `prom = 60 / 3 = 20`. La validación `n > 0` evita dividir e
 - dividir dentro del bucle cuando se necesita el total final;
 - modificar accidentalmente la variable de control.
 
-Reto: `practica/retos.md`, bloque 4.
+Reto: [`practica/retos/04-resumen-calificaciones.md`](practica/retos/04-resumen-calificaciones.md).
 
 ## 5. Repetición condicionada con `Mientras`
 
@@ -231,7 +231,7 @@ El valor cero requiere tratamiento especial porque el bucle no se ejecutaría, a
 - perder el valor original cuando después vuelve a necesitarse;
 - no considerar que el cuerpo puede ejecutarse cero veces.
 
-Reto: `practica/retos.md`, bloque 5.
+Reto: [`practica/retos/05-ahorro-meta.md`](practica/retos/05-ahorro-meta.md).
 
 ## 6. Validación con `Repetir`
 
@@ -258,7 +258,7 @@ La condición permite edades entre 18 y 120, inclusive. Una prueba adecuada pued
 - no informar al usuario cuál es el rango válido;
 - usar un rango distinto en el mensaje y en la condición.
 
-Reto: `practica/retos.md`, bloque 6.
+Reto: [`practica/retos/06-clave-intentos-limitados.md`](practica/retos/06-clave-intentos-limitados.md).
 
 ## 7. Integración de estructuras
 
@@ -294,7 +294,7 @@ Prueba mínima:
 - descuento: S/ 0.20;
 - costo esperado: S/ 0.80.
 
-Reto: `practica/retos.md`, bloque 7. Después, desarrolla `practica/laboratorio-integrador.md`.
+Reto: [`practica/retos/07-control-inventario.md`](practica/retos/07-control-inventario.md). Después, desarrolla [`practica/laboratorios/01-seguimiento-pedidos.md`](practica/laboratorios/01-seguimiento-pedidos.md).
 
 ## Criterio de dominio
 

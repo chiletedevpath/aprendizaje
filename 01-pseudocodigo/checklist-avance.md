@@ -1,75 +1,78 @@
-# Checklist de Avance
+# Checklist de avance
 
-Este checklist ayuda a revisar si ya tienes una base suficiente de pseudocódigo para pasar a programación básica.
+Usa este checklist para decidir si ya tienes una base suficiente de pseudocódigo para continuar con programación básica.
 
-## Análisis del problema
+## 1. Dominio técnico
 
-- [ ] Puedo leer un enunciado y explicar qué pide.
-- [ ] Puedo identificar datos de entrada.
-- [ ] Puedo definir el proceso principal.
-- [ ] Puedo describir la salida esperada.
-- [ ] Puedo reconocer reglas o restricciones del problema.
+### Análisis del problema
 
-## Variables y datos
+- [ ] Puedo explicar con mis palabras qué pide un enunciado.
+- [ ] Identifico entradas, proceso y salidas.
+- [ ] Reconozco reglas, restricciones y casos que requieren validación.
 
-- [ ] Puedo declarar variables con nombres claros.
-- [ ] Puedo elegir tipos de datos básicos: entero, real, carácter o lógico.
-- [ ] Puedo usar asignaciones correctamente.
-- [ ] Puedo diferenciar una variable de una constante.
+### Variables y expresiones
 
-## Estructuras de control
+- [ ] Declaro variables con nombres claros.
+- [ ] Distingo tipos básicos como entero, real, carácter y lógico.
+- [ ] Uso asignaciones y expresiones aritméticas correctamente.
+- [ ] Diferencio una variable de una constante.
 
-- [ ] Puedo resolver ejercicios secuenciales.
-- [ ] Puedo usar `Si Entonces` para decisiones simples.
-- [ ] Puedo usar `Segun` cuando hay varias opciones.
-- [ ] Puedo usar `Para` cuando conozco la cantidad de repeticiones.
-- [ ] Puedo usar `Mientras` cuando la repetición depende de una condición inicial.
-- [ ] Puedo usar `Repetir` cuando la acción debe ejecutarse al menos una vez.
+### Estructuras de control
 
-## Pruebas y corrección
+- [ ] Resuelvo problemas secuenciales.
+- [ ] Uso `Si` para decisiones y rangos.
+- [ ] Uso `Segun` para opciones discretas.
+- [ ] Uso `Para` cuando conozco la cantidad de repeticiones.
+- [ ] Uso `Mientras` cuando la condición debe comprobarse antes de repetir.
+- [ ] Uso `Repetir` cuando el bloque debe ejecutarse al menos una vez.
+- [ ] Puedo combinar estructuras sin perder claridad.
 
-- [ ] Puedo probar un algoritmo con datos normales.
-- [ ] Puedo probar un algoritmo con casos límite.
-- [ ] Puedo detectar errores lógicos simples.
-- [ ] Puedo explicar qué cambio hice para corregir un error.
-- [ ] Puedo realizar una prueba de escritorio y seguir el valor de las variables.
+### Contadores, acumuladores y seguimiento
 
-## Procedencia y explicación
+- [ ] Inicializo correctamente contadores y acumuladores.
+- [ ] Puedo calcular un promedio a partir de una suma y una cantidad válida.
+- [ ] Puedo identificar un máximo o mínimo durante una repetición.
+- [ ] Entiendo cuándo una condición de bucle puede provocar una repetición infinita.
 
-- [ ] Reconozco que los ejercicios actuales provienen de prácticas del curso Principios de Algoritmos de UTP.
-- [ ] No presento material académico como si fuera creado desde cero por Chilete DevPath.
-- [ ] Puedo explicar las soluciones con mis propias palabras.
+### Pruebas y corrección
 
-## Marca y datos ficticios
+- [ ] Defino resultados esperados antes de ejecutar.
+- [ ] Pruebo casos normales.
+- [ ] Pruebo casos límite.
+- [ ] Pruebo entradas inválidas cuando el problema exige validación.
+- [ ] Realizo una prueba de escritorio y sigo el valor de las variables.
+- [ ] Detecto errores lógicos simples y explico cómo los corregí.
 
-- [ ] Uso nombres ficticios cuando el ejercicio necesita personas, clientes o usuarios.
-- [ ] Puedo personalizar mensajes simples con Chilete DevPath sin cambiar la lógica del ejercicio.
-- [ ] Evito correos, teléfonos, DNI, direcciones o datos reales.
-- [ ] Evito marcas externas cuando no aportan al aprendizaje.
+### Resolución autónoma
 
-## Bienestar
+- [ ] Puedo resolver un reto antes de mirar una solución de referencia.
+- [ ] Puedo justificar por qué elegí una estructura de control.
+- [ ] Puedo explicar mi algoritmo sin depender de leerlo línea por línea.
+- [ ] Puedo trasladar la lógica general a un lenguaje de programación.
 
-- [ ] Evito resolver demasiados ejercicios sin pausa.
-- [ ] Hago pausas activas durante sesiones largas.
-- [ ] Reconozco cuándo necesito descansar antes de seguir corrigiendo errores.
+## 2. Evidencia mínima del módulo
 
-## Resultado esperado
+Antes de avanzar conserva:
 
-Puedes avanzar a programación básica cuando seas capaz de:
-
-- leer un enunciado
-- proponer un algoritmo en pseudocódigo
-- elegir la estructura lógica adecuada
-- probar la solución
-- explicar el razonamiento sin depender de una solución copiada
-
-## Evidencia mínima del módulo
-
-Antes de avanzar, conserva:
-
-- [ ] una prueba de escritorio por cada tipo de estructura;
+- [ ] una prueba de escritorio por cada tipo principal de estructura;
 - [ ] un intento propio de los siete retos;
-- [ ] casos normales, límite e inválidos para cada reto;
+- [ ] casos normales, límite e inválidos según corresponda;
 - [ ] una comparación razonada con las soluciones de referencia;
 - [ ] el laboratorio integrador ejecutado en PSeInt;
 - [ ] una explicación de al menos un error y su corrección.
+
+## 3. Buenas prácticas
+
+Estas prácticas acompañan el aprendizaje, pero no sustituyen el dominio técnico:
+
+- [ ] Mantengo visible la procedencia académica de los ejercicios.
+- [ ] No presento material académico como contenido oficial creado por Chilete DevPath.
+- [ ] Utilizo datos ficticios y evito información personal real.
+- [ ] Si uso IA, verifico el algoritmo y puedo explicar la solución resultante.
+- [ ] Organizo sesiones de práctica sostenibles y hago pausas cuando es necesario.
+
+## Resultado esperado
+
+Puedes avanzar a `02-programacion-basica` cuando el bloque de **dominio técnico** esté mayoritariamente logrado y puedas completar el laboratorio integrador explicando tus decisiones, pruebas y correcciones.
+
+[← Volver al módulo](README.md)

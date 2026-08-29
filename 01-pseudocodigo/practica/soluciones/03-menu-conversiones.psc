@@ -1,4 +1,8 @@
 Algoritmo Menu_Conversiones
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Reto de práctica autónoma
+	// Objetivo: Solución de referencia: 03 menu conversiones.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Solucion de referencia del reto 3.
 
 	Definir opcion Como Entero

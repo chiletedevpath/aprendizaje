@@ -1,4 +1,8 @@
 Algoritmo Costo_descuento
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Decisiones con Si
+	// Objetivo: Practicar decisiones y validaciones: Costo descuento.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	//Trabajas en el departamento de ventas de una tienda y necesitas calcular el costo y el descuento que tendrá un artículo.
 	//Por ello, se requiere crear un pseudocódigo que tome como entrada el precio de un artículo, aplique un descuento del 15%
 	//si su precio es mayor o igual a $200, o un descuento del 5% en caso contrario, y luego muestre el costo y el descuento del artículo.

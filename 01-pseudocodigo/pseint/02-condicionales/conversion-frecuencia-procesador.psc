@@ -1,4 +1,8 @@
 Algoritmo Conversion_frecuencia_procesador
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Decisiones con Si
+	// Objetivo: Practicar decisiones y validaciones: Conversion frecuencia procesador.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	//Trabajas en el departamento de soporte técnico de una empresa de hardware. Un cliente te llama
 	//y te da la frecuencia de su procesador en hercios (hz) para realizar la búsqueda de componentes
 	// en el proceso de mantenimiento o reparación.

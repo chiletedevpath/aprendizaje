@@ -1,4 +1,8 @@
 Algoritmo Porcentaje_Edades
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Porcentaje menores edad.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 // Construir un pseudocódigo para calcular cuántas personas son mayores de edad y cuántas son menores de un grupo de 20 personas,
 // cuyas edades se ingresan por el usuario. Finalmente mostrar el porcentaje de mayores y menores de edad
 

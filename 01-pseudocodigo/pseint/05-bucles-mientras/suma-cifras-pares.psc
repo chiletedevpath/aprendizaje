@@ -1,4 +1,8 @@
 Algoritmo SumaCifrasPares
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Mientras
+	// Objetivo: Practicar repeticiones condicionadas al inicio: Suma cifras pares.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
     // Crear un algoritmo en pseudocódigo que permita ingresar un número positivo y muestre la suma de sus cifras
     // pares.

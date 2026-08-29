@@ -1,4 +1,8 @@
-Proceso Presion_Neumatico
+Algoritmo Presion_Neumatico
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Secuencias, variables y expresiones
+	// Objetivo: Practicar una solución secuencial: Presion neumatico.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 //Eres un practicante de ingeniería mecánica y tienes un avión cuya presión de sus neumáticos se encuentra en bares.
 //Sin embargo, tu equipo solo mide en psi (libras por pulgada cuadrada). Necesitas convertir la presión de bares a psi
 //para poder trabajar con tu equipo. Se te solicita construir un pseudocódigo que permite ingresar la presión de un neumático
@@ -20,4 +24,4 @@ cantpsi = bar* neuma
 Escribir " "
 Escribir "La presion de su neumatico en psi es: ",cantpsi
 
-FinProceso
+FinAlgoritmo

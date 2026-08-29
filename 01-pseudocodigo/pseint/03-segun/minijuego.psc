@@ -1,4 +1,8 @@
 Algoritmo Minijuego
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Minijuego.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Realizar un pseudocódigo para un mini-juego. Este debe permitir ingresar la cantidad de manzanas que
 	// un jugador ha recogido en el juego. Luego, a partir de la cantidad el juego les da puntos. Finalmente, debe
 	// mostrar el puntaje del jugador o una mensaje de advertencia.

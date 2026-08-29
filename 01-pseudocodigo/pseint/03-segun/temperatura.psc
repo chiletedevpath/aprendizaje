@@ -1,4 +1,8 @@
 Algoritmo Temperatura
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Temperatura.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 // Realizar un pseudocódigo que al ingresar la temperatura de un motor
 // experimental en grados celsius nos devuelva un mensaje siguiendo la siguiente
 // tabla.

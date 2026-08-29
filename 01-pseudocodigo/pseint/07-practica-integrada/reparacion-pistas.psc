@@ -1,4 +1,8 @@
 Algoritmo Reparacion_Pistas
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Práctica integrada
+	// Objetivo: Integrar varias estructuras de control: Reparacion pistas.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	//La municipalidad de Pueblo Libre piensa invertir cierto monto de dinero en la reparación de las
 	//pistas en las avenidas principales. En ese sentido se le solicita desarrollar un pseudocódigo que
 	//permita ingresar un monto de inversión en soles y lo reparta en la refacción de cinco avenidas

@@ -1,4 +1,8 @@
 Algoritmo Ventas_Diarias
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Repetir
+	// Objetivo: Practicar repeticiones condicionadas al final: Ventas diarias.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 	Definir numeroVentas, i, cantidad Como Entero
 	Definir precio, porcentajeDescuento, subtotal, descuento Como Real

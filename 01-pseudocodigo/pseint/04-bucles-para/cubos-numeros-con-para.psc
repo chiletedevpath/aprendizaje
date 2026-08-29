@@ -1,4 +1,8 @@
 Algoritmo Cubos_De_Numeros_Comprendidos_Solucion_Para
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Cubos numeros con para.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Un matemático necesita desarrollar un algoritmo para enseñar a sus estudiantes
 	// sobre los números cúbicos. Como experto en algoritmos te solicita crear un
 	// algoritmo en pseudocódigo que debe solicitar al usuario que ingrese un número

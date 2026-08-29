@@ -1,4 +1,8 @@
 Algoritmo Diferencia_Dos_Numeros
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Decisiones con Si
+	// Objetivo: Practicar decisiones y validaciones: Diferencia dos numeros.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	//Eres un programador y estás trabajando en una función que necesita calcular la diferencia entre dos números.
 	//Por ello, se requiere crear un pseudocódigo que tome como entrada dos números enteros y muestre la diferencia
 	//entre el mayor y el menor. Este algoritmo podría ser útil, por ejemplo, en una aplicación de finanzas para

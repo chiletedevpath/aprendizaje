@@ -1,4 +1,8 @@
 Algoritmo CasoReto_NumeroNaturales_Pares
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Numeros naturales pares.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 	Definir numMenor, numMayor, i Como Entero
 

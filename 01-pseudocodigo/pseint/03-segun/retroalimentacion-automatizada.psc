@@ -1,4 +1,8 @@
 Algoritmo Retroalimentacion_Automatizada
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Retroalimentacion automatizada.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Un profesor está calificando los exámenes de sus estudiantes.
 	// Quiere darles un mensaje de retroalimentación según la nota que obtuvieron, pero son demasiados
 	// estudiantes para hacerlo manual. Requiere un algoritmo que al ingresar la cantidad de puntos que

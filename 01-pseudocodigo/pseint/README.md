@@ -1,26 +1,26 @@
 # Banco resuelto de PSeInt
 
-Esta carpeta contiene 52 ejercicios de pseudocódigo ya desarrollados con PSeInt. Su función es ofrecer ejemplos ejecutables y evidencia académica; los retos que deben resolverse sin mirar una respuesta se encuentran en `../practica/retos.md`.
+Esta carpeta contiene 52 ejercicios de pseudocódigo ya desarrollados con PSeInt. Su función es ofrecer ejemplos ejecutables y evidencia académica; los retos que deben resolverse sin mirar una respuesta se encuentran en [`../practica/retos/`](../practica/retos/README.md).
 
 Los ejercicios están organizados por estructura lógica para facilitar el avance progresivo.
 
 ## Organización
 
-| Carpeta | Enfoque |
-|---|---|
-| `01-secuenciales` | Instrucciones paso a paso sin decisiones. |
-| `02-condicionales` | Decisiones con estructuras condicionales. |
-| `03-segun` | Selección múltiple. |
-| `04-bucles-para` | Repeticiones con contador. |
-| `05-bucles-mientras` | Repeticiones condicionadas al inicio. |
-| `06-bucles-repetir` | Repeticiones condicionadas al final. |
-| `07-practica-integrada` | Ejercicios que combinan varias estructuras. |
+| Carpeta | Ejercicios | Enfoque |
+|---|---:|---|
+| [`01-secuenciales/`](01-secuenciales/) | 11 | Instrucciones paso a paso sin decisiones. |
+| [`02-condicionales/`](02-condicionales/) | 7 | Decisiones con estructuras condicionales. |
+| [`03-segun/`](03-segun/) | 10 | Selección múltiple. |
+| [`04-bucles-para/`](04-bucles-para/) | 9 | Repeticiones con contador. |
+| [`05-bucles-mientras/`](05-bucles-mientras/) | 5 | Repeticiones condicionadas al inicio. |
+| [`06-bucles-repetir/`](06-bucles-repetir/) | 3 | Repeticiones condicionadas al final. |
+| [`07-practica-integrada/`](07-practica-integrada/) | 7 | Ejercicios que combinan varias estructuras. |
 
 La secuencia avanza desde operaciones directas hasta problemas que requieren validaciones, acumuladores, decisiones y más de una estructura de control.
 
 ## Ruta sugerida de práctica
 
-1. Estudia el bloque correspondiente en `../guia-didactica.md`.
+1. Estudia el bloque correspondiente en [`../guia-didactica.md`](../guia-didactica.md).
 2. Ejecuta el ejemplo guiado indicado.
 3. Revisa uno o dos algoritmos adicionales de la misma carpeta.
 4. Explica sus variables, estructura y resultado.
@@ -51,3 +51,5 @@ Estos nombres son solo datos de práctica. No deben reemplazar la lógica del ej
 ## Nota de fuente
 
 Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. Se conservan como evidencia de aprendizaje y práctica académica dentro de Chilete DevPath, no como material oficial de la institución.
+
+[← Volver al módulo](../README.md)

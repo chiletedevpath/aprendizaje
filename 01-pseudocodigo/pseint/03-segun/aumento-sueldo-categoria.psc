@@ -1,4 +1,8 @@
 Algoritmo Aumento_Sueldo_Categoria
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Aumento sueldo categoria.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 	// Eres un programador en una empresa y necesitas desarrollar un algoritmo para calcular el sueldo
 	// de los empleados después de aplicar un aumento basado en su categoría.

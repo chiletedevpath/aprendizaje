@@ -1,4 +1,8 @@
 Algoritmo Ver_Pelicula
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Decisiones con Si
+	// Objetivo: Practicar decisiones y validaciones: Ver pelicula.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// El gerente de un cine está organizando una promoción especial para grupos.
 	// Los grupos de diferentes tamaños reciben diferentes descuentos en el precio de las entradas.
 	// Necesita crear un algoritmo que tome como entrada el número de personas en el grupo,

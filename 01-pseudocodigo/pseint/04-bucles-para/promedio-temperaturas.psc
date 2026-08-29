@@ -1,4 +1,8 @@
 Algoritmo Para_Promedio_Temperatura
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Promedio temperaturas.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
  // Construir un pseudocódigo para calcular el promedio de "n" temperaturas ingresadas
  // (el valor "n" se ingresa por teclado).Luego mostrar el promedio de temperaturas.

@@ -1,4 +1,8 @@
-Proceso Velocidad_Internet
+Algoritmo Velocidad_Internet
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Secuencias, variables y expresiones
+	// Objetivo: Practicar una solución secuencial: Velocidad internet.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 //Trabajas en una empresa de internet. Un cliente llama y te dice que su velocidad de internet es de ciertos kilobits
 //por segundo. Sin embargo, tu sistema solo maneja megabytes por segundo. Necesitas convertir la velocidad de kilobits
 //por segundo a megabytes por segundo para poder ayudar al cliente. Como encargado del área de cómputo de la empresa,
@@ -20,4 +24,4 @@ cantmega = velocidad / mega
 Escribir " "
 Escribir "La velocidad de su internet en megabyte es: ",cantmega
 
-FinProceso
+FinAlgoritmo

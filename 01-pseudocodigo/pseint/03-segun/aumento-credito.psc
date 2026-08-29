@@ -1,4 +1,8 @@
 Algoritmo Aumento_Credito
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Aumento credito.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
      // El banco "Préstamo fácil" ha decidido aumentar el límite de crédito de las tarjetas de sus clientes. Para
      // esto, se considera la siguiente información:
      // Si tiene tarjeta tipo 1, el aumento será de 20 %

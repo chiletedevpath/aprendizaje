@@ -1,4 +1,8 @@
 Algoritmo Ahorro_Hasta_Meta
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Reto de práctica autónoma
+	// Objetivo: Solución de referencia: 05 ahorro meta.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Solucion de referencia del reto 5.
 	// Precondicion: la meta y cada aporte son positivos.
 

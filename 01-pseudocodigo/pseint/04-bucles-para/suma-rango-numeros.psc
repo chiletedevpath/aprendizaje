@@ -1,4 +1,8 @@
 Algoritmo Suma_rango_num
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Suma rango numeros.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 Definir i, n, m, suma Como Entero
 

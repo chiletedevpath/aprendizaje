@@ -83,3 +83,7 @@ Entrega:
 ## Criterio de cierre
 
 El laboratorio está logrado cuando los resultados coinciden con los casos esperados y puedes explicar el valor de las variables durante una iteración sin depender de copiar otra solución.
+
+## Navegación
+
+[← Índice de laboratorios](README.md) · [Volver al módulo](../../README.md)

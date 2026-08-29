@@ -1,4 +1,8 @@
 Algoritmo Resumen_Calificaciones
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Reto de práctica autónoma
+	// Objetivo: Solución de referencia: 04 resumen calificaciones.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Solucion de referencia del reto 4.
 
 	Definir cantidad, i, aprobados Como Entero

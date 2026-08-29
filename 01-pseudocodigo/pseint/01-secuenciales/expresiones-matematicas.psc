@@ -1,4 +1,8 @@
-Proceso Expresiones_Matematicas
+Algoritmo Expresiones_Matematicas
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Secuencias, variables y expresiones
+	// Objetivo: Practicar una solución secuencial: Expresiones matematicas.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 //En los sistemas computacionales, las expresiones matemáticas, que son para nosotros naturales,
 //deben ser expresadas siguiendo un orden y empleando los operadores correspondientes. Por ejemplo, al programar
 //en el lenguaje Python, Java u otro y se ingresan valores literales y expresiones matemáticas, se debe emplear este
@@ -29,4 +33,4 @@ Escribir "Ejercicio 04: ¿Cuál es el producto de los primeros 3 numeros natural
 resul4 = (1*2*3)
 Escribir "El producto es: ", resul4;
 
-FinProceso
+FinAlgoritmo

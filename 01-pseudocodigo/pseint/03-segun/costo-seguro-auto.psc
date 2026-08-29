@@ -1,4 +1,8 @@
 Algoritmo Costo_seguro_auto
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Costo seguro auto.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Una agencia de seguros necesita calcular el costo mensual del seguro de auto para los clientes en función de su sexo y edad.
 	// Las reglas son: los varones menores de 25 años pagan 1000 soles, los de 25 a más pagan 700 soles.
 	// Las mujeres de 21 años o menos pagan 500 y las que tienen más de 21 años pagan 300 soles.

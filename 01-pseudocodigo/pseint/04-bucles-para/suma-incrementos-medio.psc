@@ -1,4 +1,8 @@
 Algoritmo Suma_Incrementos_De_Medio
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Suma incrementos medio.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 Definir i, suma Como Real
 
 suma <- 0

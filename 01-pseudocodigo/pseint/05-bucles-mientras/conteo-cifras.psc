@@ -1,4 +1,8 @@
 Algoritmo conteo_cifras
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Mientras
+	// Objetivo: Practicar repeticiones condicionadas al inicio: Conteo cifras.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 Definir num, contador Como Entero
 

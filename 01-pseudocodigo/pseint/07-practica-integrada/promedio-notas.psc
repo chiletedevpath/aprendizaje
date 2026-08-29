@@ -1,4 +1,8 @@
 Algoritmo Sistema_Gestion_Notas
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Práctica integrada
+	// Objetivo: Integrar varias estructuras de control: Promedio notas.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Te solicitan crear un algoritmo en pseudocódigo que permita ingresar un número "n" de estudiantes de
 	// un salón de clases (la cantidad debe estar entre 2 y 10, si se ingresa un valor diferente se debe volver
 	// a pedir hasta que cumpla). Luego, para cada estudiante, ingresar las notas de los 5 cursos (las notas

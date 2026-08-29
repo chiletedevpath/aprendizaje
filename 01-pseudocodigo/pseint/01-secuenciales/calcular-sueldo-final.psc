@@ -1,4 +1,8 @@
 Algoritmo Calcular_SueldoFinal
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Secuencias, variables y expresiones
+	// Objetivo: Practicar una solución secuencial: Calcular sueldo final.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 	// Te solicitan crear un algoritmo en pseudocódigo que debe solicitar al usuario que
 	// ingrese el sueldo base y el valor de dos bonificaciones. Luego, debes calcular el

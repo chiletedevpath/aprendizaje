@@ -1,4 +1,8 @@
 Algoritmo Servicio_Gas
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Servicio gas.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// El departamento de facturación de una empresa de servicios públicos necesita calcular el costo del servicio de gas
 	// para los clientes en diferentes zonas, basándose en los metros cúbicos consumidos.
 	// Te solicitan crear un algoritmo en pseudocódigo que le permita calcular el costo del servicio de gas ingresando como

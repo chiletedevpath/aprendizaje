@@ -1,4 +1,8 @@
 Algoritmo Tarifa_Estacionamiento
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Reto de práctica autónoma
+	// Objetivo: Solución de referencia: 02 tarifa estacionamiento.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Solucion de referencia del reto 2.
 
 	Definir horas Como Entero

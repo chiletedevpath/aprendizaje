@@ -1,4 +1,8 @@
-Proceso Cobro_Galones
+Algoritmo Cobro_Galones
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Secuencias, variables y expresiones
+	// Objetivo: Practicar una solución secuencial: Cobro galones.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 //Construir un pseudocódigo para una gasolinera cuya bomba surtidora registra la compra en galones, pero el precio de la
 //gasolina está fijado en S/10.50 el litro. El pseudocódigo debe calcular y mostrar cuánto hay que cobrarle al cliente si
 //consume una cierta cantidad de galones. Dónde: 1 Galón = 3.785 lts.
@@ -20,4 +24,4 @@ Escribir " "
 montopagar = (galones*preciogalon)
 Escribir "Monto a pagar: ", montopagar " nuevos soles"
 
-FinProceso
+FinAlgoritmo

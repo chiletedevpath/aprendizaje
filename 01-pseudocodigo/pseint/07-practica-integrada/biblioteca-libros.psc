@@ -1,4 +1,8 @@
 Algoritmo Biblioteca_De_Libros
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Práctica integrada
+	// Objetivo: Integrar varias estructuras de control: Biblioteca libros.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Registra los prestamos del dia, calcula su costo y resume las categorias atendidas.
 
 	Definir numeroPrestamos, i, idLibro, dias, categoria Como Entero

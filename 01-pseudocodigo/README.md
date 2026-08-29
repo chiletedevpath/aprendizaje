@@ -1,77 +1,71 @@
-# Pseudocódigo
+# 01 · Pseudocódigo
 
-Este módulo enseña lógica de programación mediante una guía conceptual, práctica autónoma y un banco de 52 algoritmos desarrollados con PSeInt. El recorrido avanza desde instrucciones secuenciales hasta problemas que combinan validaciones, decisiones y repeticiones.
+Este módulo desarrolla lógica de programación mediante una guía conceptual, práctica autónoma y un banco de 52 algoritmos ejecutables en PSeInt. La ruta avanza desde instrucciones secuenciales hasta problemas que combinan validaciones, decisiones y repeticiones.
 
-Los ejercicios actuales corresponden a prácticas trabajadas en el curso **Principios de Algoritmos** de la **Universidad Tecnológica del Perú (UTP)**. En Chilete DevPath se conservan como evidencia de aprendizaje académico y como base para fortalecer el razonamiento lógico antes de pasar a un lenguaje de programación.
+## Objetivo de la etapa
 
-## Objetivo
+Al finalizar deberías poder:
 
-Practicar el análisis de problemas, la secuencia de pasos, el uso de variables, condicionales, selección múltiple y bucles antes de avanzar a programación básica.
+- identificar entradas, procesos y salidas;
+- declarar variables y construir expresiones coherentes;
+- elegir entre `Si`, `Segun`, `Para`, `Mientras` y `Repetir`;
+- seguir el valor de las variables mediante una prueba de escritorio;
+- comprobar casos normales, límite e inválidos;
+- resolver un reto antes de consultar su solución;
+- explicar y trasladar la lógica a un lenguaje de programación.
 
-## Público objetivo
+## Prerrequisito
 
-Este módulo está dirigido a:
+Completa primero `00-fundamentos`. Debes poder delimitar un problema, declarar supuestos y proponer resultados esperados antes de escribir un algoritmo.
 
-- estudiantes que ya revisaron `00-fundamentos`
-- personas que quieren practicar lógica antes de programar en Java, Python, JavaScript u otro lenguaje
-- estudiantes que necesitan reforzar estructuras básicas de control
-- miembros de la comunidad Chilete DevPath que desean entender cómo se piensa un algoritmo antes de escribir código
+## Contenido
 
-## Prerrequisitos recomendados
+| Recurso | Propósito |
+|---|---|
+| [Guía didáctica](guia-didactica.md) | Conceptos, ejemplos guiados, pruebas de escritorio y errores frecuentes. |
+| [Banco PSeInt](pseint/README.md) | 52 ejercicios resueltos organizados por estructura lógica. |
+| [Práctica autónoma](practica/README.md) | Siete retos, soluciones separadas y laboratorio integrador. |
+| [Glosario](glosario.md) | Términos esenciales del módulo. |
+| [Checklist](checklist-avance.md) | Evidencia necesaria para avanzar a programación básica. |
 
-Antes de iniciar este módulo, conviene poder:
+## Ruta recomendada
 
-- separar entrada, proceso y salida
-- leer un problema simple con calma
-- reconocer casos normales y casos que pueden fallar
-- documentar una práctica breve
-- explicar una solución con palabras propias
-
-## Qué encontrarás
-
-- `guia-didactica.md`: explicación progresiva, ejemplos guiados, pruebas de escritorio y errores frecuentes.
-- `pseint/`: banco de 52 ejercicios resueltos y organizados por estructura lógica.
-- `practica/retos.md`: siete problemas que deben intentarse antes de consultar una solución.
-- `practica/soluciones-retos/`: soluciones ejecutables para comparar después del primer intento.
-- `practica/laboratorio-integrador.md`: evidencia final que combina las estructuras del módulo.
-- `glosario.md`: términos clave de pseudocódigo.
-- `checklist-avance.md`: autoevaluación para saber si puedes avanzar a programación básica.
-
-## Ruta sugerida
-
-1. Consulta el glosario cuando necesites aclarar un término.
-2. Trabaja cada bloque de `guia-didactica.md`.
-3. Ejecuta el ejemplo guiado y realiza su prueba de escritorio.
-4. Explora otros ejercicios resueltos del mismo bloque en `pseint/`.
-5. Resuelve el reto correspondiente de `practica/retos.md`.
+1. Estudia un bloque de la [guía didáctica](guia-didactica.md).
+2. Ejecuta el ejemplo guiado en PSeInt.
+3. Realiza su prueba de escritorio.
+4. Revisa otros algoritmos del mismo bloque en el [banco resuelto](pseint/README.md).
+5. Resuelve el reto correspondiente sin mirar la solución.
 6. Prueba casos normales, límite e inválidos.
-7. Compara tu intento con `practica/soluciones-retos/`.
-8. Desarrolla el laboratorio integrador.
-9. Completa el checklist de avance.
+7. Compara tu razonamiento con la solución de referencia.
+8. Completa el [laboratorio integrador](practica/laboratorios/01-seguimiento-pedidos.md).
+9. Revisa el [checklist de avance](checklist-avance.md).
 
 ## Criterio de avance
 
-Este módulo se considera logrado cuando puedes:
+Puedes continuar con `02-programacion-basica` cuando completes el laboratorio en PSeInt, justifiques las estructuras utilizadas, documentes pruebas y puedas explicar al menos un error y su corrección.
 
-- identificar entradas, procesos y salidas en un problema
-- declarar variables de forma coherente
-- usar condicionales para tomar decisiones
-- elegir entre `Si`, `Segun`, `Para`, `Mientras` y `Repetir`
-- explicar por qué una estructura es más adecuada que otra
-- probar un algoritmo con casos normales y casos límite
-- pasar de pseudocódigo a un lenguaje de programación sin perder la lógica
+No necesitas memorizar cada algoritmo. Necesitas comprender la lógica y poder reconstruirla.
 
-## Uso responsable del contenido
+## Bienestar y práctica responsable
 
-Los ejercicios conservan su intención académica y pueden adaptar mensajes o datos ficticios cuando eso no cambie la lógica. Para mantener el material seguro y reutilizable:
+- Trabaja por bloques y realiza pausas cuando disminuya tu concentración.
+- Usa datos ficticios; no incluyas información personal real.
+- Utiliza la IA como apoyo, no como sustituto de tu razonamiento.
+- Verifica en PSeInt cualquier algoritmo apoyado por IA.
+- Conserva evidencia de tus intentos, pruebas y correcciones.
 
-- usa nombres ficticios como `Usuario Chilete`, `Aprendiz DevPath` o `Cliente Chilete`;
-- usa mensajes de bienvenida como `Bienvenido a Chilete DevPath` cuando el ejercicio lo permita;
-- evita datos reales de personas, teléfonos, correos, DNI o direcciones;
-- evita marcas externas si no son necesarias para la lógica del problema;
-- conserva el objetivo técnico del ejercicio aunque se adapte el contexto;
-- revisa el resultado en PSeInt antes de considerarlo completado.
+## Políticas aplicables
 
-## Nota de autoría y fuentes
+- [Política Editorial](https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_EDITORIAL.md)
+- [Política de Uso Responsable de IA](https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_USO_RESPONSABLE_IA.md)
+- [Política de Bienestar en el Aprendizaje Técnico](https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_BIENESTAR_APRENDIZAJE.md)
 
-Ejercicios trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **UTP**. En Chilete DevPath se documentan como práctica académica y evidencia de aprendizaje; no representan material oficial de la institución.
+## Autoría y fuentes
+
+Los ejercicios del banco fueron trabajados por Adrian Pisco durante el curso **Principios de Algoritmos** de la **Universidad Tecnológica del Perú (UTP)**. Se conservan como evidencia de aprendizaje y práctica académica dentro de Chilete DevPath; no representan material oficial de la institución.
+
+Los retos, la organización didáctica y el laboratorio integrador fueron preparados para esta ruta. Cualquier fuente adicional debe declararse en el contenido correspondiente.
+
+## Nota de autoría
+
+Contenido creado para Chilete DevPath con apoyo de IA para estructuración y revisión. El criterio, selección y validación final corresponden a Adrian Pisco, autor de Chilete DevPath.

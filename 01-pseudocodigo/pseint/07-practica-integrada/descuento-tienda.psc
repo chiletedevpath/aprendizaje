@@ -1,4 +1,8 @@
 Algoritmo Descuento_tienda
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Práctica integrada
+	// Objetivo: Integrar varias estructuras de control: Descuento tienda.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 // En una tienda se efectúa un descuento a los clientes dependiendo del monto de la compra.
 // El descuento se lleva a cabo con base en el siguiente criterio:
 // Si el monto es menor que $500.00 no hay descuento

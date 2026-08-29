@@ -1,4 +1,8 @@
 Algoritmo Calculadora_Basica
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Calculadora basica.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 	// Construir un pseudocódigo que permita ingresar dos números y un símbolo (+, -, x, /) y dependiendo del operador
 	// devuelva la suma, la diferencia, el producto o la división.
 	// Nota: verificar que el divisor no sea cero y mostrar una advertencia si se ingresa un valor diferente a

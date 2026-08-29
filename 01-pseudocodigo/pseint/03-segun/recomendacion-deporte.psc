@@ -1,4 +1,8 @@
 Algoritmo Recomendacion_De_Deporte
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Selección múltiple con Segun
+	// Objetivo: Practicar selección entre opciones discretas: Recomendacion deporte.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 	// Eres un programador en una empresa de fitness y necesitas desarrollar un
 	// algoritmo para recomendar un deporte basado en la temperatura actual. Te

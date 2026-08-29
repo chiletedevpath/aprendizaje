@@ -1,4 +1,8 @@
 Algoritmo Nombre_mes
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Práctica integrada
+	// Objetivo: Integrar varias estructuras de control: Nombre mes.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
      // Eres un programador y estás trabajando en una función que necesita convertir
      //	un número de mes en el nombre del mes correspondiente para un sistema de gestión de ventas.
      //	Necesitas crear un programa que tome como entrada el número del mes e imprima en pantalla

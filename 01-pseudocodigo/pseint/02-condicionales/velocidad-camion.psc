@@ -1,4 +1,8 @@
 Algoritmo Velocidad_Camion
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Decisiones con Si
+	// Objetivo: Practicar decisiones y validaciones: Velocidad camion.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 //Eres un desarrollador de software para una empresa de logística y estás trabajando en un sistema de seguimiento de vehículos.
 //Por ello, se requiere crear un pseudocódigo que tome como entrada la velocidad de un camión, muestre un mensaje indicando
 //"Velocidad normal" si su velocidad es de 70Km/h o menor, o un mensaje indicando "Reducir velocidad" e indicar en cuánto debe

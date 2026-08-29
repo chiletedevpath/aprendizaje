@@ -1,4 +1,8 @@
 Algoritmo Suma_Enteros_Uno_Al_Diez
+	// Chilete DevPath · Etapa 01: Pseudocódigo
+	// Tema: Bucles Para
+	// Objetivo: Practicar repeticiones con cantidad conocida: Contador para.
+	// Nota: ejecutar, probar y explicar el algoritmo en PSeInt.
 
 Definir i, suma Como Entero
 
