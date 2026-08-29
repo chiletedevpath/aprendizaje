@@ -1,0 +1,6 @@
+GET /api/v1/cursos?page=0&size=20&estado=ACTIVO&q=seguridad&sort=nombre,asc
+
+# Reglas sugeridas
+# - page >= 0
+# - 1 <= size <= 100
+# - sort limitado a campos permitidos

@@ -1,0 +1,11 @@
+openapi: 3.0.3
+info:
+  title: Cursos API
+  version: 1.0.0
+paths:
+  /api/v1/cursos:
+    get:
+      summary: Lista cursos con filtros y paginación
+      responses:
+        '200':
+          description: Consulta procesada correctamente

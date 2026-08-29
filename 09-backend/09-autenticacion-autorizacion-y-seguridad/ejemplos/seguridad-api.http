@@ -1,0 +1,10 @@
+### Público
+GET http://localhost:8080/api/publico
+
+### Requiere identidad
+GET http://localhost:8080/api/perfil
+Authorization: Bearer {{access_token}}
+
+### Requiere rol administrativo
+DELETE http://localhost:8080/api/admin/usuarios/15
+Authorization: Bearer {{access_token}}

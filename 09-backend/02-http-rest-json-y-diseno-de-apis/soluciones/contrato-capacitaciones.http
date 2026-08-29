@@ -1,0 +1,5 @@
+GET /api/cursos                 # 200
+GET /api/cursos/{id}            # 200 / 404
+POST /api/cursos                # 201 / 400 / 409
+PATCH /api/cursos/{id}          # 200 / 400 / 404
+DELETE /api/cursos/{id}         # 204 / 404

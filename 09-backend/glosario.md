@@ -1,24 +1,25 @@
-# Glosario de backend
+# Glosario · Backend
 
-Este glosario resume conceptos usados en los ejercicios de `09-backend`.
-
-| Termino | Significado practico |
-|---|---|
-| Backend | Parte del sistema que procesa reglas, datos, seguridad e integraciones. |
-| API | Interfaz para que otros sistemas o clientes consuman funcionalidades. |
-| Endpoint | Ruta expuesta por una API para una operacion concreta. |
-| Controlador | Clase que recibe solicitudes HTTP y delega la logica. |
-| Servicio | Clase que contiene reglas de negocio. |
-| Repositorio | Componente que accede a datos. |
-| DTO | Objeto usado para transportar datos entre capas o hacia el cliente. |
-| Persistencia | Almacenamiento de datos en una base de datos u otro medio. |
-| Variable de entorno | Configuracion externa usada para no versionar secretos. |
-| Token | Credencial temporal o clave de acceso que no debe exponerse. |
-| JWT | Token firmado usado en autenticacion y autorizacion. |
-| Prueba unitaria | Prueba enfocada en una unidad pequena de codigo. |
-| Arquitectura hexagonal | Estilo que separa dominio, puertos y adaptadores. |
-| Integracion externa | Comunicacion con un servicio de terceros. |
-
-## Criterio de uso
-
-Un backend publicable debe separar responsabilidades, proteger configuraciones sensibles y evitar datos reales en ejemplos.
+- **API:** contrato mediante el cual sistemas intercambian operaciones y datos.
+- **Endpoint:** combinación de método HTTP y ruta que expone una operación.
+- **Request:** solicitud enviada al servidor.
+- **Response:** respuesta producida por el servidor.
+- **GET:** método HTTP usado para consultar una representación sin solicitar cambios de estado.
+- **POST:** método HTTP usado para enviar datos y solicitar el procesamiento o la creación de un recurso.
+- **PHP:** lenguaje que puede ejecutar lógica del lado servidor y generar una respuesta HTTP.
+- **PDO:** interfaz de PHP para acceder a bases de datos mediante una API consistente y consultas preparadas.
+- **DTO:** objeto utilizado para transportar datos entre límites de la aplicación.
+- **Bean:** objeto administrado por el contenedor de Spring.
+- **IoC:** inversión del control de creación y coordinación de dependencias.
+- **DI:** inyección de dependencias; un componente recibe sus colaboradores desde fuera.
+- **ORM:** mapeo entre objetos del programa y estructuras de una base relacional.
+- **Repositorio:** abstracción de acceso a persistencia.
+- **Transacción:** unidad de trabajo que se confirma o revierte como conjunto.
+- **Autenticación:** proceso para comprobar identidad.
+- **Autorización:** decisión sobre qué acciones puede realizar una identidad.
+- **JWT:** formato de token firmado que transporta claims; su contenido no está cifrado por defecto.
+- **Resiliencia:** capacidad de manejar fallos parciales sin degradar innecesariamente todo el sistema.
+- **Mock:** doble de prueba que sustituye una dependencia controlando su comportamiento.
+- **Observabilidad:** capacidad de comprender el estado de una aplicación mediante señales como logs, métricas y health checks.
+- **Puerto:** contrato que separa el núcleo de una aplicación de una tecnología externa en arquitectura hexagonal.
+- **Adaptador:** implementación que conecta un puerto con HTTP, persistencia u otro sistema externo.

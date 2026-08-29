@@ -1,0 +1,7 @@
+@Transactional
+public Matricula matricular(Long alumnoId, Long cursoId) {
+    // La transacción agrupa validación y escritura dentro de una misma unidad de trabajo.
+    Alumno alumno = alumnoRepository.findById(alumnoId).orElseThrow();
+    Curso curso = cursoRepository.findById(cursoId).orElseThrow();
+    return matriculaRepository.save(new Matricula(alumno, curso));
+}

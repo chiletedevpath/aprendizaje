@@ -3,6 +3,8 @@ target/
 build/
 dist/
 out/
+!**/domain/ports/out/
+!**/domain/ports/out/*.java
 node_modules/
 .idea/
 .bsp/

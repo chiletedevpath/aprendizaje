@@ -1,0 +1,29 @@
+### Listar recursos
+GET http://localhost:8080/api/cursos?estado=ACTIVO
+Accept: application/json
+
+### Crear un recurso
+POST http://localhost:8080/api/cursos
+Content-Type: application/json
+
+{
+  "nombre": "Fundamentos de seguridad",
+  "horas": 8
+}
+
+### Reemplazar un recurso
+PUT http://localhost:8080/api/cursos/15
+Content-Type: application/json
+
+{
+  "nombre": "Fundamentos de seguridad actualizados",
+  "horas": 10
+}
+
+### Modificar parcialmente
+PATCH http://localhost:8080/api/cursos/15
+Content-Type: application/json
+
+{
+  "horas": 12
+}

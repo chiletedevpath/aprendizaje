@@ -1,79 +1,49 @@
-# Backend
+# 09 · Desarrollo backend
 
-Esta seccion organiza ejercicios de aprendizaje sobre desarrollo backend, APIs, persistencia, seguridad, pruebas e integraciones externas.
+Esta sección enseña a construir aplicaciones del lado servidor desde el protocolo HTTP hasta una arquitectura integrada. La ruta empieza sin framework, incorpora Spring de forma progresiva y exige justificar las decisiones técnicas.
 
 ## Objetivo
 
-Comprender como se construyen servicios backend: recibir solicitudes, aplicar reglas de negocio, conectar con bases de datos, exponer APIs y proteger configuraciones sensibles.
+Al terminar podrás:
 
-## Publico objetivo
+- explicar el recorrido completo de una petición y una respuesta;
+- diseñar APIs REST con contratos, validación y manejo consistente de errores;
+- aplicar inyección de dependencias, persistencia y transacciones;
+- integrar servicios externos sin acoplar el dominio al proveedor;
+- implementar autenticación, autorización y controles básicos de seguridad;
+- probar componentes y organizar una aplicación por capas o puertos y adaptadores.
 
-Este modulo esta dirigido a:
+## Prerrequisitos
 
-- estudiantes que ya entienden Java, POO y bases de datos;
-- personas que quieren construir APIs con Spring Boot;
-- miembros de la comunidad Chilete DevPath que buscan pasar de ejercicios a servicios reales;
-- estudiantes que necesitan aprender configuracion segura antes de publicar codigo.
+Antes de iniciar se recomienda completar `03-poo`, `06-bases-de-datos`, `07-desarrollo-web` y `08-patrones`.
 
-## Prerrequisitos recomendados
+## Ruta
 
-Antes de iniciar este modulo, conviene poder:
-
-- crear clases, interfaces y servicios;
-- leer SQL y modelos relacionales;
-- entender HTTP, endpoints y JSON;
-- diferenciar datos reales de datos ficticios;
-- usar variables de entorno para credenciales.
-
-## Material de apoyo
-
-- `glosario.md`: terminos esenciales de backend y APIs.
-- `ejercicios-comunidad.md`: retos propuestos para practicar APIs, persistencia, seguridad y pruebas.
-
-## Ruta sugerida
-
-1. Revisar `spring-boot/api-rest` para entender controladores y endpoints basicos.
-2. Continuar con `spring-boot/api-bd` y `spring-boot/api-crud` para practicar persistencia.
-3. Avanzar a `spring-boot/apis-externas` para integraciones con servicios externos usando variables de entorno.
-4. Estudiar `spring-boot/seguridad` para autenticacion y JWT.
-5. Revisar `spring-boot/testing` para pruebas unitarias, cobertura y calidad.
-6. Explorar `spring-boot/hexagonal` para arquitectura por capas y puertos/adaptadores.
-
-## Contenido actual
-
-| Carpeta | Enfoque |
+| Etapa | Enfoque |
 |---|---|
-| `spring-boot/api-rest` | API REST introductoria. |
-| `spring-boot/api-bd` | Conexion con base de datos. |
-| `spring-boot/api-crud` | CRUD con validaciones y persistencia. |
-| `spring-boot/apis-externas` | Consumo de APIs externas y configuracion por entorno. |
-| `spring-boot/seguridad` | Autenticacion, JWT y configuracion de seguridad. |
-| `spring-boot/testing` | Pruebas, Jacoco y SonarCloud como practica educativa. |
-| `spring-boot/hexagonal` | Arquitectura hexagonal con modulos separados. |
+| 01 | Fundamentos del servidor |
+| 02 | HTTP, REST, JSON y diseño inicial de APIs |
+| 03 | Procesamiento del lado servidor con PHP |
+| 04 | Spring Core e inyección de dependencias |
+| 05 | Controladores, DTO y validación |
+| 06 | Persistencia, ORM, repositorios y transacciones |
+| 07 | Diseño avanzado y evolución de APIs |
+| 08 | Integraciones externas y resiliencia |
+| 09 | Autenticación, autorización y seguridad |
+| 10 | Testing y calidad |
+| 11 | Configuración, logging y observabilidad |
+| 12 | Arquitectura e integración |
 
-## Criterio de avance
+## Cómo trabajar el contenido
 
-Este modulo se considera logrado cuando puedes:
+Cada etapa combina explicación, ejemplos, prácticas y una solución de referencia cuando corresponde. Las aplicaciones Spring son prácticas de aprendizaje, no proyectos de `academia` ni piezas terminadas de `portafolio`.
 
-- crear un endpoint y explicar su responsabilidad;
-- separar controlador, servicio, repositorio y modelo;
-- conectar una API a una base de datos usando configuracion segura;
-- manejar errores sin filtrar informacion sensible;
-- usar variables de entorno para tokens y contrasenas;
-- probar servicios con casos normales y casos limite;
-- explicar cuando una integracion externa no debe publicarse sin revision legal o contractual.
+Las credenciales reales deben mantenerse fuera del repositorio. Usa `.env.example` y los archivos de configuración de prueba como referencia, sin publicar secretos.
 
-## Buenas prácticas del módulo
+## Siguiente etapa
 
-En backend no basta con que un endpoint responda. También debes cuidar configuración, errores y datos de prueba:
+Frontend y publicación se incorporarán cuando exista contenido propio validado para esas secciones.
 
-- usa variables de entorno para tokens, claves y contraseñas;
-- evita subir credenciales en `application.properties`;
-- separa controladores, servicios, repositorios y modelos;
-- maneja errores sin mostrar información interna;
-- usa datos ficticios cuando el ejercicio necesite nombres, documentos o correos;
-- revisa las condiciones de uso si consumes una API externa.
+---
 
-## Autoría y fuentes
-
-El contenido corresponde a ejercicios desarrollados por Adrián Pisco durante su proceso de aprendizaje. Si algún ejercicio futuro se adapta desde una fuente externa, debe indicarse la referencia.
+Contenido creado para Chilete DevPath con apoyo de IA para estructuración y revisión. El criterio, selección y validación final corresponden a Adrian Pisco, autor de Chilete DevPath.
