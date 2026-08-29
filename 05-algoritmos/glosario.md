@@ -1,24 +1,26 @@
-# Glosario de algoritmos
+# Glosario
 
-| Término | Significado práctico |
-|---|---|
-| Algoritmo | Secuencia finita y no ambigua de pasos para resolver un problema. |
-| Precondición | Condición que debe cumplirse antes de ejecutar el algoritmo. |
-| Poscondición | Propiedad que debe cumplirse cuando el algoritmo termina correctamente. |
-| Invariante | Propiedad que permanece verdadera durante una iteración o fase. |
-| Corrección | Argumento y evidencia de que el algoritmo produce el resultado esperado. |
-| Complejidad | Forma de expresar cómo crecen tiempo o memoria respecto al tamaño de entrada. |
-| Búsqueda lineal | Revisión elemento por elemento; no requiere orden previo. |
-| Búsqueda binaria | División repetida de un rango; requiere datos ordenados por el mismo criterio. |
-| Búsqueda por bloques | Salto entre límites de bloques y revisión lineal del bloque candidato. |
-| Ordenamiento | Reorganización de datos conforme a un criterio explícito. |
-| Recursión | Técnica en la que un método resuelve una versión menor del mismo problema. |
-| Caso base | Condición que detiene las llamadas recursivas. |
-| Backtracking | Estrategia que elige, explora, deshace y prueba otra alternativa. |
-| BFS | Recorrido por amplitud mediante una cola. |
-| DFS | Recorrido por profundidad mediante una pila o recursión. |
-| Dijkstra | Caminos mínimos desde un origen cuando no existen pesos negativos. |
-| Warshall | Cálculo de alcanzabilidad entre todos los pares de vértices. |
-| Caso límite | Entrada extrema, vacía o mínima que puede revelar defectos. |
-
-Una operación de una estructura responde “qué puede hacer”; un algoritmo explica “qué pasos usa y bajo qué condiciones”.
+- **Algoritmo:** secuencia finita y ordenada de pasos para resolver un problema.
+- **Entrada:** datos que recibe un algoritmo.
+- **Salida:** resultado producido por el algoritmo.
+- **Precondición:** condición que debe cumplirse antes de ejecutar un algoritmo correctamente.
+- **Postcondición:** propiedad que debe cumplirse cuando el algoritmo termina.
+- **Invariante:** propiedad que se mantiene durante determinadas etapas de la ejecución.
+- **Complejidad temporal:** crecimiento aproximado del número de operaciones respecto del tamaño de la entrada.
+- **Complejidad espacial:** crecimiento aproximado de la memoria adicional utilizada.
+- **Big O:** notación que describe una cota asintótica del crecimiento del costo.
+- **Búsqueda binaria:** búsqueda que descarta aproximadamente la mitad del espacio en cada paso; requiere datos ordenados.
+- **Ordenamiento estable:** conserva el orden relativo de elementos equivalentes.
+- **Recursión:** técnica donde una función se invoca sobre una versión más pequeña del mismo problema.
+- **Caso base:** condición que detiene las llamadas recursivas.
+- **Divide y vencerás:** divide el problema, resuelve subproblemas y combina resultados.
+- **Greedy:** construye una solución tomando decisiones locales según un criterio definido.
+- **Backtracking:** explora decisiones y deshace aquellas que llevan a estados inválidos.
+- **Memoización:** almacena resultados de subproblemas calculados bajo demanda.
+- **Tabulación:** construye resultados de programación dinámica de forma iterativa.
+- **BFS:** recorrido de grafos por niveles usando una cola.
+- **DFS:** recorrido que profundiza en una rama antes de retroceder.
+- **Relajación:** intento de mejorar una distancia conocida mediante una arista.
+- **MST:** árbol de expansión mínima que conecta todos los vértices con costo total mínimo.
+- **Ventana deslizante:** técnica que mantiene un rango móvil para evitar recalcular información completa.
+- **Dos punteros:** técnica que mantiene dos posiciones que avanzan según una condición.
