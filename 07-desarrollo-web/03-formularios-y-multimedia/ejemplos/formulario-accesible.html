@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario accesible</title>
+</head>
+<body>
+  <main>
+    <h1>Registro de práctica</h1>
+    <form>
+      <!-- for vincula visual y programáticamente la etiqueta con el control. -->
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" type="text" required autocomplete="name">
+
+      <label for="correo">Correo</label>
+      <input id="correo" name="correo" type="email" required autocomplete="email">
+
+      <button type="submit">Registrar</button>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+:root {
+  --espacio: clamp(.75rem, 2vw, 1.25rem);
+  --radio: .75rem;
+}
+
+.card {
+  padding: var(--espacio);
+  border: 1px solid currentColor;
+  border-radius: var(--radio);
+}
+
+/* :focus-visible muestra foco cuando la navegación lo necesita, especialmente con teclado. */
+.boton:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+.boton {
+  transition: transform 150ms ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}

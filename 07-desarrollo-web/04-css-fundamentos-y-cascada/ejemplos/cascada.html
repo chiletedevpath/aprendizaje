@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cascada CSS</title>
+  <style>
+    :root { --espacio: 1rem; }
+    p { font-size: 1rem; }
+    .destacado { font-size: 1.25rem; }
+    #principal { font-size: 1.5rem; }
+    main { padding: var(--espacio); }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- El selector por id tiene mayor especificidad que clase y elemento. -->
+    <p id="principal" class="destacado">La especificidad decide entre reglas del mismo origen.</p>
+  </main>
+</body>
+</html>

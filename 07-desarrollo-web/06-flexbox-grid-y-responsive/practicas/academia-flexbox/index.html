@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Academia Flexbox Demo: ejemplos visuales de align-items y align-content."
+    />
+    <title>Academia Flexbox Demo | Chilete DevPath</title>
+
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark">&lt;/&gt;</span>
+          <span>Academia Flexbox</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="mainNav" class="main-nav" aria-label="Navegación principal">
+          <a href="#conceptos">Conceptos</a>
+          <a href="#align-items">align-items</a>
+          <a href="#align-content">align-content</a>
+          <a href="#practica">Práctica</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+          <p class="eyebrow">CSS FLEXBOX · DEMOSTRACIÓN ACADÉMICA</p>
+          <h1>Aprende alineación en Flexbox de forma visual</h1>
+          <p class="hero-copy">
+            Una web sencilla para entender cómo se comportan
+            <strong>align-items</strong>
+            y
+            <strong>align-content</strong>
+            usando ejemplos reales dentro de contenedores flexibles.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#align-items">Ver ejemplos</a>
+            <a class="btn btn-secondary" href="#practica">Probar valores</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro section" id="conceptos">
+        <div class="container split">
+          <div>
+            <p class="section-kicker">Antes de comenzar</p>
+            <h2>¿Qué estamos alineando?</h2>
+
+            <p>
+              Flexbox trabaja principalmente con dos ejes: el
+              <strong>eje principal</strong>
+              , definido por
+              <code>flex-direction</code>
+              , y el
+              <strong>eje transversal</strong>
+              , que es perpendicular al principal.
+            </p>
+
+            <p>
+              En esta práctica nos concentramos en dos propiedades que actúan sobre el eje
+              transversal:
+            </p>
+
+            <div class="concept-pills">
+              <span>
+                <code>align-items</code>
+                : alinea los ítems dentro de una línea flex.
+              </span>
+              <span>
+                <code>align-content</code>
+                : distribuye varias líneas flex dentro del contenedor.
+              </span>
+            </div>
+
+            <aside class="note">
+              <strong>Importante:</strong>
+              <code>align-content</code>
+              necesita
+              <code>flex-wrap: wrap</code>
+              y espacio libre en el eje transversal. En una sola línea normalmente no produce un
+              efecto visible.
+            </aside>
+          </div>
+
+          <figure class="image-card">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=82"
+              alt="Persona trabajando con código en una computadora"
+            />
+            <figcaption>
+              La teoría se entiende mejor cuando se observa el comportamiento real del layout.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="align-items">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Propiedad 01</p>
+              <h2><code>align-items</code></h2>
+            </div>
+            <p>
+              Controla cómo se alinean los elementos flexibles en el
+              <strong>eje transversal</strong>
+              de cada línea.
+            </p>
+          </div>
+
+          <div class="demo-grid">
+            <article class="demo-card">
+              <div class="demo-title">
+                <code>normal</code>
+                <span class="badge">valor inicial</span>
+              </div>
+              <p>
+                Usa el comportamiento normal del modo de diseño. En un contenedor Flexbox,
+                <code>normal</code>
+                se comporta como
+                <code>stretch</code>
+                .
+              </p>
+              <div class="mini-flex align-normal">
+                <span>A</span>
+                <span class="short">B</span>
+                <span>C</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-title"><code>stretch</code></div>
+              <p>
+                Estira los elementos cuyo tamaño transversal es automático para ocupar el espacio
+                disponible del contenedor.
+              </p>
+              <div class="mini-flex align-stretch">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-title"><code>center</code></div>
+              <p>Coloca los elementos en el centro del eje transversal manteniendo su tamaño.</p>
+              <div class="mini-flex align-center">
+                <span>A</span>
+                <span class="short">B</span>
+                <span>C</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-title"><code>flex-start</code></div>
+              <p>Alinea los elementos hacia el inicio del eje transversal del contenedor.</p>
+              <div class="mini-flex align-start">
+                <span>A</span>
+                <span class="short">B</span>
+                <span>C</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-title"><code>flex-end</code></div>
+              <p>Alinea los elementos hacia el final del eje transversal del contenedor.</p>
+              <div class="mini-flex align-end">
+                <span>A</span>
+                <span class="short">B</span>
+                <span>C</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-title"><code>baseline</code></div>
+              <p>
+                Alinea los elementos tomando como referencia la línea base del texto que contienen.
+              </p>
+              <div class="mini-flex align-baseline">
+                <span class="big-text">Aa</span>
+                <span class="small-text">Bb</span>
+                <span class="mid-text">Cc</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="align-content">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Propiedad 02</p>
+              <h2><code>align-content</code></h2>
+            </div>
+            <p>
+              Distribuye
+              <strong>varias líneas flex</strong>
+              sobre el eje transversal cuando existe espacio libre.
+            </p>
+          </div>
+
+          <div class="content-demo-list">
+            <article class="content-demo">
+              <div class="content-copy">
+                <div class="demo-title">
+                  <code>stretch</code>
+                  <span class="badge">comportamiento clásico por defecto</span>
+                </div>
+                <p>
+                  Las líneas se expanden para aprovechar el espacio transversal disponible. En la
+                  especificación moderna el valor inicial es
+                  <code>normal</code>
+                  , cuyo comportamiento habitual aquí equivale a estirar las líneas.
+                </p>
+              </div>
+              <div class="wrap-demo content-stretch">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+              </div>
+            </article>
+
+            <article class="content-demo">
+              <div class="content-copy">
+                <div class="demo-title"><code>center</code></div>
+                <p>Reúne las líneas flex en el centro del eje transversal.</p>
+              </div>
+              <div class="wrap-demo content-center">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+              </div>
+            </article>
+
+            <article class="content-demo">
+              <div class="content-copy">
+                <div class="demo-title"><code>flex-start</code></div>
+                <p>Agrupa todas las líneas en el inicio del eje transversal.</p>
+              </div>
+              <div class="wrap-demo content-start">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+              </div>
+            </article>
+
+            <article class="content-demo">
+              <div class="content-copy">
+                <div class="demo-title"><code>flex-end</code></div>
+                <p>Agrupa todas las líneas en el final del eje transversal.</p>
+              </div>
+              <div class="wrap-demo content-end">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+              </div>
+            </article>
+
+            <article class="content-demo">
+              <div class="content-copy">
+                <div class="demo-title"><code>space-between</code></div>
+                <p>
+                  Coloca la primera línea al inicio, la última al final y reparte el espacio
+                  restante entre las líneas.
+                </p>
+              </div>
+              <div class="wrap-demo content-between">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+              </div>
+            </article>
+
+            <article class="content-demo">
+              <div class="content-copy">
+                <div class="demo-title"><code>space-around</code></div>
+                <p>
+                  Reparte espacio alrededor de cada línea. Los extremos reciben aproximadamente la
+                  mitad del espacio interior.
+                </p>
+              </div>
+              <div class="wrap-demo content-around">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+              </div>
+            </article>
+
+            <article class="content-demo">
+              <div class="content-copy">
+                <div class="demo-title"><code>space-evenly</code></div>
+                <p>
+                  Distribuye exactamente el mismo espacio entre las líneas y también en los extremos
+                  del contenedor.
+                </p>
+              </div>
+              <div class="wrap-demo content-evenly">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section playground-section" id="practica">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Zona práctica</p>
+              <h2>Cambia los valores y observa</h2>
+            </div>
+            <p>
+              Modifica las propiedades desde los selectores. El código CSS mostrado se actualiza
+              automáticamente.
+            </p>
+          </div>
+
+          <div class="playground">
+            <div class="controls">
+              <label>
+                align-items
+                <select id="alignItemsSelect">
+                  <option value="normal">normal</option>
+                  <option value="stretch">stretch</option>
+                  <option value="center">center</option>
+                  <option value="flex-start">flex-start</option>
+                  <option value="flex-end">flex-end</option>
+                  <option value="baseline">baseline</option>
+                </select>
+              </label>
+
+              <label>
+                align-content
+                <select id="alignContentSelect">
+                  <option value="stretch">stretch</option>
+                  <option value="center">center</option>
+                  <option value="flex-start">flex-start</option>
+                  <option value="flex-end">flex-end</option>
+                  <option value="space-between">space-between</option>
+                  <option value="space-around">space-around</option>
+                  <option value="space-evenly">space-evenly</option>
+                </select>
+              </label>
+
+              <pre><code id="liveCode">display: flex;
+flex-wrap: wrap;
+align-items: normal;
+align-content: stretch;</code></pre>
+            </div>
+
+            <div class="live-demo" id="liveDemo">
+              <span class="item item-a">A</span>
+              <span class="item item-b">B</span>
+              <span class="item item-c">C</span>
+              <span class="item item-d">D</span>
+              <span class="item item-e">E</span>
+              <span class="item item-f">F</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section photo-band">
+        <div class="container photo-grid">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80"
+            alt="Código de programación en una laptop"
+          />
+          <div>
+            <p class="section-kicker">Idea clave</p>
+            <h2>Flexbox se aprende observando el eje y el espacio disponible</h2>
+            <p>
+              Antes de elegir un valor, identifica si quieres alinear elementos individuales de una
+              línea o distribuir varias líneas dentro del contenedor. Esa diferencia determina si
+              debes usar
+              <code>align-items</code>
+              o
+              <code>align-content</code>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          Web académica demostrativa realizada por
+          <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">
+            Chilete DevPath
+          </a>
+          .
+        </p>
+        <p>Práctica de CSS Flexbox · 2026</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
