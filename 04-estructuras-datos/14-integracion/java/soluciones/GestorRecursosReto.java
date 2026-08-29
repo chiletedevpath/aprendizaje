@@ -1,0 +1,1 @@
+import java.util.*; public class GestorRecursosReto { record R(String c,String cat){} public static void main(String[]a){List<R>lista=new ArrayList<>();Map<String,R>idx=new HashMap<>();Set<String>cat=new HashSet<>();R r=new R("R1","Java");lista.add(r);idx.put(r.c(),r);cat.add(r.cat());System.out.println(idx.get("R1"));} }

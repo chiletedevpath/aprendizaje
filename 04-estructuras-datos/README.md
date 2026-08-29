@@ -1,102 +1,79 @@
-# Estructuras de datos
+# 04 · Estructuras de datos
 
-Esta seccion estudia cómo representar, almacenar y relacionar datos en memoria.
-Las operaciones de insertar, consultar, recorrer y eliminar se usan para
-comprobar el comportamiento de cada estructura.
+Esta etapa estudia **cómo organizar datos en memoria y cómo elegir una estructura según las operaciones que el problema necesita**.
 
-## Objetivo
+No se trata de memorizar nombres como `ArrayList`, `HashMap` o `TreeNode`. La meta es poder explicar qué estructura conviene, qué operación ofrece y cuál es su costo aproximado.
 
-Comprender como elegir y aplicar estructuras de datos segun el problema: colecciones lineales para secuencias, tablas hash para busquedas por clave, arboles para jerarquias e indices auxiliares para organizar registros.
+## Antes de empezar
+
+Conviene haber completado:
+
+- `00-fundamentos`;
+- `01-pseudocodigo`;
+- `02-programacion-basica`;
+- `03-poo`.
+
+Debes sentirte cómodo con clases, objetos, referencias, genéricos, colecciones básicas y excepciones.
+
+## Cómo estudiar esta etapa
+
+Cada tema mantiene la misma lógica:
+
+```text
+README.md        → idea, operaciones y criterio de avance
+java/ejemplos/   → uso pequeño de la estructura
+java/implementaciones/ → construcción educativa cuando aporta valor
+java/practicas/  → problemas completos ya desarrollados
+java/soluciones/ → solución del reto del tema
+
+scala/           → misma lógica usando Scala
+```
+
+`implementaciones/` solo aparece cuando construir la estructura ayuda a comprenderla. No tiene sentido reimplementar todo lo que ya ofrece la biblioteca estándar.
+
+## Ruta
+
+| Etapa | Tema | Nivel |
+|---:|---|---|
+| 01 | [Fundamentos y complejidad](01-fundamentos-y-complejidad/) | Básico |
+| 02 | [Arreglos y listas dinámicas](02-arreglos-y-listas-dinamicas/) | Básico |
+| 03 | [Listas enlazadas](03-listas-enlazadas/) | Básico |
+| 04 | [Pilas](04-pilas/) | Básico |
+| 05 | [Colas y deques](05-colas-y-deques/) | Básico |
+| 06 | [Conjuntos y mapas](06-conjuntos-y-mapas/) | Básico avanzado |
+| 07 | [Tablas hash](07-tablas-hash/) | Básico avanzado |
+| 08 | [Árboles binarios](08-arboles-binarios/) | Básico avanzado |
+| 09 | [Árboles binarios de búsqueda](09-arboles-binarios-busqueda/) | Intermedio |
+| 10 | [Heaps y colas de prioridad](10-heaps-y-colas-prioridad/) | Intermedio |
+| 11 | [Grafos: representación](11-grafos-representacion/) | Intermedio |
+| 12 | [Índices y organización de registros](12-indices-y-organizacion-registros/) | Intermedio |
+| 13 | [Selección y combinación de estructuras](13-seleccion-y-combinacion-estructuras/) | Intermedio |
+| 14 | [Integración](14-integracion/) | Intermedio |
+
 
 ## Diferencia con `05-algoritmos`
 
-| `04-estructuras-datos` | `05-algoritmos` |
-|---|---|
-| Decide cómo se organizan los datos. | Decide qué pasos resuelven el problema. |
-| Estudia listas, tablas hash, árboles e índices. | Estudia búsqueda, ordenamiento, recursión, backtracking y algoritmos de grafos. |
-| Pregunta: “¿Dónde y cómo guardo cada dato?”. | Pregunta: “¿Cómo proceso los datos y por qué funciona?”. |
-| Usa operaciones básicas para observar la estructura. | Compara estrategias, precondiciones y eficiencia. |
+- **Estructuras de datos:** decide cómo representar y almacenar información.
+- **Algoritmos:** estudia los pasos para procesarla, buscarla, ordenarla, recorrer grafos o resolver problemas con eficiencia.
 
-Una tabla hash puede ofrecer `buscar()` en esta sección porque consultar es una
-operación propia de la estructura. Comparar búsqueda lineal, binaria o indexada,
-demostrar sus pasos y analizar sus requisitos corresponde a la sección 5.
+Ejemplo: aquí se aprende a representar un grafo mediante una lista de adyacencia. En `05-algoritmos` se estudiarán BFS, DFS, Dijkstra y otras estrategias.
 
-## Publico objetivo
+## Lenguajes
 
-Este modulo esta dirigido a:
+La ruta utiliza **Java y Scala** para comparar cómo se expresan los mismos conceptos. Java conserva además las prácticas académicas que ya existían en el repositorio.
 
-- estudiantes que ya entienden programacion basica y POO;
-- personas que necesitan practicar colecciones antes de algoritmos;
-- miembros de la comunidad Chilete DevPath que quieren aprender a elegir estructuras segun el problema;
-- estudiantes que buscan conectar teoria, implementacion y analisis de resultados.
+## Criterio de salida
 
-## Prerrequisitos recomendados
+Al finalizar deberías poder justificar decisiones como:
 
-Antes de iniciar este modulo, conviene poder:
+- “uso una cola porque debo respetar el orden de llegada”;
+- “uso un mapa porque necesito localizar un objeto por clave”;
+- “uso una cola de prioridad porque el orden depende de una prioridad, no de la llegada”;
+- “uso una lista de adyacencia porque el grafo es disperso”;
+- “combino `List`, `Map` y `Set` porque cada una resuelve una operación diferente”.
 
-- crear clases y objetos simples;
-- recorrer arreglos y listas con bucles;
-- entender indices, posiciones y referencias;
-- leer metodos que insertan, buscan o eliminan datos;
-- explicar que entrada recibe un programa y que salida produce.
+Siguiente etapa: **05 · Algoritmos**.
 
-## Material de apoyo
+## Criterio de autoría
 
-- `glosario.md`: terminos esenciales de estructuras de datos.
-- `ejercicios-comunidad.md`: retos propuestos para practicar seleccion e implementacion.
-- `laboratorio-integrador.md`: práctica final para combinar una secuencia y un índice por clave.
-
-## Ruta sugerida
-
-1. Revisar `colecciones-lineales` para comparar operaciones con `ArrayList` y `LinkedList`.
-2. Estudiar `tablas-hash` para practicar dispersion, colisiones y busqueda.
-3. Continuar con `arboles-binarios` para representar jerarquias mediante nodos.
-4. Avanzar a `indices-y-archivos-simulados` para relacionar claves, registros y ubicaciones.
-5. Revisar `practicas-integradoras/java/catalogo-indexado` como ejemplo de combinación de estructuras.
-6. Resolver `laboratorio-integrador.md` justificando cada estructura elegida.
-
-## Contenido actual
-
-| Carpeta | Enfoque |
-|---|---|
-| `colecciones-lineales` | Uso de `ArrayList`, `LinkedList`, operaciones indexadas y colecciones de objetos. |
-| `tablas-hash` | Insercion, busqueda, eliminacion, dispersion, colisiones y doble hashing. |
-| `arboles-binarios` | Nodos, raiz, relaciones izquierda/derecha y arbol aplicado a tickets. |
-| `indices-y-archivos-simulados` | Estructuras auxiliares de claves, clientes y ubicaciones sin persistencia real. |
-| `practicas-integradoras` | Catalogo en memoria que combina una colección lineal con un índice por clave. |
-
-## Lenguajes incorporados
-
-El modulo se organiza primero por estructura de datos y despues por lenguaje. No se crean carpetas para lenguajes que aun no cuentan con practicas verificables.
-
-| Tema | Java | Scala | Python |
-|---|---|---|---|
-| Colecciones lineales | Disponible | No incorporado | No incorporado |
-| Tablas hash | Disponible | No incorporado | No incorporado |
-| Arboles binarios | Disponible | No incorporado | No incorporado |
-| Indices simulados | Disponible | No incorporado | No incorporado |
-| Practicas integradoras | Disponible | No incorporado | No incorporado |
-
-Cuando exista evidencia en Scala o Python, debe incorporarse dentro de la estructura correspondiente. Por ejemplo, una practica real de listas en Python vivira en `colecciones-lineales/python`; no se creara una carpeta paralela en la raiz.
-
-## Criterio de avance
-
-Este modulo se considera logrado cuando puedes:
-
-- elegir entre coleccion lineal, tabla hash, arbol o indice auxiliar segun el problema;
-- explicar el costo practico de insertar, buscar o eliminar datos;
-- representar datos relacionados sin forzar una estructura incorrecta;
-- interpretar una colision en una tabla hash;
-- reconocer raiz, nodos y ramas de un arbol binario;
-- explicar como un indice auxiliar permite localizar registros;
-- probar una estructura con casos normales y casos limite.
-
-## Criterio Chilete DevPath
-
-Los ejemplos se mantienen como practicas educativas. No representan sistemas productivos ni proyectos academicos finales.
-
-Para publicarlos en una futura web, cada ejercicio elegido debe tener enunciado propio, explicacion breve, solucion desarrollada y datos ficticios. Si se agregan diagramas de grafos o tablas, deben ser propios o contar con referencia clara.
-
-## Autoria y fuentes
-
-El contenido corresponde a ejercicios desarrollados por Adrian Pisco durante su proceso de aprendizaje. Si algun ejercicio futuro se adapta desde una fuente externa, debe indicarse la referencia correspondiente antes de publicarlo.
+Contenido creado para Chilete DevPath con apoyo de IA para estructuración y revisión. El criterio, selección y validación final corresponden a Adrian Pisco, autor de Chilete DevPath.

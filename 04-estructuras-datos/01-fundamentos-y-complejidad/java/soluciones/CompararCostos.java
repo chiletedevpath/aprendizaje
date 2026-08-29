@@ -1,0 +1,1 @@
+import java.util.*; public class CompararCostos { public static void main(String[] a){ List<Integer> l=new ArrayList<>(List.of(1,2,3,4)); System.out.println(l.get(2)); System.out.println(l.contains(4)); l.add(0,0); /* get ~O(1); contains y add(0) ~O(n). */ } }

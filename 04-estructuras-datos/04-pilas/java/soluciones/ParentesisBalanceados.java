@@ -1,0 +1,1 @@
+import java.util.*; public class ParentesisBalanceados { public static void main(String[]a){String s="(()())"; Deque<Character> p=new ArrayDeque<>(); boolean ok=true; for(char c:s.toCharArray()){if(c=='(')p.push(c); else if(c==')'){if(p.isEmpty()){ok=false;break;}p.pop();}} System.out.println(ok&&p.isEmpty());} }

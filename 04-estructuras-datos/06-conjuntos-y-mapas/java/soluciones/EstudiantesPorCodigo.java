@@ -1,0 +1,1 @@
+import java.util.*; public class EstudiantesPorCodigo { public static void main(String[]a){Map<String,String> m=new HashMap<>(); Set<String> c=new HashSet<>(); if(c.add("U1"))m.put("U1","Ana"); System.out.println(m.get("U1"));} }

@@ -1,0 +1,1 @@
+import java.util.*; public class BstReto { public static void main(String[]a){TreeSet<Integer> s=new TreeSet<>(List.of(50,30,70,20)); s.remove(20); System.out.println(s.contains(30)); System.out.println(s);} }

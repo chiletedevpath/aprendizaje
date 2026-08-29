@@ -1,0 +1,1 @@
+import java.util.*; public class ColisionHash { public static void main(String[]a){Map<Integer,List<Integer>> t=new HashMap<>(); for(int k:new int[]{1,6,11}) t.computeIfAbsent(k%5,x->new ArrayList<>()).add(k); System.out.println(t);} }

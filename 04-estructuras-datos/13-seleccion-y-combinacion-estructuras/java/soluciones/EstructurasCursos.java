@@ -1,0 +1,1 @@
+import java.util.*; public class EstructurasCursos { public static void main(String[]a){List<String>orden=new ArrayList<>();Map<String,String>porDni=new HashMap<>();Set<String>cursos=new HashSet<>();PriorityQueue<Integer>alertas=new PriorityQueue<>();System.out.println(List.of(orden,porDni,cursos,alertas));} }

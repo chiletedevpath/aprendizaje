@@ -1,33 +1,24 @@
-# Glosario de estructuras de datos
+# Glosario
 
-Este glosario resume conceptos usados en los ejercicios de `04-estructuras-datos`.
-
-| Termino | Significado practico |
-|---|---|
-| Estructura de datos | Forma de organizar informacion para usarla de manera eficiente. |
-| Tipo abstracto de datos (TAD) | Definición de los datos y operaciones disponibles sin imponer una única implementación. |
-| Arreglo | Coleccion indexada con posiciones ordenadas. |
-| Lista | Coleccion que permite agregar, recorrer y eliminar elementos. |
-| `ArrayList` | Lista dinamica basada internamente en arreglo. |
-| `LinkedList` | Lista enlazada donde los elementos se conectan mediante referencias. |
-| Nodo | Unidad que guarda un dato y puede enlazar con otro nodo. |
-| Indice | Posicion numerica usada para acceder a un elemento. |
-| Insercion | Operacion para agregar un nuevo elemento. |
-| Eliminacion | Operacion para retirar un elemento existente. |
-| Busqueda | Proceso de encontrar un elemento dentro de una estructura. |
-| Operación de estructura | Acción que una estructura ofrece, como insertar, consultar, recorrer o eliminar. |
-| Algoritmo | Secuencia finita de pasos para resolver un problema; su diseño y comparación se profundizan en `05-algoritmos`. |
-| Tabla hash | Estructura que usa una funcion para ubicar datos por clave. |
-| Funcion hash | Regla que transforma una clave en una posicion de tabla. |
-| Colision | Situacion donde dos claves llegan a la misma posicion. |
-| Doble hashing | Tecnica que usa una segunda funcion para resolver colisiones. |
-| Arbol binario | Estructura jerarquica donde cada nodo puede tener hasta dos hijos. |
-| Nodo raiz | Primer nodo del arbol y punto de inicio de sus ramas. |
-| Hijo izquierdo/derecho | Referencia que conecta un nodo con cada una de sus dos ramas posibles. |
-| Recorrido de arbol | Operacion que visita sistematicamente los nodos de una estructura jerarquica. |
-| Indice auxiliar | Estructura que relaciona una clave con la ubicacion de un registro. |
-| Archivo simulado | Coleccion en memoria usada para estudiar organizacion de registros sin persistencia real. |
-
-## Criterio de uso
-
-Una estructura esta bien elegida cuando resuelve el problema con claridad y permite explicar sus operaciones principales.
+- **TAD (Tipo Abstracto de Datos):** modelo que define operaciones y comportamiento sin depender de una implementación concreta.
+- **Estructura de datos:** forma concreta de organizar datos para facilitar determinadas operaciones.
+- **Nodo:** elemento que almacena un dato y, normalmente, referencias hacia otros nodos.
+- **Referencia:** vínculo hacia un objeto ubicado en memoria.
+- **Índice:** posición o estructura auxiliar utilizada para localizar información.
+- **LIFO:** Last In, First Out; el último elemento en entrar es el primero en salir.
+- **FIFO:** First In, First Out; el primer elemento en entrar es el primero en salir.
+- **Hash:** valor calculado a partir de una clave para decidir una ubicación probable.
+- **Colisión:** situación donde dos claves producen la misma posición de una tabla hash.
+- **Árbol:** estructura jerárquica formada por nodos conectados mediante relaciones padre-hijo.
+- **Raíz:** nodo inicial de un árbol.
+- **Hoja:** nodo que no tiene hijos.
+- **BST:** Binary Search Tree; árbol binario que mantiene una propiedad de orden entre izquierda, nodo y derecha.
+- **Heap:** árbol completo que mantiene una relación de prioridad entre padres e hijos.
+- **Grafo:** conjunto de vértices conectados mediante aristas.
+- **Lista de adyacencia:** representación que guarda, para cada vértice, sus vecinos.
+- **Matriz de adyacencia:** matriz donde filas y columnas representan conexiones entre vértices.
+- **Complejidad:** forma de describir cómo crece el costo de una operación cuando aumenta la cantidad de datos.
+- **O(1):** costo constante aproximado.
+- **O(log n):** costo que crece logarítmicamente.
+- **O(n):** costo proporcional al número de elementos.
+- **O(n²):** costo cuadrático.

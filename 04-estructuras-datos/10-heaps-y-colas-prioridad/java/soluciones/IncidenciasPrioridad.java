@@ -1,0 +1,1 @@
+import java.util.*; public class IncidenciasPrioridad { record I(String c,int p){} public static void main(String[]a){PriorityQueue<I>q=new PriorityQueue<>(Comparator.comparingInt(I::p));q.add(new I("A",3));q.add(new I("B",1));while(!q.isEmpty())System.out.println(q.poll());} }

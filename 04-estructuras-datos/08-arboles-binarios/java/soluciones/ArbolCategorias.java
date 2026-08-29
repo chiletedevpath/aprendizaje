@@ -1,0 +1,1 @@
+public class ArbolCategorias { static class N{String v;N i,d;N(String v){this.v=v;}} public static void main(String[]a){N r=new N("Tech");r.i=new N("Backend");r.d=new N("Frontend");System.out.println(r.v+" -> "+r.i.v+", "+r.d.v);} }

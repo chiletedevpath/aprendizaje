@@ -1,0 +1,1 @@
+import java.util.*; public class ColaAtencion { public static void main(String[]a){Deque<String> q=new ArrayDeque<>(); q.addLast("T1");q.addLast("T2");q.addFirst("URG"); while(!q.isEmpty())System.out.println(q.removeFirst());} }

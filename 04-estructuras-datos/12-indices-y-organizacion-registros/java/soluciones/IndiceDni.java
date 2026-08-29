@@ -1,0 +1,1 @@
+import java.util.*; public class IndiceDni { record C(String dni,String n){} public static void main(String[]a){List<C> f=List.of(new C("1","Ana"),new C("2","Luis"));Map<String,Integer>i=new HashMap<>();for(int p=0;p<f.size();p++)i.put(f.get(p).dni(),p);System.out.println(f.get(i.get("2")));} }
