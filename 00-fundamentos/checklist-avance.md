@@ -59,3 +59,8 @@ Puedes continuar cuando recibas un problema sencillo y seas capaz de:
 5. explicar y revisar tu respuesta.
 
 No necesitas memorizar todas las definiciones. Necesitas saber aplicarlas.
+
+
+---
+
+Cuando cumplas la evidencia mínima, continúa con **`01-pseudocodigo`**.

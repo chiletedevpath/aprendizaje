@@ -13,7 +13,7 @@ Tiempo estimado: 40 minutos
 Resultado: secuencia explicada y tres casos de prueba
 ```
 
-Lee primero `base-conceptual.md`. Usa el glosario para aclarar términos, no para memorizar definiciones aisladas.
+Lee primero [base-conceptual.md](base-conceptual.md). Usa el glosario para aclarar términos, no para memorizar definiciones aisladas.
 
 ## Método de seis pasos
 
@@ -80,7 +80,7 @@ Una explicación clara demuestra más comprensión que una respuesta extensa sin
 
 ## Cómo comparar una solución
 
-Cuando revises `ejercicios-resueltos/`, no preguntes solamente si tu respuesta es igual.
+Cuando revises [ejercicios-resueltos/](ejercicios-resueltos/README.md), no preguntes solamente si tu respuesta es igual.
 
 Compara:
 
