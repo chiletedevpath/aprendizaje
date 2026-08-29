@@ -1,81 +1,53 @@
-# Patrones de diseno
+# 08 · Patrones de diseño
 
-Esta seccion organiza practicas sobre principios SOLID, patrones de diseno y casos integradores en Java y Spring Boot.
+Este módulo desarrolla criterio de diseño orientado a objetos: primero identifica problemas de diseño, después aplica principios y patrones solo cuando reducen complejidad real.
 
 ## Objetivo
 
-Comprender como los principios y patrones ayudan a organizar codigo, reducir acoplamiento, mejorar extensibilidad y resolver problemas comunes de diseno de software.
+Al terminar podrás:
 
-## Publico objetivo
+- reconocer acoplamiento, baja cohesión y responsabilidades mezcladas;
+- aplicar los cinco principios SOLID con una justificación concreta;
+- diferenciar y aplicar los 23 patrones GoF clásicos;
+- comparar patrones que suelen confundirse;
+- refactorizar sin introducir abstracciones innecesarias;
+- combinar patrones cuando el problema realmente lo requiere.
 
-Este modulo esta dirigido a:
+## Prerrequisitos
 
-- estudiantes que ya trabajan POO y estructuras de datos;
-- personas que quieren entender patrones sin memorizarlos;
-- miembros de la comunidad Chilete DevPath que buscan mejorar criterio de diseno;
-- estudiantes que quieren preparar proyectos con mejor organizacion tecnica.
+Se recomienda dominar `03-poo`, además de poder leer colecciones, excepciones y código Java organizado en varias clases.
 
-## Prerrequisitos recomendados
+## Ruta
 
-Antes de iniciar este modulo, conviene poder:
-
-- crear clases, interfaces y jerarquias simples;
-- explicar encapsulamiento, herencia, abstraccion y polimorfismo;
-- reconocer responsabilidades dentro de una clase;
-- detectar duplicacion o acoplamiento excesivo;
-- leer un flujo de clases relacionadas.
-
-## Material de apoyo
-
-- `glosario.md`: terminos esenciales de principios y patrones.
-- `ejercicios-comunidad.md`: retos propuestos para practicar decisiones de diseno.
-
-## Ruta sugerida
-
-1. Revisar `principios-solid` para reforzar bases de diseno orientado a objetos.
-2. Continuar con `creacionales` para estudiar formas de crear objetos.
-3. Avanzar a `estructurales` para entender adaptacion, composicion y simplificacion de subsistemas.
-4. Continuar con `comportamiento` para estudiar comunicacion, estados, comandos e historial de cambios.
-5. Revisar `casos-integradores` para observar combinaciones de principios y patrones.
-6. Usar los casos practicos como refuerzo tecnico antes de crear guias para comunidad.
-
-## Contenido actual
-
-| Carpeta | Enfoque |
+| Etapa | Enfoque |
 |---|---|
-| `principios-solid` | Ejercicios sobre OCP, LSP y principios relacionados. |
-| `creacionales` | Builder, Factory, Prototype y Singleton. |
-| `estructurales` | Adapter, Bridge, Facade y Proxy. |
-| `comportamiento` | Command, Memento, Observer y State. |
-| `casos-integradores` | Casos que combinan principios SOLID y patrones en un flujo completo. |
+| 01 | Fundamentos de diseño y code smells |
+| 02 | SOLID, composición e inyección de dependencias |
+| 03 | Patrones creacionales |
+| 04 | Patrones estructurales |
+| 05 | Patrones de comportamiento |
+| 06 | Comparación y combinación |
+| 07 | Refactorización, selección y antipatrones |
+| 08 | Integración y justificación de decisiones |
 
-## Criterio de avance
+## Cómo usar el código
 
-Este modulo se considera logrado cuando puedes:
+Dentro de cada patrón se mantienen tres tipos de material:
 
-- explicar que problema resuelve un patron;
-- justificar por que aplicar o no aplicar un patron;
-- diferenciar principios SOLID de patrones de diseno;
-- reconocer acoplamiento, cohesion y responsabilidad unica;
-- adaptar un ejemplo sin copiar nombres de marcas externas;
-- convertir un caso en una guia propia con decision tecnica.
+- `ejemplos/`: muestran la idea esencial con el menor código razonable;
+- `practicas/`: aplican el patrón a un caso más completo e incluyen prácticas previas cuando existen;
+- `soluciones/`: permiten comparar una respuesta con el reto indicado en el README del bloque.
 
-## Convencion
+Los comentarios del código explican decisiones técnicas relevantes y evitan describir instrucciones obvias.
 
-- `java`: ejercicios de clase, laboratorio o practica tecnica.
-- `spring-boot`: ejemplos implementados como proyectos Spring Boot.
-- `casos-practicos`: ejercicios reorganizados por concepto para reforzar principios y patrones sin formato de actividad academica.
-- `comportamiento`: patrones que organizan comunicacion, cambios de estado, acciones y recuperacion de informacion.
-- `casos-integradores`: casos de mayor alcance donde se combinan varios principios y patrones.
+## Lenguaje
 
-## Criterio Chilete DevPath
+Java es el lenguaje principal de este módulo. Scala se utilizará posteriormente en comparaciones puntuales cuando sus características cambien la forma de expresar un patrón.
 
-Los ejemplos generales pueden alimentar futuras guias si se convierten en casos propios con explicacion del problema, patron aplicado, decision de diseno y resultado.
+## Límite del módulo
 
-Los casos practicos pueden reutilizarse en la web solo si se convierten en guias originales de Chilete DevPath, con enunciado propio, explicacion tecnica y contexto de aprendizaje.
+Spring Boot, MVC, Repository, Service Layer, DTO, Clean Architecture y patrones propios de aplicaciones backend no se desarrollan aquí. Se estudian con contexto en `09-backend`.
 
-Evitar nombres de marcas externas cuando no sean necesarios. Para canales de mensajes, pagos o servicios de terceros, usar nombres genericos como `MensajeriaExterna`, `PasarelaPago` o `ServicioExterno`.
+## Siguiente etapa
 
-## Autoria y fuentes
-
-El contenido corresponde a ejercicios desarrollados por Adrian Pisco durante su proceso de aprendizaje. Si algun ejercicio futuro se adapta desde una fuente externa, debe indicarse la referencia antes de publicarlo.
+`09-backend`: aplicar principios, dependencias y patrones dentro de aplicaciones del lado del servidor.

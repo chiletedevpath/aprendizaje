@@ -1,30 +1,21 @@
-# Glosario de patrones de diseno
+# Glosario
 
-Este glosario resume conceptos usados en los ejercicios de `08-patrones`.
-
-| Termino | Significado practico |
+| Término | Significado práctico |
 |---|---|
-| Patron de diseno | Solucion reutilizable para un problema comun de diseno. |
-| SOLID | Conjunto de principios para organizar codigo orientado a objetos. |
-| Responsabilidad unica | Idea de que una clase debe tener un motivo principal para cambiar. |
-| Abierto/cerrado | Codigo abierto a extension y cerrado a modificacion innecesaria. |
-| Sustitucion de Liskov | Una clase hija debe poder usarse donde se espera la clase padre. |
-| Acoplamiento | Dependencia entre componentes. Menos acoplamiento facilita cambios. |
-| Cohesion | Relacion entre las responsabilidades internas de una clase. |
-| Factory | Patron que centraliza la creacion de objetos. |
-| Abstract Factory | Patron que crea familias de objetos relacionados. |
-| Builder | Patron para construir objetos paso a paso. |
-| Singleton | Patron que restringe una clase a una unica instancia controlada. |
-| Prototype | Patron que crea objetos copiando una instancia base. |
-| Adapter | Patron que adapta una interfaz externa a un contrato interno. |
-| Bridge | Patron que separa una abstraccion de su implementacion para que ambas evolucionen sin depender directamente. |
-| Facade | Patron que simplifica el acceso a un subsistema complejo. |
-| Proxy | Patron que usa un intermediario para controlar el acceso a un objeto real. |
-| Observer | Patron donde varios observadores reaccionan a cambios de un sujeto. |
-| State | Patron que permite cambiar el comportamiento de un objeto segun su estado interno. |
-| Command | Patron que encapsula una accion como objeto para ejecutarla, reemplazarla o almacenarla. |
-| Memento | Patron que guarda y restaura el estado de un objeto sin exponer sus detalles internos. |
+| Patrón de diseño | Solución reusable a un problema recurrente de diseño dentro de un contexto. |
+| Code smell | Señal de que una parte del diseño merece revisión; no implica por sí sola un error. |
+| Cohesión | Grado en que las responsabilidades de un componente pertenecen al mismo propósito. |
+| Acoplamiento | Dependencia entre componentes. Un acoplamiento innecesario dificulta cambios. |
+| Abstracción | Contrato que expresa qué se necesita sin fijar necesariamente cómo se implementa. |
+| Composición | Construcción de comportamiento mediante objetos colaboradores. |
+| Dependencia | Componente que otro objeto necesita para cumplir una responsabilidad. |
+| Inyección de dependencias | Entrega de dependencias desde el exterior en lugar de crearlas dentro del componente. |
+| SOLID | Cinco principios para orientar diseño orientado a objetos mantenible. |
+| GoF | Catálogo clásico de 23 patrones de diseño de *Gang of Four*. |
+| Refactorización | Cambio interno del diseño sin alterar el comportamiento observable esperado. |
+| Antipatrón | Solución recurrente que parece útil, pero suele generar consecuencias negativas. |
+| Sobreingeniería | Complejidad añadida sin una necesidad real del problema. |
 
-## Criterio de uso
+## Regla
 
-Un patron suma valor cuando reduce complejidad real. Si solo agrega clases sin aclarar el problema, no debe aplicarse.
+Un patrón es una herramienta de diseño, no un objetivo. Si una solución directa es suficiente y mantenible, agregar un patrón puede empeorar el código.
