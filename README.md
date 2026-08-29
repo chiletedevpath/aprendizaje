@@ -16,8 +16,29 @@ Este repositorio reúne ejercicios, laboratorios, glosarios y guías breves que 
 - `07-desarrollo-web`: HTML, CSS, JavaScript y práctica de interfaces.
 - `08-patrones`: principios SOLID y patrones de diseño.
 - `09-backend`: prácticas de backend y Spring Boot.
-- `10-frontend`: prácticas enfocadas en frontend moderno.
-- `11-publicacion-y-produccion`: publicación, despliegue, configuración segura y checklist antes de mostrar un proyecto.
+- `10-frontend`: etapa futura; se creará cuando existan prácticas propias de frontend moderno.
+- `11-publicacion-y-produccion`: etapa futura; se creará cuando existan laboratorios reproducibles de publicación y operación.
+
+## Estado verificable de la ruta
+
+La ruta distingue entre contenido disponible, contenido que todavía se está revisando y temas que se desarrollarán cuando formen parte del aprendizaje real.
+
+| Módulo | Estado | Evidencia actual |
+|---|---|---|
+| `00-fundamentos` | Disponible | Conceptos, guía, glosario, ejercicios, laboratorios y criterio de avance. |
+| `01-pseudocodigo` | Disponible | Secuencia progresiva en PSeInt y prácticas integradas. |
+| `02-programacion-basica` | Disponible | Ruta por temas con Java y Scala como lenguajes principales y prácticas complementarias de JavaScript donde existe contenido real. |
+| `03-poo` | Disponible | Clases, encapsulamiento, relaciones, herencia, polimorfismo, abstracción, contratos, excepciones, modelado e integración. |
+| `04-estructuras-datos` | Disponible | Colecciones lineales, tablas hash, árboles e índices simulados. |
+| `05-algoritmos` | Disponible | Búsqueda, ordenamiento, recursión, backtracking y grafos. |
+| `06-bases-de-datos` | Disponible | Modelado, SQL Server, PostgreSQL, Oracle, MongoDB y Cassandra con scripts separados por concepto y verificación ejecutada. |
+| `07-desarrollo-web` | Disponible | HTML, CSS, Bootstrap y JavaScript del navegador con prácticas progresivas e integración web. |
+| `08-patrones` | Disponible | Fundamentos de diseño, SOLID, los 23 patrones GoF, comparación, refactorización e integración en Java. |
+| `09-backend` | Disponible | HTTP, PHP del lado servidor, Spring, APIs, persistencia, seguridad, pruebas, observabilidad y arquitectura verificadas. |
+| `10-frontend` | Planificado | Sin contenido publicado; se incorporará cuando existan prácticas propias estudiadas y comprobadas. |
+| `11-publicacion-y-produccion` | Planificado | Sin contenido publicado; se incorporará cuando existan laboratorios propios reproducibles. |
+
+**Disponible** significa que existe material organizado, ejecutable y revisado para estudiar y practicar. **Planificado** no se presenta como contenido aprendido ni genera carpetas publicadas sin material real.
 
 ## Cómo usar esta ruta
 
@@ -32,10 +53,11 @@ Este repositorio reúne ejercicios, laboratorios, glosarios y guías breves que 
 Cada módulo puede crecer con esta estructura solo cuando el contenido lo justifique:
 
 - `README.md`: objetivo del módulo, temas y criterio de avance.
-- `ejercicios-propuestos/`: problemas para resolver sin mirar la solución.
-- `ejercicios-resueltos/`: soluciones explicadas y comparables.
-- `laboratorios/`: prácticas integradoras.
-- `notas/`: apuntes breves cuando aporten contexto.
+- `ejemplos/`: demostraciones breves del concepto.
+- `practicas/`: ejercicios aplicados y evidencia de aprendizaje.
+- `retos/`: problemas que se resuelven antes de consultar una referencia.
+- `soluciones/`: respuestas de referencia para comparar enfoques.
+- laboratorios integradores: actividades de cierre cuando el tema lo requiere.
 
 No todos los módulos necesitan todas las carpetas. Si una carpeta no aporta contenido real, no se crea.
 
@@ -54,8 +76,14 @@ No todos los módulos necesitan todas las carpetas. Si una carpeta no aporta con
 11. Frontend moderno.
 12. Publicación y producción básica.
 
+La secuencia no obliga a avanzar por calendario. Un módulo se considera listo para el siguiente paso cuando se cumple su criterio de avance y existe una práctica que lo demuestre.
+
 ## Relación con otros repositorios
 
 - `academia`: registra proyectos académicos, cursos, entregas y repos publicados.
 - `portafolio`: reunirá más adelante una selección curada de proyectos.
 - `chiletedevpath`: presenta la marca personal y conecta el ecosistema completo.
+
+---
+
+Contenido creado para Chilete DevPath con apoyo de IA para estructuración y revisión. El criterio, selección y validación final corresponden a Adrian Pisco, autor de Chilete DevPath.
