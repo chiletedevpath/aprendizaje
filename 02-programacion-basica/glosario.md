@@ -1,33 +1,25 @@
-# Glosario de programación básica
+# Glosario
 
-| Término | Explicación técnica y sencilla |
+| Término | Significado práctico |
 |---|---|
-| Algoritmo | Secuencia finita de pasos para resolver un problema. |
-| Sintaxis | Reglas que determinan cómo debe escribirse código válido en un lenguaje. |
+| Algoritmo | Secuencia ordenada de pasos para resolver un problema. |
 | Variable | Nombre asociado a un valor que puede cambiar durante la ejecución. |
-| Constante / valor inmutable | Dato que, una vez asignado, no debe reasignarse. |
-| Alcance | Región del programa donde un identificador puede utilizarse. |
-| Tipo de dato | Define qué clase de valores puede representar una variable y qué operaciones son válidas. |
-| Casting | Conversión explícita de un valor a otro tipo compatible. |
+| Constante | Valor que se define para no cambiar durante una ejecución. |
+| Tipo de dato | Define qué valores puede representar una variable y qué operaciones admite. |
 | Expresión | Combinación de valores, variables y operadores que produce un resultado. |
-| Condición | Expresión booleana cuyo resultado es verdadero o falso. |
-| Bucle | Estructura que repite un bloque según una condición o secuencia. |
-| Función / método | Bloque reutilizable con una responsabilidad concreta; puede recibir parámetros y devolver un valor. |
-| Parámetro | Variable declarada por una función para recibir información. |
-| Argumento | Valor concreto enviado a un parámetro al invocar una función. |
+| Booleano | Tipo lógico con dos posibles valores: verdadero o falso. |
+| Condicional | Estructura que selecciona un camino según una condición. |
+| Bucle | Estructura que repite instrucciones de forma controlada. |
+| Función / método | Bloque reutilizable que realiza una responsabilidad concreta. |
+| Parámetro | Dato que una función recibe para realizar su trabajo. |
+| Retorno | Resultado que una función entrega al código que la llamó. |
 | Cadena | Secuencia de caracteres usada para representar texto. |
-| Arreglo | Estructura indexada de tamaño definido que almacena varios valores. |
-| Matriz | Estructura bidimensional organizada por filas y columnas. |
-| Colección | Estructura que agrupa varios elementos y ofrece operaciones para almacenarlos y consultarlos. |
-| Lista | Colección secuencial que normalmente admite elementos repetidos. |
-| Conjunto | Colección orientada a mantener elementos únicos. |
-| Mapa | Colección de pares clave-valor. |
-| Validación | Comprobación de que un dato cumple reglas antes de procesarlo. |
-| Excepción | Evento de ejecución que interrumpe el flujo normal y puede ser manejado por el programa. |
-| Persistencia | Conservación de información fuera de la memoria temporal del programa. |
-| API | Conjunto documentado de clases, funciones o métodos disponibles para utilizar una funcionalidad. |
-| Depuración | Proceso sistemático para localizar y corregir defectos. |
-| Breakpoint | Punto donde el depurador pausa la ejecución para inspeccionar el estado del programa. |
-| Caso de prueba | Entrada y resultado esperado usados para comprobar comportamiento. |
-| Caso límite | Entrada ubicada en un extremo válido del dominio del problema. |
-| Inmutabilidad | Propiedad de un valor que no cambia después de crearse. |
+| Arreglo | Colección indexada de tamaño fijo. |
+| Matriz | Arreglo de dos dimensiones organizado en filas y columnas. |
+| Colección | Estructura que agrupa varios elementos y ofrece operaciones para gestionarlos. |
+| Excepción | Evento que interrumpe el flujo normal y puede manejarse explícitamente. |
+| Persistencia | Conservación de datos más allá de la ejecución actual del programa. |
+| Modularización | División de una solución en partes pequeñas y relacionadas por responsabilidades. |
+| Depuración | Proceso de localizar y corregir defectos observando la ejecución. |
+| Caso límite | Entrada válida situada en un extremo del dominio del problema. |
+| Caso inválido | Entrada que incumple las reglas del problema. |

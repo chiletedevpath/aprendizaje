@@ -1,21 +1,96 @@
-# Programación básica
+# 02 · Programación básica
 
-Este módulo transforma los fundamentos y el pseudocódigo en programas pequeños, legibles y verificables. La ruta se practica en **Java** y **Scala** para distinguir los conceptos generales de la sintaxis particular de cada lenguaje.
+Esta etapa convierte la lógica trabajada en pseudocódigo en programas reales. La ruta usa **Java y Scala** para mostrar que los conceptos de programación son transferibles entre lenguajes.
 
-## Cómo recorrer el módulo
+## Cómo está organizada
 
-1. Sigue [`ruta-de-aprendizaje.md`](./ruta-de-aprendizaje.md).
-2. Estudia el concepto y compara su aplicación en Java y Scala.
-3. Ejecuta el ejemplo guiado antes de resolver los retos.
-4. Usa las prácticas resueltas para contrastar tu solución, no para copiarla.
-5. Registra tu avance en [`checklist-avance.md`](./checklist-avance.md).
-6. Finaliza con el laboratorio de la etapa 15.
+Cada tema contiene un único `README.md` breve y dos implementaciones:
 
-Consulta [`como-ejecutar.md`](./como-ejecutar.md) para preparar cada lenguaje y [`glosario.md`](./glosario.md) para repasar términos.
+```text
+tema/
+├── README.md
+├── java/
+│   ├── ejemplos/
+│   ├── practicas/
+│   └── soluciones/
+└── scala/
+    ├── ejemplos/
+    ├── practicas/
+    └── soluciones/
+```
+
+- **Ejemplos:** código pequeño para aprender un concepto. Los comentarios explican comportamientos técnicos importantes.
+- **Prácticas:** programas completos que aplican lo aprendido. Aquí también se conservan ejercicios desarrollados durante el proceso académico.
+- **Reto:** aparece al final del `README.md` de cada tema y se intenta sin mirar la respuesta.
+- **Soluciones:** implementaciones de referencia del reto para comparar después de resolverlo.
+
+## Cómo ejecutar el código
+
+Puedes trabajar desde IntelliJ IDEA o desde terminal. Para un archivo Java:
+
+```bash
+javac NombreArchivo.java
+java NombreClase
+```
+
+Para Scala 3, una opción simple es Scala CLI:
+
+```bash
+scala-cli NombreArchivo.scala
+```
+
+No memorices los comandos al inicio: lo importante es comprender qué archivo se compila o ejecuta y leer cualquier mensaje de error que aparezca.
+
+## Regla de comentarios
+
+Los comentarios deben aportar información técnica sin narrar lo obvio:
+
+```java
+// Scanner conecta el programa con la entrada estándar (teclado).
+Scanner scanner = new Scanner(System.in);
+
+// % devuelve el residuo de una división.
+boolean esPar = numero % 2 == 0;
+```
+
+No se comenta cada línea. Se comenta el concepto, la decisión o el comportamiento que merece ser entendido.
+
+## Ruta
+
+| Nivel | Temas |
+|---|---|
+| Básico | 01–05 |
+| Básico avanzado | 06–08 |
+| Intermedio inicial | 09–10 |
+| Intermedio | 11–15 |
+
+Consulta [`ruta-de-aprendizaje.md`](ruta-de-aprendizaje.md) para ver la progresión completa.
+
+## Antes de empezar
+
+Se recomienda haber completado:
+
+1. `00-fundamentos`.
+2. `01-pseudocodigo`.
+
+No es necesario conocer Java o Scala previamente.
+
+## Criterio de avance
+
+No avances solo porque el código ejecuta. Antes de pasar a POO debes poder:
+
+- leer un problema y separar entrada, proceso y salida;
+- elegir tipos y estructuras de control adecuadas;
+- construir funciones pequeñas;
+- trabajar con texto, arreglos y colecciones;
+- validar entradas y reconocer errores;
+- leer y escribir archivos simples;
+- probar casos normales, límite e inválidos;
+- explicar tu solución sin depender de copiar otra implementación.
 
 ## Alcance
 
-La sección cubre sintaxis, entrada y salida, variables, tipos, operadores, decisiones, repeticiones, funciones, texto, arreglos, colecciones, validación, archivos, biblioteca estándar, depuración y práctica integrada. La programación orientada a objetos corresponde a [`03-poo`](../03-poo/README.md).
+Esta etapa llega hasta programación imperativa y modular de nivel intermedio. **POO comienza en `03-poo`**, por lo que aquí no se adelantan herencia, polimorfismo, interfaces ni patrones de diseño.
 
 ## Criterio de autoría
 
