@@ -1,29 +1,24 @@
-# Glosario de bases de datos
+# Glosario
 
-| Término | Significado práctico |
-|---|---|
-| Base de datos | Conjunto organizado de datos administrado bajo reglas definidas. |
-| SGBD | Software que permite definir, consultar, proteger y mantener bases de datos. |
-| Modelo relacional | Organización de datos mediante relaciones representadas como tablas. |
-| SQL | Lenguaje declarativo utilizado por bases de datos relacionales. |
-| Dialecto SQL | Extensiones y diferencias propias de un motor, como T-SQL o PL/SQL. |
-| NoSQL | Familia de modelos no relacionales; no identifica una única tecnología. |
-| Documento | Registro autocontenido, normalmente similar a JSON, usado por MongoDB. |
-| Columna ancha | Modelo distribuido que organiza datos por particiones y filas con columnas. |
-| Partición | Distribución de datos determinada por una clave; es central en Cassandra. |
-| Entidad | Concepto del dominio que necesita persistencia. |
-| Cardinalidad | Cantidad de ocurrencias que pueden relacionarse entre entidades. |
-| Clave primaria | Atributo o conjunto que identifica un registro. |
-| Clave foránea | Restricción que referencia una clave de otra tabla. |
-| Restricción | Regla que protege la validez de los datos. |
-| DDL | Instrucciones que crean o modifican estructuras. |
-| DML | Instrucciones que insertan, actualizan o eliminan datos. |
-| DCL | Instrucciones relacionadas con privilegios y acceso. |
-| Transacción | Unidad de trabajo que se confirma o revierte como conjunto. |
-| Índice | Estructura auxiliar que acelera ciertos accesos a cambio de espacio y mantenimiento. |
-| Normalización | Técnica relacional para reducir redundancia y anomalías. |
-| Desnormalización | Duplicación deliberada de datos para atender patrones de acceso concretos. |
-| Agregación | Procesamiento por etapas de documentos en MongoDB. |
-| CQL | Lenguaje de consulta de Cassandra; se parece a SQL, pero responde a otro modelo. |
-
-Compartir términos no vuelve equivalentes a los motores. Cada práctica debe declarar tecnología, versión, contexto y precondiciones.
+- **SGBD:** software que administra almacenamiento, consultas, concurrencia, seguridad y recuperación de una base de datos.
+- **Esquema:** definición lógica de objetos y restricciones.
+- **Instancia:** datos concretos almacenados en un momento determinado.
+- **Entidad:** concepto del dominio que necesita persistencia.
+- **Clave primaria:** atributo o conjunto de atributos que identifica una fila.
+- **Clave foránea:** referencia que mantiene una relación entre tablas.
+- **Cardinalidad:** cantidad de ocurrencias que pueden relacionarse entre entidades.
+- **Normalización:** proceso para reducir redundancia y anomalías en el modelo relacional.
+- **DDL:** instrucciones que definen estructuras, por ejemplo `CREATE`, `ALTER` y `DROP`.
+- **DML:** instrucciones que modifican datos, principalmente `INSERT`, `UPDATE` y `DELETE`.
+- **Consulta:** operación que recupera o transforma información almacenada.
+- **Transacción:** unidad lógica de trabajo que debe confirmarse o revertirse de forma coherente.
+- **ACID:** atomicidad, consistencia, aislamiento y durabilidad.
+- **Índice:** estructura auxiliar que acelera determinados patrones de consulta a cambio de espacio y costo de mantenimiento.
+- **Vista:** consulta almacenada que expone una representación lógica de los datos.
+- **Trigger:** lógica que se ejecuta automáticamente ante determinados eventos del motor.
+- **Rol:** conjunto de permisos asignable a usuarios o cuentas.
+- **Plan de ejecución:** estrategia elegida por el optimizador para ejecutar una consulta.
+- **Documento:** unidad de datos de MongoDB formada por campos y valores anidados.
+- **Partition key:** clave que determina dónde se distribuyen los datos en Cassandra.
+- **Clustering column:** columna que ordena datos dentro de una partición en Cassandra.
+- **Patrón de acceso:** consulta o forma prevista de recuperar datos que influye en el diseño.

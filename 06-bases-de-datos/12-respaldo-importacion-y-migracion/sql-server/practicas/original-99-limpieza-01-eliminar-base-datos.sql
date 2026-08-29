@@ -1,0 +1,14 @@
+/*
+ * Concepto: eliminar una base de datos.
+ * ADVERTENCIA: destruye EMPRESAVENTAS y todas sus evidencias de practica.
+ */
+
+USE master;
+GO
+
+IF DB_ID(N'EMPRESAVENTAS') IS NOT NULL
+BEGIN
+    ALTER DATABASE EMPRESAVENTAS SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE EMPRESAVENTAS;
+END;
+GO

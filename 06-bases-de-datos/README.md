@@ -1,98 +1,75 @@
-# Bases de datos
+# 06 · Bases de datos
 
-Esta sección desarrolla modelado, bases de datos relacionales y bases de datos NoSQL. La ruta separa los conceptos comunes de las particularidades de cada motor.
+Esta etapa enseña a **modelar, implementar, consultar, proteger y elegir bases de datos con criterio**. El protagonista es el concepto; SQL Server, PostgreSQL, Oracle, MongoDB y Cassandra muestran cómo cambia la implementación según el motor y el modelo de datos.
 
-## Objetivo
+## Antes de empezar
 
-Diseñar modelos coherentes, implementar estructuras, consultar y modificar datos, aplicar controles básicos de seguridad y elegir una tecnología según el problema.
+Conviene dominar programación básica, estructuras de datos elementales y lectura de diagramas. Trabaja siempre con **datos ficticios** y una base exclusiva de práctica.
 
-## Límite de publicación
+## Cómo recorrer la etapa
 
-Que una tecnología aparezca en la ruta no significa que su contenido ya esté aprobado. Los materiales recibidos deben pasar por revisión de autoría, seguridad, sintaxis, ejecución y valor didáctico antes de declararse publicables.
+1. Empieza por fundamentos, modelado y normalización.
+2. Continúa con SQL relacional: DDL, DML, consultas, transacciones, índices y seguridad.
+3. Compara dialectos entre SQL Server, PostgreSQL y Oracle sin memorizar comandos aislados.
+4. Estudia MongoDB y Cassandra como modelos distintos, no como sustitutos directos de SQL.
+5. Cierra justificando qué modelo y motor conviene para un problema concreto.
 
-Consulta `estado-publicacion.md` para conocer el estado verificable de cada bloque.
+Consulta [`ruta-de-aprendizaje.md`](ruta-de-aprendizaje.md) para ver la progresión completa.
+Revisa [`estado-publicacion.md`](estado-publicacion.md) antes de considerar disponible una práctica en un motor concreto.
 
-## Estructura
+## Estructura de cada tema
+
+En los bloques relacionales encontrarás, cuando corresponde:
 
 ```text
-06-bases-de-datos/
-├── modelado/
-├── sql/
-│   ├── sql-server/
-│   ├── postgresql/
-│   └── oracle/
-└── nosql/
-    ├── mongodb/
-    └── cassandra/
+tema/
+├── README.md
+├── sql-server/
+│   ├── ejemplos/
+│   ├── practicas/
+│   └── soluciones/
+├── postgresql/
+│   ├── ejemplos/
+│   ├── practicas/
+│   └── soluciones/
+└── oracle/
+    ├── ejemplos/
+    ├── practicas/
+    └── soluciones/
 ```
 
-`modelado` permanece como base común porque el análisis de entidades, relaciones y patrones de acceso ocurre antes de elegir un motor.
+- **ejemplos/**: código pequeño para observar un concepto.
+- **practicas/**: ejercicios completos, incluidas prácticas académicas reorganizadas.
+- **soluciones/**: una referencia para comparar después de intentar el reto del tema.
 
-## Prerrequisitos
+Los comentarios siguen un criterio simple y técnico:
 
-- reconocer entidades, atributos y relaciones;
-- comprender claves primarias y foráneas;
-- diferenciar datos ficticios de información real;
-- identificar instrucciones destructivas antes de ejecutar un script;
-- utilizar una instancia local o una base exclusiva de práctica.
+```sql
+-- La clave foránea evita registrar una categoría inexistente.
+-- COMMIT confirma de forma permanente los cambios de la transacción.
+-- El índice compuesto sigue el orden de las columnas definidas.
+```
 
-## Ruta sugerida
+## Motores de la ruta
 
-1. `modelado`: modelo entidad-relación y transformación al modelo lógico.
-2. `sql/sql-server`: DDL, DML, consultas, permisos, índices y procedimientos en T-SQL.
-3. `sql/postgresql`: laboratorio inicial propio; debe ejecutarse y documentarse antes de ampliar el bloque.
-4. `sql/oracle`: prácticas específicas de Oracle Database, después de ser recibidas y validadas.
-5. `nosql/mongodb`: laboratorio documental inicial; debe ejecutarse y documentarse antes de ampliar el bloque.
-6. `nosql/cassandra`: modelado orientado a consultas y CQL, después de ser recibido y validado.
-7. Comparación: justificar cuándo conviene un modelo relacional, documental o de columnas anchas.
+| Tecnología | Modelo | Papel en la ruta |
+|---|---|---|
+| SQL Server | Relacional | T-SQL, administración y objetos programables |
+| PostgreSQL | Relacional | SQL estándar, extensibilidad y análisis de consultas |
+| Oracle Database | Relacional | SQL/PLSQL, secuencias y objetos de esquema |
+| MongoDB | Documental | Documentos, índices y pipelines de agregación |
+| Apache Cassandra | Columnas anchas | Particiones, clustering y modelado orientado a consultas |
 
-## SQL y NoSQL
+## Criterio de avance
 
-| Familia | Tecnología | Enfoque esperado | Estado |
-|---|---|---|---|
-| SQL | SQL Server | T-SQL, restricciones, consultas, seguridad e índices | Validado localmente; en evaluación editorial |
-| SQL | PostgreSQL | Esquema, integridad, consultas, vista, índice y transacción | En desarrollo; ejecución local pendiente |
-| SQL | Oracle Database | SQL, secuencias, PL/SQL y objetos del esquema | Pendiente de contenido |
-| NoSQL documental | MongoDB | documentos, CRUD, índice y agregación | En desarrollo; ejecución local pendiente |
-| NoSQL de columnas anchas | Apache Cassandra | particiones, clustering y CQL | Pendiente de contenido |
+No basta con ejecutar scripts. Al finalizar debes poder explicar:
 
-SQL Server, PostgreSQL y Oracle comparten fundamentos relacionales, pero no todos sus comandos son intercambiables. MongoDB y Cassandra pertenecen a la familia no relacional, pero tampoco deben agruparse como si utilizaran el mismo modelo: MongoDB es documental y Cassandra utiliza columnas anchas con modelado orientado a consultas.
+- por qué el modelo representa correctamente el problema;
+- qué restricciones protegen los datos;
+- por qué una consulta produce determinado resultado;
+- cuándo una transacción, un índice o un permiso son necesarios;
+- por qué un caso conviene en un modelo relacional, documental o de columnas anchas.
 
-La clasificación `sql` y `nosql` organiza familias de bases de datos, no lenguajes de programación. SQL Server, PostgreSQL y Oracle son relacionales. MongoDB es documental y Cassandra utiliza columnas anchas con modelado orientado a consultas.
+> La ruta prepara el terreno para backend y persistencia desde aplicaciones, pero aquí el foco sigue siendo la base de datos.
 
-SQL es además el lenguaje común de los motores relacionales, pero cada motor tiene su propio dialecto y herramientas. T-SQL, PL/SQL, CQL y el lenguaje de consultas de MongoDB deben estudiarse dentro del motor al que pertenecen.
-
-## Material actual
-
-- `glosario.md`: conceptos compartidos y diferencias esenciales.
-- `ejercicios-comunidad.md`: retos propios posteriores a los ejemplos resueltos.
-- `modelado`: diagramas y modelos lógico-relacionales.
-- `sql/sql-server/README.md`: contexto, orden de ejecución y evidencia de validación.
-- `sql/sql-server/ddl-dml-queries`: secuencia ejecutable de prácticas T-SQL.
-- `sql/postgresql/01-inventario-academico.sql`: primer laboratorio didáctico propio de PostgreSQL.
-- `nosql/mongodb/01-inventario-documental.mongodb.js`: primer laboratorio didáctico propio de MongoDB.
-- `estado-publicacion.md`: inventario de contenido validado y pendiente.
-
-## Secuencia de SQL Server
-
-1. `01-ddl-basico.sql`
-2. `02-dml-basico.sql`
-3. `03-seguridad-indices.sql`
-4. `04-procedimientos-errores.sql`
-5. `99-limpieza-opcional.sql`, únicamente si se desea eliminar la base de práctica.
-
-## Criterio de logro
-
-Puedes avanzar cuando logres:
-
-- convertir un problema en un modelo con cardinalidades justificadas;
-- crear restricciones que protejan la integridad;
-- consultar relaciones sin depender de `SELECT *`;
-- explicar el efecto de una transacción, un permiso y un índice;
-- reconocer diferencias de dialecto entre motores SQL;
-- justificar el modelo NoSQL desde sus patrones de acceso;
-- ejecutar solo sobre datos ficticios y entornos controlados.
-
-## Autoría y fuentes
-
-El material publicable debe ser propio o estar correctamente atribuido. Los contenidos académicos deben convertirse en explicaciones y prácticas propias cuando el enunciado original no pueda compartirse.
+Contenido creado para Chilete DevPath con apoyo de IA para estructuración y revisión. El criterio, selección y validación final corresponden a Adrian Pisco, autor de Chilete DevPath.

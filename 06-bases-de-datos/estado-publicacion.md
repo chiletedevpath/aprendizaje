@@ -1,15 +1,16 @@
 # Estado de evaluación y publicación
 
-Esta matriz evita presentar como terminada una tecnología que todavía no cuenta con material revisado.
+Esta matriz diferencia el contenido organizado de las prácticas que cuentan con ejecución comprobada. Una revisión estática no sustituye la validación sobre el motor correspondiente.
 
-| Bloque | Contenido disponible | Validación pendiente | Estado editorial |
+| Bloque | Contenido disponible | Validación comprobada | Estado |
 |---|---|---|---|
-| Modelado | Diagramas ER y tres modelos lógicos orientados a SQL Server | revisar cardinalidades contra sus enunciados originales y renderizar los diagramas | En evaluación |
-| SQL Server | DDL, DML, consultas, permisos, índices, procedimientos y manejo de errores | revisar el origen editorial de cada ejercicio | Validado en SQL Server 16.0.1190.2; en evaluación editorial |
-| PostgreSQL | Laboratorio inicial propio de esquema, integridad, consultas, vista, índice y transacción | PostgreSQL 18 acepta conexiones locales, pero falta autenticar una base exclusiva, ejecutar dos veces y registrar resultados | En desarrollo; validación local pendiente |
-| Oracle Database | Sin prácticas incorporadas en esta sección | recibir, revisar autoría, adaptar datos y ejecutar | Pendiente de contenido |
-| MongoDB | Laboratorio inicial propio de documentos, CRUD, índice y agregación | MongoDB Server 8.3 está disponible localmente, pero falta instalar o habilitar `mongosh`, ejecutar y registrar resultados | En desarrollo; validación local pendiente |
-| Apache Cassandra | Sin prácticas incorporadas en esta sección | recibir, revisar autoría, validar modelo por consultas y CQL | Pendiente de contenido |
+| Fundamentos y selección tecnológica | Conceptos, criterios y casos comparativos | Revisión didáctica y editorial | Disponible |
+| Modelado | Tres diagramas ER y modelos lógico-relacionales | Falta revisar visualmente todos los diagramas contra sus enunciados originales | En evaluación |
+| SQL Server | DDL, DML, consultas, transacciones, seguridad, índices y objetos programables | La secuencia histórica se ejecutó dos veces el 28/08/2026 sobre SQL Server `16.0.1190.2` | Disponible con revisión editorial pendiente |
+| PostgreSQL | DDL, DML, consultas, transacciones, índices, vistas, seguridad y objetos programables | La secuencia histórica se ejecutó dos veces el 28/08/2026 sobre PostgreSQL `18.1` | Disponible con revisión editorial pendiente |
+| Oracle Database | Ejemplos, prácticas y soluciones introductorias en SQL y PL/SQL | Los tres recorridos se ejecutaron el 29/08/2026 sobre Oracle XE `21.3`; finalizaron sin errores ni objetos inválidos | Disponible con revisión editorial pendiente |
+| MongoDB | Documentos, CRUD, índices y agregaciones | Los cuatro scripts se ejecutaron el 29/08/2026 sobre MongoDB `7.0.34`; se comprobaron documentos, categorías e índices | Disponible con revisión editorial pendiente |
+| Apache Cassandra | Keyspace, CQL, particiones y clustering | Los tres scripts se ejecutaron el 29/08/2026 sobre Cassandra `5.0.9`; se comprobaron partición, orden descendente y dos avances | Disponible con revisión editorial pendiente |
 
 ## Condiciones para aprobar un bloque
 
@@ -20,12 +21,10 @@ Esta matriz evita presentar como terminada una tecnología que todavía no cuent
 5. Instrucciones destructivas aisladas y advertidas.
 6. Ejecución reproducible en una versión documentada del motor.
 7. Fuentes y autoría revisadas.
-8. Ejercicio resuelto, reto y evidencia de laboratorio cuando corresponda.
+8. Ejemplo, práctica, reto y evidencia de integración cuando correspondan.
 
-Hasta cumplir estas condiciones, el bloque permanece como contenido en evaluación y no como práctica validada de Chilete DevPath.
+Hasta cumplir estas condiciones, el bloque debe presentarse como contenido en evaluación y no como práctica validada de Chilete DevPath.
 
 ## Evidencia académica relacionada
 
-El proyecto ComidaPerucha BD Backend, conservado en `academia`, demuestra trabajo previo con PostgreSQL y MongoDB. Esa evidencia no se copia como si fuera una guía: sirve como punto de partida para crear laboratorios pequeños, genéricos y explicables dentro de `aprendizaje`.
-
-Oracle Database y Apache Cassandra permanecen planificados hasta que existan prácticas propias estudiadas y ejecutadas.
+Los proyectos formales conservados en `academia` demuestran experiencia aplicada, pero no se copian como guías. En `aprendizaje` se mantienen ejercicios pequeños, genéricos y explicables.
