@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Práctica académica de Bootstrap con contenido visual original de Chilete DevPath."
+    />
+    <title>Exploradores del Código | Chilete DevPath</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">EXPLORADORES <span>DEL CÓDIGO</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mundos">Mundos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="hero d-flex align-items-center">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="badge rounded-pill text-bg-warning mb-3">Práctica Bootstrap</span>
+            <h1 class="display-3 fw-bold">Cinco mundos. Una ruta para aprender creando.</h1>
+            <p class="lead text-white-50 mt-3">
+              Explora escenarios ficticios que representan habilidades de programación y observa
+              cómo Bootstrap facilita una interfaz responsive y accesible.
+            </p>
+            <a class="btn btn-warning btn-lg rounded-pill px-4 mt-2" href="#mundos">
+              Iniciar exploración
+            </a>
+          </div>
+          <div class="col-lg-5" aria-hidden="true">
+            <div class="hero-orbit mx-auto">
+              <span class="orbit-core">&lt;/&gt;</span>
+              <span class="orbit-dot dot-one"></span>
+              <span class="orbit-dot dot-two"></span>
+              <span class="orbit-dot dot-three"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="mundos" class="container py-5">
+        <div class="text-center py-4">
+          <span class="text-uppercase text-warning fw-bold">Mapa de aprendizaje</span>
+          <h2 class="display-5 fw-bold mt-2">Elige un mundo</h2>
+          <p class="text-secondary mx-auto section-copy">
+            Cada tarjeta combina componentes, utilidades, grid y un modal de Bootstrap.
+          </p>
+        </div>
+        <div id="worldGrid" class="row g-4" aria-live="polite"></div>
+      </section>
+
+      <section id="registro" class="registration py-5">
+        <div class="container py-4">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <span class="text-uppercase text-warning fw-bold">Actividad demostrativa</span>
+              <h2 class="display-6 fw-bold mt-2">Registra tu siguiente exploración</h2>
+              <p class="text-white-50">
+                El formulario funciona de manera local y no envía ni almacena datos.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <form id="registrationForm" class="card border-0 shadow-lg p-4" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="studentName">Nombre ficticio</label>
+                    <input class="form-control" id="studentName" required minlength="2" />
+                    <div class="invalid-feedback">Ingresa al menos dos caracteres.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="selectedWorld">Mundo</label>
+                    <select class="form-select" id="selectedWorld" required>
+                      <option value="">Selecciona uno</option>
+                    </select>
+                    <div class="invalid-feedback">Selecciona un mundo.</div>
+                  </div>
+                  <div class="col-12 d-grid d-sm-flex justify-content-sm-end">
+                    <button class="btn btn-dark rounded-pill px-4" type="submit">Registrar</button>
+                  </div>
+                </div>
+                <p id="formMessage" class="alert alert-success mt-3 mb-0 d-none" role="status"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 text-center text-secondary">
+      Práctica académica no comercial · Contenido visual original de Chilete DevPath
+    </footer>
+
+    <div class="modal fade" id="worldModal" tabindex="-1" aria-labelledby="worldModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+          <div id="modalArtwork" class="modal-artwork" aria-hidden="true"></div>
+          <div class="modal-body p-4">
+            <h2 id="worldModalTitle" class="h3 fw-bold"></h2>
+            <p id="worldModalDescription" class="text-secondary mb-0"></p>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button class="btn btn-dark rounded-pill px-4" type="button" data-bs-dismiss="modal">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
