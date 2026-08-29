@@ -1,0 +1,20 @@
+# Java
+*.class
+out/
+target/
+
+# Scala / sbt
+.bsp/
+.metals/
+.bloop/
+.scala-build/
+project/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
