@@ -1,10 +1,10 @@
 # 02 · Programación básica
 
-Esta etapa convierte la lógica trabajada en pseudocódigo en programas reales. La ruta usa **Java y Scala** para mostrar que los conceptos de programación son transferibles entre lenguajes.
+Esta etapa convierte la lógica trabajada en pseudocódigo en programas reales. La ruta usa **Java y Scala** como lenguajes principales para mostrar que los conceptos son transferibles. Las prácticas complementarias en otro lenguaje se conservan solo cuando aplican los mismos fundamentos y se identifican por su carpeta de lenguaje.
 
 ## Cómo está organizada
 
-Cada tema contiene un único `README.md` breve y dos implementaciones:
+Cada tema contiene un único `README.md` breve y, como base, dos implementaciones:
 
 ```text
 tema/

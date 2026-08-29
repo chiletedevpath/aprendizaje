@@ -15,6 +15,8 @@ Construye un sistema pequeño de cursos, participantes e inscripciones. Incluye 
 
 Empieza con `java/ejemplos` o `scala/ejemplos`, revisa `practicas` y consulta `soluciones` solo después de intentar el reto.
 
+El reto complementario de `javascript/` permite trasladar clases, encapsulamiento, herencia y errores personalizados a ese lenguaje después de dominar los conceptos principales.
+
 ## Laboratorio integrador
 
 Después del reto completa [`laboratorio-ruta-aprendizaje.md`](./laboratorio-ruta-aprendizaje.md). No se incluye una solución para que el resultado evidencie tus propias decisiones de modelado.
