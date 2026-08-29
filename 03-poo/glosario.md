@@ -1,26 +1,27 @@
-# Glosario de programacion orientada a objetos
+# Glosario POO
 
-Este glosario resume los conceptos principales usados en los ejercicios de `03-poo`.
-
-| Termino | Significado practico |
+| Término | Significado práctico |
 |---|---|
-| Clase | Molde que define atributos y metodos de un tipo de objeto. |
+| Clase | Define la estructura y comportamiento de un tipo de objeto. |
 | Objeto | Instancia concreta creada a partir de una clase. |
-| Atributo | Dato que describe el estado de un objeto. |
-| Metodo | Comportamiento que puede ejecutar un objeto o una clase. |
-| Constructor | Metodo especial usado para inicializar un objeto. |
-| Encapsulamiento | Proteccion del estado interno de una clase mediante acceso controlado. |
-| Getter | Metodo que permite consultar un atributo de forma controlada. |
-| Setter | Metodo que permite modificar un atributo aplicando reglas si corresponde. |
-| Herencia | Relacion donde una clase hija reutiliza y especializa una clase padre. |
-| Sobrescritura | Redefinicion de un metodo heredado para adaptar su comportamiento. |
-| Abstraccion | Separacion entre lo esencial de un concepto y sus detalles internos. |
-| Clase abstracta | Clase incompleta que define una base comun para clases hijas. |
-| Interfaz | Contrato que indica que comportamiento debe implementar una clase. |
-| Polimorfismo | Capacidad de tratar objetos distintos mediante una misma referencia o contrato. |
-| Composicion | Relacion donde una clase utiliza otros objetos como parte de su estructura. |
-| UML | Lenguaje visual para representar clases, atributos, metodos y relaciones. |
-
-## Criterio de uso
-
-Un concepto de POO esta entendido cuando puedes explicarlo con un ejemplo propio, ubicarlo en el codigo y justificar por que se uso.
+| Estado | Valores que mantiene un objeto en un momento determinado. |
+| Atributo | Dato que forma parte del estado de un objeto. |
+| Método | Operación que expresa comportamiento. |
+| Constructor | Inicializa un objeto al momento de crearlo. |
+| Encapsulamiento | Controla el acceso y modificación del estado interno. |
+| Asociación | Relación general entre objetos que colaboran. |
+| Dependencia | Una clase utiliza temporalmente otra para realizar una operación. |
+| Agregación | Un objeto agrupa otros que pueden existir de forma independiente. |
+| Composición | Un objeto contiene partes cuyo ciclo de vida depende del todo. |
+| Herencia | Especialización de una clase base mediante una relación “es un”. |
+| Sobrescritura | Redefine un comportamiento heredado. |
+| Polimorfismo | Permite usar un tipo común para objetos con comportamientos distintos. |
+| Abstracción | Conserva lo esencial de un concepto y oculta detalles innecesarios. |
+| Interfaz / trait | Contrato de comportamiento que otros tipos pueden implementar. |
+| Miembro de instancia | Pertenece a un objeto concreto. |
+| Miembro de clase | Pertenece al tipo y se comparte entre instancias. |
+| Igualdad | Regla que determina cuándo dos objetos se consideran equivalentes. |
+| Genérico | Permite parametrizar un tipo sin perder seguridad de tipos. |
+| UML | Notación visual para representar clases y relaciones. |
+| Cohesión | Grado en que una clase concentra responsabilidades relacionadas. |
+| Acoplamiento | Nivel de dependencia entre clases. |

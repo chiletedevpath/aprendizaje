@@ -1,116 +1,40 @@
-# Programacion Orientada a Objetos
+# 03 · Programación orientada a objetos
 
-Este modulo reune ejercicios de programacion orientada a objetos en Java.
+Esta etapa enseña a modelar problemas mediante objetos con estado, comportamiento, responsabilidades y relaciones claras.
 
-Su proposito es practicar el modelado de entidades, la creacion de clases, el uso de objetos, el control de acceso, la reutilizacion de codigo y el comportamiento flexible antes de pasar a estructuras de datos, patrones y proyectos mas completos.
+**Prerrequisito:** completar `02-programacion-basica`.
 
-## Objetivo
+## Cómo usar esta carpeta
 
-Fortalecer la capacidad de convertir problemas en clases, atributos, metodos y relaciones. Este modulo busca que cada ejercicio ayude a entender como se representa un concepto del mundo real o del sistema dentro de codigo Java.
+Cada tema contiene una explicación breve y dos implementaciones: **Java** y **Scala**. Dentro de cada lenguaje encontrarás:
 
-## Publico objetivo
+- `ejemplos/`: código pequeño para observar el concepto;
+- `practicas/`: aplicaciones completas y prácticas conservadas del proceso de aprendizaje;
+- `soluciones/`: referencia del reto propuesto en el README del tema.
 
-Este modulo esta dirigido a:
+La secuencia recomendada es: **leer lo esencial → ejecutar ejemplos → revisar prácticas → resolver el reto → comparar la solución**.
 
-- estudiantes que ya revisaron `02-programacion-basica`;
-- personas que quieren entender POO desde ejemplos pequenos;
-- estudiantes que necesitan practicar clases, objetos, herencia, interfaces y polimorfismo;
-- miembros de la comunidad Chilete DevPath que buscan una ruta progresiva antes de trabajar proyectos mas grandes.
+## Ruta
 
-## Prerrequisitos recomendados
+1. [Clases y objetos](./01-clases-y-objetos/README.md)
+2. [Atributos, métodos y estado](./02-atributos-metodos-y-estado/README.md)
+3. [Constructores e instanciación](./03-constructores-e-instanciacion/README.md)
+4. [Encapsulamiento y modificadores de acceso](./04-encapsulamiento-y-modificadores-acceso/README.md)
+5. [Relaciones entre objetos](./05-relaciones-entre-objetos/README.md)
+6. [Herencia](./06-herencia/README.md)
+7. [Sobrescritura y polimorfismo](./07-sobrescritura-y-polimorfismo/README.md)
+8. [Abstracción](./08-abstraccion/README.md)
+9. [Interfaces y traits](./09-interfaces-y-traits/README.md)
+10. [Miembros de clase y de instancia](./10-miembros-de-clase-y-de-instancia/README.md)
+11. [Contratos de objetos](./11-contratos-de-objetos/README.md)
+12. [Enumeraciones y genéricos](./12-enumeraciones-y-genericos/README.md)
+13. [Excepciones personalizadas](./13-excepciones-personalizadas/README.md)
+14. [UML y modelado](./14-uml-y-modelado/README.md)
+15. [Diseño orientado a objetos](./15-diseno-orientado-a-objetos/README.md)
+16. [Integración POO](./16-integracion-poo/README.md)
 
-Antes de iniciar este modulo, conviene poder:
+Consulta [`ruta-de-aprendizaje.md`](./ruta-de-aprendizaje.md) para ver qué dominio se espera en cada nivel.
 
-- declarar variables y metodos en Java;
-- usar condicionales y bucles;
-- leer y ejecutar clases simples;
-- reconocer responsabilidades dentro de un problema;
-- explicar con palabras propias que hace un metodo.
+## Criterio de autoría
 
-## Temas
-
-- `clases-objetos`: creacion de clases, atributos, metodos y objetos.
-- `encapsulamiento`: acceso controlado a datos internos.
-- `herencia`: reutilizacion y especializacion de clases.
-- `abstraccion`: clases abstractas e interfaces.
-- `polimorfismo`: comportamiento variable segun el tipo de objeto.
-- `practicas-integradoras`: ejercicios que combinan varios conceptos de POO.
-- `uml`: diagramas de clases y modelado.
-
-## Material de apoyo
-
-- `glosario.md`: terminos esenciales de POO explicados desde la practica.
-- `ejercicios-comunidad.md`: retos propuestos para practicar modelado y codigo.
-- `laboratorio-integrador.md`: practica final con composicion, abstraccion y polimorfismo.
-
-## Organizacion interna
-
-| Tema | Contenido principal |
-|---|---|
-| `clases-objetos` | Clases simples, objetos, constructores, genericos y enumeraciones. |
-| `encapsulamiento` | Atributos privados, metodos de acceso y validaciones internas. |
-| `herencia` | Jerarquias basicas entre personas, clientes, empleados y roles. |
-| `abstraccion` | Clases abstractas, interfaces, pagos y notificaciones genericas. |
-| `polimorfismo` | Figuras, publicaciones y notificaciones tratadas desde contratos comunes. |
-| `practicas-integradoras` | Practicas integradoras con comprobantes, listas, serializacion y juego simple. |
-| `uml` | Diagramas de clases como apoyo visual para conectar modelado y codigo. |
-
-## Ruta sugerida
-
-1. Empieza con `clases-objetos/java/rectangulo-basico` y `libro-basico`.
-2. Modela más entidades en `objetos-basicos` y `perfil-estudiante`.
-3. Continúa con `encapsulamiento` para proteger estados válidos.
-4. Practica especialización con `herencia`.
-5. Avanza a clases abstractas e interfaces en `abstraccion`.
-6. Refuerza comportamiento flexible con `polimorfismo`.
-7. Revisa enumeraciones y genéricos como ampliación de tipos.
-8. Integra conceptos en `practicas-integradoras` y en `laboratorio-integrador.md`.
-9. Usa `uml` antes o después del código para contrastar el modelo.
-
-En cada etapa ejecuta primero un ejemplo resuelto, explica sus decisiones,
-resuelve el reto equivalente y prueba los casos de `ejercicios-comunidad.md`.
-
-## Lenguajes incorporados
-
-El modulo se organiza primero por concepto de POO y despues por lenguaje. No se crean carpetas para lenguajes que aun no cuentan con practicas verificables.
-
-| Tema | Java | Scala | Python |
-|---|---|---|---|
-| Clases y objetos | Disponible | No incorporado | No incorporado |
-| Encapsulamiento | Disponible | No incorporado | No incorporado |
-| Herencia | Disponible | No incorporado | No incorporado |
-| Abstraccion e interfaces | Disponible | No incorporado | No incorporado |
-| Polimorfismo | Disponible | No incorporado | No incorporado |
-| Practicas integradoras | Disponible | No incorporado | No incorporado |
-
-Cuando exista evidencia de POO en Scala o Python, debe incorporarse dentro del concepto correspondiente. Por ejemplo, una practica de clases y objetos en Scala vivira en `clases-objetos/scala`; no se creara una ruta paralela en la raiz.
-
-## Criterio de marca y datos de ejemplo
-
-Los ejercicios pueden usar nombres o mensajes personalizados cuando ayuden a dar identidad al material. Para mantener el contenido seguro y reutilizable:
-
-- usa nombres ficticios como `Usuario Chilete`, `Aprendiz DevPath` o `Cliente Chilete`;
-- usa mensajes de bienvenida como `Bienvenido a Chilete DevPath` cuando el ejercicio lo permita;
-- usa documentos, telefonos o codigos ficticios cuando el ejercicio requiera validacion;
-- evita datos reales de personas, direcciones, correos, DNI o telefonos;
-- evita marcas externas si no son necesarias para la logica del problema.
-
-## Criterio de avance
-
-Este modulo se considera logrado cuando puedes:
-
-- crear clases con atributos y metodos coherentes;
-- instanciar objetos y usar sus comportamientos;
-- aplicar encapsulamiento con getters, setters y validaciones;
-- construir una jerarquia simple con herencia;
-- usar clases abstractas o interfaces cuando el problema lo requiera;
-- explicar polimorfismo con un ejemplo propio;
-- relacionar un diagrama UML basico con el codigo implementado.
-
-## Nota de autoria y fuentes
-
-Los ejercicios corresponden a practicas desarrolladas por Adrian Pisco durante su proceso de aprendizaje. Algunos ejemplos conservan contexto academico de clase, por lo que se documentan como practica propia y evidencia de aprendizaje, no como material oficial de una institucion.
-
-Los recursos visuales o estilos usados como apoyo en ejercicios concretos deben tratarse como recursos auxiliares, no como contenido principal del modulo.
-
-La documentacion de organizacion del modulo fue creada para Chilete DevPath con apoyo de IA para estructuracion y redaccion. La revision editorial final corresponde a Adrian Pisco, fundador de Chilete DevPath.
+Contenido creado para Chilete DevPath con apoyo de IA para estructuración y revisión. El criterio, selección y validación final corresponden a Adrian Pisco, autor de Chilete DevPath.

@@ -1,0 +1,18 @@
+# Java
+*.class
+out/
+
+# Scala / sbt
+target/
+.bsp/
+.metals/
+.scala-build/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# SO
+.DS_Store
+Thumbs.db
