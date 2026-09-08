@@ -1,10 +1,12 @@
 # Aprendizaje
 
-Ruta práctica de Chilete DevPath para aprender programación paso a paso: primero entender, luego practicar, después construir y finalmente publicar con criterio.
+Ruta práctica de Chilete DevPath para aprender tecnología paso a paso: primero entender, luego practicar, después construir y finalmente publicar con criterio.
 
-Este repositorio reúne ejercicios, laboratorios, glosarios y guías breves que ayudan a estudiar desde fundamentos hasta temas cercanos a producción. La idea no es acumular carpetas, sino dejar material que pueda revisarse, resolverse y reutilizarse con orden.
+Este repositorio reúne ejercicios, laboratorios, glosarios y guías breves que ayudan a estudiar desde fundamentos hasta temas cercanos a producción. Hoy la ruta publicada se centra en desarrollo de software; con el tiempo podrá incorporar otras áreas tecnológicas cuando exista práctica propia y evidencia verificable. La idea no es acumular carpetas, sino dejar material que pueda revisarse, resolverse y reutilizarse con orden.
 
-## Estructura
+## Ruta publicada: desarrollo de software
+
+La secuencia actual corresponde a la ruta de desarrollo de software. Se mantiene estable para no romper enlaces, referencias ni el progreso ya documentado.
 
 - `00-fundamentos`: base para estudiar, resolver problemas, usar herramientas y documentar avances.
 - `01-pseudocodigo`: ejercicios de lógica y pseudocódigo con PSeInt.
@@ -18,6 +20,20 @@ Este repositorio reúne ejercicios, laboratorios, glosarios y guías breves que 
 - `09-backend`: prácticas de backend y Spring Boot.
 - `10-frontend`: etapa futura; se creará cuando existan prácticas propias de frontend moderno.
 - `11-publicacion-y-produccion`: etapa futura; se creará cuando existan laboratorios reproducibles de publicación y operación.
+- `excel-y-productividad`: ruta complementaria para Excel y automatización aplicada; inicia con su alcance editorial y crecerá solo con prácticas propias o autorizadas.
+
+## Crecimiento tecnológico
+
+Chilete DevPath no se limita a programación. Cuando haya contenido propio, comprobado y con un objetivo didáctico claro, `aprendizaje` podrá crecer con rutas complementarias como:
+
+- Excel y productividad, cuya ruta inicial ya está definida;
+- datos y analítica;
+- cloud, infraestructura y DevOps;
+- ciberseguridad;
+- herramientas digitales y automatización;
+- otras tecnologías que respondan a una práctica real.
+
+Estas rutas no se mezclan con la secuencia actual de desarrollo de software. Cada una debe contar con una guía de alcance, prácticas reproducibles y evidencia de aprendizaje antes de declarar sus módulos como disponibles. Los archivos personales, laborales o de clientes no ingresan a esta ruta sin una revisión editorial y de privacidad previa.
 
 ## Estado verificable de la ruta
 
@@ -35,6 +51,7 @@ La ruta distingue entre contenido disponible, contenido que todavía se está re
 | `07-desarrollo-web` | Disponible | HTML, CSS, Bootstrap y JavaScript del navegador con prácticas progresivas e integración web. |
 | `08-patrones` | Disponible | Fundamentos de diseño, SOLID, los 23 patrones GoF, comparación, refactorización e integración en Java. |
 | `09-backend` | Disponible | HTTP, PHP del lado servidor, Spring, APIs, persistencia, seguridad, pruebas, observabilidad y arquitectura verificadas. |
+| `excel-y-productividad` | Disponible | Diez módulos con prácticas y retos sobre datos, formatos, fórmulas, funciones, limpieza, visualización, integración y modelos aplicados. |
 | `10-frontend` | Planificado | Sin contenido publicado; se incorporará cuando existan prácticas propias estudiadas y comprobadas. |
 | `11-publicacion-y-produccion` | Planificado | Sin contenido publicado; se incorporará cuando existan laboratorios propios reproducibles. |
 
