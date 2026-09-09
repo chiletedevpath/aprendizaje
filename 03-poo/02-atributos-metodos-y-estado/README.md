@@ -13,4 +13,4 @@ Los atributos representan estado; los métodos consultan o modifican ese estado 
 
 Crea `Contador` con estado interno y métodos `incrementar()` y `mostrarValor()`.
 
-Empieza con `java/ejemplos` o `scala/ejemplos`, revisa `practicas` y consulta `soluciones` solo después de intentar el reto.
+Empieza con los ejemplos del lenguaje que estés estudiando, revisa `practicas` y consulta `soluciones` solo después de intentar el reto. La práctica de JavaScript encapsula las notas y el cálculo del promedio dentro de `Estudiante`.

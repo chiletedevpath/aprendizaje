@@ -11,13 +11,16 @@ Trabajar con estructuras dinámicas para listas, conjuntos y asociaciones clave-
 - Map / HashMap
 - recorridos
 - selección de estructura
+- transformaciones con `filter` y `map` en JavaScript
 
 ## Cómo trabajar este tema
 
 1. Revisa primero los ejemplos del lenguaje que estés estudiando.
 2. Ejecuta las prácticas y cambia valores para observar el comportamiento.
 3. Resuelve el reto sin abrir `soluciones/`.
-4. Compara después tu enfoque con la solución de referencia en Java o Scala.
+4. Compara después tu enfoque con la solución de referencia disponible para el lenguaje estudiado.
+
+Las prácticas de JavaScript incluyen recorridos de colecciones anidadas, transformaciones funcionales y una introducción al comportamiento LIFO con un arreglo. La construcción formal de pilas se estudia en `04-estructuras-datos/04-pilas`.
 
 ## Reto
 
