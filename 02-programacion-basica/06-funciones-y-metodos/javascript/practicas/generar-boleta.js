@@ -22,4 +22,4 @@ Tipo de cliente: ${total > 500 ? "Cliente preferencial" : "Cliente regular"}
   console.log(boleta);
 }
 
-generarBoleta("Adrian Pisco", "Laptop", 1, 2800);
+generarBoleta("Elena Torres", "Equipo de estudio", 1, 2800);

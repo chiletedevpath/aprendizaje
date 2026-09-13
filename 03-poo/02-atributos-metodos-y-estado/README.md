@@ -13,4 +13,4 @@ Los atributos representan estado; los métodos consultan o modifican ese estado 
 
 Crea `Contador` con estado interno y métodos `incrementar()` y `mostrarValor()`.
 
-Empieza con los ejemplos del lenguaje que estés estudiando, revisa `practicas` y consulta `soluciones` solo después de intentar el reto. La práctica de JavaScript encapsula las notas y el cálculo del promedio dentro de `Estudiante`.
+Empieza con los ejemplos del lenguaje que estés estudiando, revisa `practicas` y consulta `soluciones` solo después de intentar el reto. Las prácticas de JavaScript encapsulan el cálculo de promedios en `Estudiante` y una regla tributaria por tramos en `Vehiculo`.

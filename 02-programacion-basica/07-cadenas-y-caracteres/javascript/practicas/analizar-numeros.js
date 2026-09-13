@@ -10,4 +10,4 @@ function analizarNumeros(texto) {
   }
 }
 
-analizarNumeros("Adrian compró 3 productos por 120 soles y recibió 15 soles de descuento.");
+analizarNumeros("Una persona compró 3 productos por 120 soles y recibió 15 soles de descuento.");

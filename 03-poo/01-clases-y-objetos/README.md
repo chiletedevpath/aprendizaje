@@ -13,4 +13,4 @@ Una clase define un tipo; un objeto es una instancia concreta creada a partir de
 
 Crea una clase `Curso` con título y duración. Instancia dos cursos y muestra sus datos.
 
-Empieza con los ejemplos del lenguaje que estés estudiando, revisa `practicas` y consulta `soluciones` solo después de intentar el reto. En JavaScript, las prácticas de productos y vehículos muestran cómo crear instancias y transformarlas sin añadir responsabilidades innecesarias a las clases.
+Empieza con los ejemplos del lenguaje que estés estudiando, revisa `practicas` y consulta `soluciones` solo después de intentar el reto. En JavaScript, la práctica de productos muestra cómo crear instancias y transformarlas sin añadir responsabilidades innecesarias a la clase.

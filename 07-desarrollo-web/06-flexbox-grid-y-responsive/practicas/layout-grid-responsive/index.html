@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Práctica académica de CSS Grid, áreas de cuadrícula y diseño adaptable."
+    >
+    <title>Layout con CSS Grid | Chilete DevPath</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="intro">
+      <p class="intro__eyebrow">CSS Grid y diseño adaptable</p>
+      <h1>Layout responsive con áreas de cuadrícula</h1>
+      <p>
+        La distribución cambia entre móvil, tablet y escritorio mediante
+        <code>grid-template-areas</code> y media queries.
+      </p>
+    </header>
+
+    <main class="grid-container">
+      <header class="panel header">
+        <div class="demo-icon" aria-hidden="true">H</div>
+        <h2>Encabezado</h2>
+        <p>Presenta la identidad y el propósito principal de la página.</p>
+      </header>
+
+      <nav class="panel navbar" aria-label="Navegación demostrativa">
+        <div class="demo-icon" aria-hidden="true">N</div>
+        <h2>Navegación</h2>
+        <p>Agrupa los accesos principales de la interfaz.</p>
+      </nav>
+
+      <aside class="panel sidebar">
+        <div class="demo-icon" aria-hidden="true">S</div>
+        <h2>Contenido lateral</h2>
+        <p>Muestra información complementaria o accesos secundarios.</p>
+      </aside>
+
+      <section class="panel content" aria-labelledby="contenido-principal">
+        <div class="demo-icon" aria-hidden="true">M</div>
+        <h2 id="contenido-principal">Contenido principal</h2>
+        <p>
+          Ocupa el área central y se adapta al espacio disponible en cada
+          punto de ruptura.
+        </p>
+      </section>
+
+      <footer class="panel footer">
+        <div class="demo-icon" aria-hidden="true">F</div>
+        <h2>Pie de página</h2>
+        <p>Completa la estructura semántica del layout demostrativo.</p>
+      </footer>
+    </main>
+  </body>
+</html>
