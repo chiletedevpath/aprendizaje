@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Práctica de registro de estudiantes con Spring Boot y Thymeleaf.">
+    <title>Inicio | Registro de Estudiantes</title>
+    <!-- th:href crea una ruta correcta hacia los archivos estáticos de Spring Boot. -->
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<header class="barra-superior">
+    <div class="barra-contenido">
+        <a class="marca" th:href="@{/}" aria-label="Ir al inicio">
+            <span class="marca-icono" aria-hidden="true">RE</span>
+            <span>Registro de <strong>Estudiantes</strong></span>
+        </a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a class="nav-enlace activo" th:href="@{/}" aria-current="page">Inicio</a>
+            <a class="nav-enlace" th:href="@{/formulario}">Registrar</a>
+            <a class="nav-enlace" th:href="@{/lista}">Listado</a>
+            <a class="nav-enlace" th:href="@{/condicional}">Condicionales</a>
+        </nav>
+    </div>
+</header>
+
+<main class="pagina">
+    <section class="hero">
+        <div>
+            <span class="etiqueta">PRÁCTICA · SPRING BOOT + THYMELEAF</span>
+            <h1>Gestión básica de estudiantes</h1>
+            <p class="descripcion">Registra estudiantes, consulta sus datos y conoce cómo Thymeleaf conecta las vistas HTML con un controlador de Spring Boot.</p>
+            <div class="acciones">
+                <!-- th:href genera enlaces internos según las rutas del controlador. -->
+                <a class="boton boton-primario" th:href="@{/formulario}">Registrar estudiante <span aria-hidden="true">→</span></a>
+                <a class="boton boton-secundario" th:href="@{/lista}">Ver listado</a>
+            </div>
+        </div>
+        <aside class="hero-panel" aria-label="Resumen del proyecto">
+            <span class="panel-encabezado">RESUMEN DEL SISTEMA</span>
+            <div class="numero-grande" th:text="${totalEstudiantes}">0</div>
+            <p class="panel-descripcion">Estudiantes registrados en esta sesión</p>
+            <div class="panel-separador"></div>
+            <p class="panel-detalle"><span class="punto-verde"></span> Aplicación de demostración local</p>
+            <p class="panel-nota">Los datos se mantienen en memoria hasta reiniciar la aplicación.</p>
+        </aside>
+    </section>
+
+    <section class="seccion">
+        <div class="seccion-titulo">
+            <span class="etiqueta etiqueta-clara">FUNCIONES PRINCIPALES</span>
+            <h2>¿Qué podemos hacer?</h2>
+        </div>
+        <div class="tarjetas">
+            <a class="tarjeta-enlace" th:href="@{/formulario}">
+                <span class="tarjeta-numero">01</span>
+                <h3>Registrar datos</h3>
+                <p>Capturar nombre, correo, edad y carrera mediante un formulario HTML.</p>
+                <span class="tarjeta-pie">Formulario <span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="tarjeta-enlace" th:href="@{/lista}">
+                <span class="tarjeta-numero">02</span>
+                <h3>Consultar estudiantes</h3>
+                <p>Mostrar los registros guardados mediante una tabla y el atributo th:each.</p>
+                <span class="tarjeta-pie">Listado <span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="tarjeta-enlace" th:href="@{/condicional}">
+                <span class="tarjeta-numero">03</span>
+                <h3>Evaluar condiciones</h3>
+                <p>Usar th:if y th:unless para mostrar mensajes según la edad.</p>
+                <span class="tarjeta-pie">Condicionales <span aria-hidden="true">↗</span></span>
+            </a>
+        </div>
+    </section>
+</main>
+<footer class="pie-pagina"><span>Práctica académica adaptada y explicada por <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a></span><span>Java 17 · Spring Boot · Thymeleaf</span></footer>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

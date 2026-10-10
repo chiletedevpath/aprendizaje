@@ -1,0 +1,15 @@
+{
+  "name": "tarjeta-producto-less-chilete-devpath",
+  "version": "1.0.0",
+  "description": "Práctica didáctica de variables, mixins, anidación y operaciones con Less.",
+  "scripts": {
+    "build:css": "lessc estilos.less estilos.css"
+  },
+  "keywords": ["less", "css", "chilete-devpath"],
+  "author": "Chilete DevPath",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "less": "^4.9.1"
+  }
+}

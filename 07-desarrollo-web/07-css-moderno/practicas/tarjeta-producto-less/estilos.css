@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+.cabecera {
+  padding: 24px 16px;
+  text-align: center;
+}
+.cabecera__contenido {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.cabecera__marca {
+  display: block;
+  color: #7c3aed;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.cabecera p {
+  color: #64748b;
+}
+.contenido-principal {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  gap: 32px;
+  padding: 24px 16px;
+}
+.explicacion {
+  width: min(760px, 100%);
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+}
+.explicacion__etiqueta {
+  margin-bottom: 8px;
+  color: #7c3aed;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.explicacion h2 {
+  margin-bottom: 16px;
+}
+.explicacion dl {
+  display: grid;
+  gap: 16px;
+}
+.explicacion dt {
+  margin-bottom: 4px;
+  font-weight: 800;
+}
+.explicacion dd {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+.producto {
+  width: 400px;
+  max-width: 400px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+.producto__visual {
+  min-height: 220px;
+  background: linear-gradient(135deg, #e6d9fc, #b48ef5);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.producto__contenido {
+  padding: 24px;
+}
+.producto__categoria {
+  display: inline-block;
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.producto h2 {
+  color: #333;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.producto .descripcion {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.producto .caracteristicas {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.producto .caracteristicas li {
+  color: #333;
+  font-size: 0.92rem;
+}
+.producto .caracteristicas li::before {
+  content: "✓";
+  color: #7c3aed;
+  font-weight: 800;
+  margin-right: 8px;
+}
+.producto .precio {
+  color: #7c3aed;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.producto button {
+  background: #7c3aed;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  font-size: 1rem;
+}
+.producto button:hover {
+  background: #5b14d6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.28);
+}
+.telefono {
+  width: 112px;
+  height: 188px;
+  padding: 8px;
+  background: #111827;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.22);
+}
+.telefono__camara {
+  width: 36px;
+  height: 6px;
+  background: #374151;
+  border-radius: 999px;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.telefono__pantalla {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #955ff0, #5b14d6);
+  display: grid;
+  place-items: center;
+}
+.telefono__pantalla span {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+.pie-pagina {
+  padding: 20px 16px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+.pie-pagina a {
+  color: #7c3aed;
+  font-weight: 800;
+  text-decoration: none;
+}
+.pie-pagina a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .producto {
+    width: 90%;
+  }
+  .producto__visual {
+    min-height: 190px;
+  }
+  .producto__contenido {
+    padding: 20px;
+  }
+  .producto h2 {
+    font-size: 1.35rem;
+  }
+  .producto .precio {
+    font-size: 1.8rem;
+  }
+  .telefono {
+    width: 96px;
+    height: 165px;
+  }
+}

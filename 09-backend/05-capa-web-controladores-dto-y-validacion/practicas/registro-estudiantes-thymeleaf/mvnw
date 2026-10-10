@@ -1,0 +1,13 @@
+#!/bin/sh
+# Arranque auxiliar para Linux/macOS; requiere conexión la primera vez.
+set -eu
+ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+MAVEN_DIR="$ROOT_DIR/.mvn/apache-maven-3.9.9"
+if [ ! -x "$MAVEN_DIR/bin/mvn" ]; then
+  echo '[INFO] Descargando Apache Maven 3.9.9...'
+  ZIP_FILE="$ROOT_DIR/.mvn/apache-maven-3.9.9-bin.zip"
+  curl -fLSs 'https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip' -o "$ZIP_FILE"
+  unzip -q -o "$ZIP_FILE" -d "$ROOT_DIR/.mvn"
+  rm "$ZIP_FILE"
+fi
+exec "$MAVEN_DIR/bin/mvn" "$@"

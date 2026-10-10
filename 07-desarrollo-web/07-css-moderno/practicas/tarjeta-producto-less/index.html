@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Práctica académica: tarjeta de producto responsive desarrollada con Less CSS."
+    />
+    <title>Tienda Tech | Tarjeta responsive con Less</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="cabecera__contenido">
+        <span class="cabecera__marca">Tienda Tech</span>
+        <p>Práctica académica con Less CSS</p>
+      </div>
+    </header>
+
+    <main class="contenido-principal">
+      <article class="producto">
+        <div class="producto__visual" aria-hidden="true">
+          <div class="telefono">
+            <div class="telefono__camara"></div>
+            <div class="telefono__pantalla"><span>A55</span></div>
+          </div>
+        </div>
+
+        <div class="producto__contenido">
+          <span class="producto__categoria">Smartphone</span>
+          <h2>Smartphone Galaxy A55</h2>
+          <p class="descripcion">Smartphone con pantalla AMOLED y 256 GB de almacenamiento.</p>
+
+          <ul class="caracteristicas">
+            <li>Pantalla AMOLED</li>
+            <li>256 GB de almacenamiento</li>
+            <li>Diseño moderno y resistente</li>
+          </ul>
+
+          <p class="precio">S/ 1,299</p>
+          <button type="button">Comprar ahora</button>
+        </div>
+      </article>
+
+      <section class="explicacion" aria-labelledby="conceptos-less">
+        <p class="explicacion__etiqueta">Chilete DevPath explica</p>
+        <h2 id="conceptos-less">Qué aporta Less en esta práctica</h2>
+        <dl>
+          <div>
+            <dt>Variables</dt>
+            <dd>Centralizan colores, medidas y espaciados para evitar valores dispersos.</dd>
+          </div>
+          <div>
+            <dt>Mixins</dt>
+            <dd>Agrupan declaraciones reutilizables, como el estilo base del botón.</dd>
+          </div>
+          <div>
+            <dt>Anidación</dt>
+            <dd>Relaciona modificadores y elementos con su componente sin perder la jerarquía.</dd>
+          </div>
+          <div>
+            <dt>Compilación</dt>
+            <dd>El navegador recibe CSS; por eso <code>estilos.less</code> se compila en <code>estilos.css</code>.</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="pie-pagina">
+      <p>
+        Desarrollado por
+        <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">
+          Chilete DevPath
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar estudiante | Registro de Estudiantes</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<header class="barra-superior">
+    <div class="barra-contenido">
+        <a class="marca" th:href="@{/}"><span class="marca-icono" aria-hidden="true">RE</span><span>Registro de <strong>Estudiantes</strong></span></a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a class="nav-enlace" th:href="@{/}">Inicio</a>
+            <a class="nav-enlace activo" th:href="@{/formulario}" aria-current="page">Registrar</a>
+            <a class="nav-enlace" th:href="@{/lista}">Listado</a>
+            <a class="nav-enlace" th:href="@{/condicional}">Condicionales</a>
+        </nav>
+    </div>
+</header>
+
+<main class="pagina pagina-interior">
+    <div class="encabezado-vista">
+        <a class="volver" th:href="@{/}">← Volver al inicio</a>
+        <span class="etiqueta etiqueta-clara">FORMULARIO / 01</span>
+        <h1>Registrar estudiante</h1>
+        <p class="descripcion">Completa los datos del estudiante y envía el formulario para visualizar el resultado.</p>
+    </div>
+
+    <section class="panel-formulario" aria-labelledby="datos-titulo">
+        <div class="panel-cabecera">
+            <div><h2 id="datos-titulo">Datos del estudiante</h2><p>Todos los campos son obligatorios.</p></div>
+            <span class="identificador">REGISTRO</span>
+        </div>
+
+        <!-- th:action define el POST; th:object vincula el formulario al Estudiante del controlador. -->
+        <form th:action="@{/resultado}" th:object="${estudiante}" method="post">
+            <div class="campos-grid">
+                <div class="campo campo-ancho">
+                    <label for="nombre">Nombres y apellidos</label>
+                    <!-- th:field relaciona este input con la propiedad nombre del modelo Java. -->
+                    <input id="nombre" type="text" th:field="*{nombre}" placeholder="Ej. María López Díaz" maxlength="100" autocomplete="name" required autofocus>
+                </div>
+                <div class="campo campo-ancho">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" type="email" th:field="*{correo}" placeholder="Ej. maria@correo.com" maxlength="150" autocomplete="email" required>
+                </div>
+                <div class="campo">
+                    <label for="edad">Edad</label>
+                    <input id="edad" type="number" th:field="*{edad}" placeholder="Ej. 20" min="1" max="120" required>
+                </div>
+                <div class="campo">
+                    <label for="carrera">Carrera profesional</label>
+                    <input id="carrera" type="text" th:field="*{carrera}" placeholder="Ej. Ingeniería de Sistemas" maxlength="100" required>
+                </div>
+            </div>
+            <div class="pie-formulario">
+                <p>El registro se guarda temporalmente en memoria.</p>
+                <button class="boton boton-primario" type="submit">Guardar estudiante <span aria-hidden="true">→</span></button>
+            </div>
+        </form>
+    </section>
+</main>
+<footer class="pie-pagina"><span>Chilete DevPath explica el enlace entre formulario y modelo</span><span><a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a> · <code>th:object</code> y <code>th:field</code></span></footer>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

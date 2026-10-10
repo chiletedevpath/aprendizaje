@@ -19,6 +19,8 @@ Dividir una solución en unidades pequeñas, reutilizables y con responsabilidad
 3. Resuelve el reto sin abrir `soluciones/`.
 4. Compara después tu enfoque con la solución de referencia en Java o Scala.
 
+La práctica de TypeScript separa el cálculo de una boleta de su presentación y utiliza una interfaz para definir el resultado que la función debe devolver.
+
 ## Reto
 
 Construye una calculadora con funciones separadas para sumar, restar, multiplicar y dividir.

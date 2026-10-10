@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1115" />
+    <meta name="description" content="MotionLab CSS: laboratorio académico de animaciones, transiciones, efectos ripple y animaciones vinculadas al desplazamiento." />
+    <title>MotionLab CSS | El movimiento también comunica</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
+
+    <!-- Cabecera: menú responsivo y cambio de tema. -->
+    <header class="site-header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="MotionLab CSS, ir al inicio">
+          <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="brand__name">motionlab<span class="brand__suffix">.css</span></span>
+        </a>
+
+        <nav class="primary-nav" id="mainNavigation" aria-label="Navegación principal">
+          <a href="#laboratorio">Laboratorio</a>
+          <a href="#galeria">Galería</a>
+          <a href="#recursos">Técnicas</a>
+          <a href="#proyecto">Proyecto</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activar tema claro" aria-pressed="false" title="Cambiar apariencia">
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 15.6A8.7 8.7 0 0 1 8.4 3.8 8.8 8.8 0 1 0 20.2 15.6Z"/></svg>
+          </button>
+          <button class="nav-toggle" id="mobileMenuToggle" type="button" aria-expanded="false" aria-controls="mainNavigation" aria-label="Abrir menú">
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- Hero: animación decorativa creada únicamente con CSS. -->
+      <section class="hero section-pad" aria-labelledby="heroTitle">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> LABORATORIO WEB / EDICIÓN 2026</p>
+            <h1 id="heroTitle">El movimiento <span class="gradient-text">también comunica.</span></h1>
+            <p class="hero__lead">Una experiencia interactiva para descubrir cómo <strong>CSS avanzado</strong> convierte elementos estáticos en interfaces que responden, orientan y sorprenden.</p>
+            <div class="hero__actions">
+              <a href="#laboratorio" class="btn btn--primary" data-ripple>Explorar efectos <span aria-hidden="true">↗</span></a>
+              <a href="#recursos" class="btn btn--outline">Ver técnicas <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero__meta" aria-label="Características del proyecto">
+              <div><strong>04</strong><span>Efectos base</span></div>
+              <span class="hero__meta-line" aria-hidden="true"></span>
+              <div><strong>04</strong><span>Mejoras extra</span></div>
+              <span class="hero__meta-line" aria-hidden="true"></span>
+              <div><strong>0</strong><span>Librerías externas</span></div>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-art__grid"></div>
+            <div class="hero-art__halo"></div>
+            <div class="hero-art__ring hero-art__ring--outer"></div>
+            <div class="hero-art__ring hero-art__ring--middle"></div>
+            <div class="hero-art__ring hero-art__ring--inner"></div>
+            <div class="hero-art__axis hero-art__axis--horizontal"></div>
+            <div class="hero-art__axis hero-art__axis--vertical"></div>
+            <span class="hero-art__node hero-art__node--one"></span>
+            <span class="hero-art__node hero-art__node--two"></span>
+            <span class="hero-art__node hero-art__node--three"></span>
+            <div class="hero-art__core"><span>ML<span class="hero-art__core-dot">.</span></span><small>CSS ENGINE</small></div>
+            <div class="art-chip art-chip--top"><span class="art-chip__symbol">{ }</span><span><strong>@keyframes</strong><small>animation active</small></span><span class="art-chip__pulse"></span></div>
+            <div class="art-chip art-chip--bottom"><span class="art-chip__spark">✳</span><span><strong>transform: scale()</strong><small>GPU friendly</small></span></div>
+            <div class="hero-art__caption">INTERACTIVE MOTION SYSTEM <span>001—004</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-strip" aria-label="Propiedades CSS incluidas">
+        <div class="container marquee-strip__inner">
+          <span>TRANSFORM</span><b>✳</b><span>TRANSITION</span><b>✳</b><span>@KEYFRAMES</span><b>✳</b><span>ANIMATION-TIMELINE</span><b>✳</b><span>PSEUDOELEMENTOS</span>
+        </div>
+      </section>
+
+      <!-- Los cuatro efectos originales están adaptados como demostraciones funcionales. -->
+      <section class="section-pad lab-section" id="laboratorio" aria-labelledby="labTitle">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow eyebrow--muted">01 / EXPERIMENTA</p><h2 id="labTitle">Un laboratorio.<br /><span class="text-muted">Cuatro interacciones.</span></h2></div>
+            <p>Prueba cada demostración. Debajo verás la técnica principal que la hace funcionar.</p>
+          </div>
+
+          <div class="lab-grid">
+            <article class="lab-card reveal">
+              <div class="lab-card__top"><span class="lab-card__number">01 / NAV</span><span class="pill">INTERACCIÓN</span></div>
+              <h3>Menú hamburguesa</h3>
+              <p>La navegación se despliega suavemente y el icono cambia de tres líneas a una X.</p>
+              <div class="lab-preview lab-preview--menu">
+                <div class="demo-menu">
+                  <div class="demo-menu__bar">
+                    <span class="demo-menu__brand"><span class="demo-menu__brand-dot"></span> my.website</span>
+                    <button class="demo-menu__toggle" id="demoMenuToggle" type="button" aria-expanded="false" aria-controls="demoMenuPanel" aria-label="Abrir menú de demostración"><span class="hamburger" aria-hidden="true"></span></button>
+                  </div>
+                  <div class="demo-menu__panel" id="demoMenuPanel">
+                    <ul>
+                      <li><a href="#laboratorio">Inicio <span>↗</span></a></li>
+                      <li><a href="#galeria">Galería <span>↗</span></a></li>
+                      <li><a href="#recursos">Técnicas <span>↗</span></a></li>
+                    </ul>
+                  </div>
+                  <p class="demo-menu__hint">Haz clic en el icono para probar</p>
+                </div>
+              </div>
+              <div class="lab-card__footer"><code>transition + @keyframes</code><span>CSS + JS</span></div>
+            </article>
+
+            <article class="lab-card reveal">
+              <div class="lab-card__top"><span class="lab-card__number">02 / RIPPLE</span><span class="pill">INTERACCIÓN</span></div>
+              <h3>Botón con efecto onda</h3>
+              <p>Una onda nace donde haces clic. JavaScript calcula la posición y CSS anima la expansión.</p>
+              <div class="lab-preview lab-preview--ripple">
+                <span class="preview-cross preview-cross--tl" aria-hidden="true">+</span>
+                <span class="preview-cross preview-cross--br" aria-hidden="true">+</span>
+                <button class="ripple-demo-btn" id="rippleDemoButton" type="button" data-ripple>Haz clic aquí <span aria-hidden="true">↗</span></button>
+                <p class="ripple-demo__count" id="rippleCount" aria-live="polite">0 activaciones</p>
+              </div>
+              <div class="lab-card__footer"><code>scale() + opacity</code><span>CSS + JS</span></div>
+            </article>
+
+            <article class="lab-card reveal">
+              <div class="lab-card__top"><span class="lab-card__number">03 / LOADER</span><span class="pill">ANIMACIÓN</span></div>
+              <h3>Indicador de carga</h3>
+              <p>La rotación continua comunica una espera. Puedes simular un proceso y observar su estado.</p>
+              <div class="lab-preview lab-preview--loader">
+                <div class="loader-demo__visual"><span class="loader-demo__spinner" aria-hidden="true"></span><span class="loader-demo__center" aria-hidden="true">M</span></div>
+                <div class="loader-demo__details"><strong id="loaderStatus" role="status" aria-live="polite">Vista previa activa</strong><small>Animación de giro continuo</small></div>
+                <button class="small-action" id="loaderButton" type="button" data-ripple>Simular carga <span aria-hidden="true">↗</span></button>
+              </div>
+              <div class="lab-card__footer"><code>rotate(360deg) infinite</code><span>CSS + JS</span></div>
+            </article>
+
+            <article class="lab-card reveal">
+              <div class="lab-card__top"><span class="lab-card__number">04 / SCROLL</span><span class="pill pill--new">CSS AVANZADO</span></div>
+              <h3>Animación al desplazar</h3>
+              <p>Los elementos aparecen al entrar en el área visible y la barra superior muestra el avance de lectura.</p>
+              <div class="lab-preview lab-preview--scroll">
+                <div class="mini-scroll" aria-hidden="true"><div class="mini-scroll__left"><span></span><span></span><span></span></div><div class="mini-scroll__cards"><span></span><span></span><span></span></div></div>
+                <a href="#galeria" class="small-action small-action--link">Ver efecto en la galería <span aria-hidden="true">↓</span></a>
+              </div>
+              <div class="lab-card__footer"><code>animation-timeline: view()</code><span>CSS + respaldo JS</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Las imágenes SVG están incluidas localmente: la web funciona sin internet. -->
+      <section class="section-pad gallery-section" id="galeria" aria-labelledby="galleryTitle">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow eyebrow--muted">02 / OBSERVA</p><h2 id="galleryTitle">El diseño cobra<br /><span class="text-muted">vida al avanzar.</span></h2></div>
+            <p>Desplázate hacia abajo: las composiciones aparecen progresivamente mediante una línea de tiempo vinculada a la vista.</p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-card gallery-card--large reveal">
+              <div class="gallery-card__image"><img src="assets/orbitas.svg" width="940" height="720" loading="lazy" alt="Composición abstracta de órbitas, círculos luminosos y puntos conectados" /></div>
+              <figcaption><div><span>01 / MOVIMIENTO</span><strong>Ritmo orbital</strong></div><span class="gallery-card__arrow" aria-hidden="true">↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card reveal">
+              <div class="gallery-card__image"><img src="assets/ondas.svg" width="940" height="720" loading="lazy" alt="Ondas fluidas superpuestas con luces turquesa y violeta" /></div>
+              <figcaption><div><span>02 / FLUIDEZ</span><strong>Ondas en tránsito</strong></div><span class="gallery-card__arrow" aria-hidden="true">↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card reveal">
+              <div class="gallery-card__image"><img src="assets/prisma.svg" width="940" height="720" loading="lazy" alt="Prisma geométrico con líneas finas y degradados de color" /></div>
+              <figcaption><div><span>03 / TRANSFORMACIÓN</span><strong>Geometría viva</strong></div><span class="gallery-card__arrow" aria-hidden="true">↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card gallery-card--wide reveal">
+              <div class="gallery-card__image"><img src="assets/trayectorias.svg" width="940" height="720" loading="lazy" alt="Trayectorias curvas luminosas sobre una cuadrícula oscura" /></div>
+              <figcaption><div><span>04 / DIRECCIÓN</span><strong>Trayectorias visuales</strong></div><span class="gallery-card__arrow" aria-hidden="true">↗</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad quality-section" id="recursos" aria-labelledby="resourcesTitle">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow eyebrow--muted">03 / PROFUNDIZA</p><h2 id="resourcesTitle">Detalles que elevan<br /><span class="text-muted">la experiencia.</span></h2></div>
+            <p>Además de los cuatro ejercicios, se añadieron mejoras que aportan utilidad, consistencia y accesibilidad.</p>
+          </div>
+
+          <div class="quality-grid">
+            <div class="reveal"><article class="quality-card"><span class="quality-card__icon">↗</span><h3>Hover avanzado</h3><p>Las tarjetas responden con elevación, cambios de borde y desplazamiento suave.</p><code>transform: translateY()</code></article></div>
+            <div class="reveal"><article class="quality-card"><span class="quality-card__icon">≋</span><h3>Entrada progresiva</h3><p>Contenido y elementos visuales aparecen mientras se recorren las secciones.</p><code>animation-range</code></article></div>
+            <div class="reveal"><article class="quality-card"><span class="quality-card__icon">◉</span><h3>Progreso de lectura</h3><p>Una línea fija en la parte superior refleja cuánto se ha desplazado la página.</p><code>scroll(root block)</code></article></div>
+            <div class="reveal"><article class="quality-card"><span class="quality-card__icon">◐</span><h3>Apariencia y acceso</h3><p>Modo claro/oscuro, soporte de teclado y reducción de movimiento solicitada.</p><code>prefers-reduced-motion</code></article></div>
+          </div>
+
+          <div class="technique-panel reveal">
+            <div class="technique-panel__description"><p class="eyebrow eyebrow--muted">CHILETE DEVPATH EXPLICA</p><h3>¿Qué hace realmente <span class="gradient-text">@keyframes</span>?</h3><p>Define estados de una animación. El navegador interpola los cambios entre el inicio y el final; la propiedad <code>animation</code> indica cómo y cuándo reproducirlos.</p><a href="https://developer.mozilla.org/es/docs/Web/CSS/@keyframes" target="_blank" rel="noopener noreferrer" class="inline-link">Consultar la referencia de MDN <span aria-hidden="true">↗</span></a></div>
+            <div class="code-window" aria-label="Ejemplo de código CSS con keyframes"><div class="code-window__header"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>styles.css</span><span>CSS</span></div><pre><code><span class="code-purple">@keyframes</span> spin {
+  <span class="code-cyan">from</span> { transform: <span class="code-green">rotate(0deg)</span>; }
+  <span class="code-cyan">to</span>   { transform: <span class="code-green">rotate(360deg)</span>; }
+}
+
+.loader {
+  <span class="code-purple">animation</span>: spin <span class="code-green">2s linear infinite</span>;
+}</code></pre></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section section-pad" id="proyecto" aria-labelledby="projectTitle">
+        <div class="container project-box reveal"><div class="project-box__glow" aria-hidden="true"></div><div class="project-box__copy"><p class="eyebrow">04 / ACERCA DEL LABORATORIO</p><h2 id="projectTitle">Aprender haciendo.<br /><span>Comprender el movimiento.</span></h2><p>MotionLab CSS es una práctica integradora de Chilete DevPath desarrollada con HTML5, CSS avanzado y JavaScript. Cada interacción tiene una finalidad y un código explicable.</p><a class="btn btn--light" data-ripple href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a></div><div class="project-box__badge" aria-hidden="true"><span>M</span><small>CSS<br />LAB</small></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand brand--footer" href="#inicio"><span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand__name">motionlab<span class="brand__suffix">.css</span></span></a><p>Laboratorio de Hojas de Estilo en Cascada Avanzado · 2026</p><a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Explicado por Chilete DevPath <span aria-hidden="true">↗</span></a></div></footer>
+  </body>
+</html>

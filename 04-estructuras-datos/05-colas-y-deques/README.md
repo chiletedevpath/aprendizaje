@@ -26,3 +26,5 @@ Modela una cola de atención donde los tickets se procesan en orden de llegada y
 ## Para avanzar
 
 Debes poder explicar **por qué esta estructura es adecuada**, no solo escribir su sintaxis.
+
+La práctica de TypeScript simula la atención de clientes y hace visible cómo `shift` retira el elemento que ingresó primero.

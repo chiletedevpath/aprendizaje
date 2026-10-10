@@ -16,7 +16,7 @@ Puede estudiarse en paralelo a la ruta de desarrollo de software. Los módulos i
 | 05 | [Funciones estadísticas](05-funciones-estadisticas/practicas/05-analisis-calificaciones.xlsx) | Análisis de calificaciones | Resumir datos con promedios, extremos y conteos condicionales. |
 | 06 | [Visualización y reportes](06-visualizacion-y-reportes/practicas/06-reporte-inscripciones.xlsx) | Reporte de inscripciones | Elegir y construir una visualización vinculada a los datos. |
 | 07 | [Integración](07-integracion/practicas/07-control-ruta-aprendizaje.xlsx) | Control de aprendizaje | Integrar fórmulas, validación, formato condicional y gráficos. |
-| 08 | [Tablas y análisis operativo](08-tablas-y-analisis-operativo/practicas/08-control-operativo-obra.xlsx) | Control operativo de obra | Relacionar jornadas, costos, presupuestos, estados y resúmenes sin depender de macros. |
+| 08 | Tablas y análisis operativo: [obra](08-tablas-y-analisis-operativo/practicas/08-control-operativo-obra.xlsx) y [vuelos](08-tablas-y-analisis-operativo/practicas/08-control-operativo-vuelos.xlsx) | Controles operativos | Relacionar registros, catálogos, validaciones, estados y resúmenes sin depender de macros. |
 | 09 | [Modelos financieros personales](09-modelos-financieros-personales/practicas/09-control-financiero-personal.xlsx) | Control financiero personal | Integrar movimientos, presupuestos, metas, deudas y resultados mensuales. |
 
 ## De proyectos grandes a contenidos de aprendizaje
@@ -26,6 +26,7 @@ Los proyectos aplicados sirven como fuente para detectar competencias, pero no s
 | Proyecto fuente | Contenidos que aporta | Aplicación en la ruta |
 |---|---|---|
 | Control de obra para constructora | Registro estructurado, costos por jornada, presupuestos, estados, consolidación y resumen operativo | Los módulos 00 al 07 preparan las habilidades fundamentales y el módulo 08 las integra en un caso operativo. |
+| Control operativo de vuelos | Registro tabular, listas maestras, validación de datos, conteos condicionales y panel de indicadores | El módulo 08 aplica esas capacidades en otro dominio para comprobar que el estudiante comprende el método y no solo una plantilla. |
 | Sistema de finanzas personales | Movimientos, clasificación, agregaciones con criterios, presupuesto frente a gasto, metas, deudas y resumen financiero | Los módulos 02, 04, 05 y 06 introducen los cálculos necesarios; el módulo 09 los combina en un modelo financiero personal. |
 
 Esta descomposición evita saltar directamente a archivos complejos. El estudiante aprende primero cada recurso, luego relaciona varias hojas y finalmente comprende cómo se construye un sistema completo.

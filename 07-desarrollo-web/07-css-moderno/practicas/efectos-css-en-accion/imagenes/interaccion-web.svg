@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" role="img" aria-labelledby="t d"><title id="t">Navegación y respuesta visual</title><desc id="d">Ilustración de una web con menú desplegable y botón que emite ondas.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f0e8e0"/><stop offset="1" stop-color="#dbe7f0"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#5c6471" flood-opacity=".18"/></filter></defs>
+<rect width="1200" height="740" fill="url(#bg)"/><circle cx="1094" cy="94" r="250" fill="#e9d7c6" opacity=".55"/>
+<rect x="110" y="104" width="984" height="540" rx="24" fill="#fff" filter="url(#s)"/><rect x="110" y="104" width="984" height="70" rx="24" fill="#f8fafc"/><rect x="110" y="145" width="984" height="29" fill="#f8fafc"/><circle cx="146" cy="138" r="8" fill="#e4a59d"/><circle cx="169" cy="138" r="8" fill="#edc27e"/><circle cx="191" cy="138" r="8" fill="#b2d9c3"/>
+<rect x="159" y="211" width="132" height="18" rx="9" fill="#2b4557"/><rect x="159" y="243" width="94" height="8" rx="4" fill="#b3c3ca"/>
+<text x="160" y="339" font-family="Georgia" font-size="57" fill="#243a48" font-weight="bold">La web responde</text><text x="162" y="386" font-family="Arial" font-size="21" fill="#627783">a cada interacción.</text><rect x="159" y="428" width="280" height="76" rx="12" fill="#215bb4"/><text x="218" y="476" font-family="Arial" font-size="21" font-weight="bold" fill="white">Haz clic aquí</text>
+<circle cx="299" cy="466" r="40" fill="none" stroke="#fff" stroke-width="5" opacity=".72"/><circle cx="299" cy="466" r="64" fill="none" stroke="#fff" stroke-width="4" opacity=".42"/><circle cx="299" cy="466" r="93" fill="none" stroke="#215bb4" stroke-width="3" opacity=".19"/>
+<rect x="844" y="203" width="203" height="45" rx="9" fill="#f2f6f9" stroke="#dfe9ee"/><path d="M993 219h28M993 225h28M993 231h28" stroke="#2d4653" stroke-width="3" stroke-linecap="round"/>
+<rect x="730" y="259" width="320" height="302" rx="14" fill="#fff" stroke="#dfe7ec" filter="url(#s)"/>
+<rect x="748" y="276" width="284" height="53" rx="7" fill="#edf4fb"/><text x="771" y="310" font-family="Arial" font-size="20" fill="#215bb4" font-weight="bold">Inicio</text><path d="M996 297l10 9-10 9" fill="none" stroke="#215bb4" stroke-width="3"/>
+<text x="771" y="372" font-family="Arial" font-size="20" fill="#3a4c57">Servicios</text><path d="M996 357l10 9-10 9" fill="none" stroke="#7b929f" stroke-width="3"/><path d="M748 391h284" stroke="#e6edef"/>
+<text x="771" y="429" font-family="Arial" font-size="20" fill="#3a4c57">Nosotros</text><path d="M996 414l10 9-10 9" fill="none" stroke="#7b929f" stroke-width="3"/><path d="M748 450h284" stroke="#e6edef"/>
+<text x="771" y="489" font-family="Arial" font-size="20" fill="#3a4c57">Contacto</text><path d="M996 474l10 9-10 9" fill="none" stroke="#7b929f" stroke-width="3"/>
+<rect x="146" y="589" width="430" height="19" rx="9" fill="#e6edf1"/><rect x="146" y="616" width="291" height="11" rx="5" fill="#e8eef1"/>
+</svg>

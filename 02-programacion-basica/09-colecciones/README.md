@@ -22,6 +22,8 @@ Trabajar con estructuras dinámicas para listas, conjuntos y asociaciones clave-
 
 Las prácticas de JavaScript incluyen recorridos de colecciones anidadas, transformaciones funcionales y una introducción al comportamiento LIFO con un arreglo. La construcción formal de pilas se estudia en `04-estructuras-datos/04-pilas`.
 
+Las prácticas de TypeScript aplican `filter` para seleccionar elementos y `map` para transformar una colección sin modificar los datos originales.
+
 ## Reto
 
 Registra cursos y cantidades de estudiantes en una colección clave-valor y muestra el curso con mayor cantidad.

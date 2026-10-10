@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Ejecutar Registro de Estudiantes",
+      "request": "launch",
+      "mainClass": "com.ejemplo.thymeleaf.ThymeleafDemoApplication",
+      "projectName": "thymeleaf-demo"
+    }
+  ]
+}

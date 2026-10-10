@@ -6,7 +6,7 @@ Esta etapa enseña a modelar problemas mediante objetos con estado, comportamien
 
 ## Cómo usar esta carpeta
 
-Cada tema contiene una explicación breve y prácticas organizadas por lenguaje. **Java** y **Scala** cubren la ruta completa; **JavaScript** aparece cuando existe una práctica propia que aplica el concepto de forma natural. Dentro de cada lenguaje encontrarás:
+Cada tema contiene una explicación breve y prácticas organizadas por lenguaje. **Java** y **Scala** cubren la ruta completa; **JavaScript** y **TypeScript** aparecen cuando existe una práctica propia que aplica el concepto de forma natural. Dentro de cada lenguaje encontrarás:
 
 - `ejemplos/`: código pequeño para observar el concepto;
 - `practicas/`: aplicaciones completas y prácticas conservadas del proceso de aprendizaje;

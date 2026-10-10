@@ -1,0 +1,15 @@
+{
+  "name": "layout-empresarial-less-chilete-devpath",
+  "version": "1.0.0",
+  "description": "Práctica didáctica de Less y CSS Grid con enfoque mobile first.",
+  "scripts": {
+    "build:css": "lessc css/style.less css/style.css"
+  },
+  "keywords": ["less", "css-grid", "responsive", "chilete-devpath"],
+  "author": "Chilete DevPath",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "less": "^4.9.1"
+  }
+}

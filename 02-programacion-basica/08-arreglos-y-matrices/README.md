@@ -22,6 +22,8 @@ Guardar colecciones de tamaño fijo y recorrer datos organizados en una o dos di
 
 En JavaScript, `javascript/practicas/calcular-promedios-matriz.js` muestra un recorrido por filas, acumulación con `reduce` y control de una colección vacía.
 
+Las prácticas de TypeScript muestran una tupla tipada para inventario y una matriz bidimensional generada por una función reutilizable.
+
 ## Reto
 
 Registra cinco notas en un arreglo y muestra promedio, nota mayor, nota menor y cantidad de aprobados.

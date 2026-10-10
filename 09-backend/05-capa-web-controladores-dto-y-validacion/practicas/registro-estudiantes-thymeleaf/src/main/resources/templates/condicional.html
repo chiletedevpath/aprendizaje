@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales | Registro de Estudiantes</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<header class="barra-superior">
+    <div class="barra-contenido">
+        <a class="marca" th:href="@{/}"><span class="marca-icono" aria-hidden="true">RE</span><span>Registro de <strong>Estudiantes</strong></span></a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a class="nav-enlace" th:href="@{/}">Inicio</a>
+            <a class="nav-enlace" th:href="@{/formulario}">Registrar</a>
+            <a class="nav-enlace" th:href="@{/lista}">Listado</a>
+            <a class="nav-enlace activo" th:href="@{/condicional}" aria-current="page">Condicionales</a>
+        </nav>
+    </div>
+</header>
+
+<main class="pagina pagina-interior">
+    <div class="encabezado-vista">
+        <a class="volver" th:href="@{/}">← Volver al inicio</a>
+        <span class="etiqueta etiqueta-clara">LÓGICA DE VISTAS / 04</span>
+        <h1>Condicionales con Thymeleaf</h1>
+        <p class="descripcion">Ejemplo de la guía: se evalúa una estudiante de prueba para decidir qué mensajes aparecen.</p>
+    </div>
+    <section class="panel-formulario">
+        <div class="panel-cabecera"><div><h2>Estudiante de ejemplo</h2><p>Datos definidos en EstudianteController.java.</p></div><span class="identificador">DEMO</span></div>
+        <dl class="ficha-estudiante">
+            <div><dt>Nombre</dt><dd th:text="${estudiante.nombre}">Ana López</dd></div>
+            <div><dt>Edad</dt><dd><span th:text="${estudiante.edad}">17</span> años</dd></div>
+            <div><dt>Carrera</dt><dd th:text="${estudiante.carrera}">Ingenieria</dd></div>
+        </dl>
+        <h3 class="subtitulo">Evaluación de reglas</h3>
+        <!-- th:if muestra el mensaje solo cuando la edad es de 18 años o más. -->
+        <div class="aviso aviso-exito" th:if="${estudiante.edad >= 18}">Es mayor de edad: puede inscribirse.</div>
+        <!-- th:unless funciona como el caso contrario de la condición. -->
+        <div class="aviso aviso-alerta" th:unless="${estudiante.edad >= 18}">Es menor de edad: requiere autorización.</div>
+        <div class="aviso aviso-info" th:if="${estudiante.carrera == 'Ingenieria'}">Pertenece a la carrera de Ingeniería.</div>
+        <div class="estado-fila">
+            <span>Estado del estudiante</span>
+            <!-- Operador ternario: selecciona un texto según la condición. -->
+            <span class="estado-badge" th:classappend="${estudiante.edad >= 18} ? 'estado-activo' : 'estado-pendiente'" th:text="${estudiante.edad >= 18 ? 'Activo' : 'Pendiente'}">Pendiente</span>
+        </div>
+        <p class="nota-ejemplo">Este ejercicio usa datos fijos; no modifica ni consulta los registros del formulario.</p>
+    </section>
+</main>
+<footer class="pie-pagina"><span>Chilete DevPath explica decisiones en la plantilla</span><span><a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a> · <code>th:if</code> y <code>th:unless</code></span></footer>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

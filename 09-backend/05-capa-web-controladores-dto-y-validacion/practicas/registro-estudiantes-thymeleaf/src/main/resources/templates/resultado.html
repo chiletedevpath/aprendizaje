@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del registro | Registro de Estudiantes</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<header class="barra-superior">
+    <div class="barra-contenido">
+        <a class="marca" th:href="@{/}"><span class="marca-icono" aria-hidden="true">RE</span><span>Registro de <strong>Estudiantes</strong></span></a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a class="nav-enlace" th:href="@{/}">Inicio</a>
+            <a class="nav-enlace" th:href="@{/formulario}">Registrar</a>
+            <a class="nav-enlace" th:href="@{/lista}">Listado</a>
+            <a class="nav-enlace" th:href="@{/condicional}">Condicionales</a>
+        </nav>
+    </div>
+</header>
+
+<main class="pagina pagina-interior">
+    <div class="encabezado-vista">
+        <span class="etiqueta etiqueta-clara">RESULTADO / 02</span>
+        <h1>Estudiante registrado</h1>
+        <p class="descripcion">El formulario se procesó correctamente y estos son los datos recibidos por el controlador.</p>
+    </div>
+    <section class="panel-formulario">
+        <div class="mensaje-exito" role="status"><span class="exito-icono" aria-hidden="true">✓</span><span>Registro agregado correctamente a la lista en memoria.</span></div>
+        <h2 class="titulo-tabla">Datos capturados</h2>
+        <div class="tabla-scroll">
+            <table class="tabla-datos tabla-resultado">
+                <thead><tr><th scope="col">Campo</th><th scope="col">Valor recibido</th></tr></thead>
+                <tbody>
+                    <!-- th:text lee los datos del objeto enviado desde @PostMapping. -->
+                    <tr><th scope="row">Nombre</th><td th:text="${estudiante.nombre}">Ejemplo</td></tr>
+                    <tr><th scope="row">Correo</th><td th:text="${estudiante.correo}">ejemplo@correo.com</td></tr>
+                    <tr><th scope="row">Edad</th><td th:text="${estudiante.edad}">20</td></tr>
+                    <tr><th scope="row">Carrera</th><td th:text="${estudiante.carrera}">Ingeniería</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="acciones acciones-inferiores">
+            <a class="boton boton-primario" th:href="@{/formulario}">Registrar otro <span aria-hidden="true">→</span></a>
+            <a class="boton boton-secundario" th:href="@{/lista}">Ver todos los estudiantes</a>
+        </div>
+    </section>
+</main>
+<footer class="pie-pagina"><span>Chilete DevPath explica la salida dinámica del controlador</span><span><a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a> · Presentación con <code>th:text</code></span></footer>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

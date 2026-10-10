@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Una mirada al movimiento en las interfaces web: navegación animada, botones interactivos, indicadores de carga e imágenes que aparecen al desplazarse."
+    />
+    <title>Efectos CSS en acción | Animaciones web</title>
+    <link rel="icon" href="imagenes/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- La clase .active controla la apertura del menú. -->
+    <header class="cabecera" id="inicio">
+      <div class="contenedor cabecera-interior">
+        <a class="marca" href="#inicio" aria-label="Efectos CSS en acción, ir al inicio">
+          <span class="marca-icono" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>
+            Efectos
+            <strong>CSS</strong>
+            en acción
+          </span>
+        </a>
+        <nav class="menu" aria-label="Navegación principal">
+          <button
+            class="menu-toggle"
+            type="button"
+            id="menuToggle"
+            aria-label="Abrir menú"
+            aria-controls="menuItems"
+            aria-expanded="false"
+          >
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+          <ul class="menu-items" id="menuItems">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#lectura">Artículo</a></li>
+            <li><a href="#efectos">Efectos interactivos</a></li>
+            <li><a href="#imagenes">Imágenes en movimiento</a></li>
+            <li><a href="#aprendizaje">Cómo funciona</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="portada" aria-labelledby="titulo-portada">
+        <div class="contenedor portada-grid">
+          <div class="portada-texto">
+            <p class="etiqueta">
+              <span class="punto"></span>
+              DISEÑO WEB · MOVIMIENTO E INTERACCIÓN
+            </p>
+            <h1 id="titulo-portada">
+              Una página web también puede
+              <em>cobrar vida.</em>
+            </h1>
+            <p class="portada-descripcion">
+              Los detalles importan. Un menú que aparece con suavidad, un botón que responde al clic
+              o una imagen que entra en escena pueden hacer la navegación más clara y agradable.
+            </p>
+            <div class="portada-acciones">
+              <a class="boton boton-principal" href="#lectura">
+                Comenzar la lectura
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="enlace-texto" href="#efectos">
+                Probar los efectos
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+            <p class="portada-detalle">
+              <span class="linea"></span>
+              HTML5 · CSS3 · JavaScript
+            </p>
+            <!-- Permite activar el movimiento si el dispositivo utiliza animaciones reducidas. -->
+            <div class="estado-animaciones" role="status" aria-live="polite" hidden>
+              <span id="mensajeAnimaciones">El movimiento está reducido en este dispositivo.</span>
+              <button type="button" id="activarAnimaciones" class="activar-animaciones" hidden>
+                Ver animaciones
+              </button>
+            </div>
+          </div>
+          <div class="portada-visual" aria-label="Ilustración de una página y su código CSS">
+            <div class="pantalla" aria-hidden="true">
+              <div class="pantalla-cabecera">
+                <i></i>
+                <i></i>
+                <i></i>
+                <span>estilos.css</span>
+              </div>
+              <div class="linea-codigo">
+                <b>01</b>
+                <code>
+                  <span class="codigo-azul">@keyframes</span>
+                  show {
+                </code>
+              </div>
+              <div class="linea-codigo">
+                <b>02</b>
+                <code>&nbsp; from {</code>
+              </div>
+              <div class="linea-codigo">
+                <b>03</b>
+                <code>
+                  &nbsp;&nbsp;
+                  <span class="codigo-rosa">opacity</span>
+                  : 0;
+                </code>
+              </div>
+              <div class="linea-codigo">
+                <b>04</b>
+                <code>
+                  &nbsp;&nbsp;
+                  <span class="codigo-rosa">scale</span>
+                  : 25%;
+                </code>
+              </div>
+              <div class="linea-codigo">
+                <b>05</b>
+                <code>&nbsp; }</code>
+              </div>
+              <div class="linea-codigo">
+                <b>06</b>
+                <code>&nbsp; to {</code>
+              </div>
+              <div class="linea-codigo">
+                <b>07</b>
+                <code>
+                  &nbsp;&nbsp;
+                  <span class="codigo-rosa">opacity</span>
+                  : 1;
+                </code>
+              </div>
+              <div class="linea-codigo">
+                <b>08</b>
+                <code>
+                  &nbsp;&nbsp;
+                  <span class="codigo-rosa">scale</span>
+                  : 100%;
+                </code>
+              </div>
+              <div class="linea-codigo">
+                <b>09</b>
+                <code>&nbsp; }</code>
+              </div>
+              <div class="linea-codigo">
+                <b>10</b>
+                <code>}</code>
+              </div>
+              <div class="pantalla-pie">
+                <span class="cursor"></span>
+                CSS · animación activa
+              </div>
+            </div>
+            <div class="sello" aria-hidden="true">
+              <span>4</span>
+              <small>
+                efectos
+                <br />
+                CSS
+              </small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="franja">
+        <div class="contenedor">
+          <span>DISEÑO WEB</span>
+          <span class="separador">✳</span>
+          <span>ANIMACIÓN</span>
+          <span class="separador">✳</span>
+          <span>INTERACCIÓN</span>
+          <span class="separador">✳</span>
+          <span>EXPERIENCIA</span>
+        </div>
+      </div>
+
+      <!-- El artículo combina contenido e imágenes animadas. -->
+      <article class="articulo contenedor" id="lectura">
+        <header class="articulo-intro">
+          <p class="etiqueta etiqueta-oscura">01 / LECTURA</p>
+          <h2>El movimiento como parte del diseño web</h2>
+          <p class="entradilla">
+            Una página no necesita animaciones complejas para sentirse interactiva. A veces, un
+            pequeño movimiento ayuda al usuario a comprender qué está sucediendo.
+          </p>
+          <div class="meta-articulo">
+            <span>Diseño e interacción</span>
+            <span class="separador-meta"></span>
+            <span>Animaciones CSS</span>
+          </div>
+        </header>
+
+        <div class="cuerpo-articulo">
+          <p>
+            Las hojas de estilo en cascada permiten definir colores, tamaños, posiciones y
+            distribuciones. Además, con las propiedades de animación de CSS, también podemos
+            controlar
+            <strong>cómo cambian los elementos de la interfaz</strong>
+            .
+          </p>
+          <p>
+            Con
+            <code>@keyframes</code>
+            se establece el estado inicial y final de una animación. Después, la propiedad
+            <code>animation</code>
+            determina su duración, velocidad y repetición. El resultado puede ser tan simple como
+            una transición suave o un elemento que gira sin detenerse.
+          </p>
+
+          <figure class="figura-lectura">
+            <!-- Cada imagen utiliza su propia línea de tiempo de visualización. -->
+            <img
+              class="imagen-scroll"
+              src="imagenes/desarrollo-web.svg"
+              width="1200"
+              height="740"
+              loading="eager"
+              alt="Ilustración de un entorno de desarrollo de páginas web con código y vista previa"
+            />
+            <figcaption>
+              <span>FIGURA 01</span>
+              CSS permite controlar la presentación y animación de los elementos.
+            </figcaption>
+          </figure>
+
+          <h3>1. La navegación responde a nuestras acciones</h3>
+          <p>
+            Un menú hamburguesa ocupa poco espacio y permite mostrar u ocultar opciones cuando el
+            usuario lo necesita. En la cabecera, el icono de tres líneas permite desplegar las
+            opciones de navegación sin ocupar espacio de forma permanente.
+          </p>
+          <p>
+            El diseño de las tres líneas se obtiene mediante un elemento y los pseudoelementos
+            <code>::before</code>
+            y
+            <code>::after</code>
+            . Al activar el menú, JavaScript agrega la clase
+            <code>active</code>
+            , mientras que CSS ejecuta la animación de entrada
+            <code>slideIn</code>
+            .
+          </p>
+
+          <aside class="nota">
+            <span class="nota-numero">01</span>
+            <div>
+              <strong>Navegación compacta</strong>
+              <p>
+                Al pulsar el icono de la cabecera, las opciones se despliegan suavemente. Al cerrar
+                el menú, el contenido vuelve a quedar despejado.
+              </p>
+            </div>
+          </aside>
+
+          <figure class="figura-lectura">
+            <img
+              class="imagen-scroll"
+              src="imagenes/interaccion-web.svg"
+              width="1200"
+              height="740"
+              loading="lazy"
+              alt="Ilustración de una interfaz web con menú desplegable y botón interactivo"
+            />
+            <figcaption>
+              <span>FIGURA 02</span>
+              Una interacción clara orienta al usuario durante la navegación.
+            </figcaption>
+          </figure>
+
+          <h3>2. Un botón también puede dar respuesta visual</h3>
+          <p>
+            Al hacer clic en un botón, el efecto de onda o
+            <em>ripple</em>
+            genera un círculo en el punto donde se ha pulsado. Este círculo aumenta de tamaño y
+            desaparece gradualmente.
+          </p>
+          <p>
+            JavaScript obtiene la posición del clic y crea un elemento temporal. CSS se encarga de
+            animarlo utilizando
+            <code>transform: scale()</code>
+            y
+            <code>opacity</code>
+            . Ambas tecnologías cumplen funciones diferentes y complementarias.
+          </p>
+        </div>
+      </article>
+
+      <section class="seccion-efectos" id="efectos" aria-labelledby="titulo-efectos">
+        <div class="contenedor">
+          <div class="cabecera-seccion">
+            <p class="etiqueta etiqueta-oscura">02 / INTERACTÚA</p>
+            <h2 id="titulo-efectos">Pequeños movimientos, respuestas claras</h2>
+            <p>
+              Un botón puede confirmar una pulsación y un indicador giratorio puede comunicar
+              movimiento sin distraer del contenido.
+            </p>
+          </div>
+          <div class="ejemplos-grid">
+            <section class="ejemplo" aria-labelledby="titulo-ripple">
+              <div class="ejemplo-numeracion">
+                <span>INTERACCIÓN</span>
+                <span>CSS + JAVASCRIPT</span>
+              </div>
+              <h3 id="titulo-ripple">Botón con efecto de onda</h3>
+              <p>
+                Cada clic genera una onda desde el punto de contacto, incluso cuando se pulsa cerca
+                de los bordes.
+              </p>
+              <div class="area-demo">
+                <!-- JavaScript crea el círculo y CSS ejecuta ripple-effect. -->
+                <button class="ripple-button" type="button" id="rippleButton">Haz clic aquí</button>
+                <p class="ayuda-demo" id="estadoRipple" aria-live="polite">Pulsaciones: 0</p>
+              </div>
+              <p class="tecnica">
+                <code>@keyframes ripple-effect</code>
+                ·
+                <code>scale(4)</code>
+                ·
+                <code>opacity</code>
+              </p>
+            </section>
+
+            <section class="ejemplo" aria-labelledby="titulo-loader">
+              <div class="ejemplo-numeracion">
+                <span>MOVIMIENTO CONTINUO</span>
+                <span>CSS</span>
+              </div>
+              <h3 id="titulo-loader">Animación de carga</h3>
+              <p>
+                Una animación continua hace girar el borde superior del círculo sin necesidad de
+                JavaScript.
+              </p>
+              <div class="area-demo area-demo-loader">
+                <!-- El giro del loader depende únicamente de @keyframes spin. -->
+                <div
+                  class="loader"
+                  role="img"
+                  aria-label="Ejemplo visual de indicador de carga giratorio"
+                ></div>
+                <p class="ayuda-demo">Rotación continua</p>
+              </div>
+              <p class="tecnica">
+                <code>@keyframes spin</code>
+                ·
+                <code>rotate(360deg)</code>
+                ·
+                <code>infinite</code>
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion-imagenes contenedor" id="imagenes" aria-labelledby="titulo-imagenes">
+        <div class="cabecera-seccion cabecera-imagenes">
+          <p class="etiqueta etiqueta-oscura">03 / DESPLÁZATE</p>
+          <h2 id="titulo-imagenes">Las imágenes aparecen al bajar</h2>
+          <p>
+            Las imágenes se revelan poco a poco conforme entran en pantalla. Su escala y
+            transparencia cambian al ritmo del desplazamiento.
+          </p>
+        </div>
+        <div class="lectura-cierre">
+          <h3>3. El desplazamiento puede controlar una animación</h3>
+          <p>
+            A diferencia del loader, que avanza con el tiempo, esta animación utiliza una línea de
+            tiempo relacionada con la visibilidad de la imagen. Por eso, el efecto está asociado al
+            desplazamiento de la página.
+          </p>
+          <p>
+            Las propiedades
+            <code>view-timeline-name</code>
+            ,
+            <code>animation-timeline</code>
+            y
+            <code>animation-range</code>
+            establecen cuándo progresa la animación
+            <code>show</code>
+            .
+          </p>
+        </div>
+        <figure class="figura-lectura figura-final">
+          <img
+            class="imagen-scroll"
+            src="imagenes/animaciones-scroll.svg"
+            width="1200"
+            height="740"
+            loading="lazy"
+            alt="Ilustración de imágenes y componentes web que aparecen al desplazarse por la pantalla"
+          />
+          <figcaption>
+            <span>FIGURA 03</span>
+            Cada imagen se anima de acuerdo con su entrada en la ventana visible.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="seccion-aprendizaje" id="aprendizaje" aria-labelledby="titulo-aprendizaje">
+        <div class="contenedor aprendizaje-grid">
+          <div>
+            <p class="etiqueta">04 / DETRÁS DEL MOVIMIENTO</p>
+            <h2 id="titulo-aprendizaje">Así funcionan estos efectos</h2>
+            <p>
+              CSS define el aspecto y las animaciones. JavaScript interviene cuando hay que detectar
+              una acción o crear un elemento.
+            </p>
+          </div>
+          <div class="lista-aprendizaje">
+            <div>
+              <span>01</span>
+              <p>
+                <strong>Menú desplegable:</strong>
+                la clase
+                <code>active</code>
+                muestra las opciones con
+                <code>slideIn</code>
+                .
+              </p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>
+                <strong>Efecto de onda:</strong>
+                un círculo temporal se expande mediante
+                <code>ripple-effect</code>
+                .
+              </p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>
+                <strong>Indicador de carga:</strong>
+                <code>spin 2s linear infinite</code>
+                mantiene el círculo girando.
+              </p>
+            </div>
+            <div>
+              <span>04</span>
+              <p>
+                <strong>Imágenes al desplazarse:</strong>
+                <code>show</code>
+                avanza según la visibilidad de cada imagen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor pie-interior">
+        <p>
+          <strong>Efectos CSS en acción</strong>
+          <span>Diseño web, movimiento e interacción</span>
+        </p>
+        <p>
+          Desarrollado por
+          <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">
+            Chilete DevPath
+            <span aria-hidden="true">↗</span>
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

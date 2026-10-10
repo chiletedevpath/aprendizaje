@@ -17,6 +17,8 @@ Construye un sitio educativo responsive sin framework frontend que integre los f
 
 Después desarrolla el [laboratorio integrador de catálogo web de recursos](laboratorio-catalogo-recursos.md), con validación, filtros, estado persistente y casos de prueba desde 320 px.
 
+`practicas/motionlab-css` integra animaciones, DOM, tema claro/oscuro, progreso de lectura, accesibilidad de teclado y preferencias de movimiento reducido en una experiencia explicativa de Chilete DevPath.
+
 ## Para avanzar
 
 Debes poder explicar qué problema resuelve cada técnica utilizada y reproducirla sin copiar una plantilla completa.

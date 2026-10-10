@@ -60,7 +60,7 @@ Ejemplo: aquí se aprende a representar un grafo mediante una lista de adyacenci
 
 ## Lenguajes
 
-La ruta utiliza **Java y Scala** para comparar cómo se expresan los mismos conceptos. Java conserva además las prácticas académicas que ya existían en el repositorio.
+La ruta utiliza **Java y Scala** para comparar cómo se expresan los mismos conceptos. Java conserva además las prácticas académicas que ya existían en el repositorio. TypeScript aparece solo en prácticas concretas cuando ayuda a observar el contrato de una colección sin duplicar toda la ruta.
 
 ## Criterio de salida
 

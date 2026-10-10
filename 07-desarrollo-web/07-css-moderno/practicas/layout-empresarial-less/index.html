@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Práctica de Less, CSS Grid y diseño mobile first explicada por Chilete DevPath."
+    />
+    <title>Estudio Digital | Layout con Less</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Encabezado principal -->
+      <header class="header">
+        <h1>Estudio Digital</h1>
+      </header>
+
+      <!-- Barra de navegación -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contenido principal -->
+      <main class="main">
+        <article>
+          <h2>Un layout adaptable construido con Less</h2>
+          <p>
+            Esta interfaz demuestra cómo combinar áreas de CSS Grid con variables, mixins,
+            anidación y operaciones compiladas desde Less.
+          </p>
+          <div class="conceptos" aria-labelledby="conceptos-less-layout">
+            <h3 id="conceptos-less-layout">Chilete DevPath explica los conceptos</h3>
+            <ul>
+              <li><strong>Variables:</strong> mantienen colores y medidas en un solo lugar.</li>
+              <li><strong>Mixin parametrizado:</strong> reutiliza el radio de borde con distintos valores.</li>
+              <li><strong>Anidación:</strong> expresa la relación entre navegación, lista y enlaces.</li>
+              <li><strong>Mobile first:</strong> parte de una columna y reorganiza las áreas desde 768 px.</li>
+            </ul>
+          </div>
+        </article>
+      </main>
+
+      <!-- Información secundaria -->
+      <aside class="sidebar">
+        <h2>Servicios</h2>
+        <ul>
+          <li>Desarrollo web</li>
+          <li>Soporte técnico</li>
+          <li>Consultoría tecnológica</li>
+        </ul>
+      </aside>
+
+      <!-- Pie de página -->
+      <footer class="footer">
+        <p>
+          Práctica educativa desarrollada por
+          <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">
+            Chilete DevPath
+          </a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

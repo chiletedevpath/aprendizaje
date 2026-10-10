@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de estudiantes | Registro de Estudiantes</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<header class="barra-superior">
+    <div class="barra-contenido">
+        <a class="marca" th:href="@{/}"><span class="marca-icono" aria-hidden="true">RE</span><span>Registro de <strong>Estudiantes</strong></span></a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a class="nav-enlace" th:href="@{/}">Inicio</a>
+            <a class="nav-enlace" th:href="@{/formulario}">Registrar</a>
+            <a class="nav-enlace activo" th:href="@{/lista}" aria-current="page">Listado</a>
+            <a class="nav-enlace" th:href="@{/condicional}">Condicionales</a>
+        </nav>
+    </div>
+</header>
+
+<main class="pagina pagina-interior">
+    <div class="encabezado-vista encabezado-acciones">
+        <div><span class="etiqueta etiqueta-clara">CONSULTA / 03</span><h1>Lista de estudiantes</h1><p class="descripcion">Consulta los registros que se han ingresado durante la ejecución del sistema.</p></div>
+        <a class="boton boton-primario" th:href="@{/formulario}">+ Nuevo registro</a>
+    </div>
+    <section class="panel-formulario">
+        <div class="panel-cabecera">
+            <div><h2>Estudiantes registrados</h2><p>Información temporal almacenada en la aplicación.</p></div>
+            <span class="chip-contador" th:text="${#lists.size(estudiantes)} + ' registros'">0 registros</span>
+        </div>
+        <!-- th:if muestra el aviso cuando la lista está vacía. -->
+        <div class="sin-registros" th:if="${#lists.isEmpty(estudiantes)}">
+            <span class="sin-registros-icono" aria-hidden="true">—</span>
+            <h3>Todavía no hay estudiantes registrados</h3>
+            <p>Comienza registrando un estudiante para que aparezca en esta tabla.</p>
+            <a class="boton boton-primario" th:href="@{/formulario}">Registrar estudiante <span aria-hidden="true">→</span></a>
+        </div>
+        <!-- th:unless muestra la tabla cuando la lista contiene estudiantes. -->
+        <div class="tabla-scroll" th:unless="${#lists.isEmpty(estudiantes)}">
+            <table class="tabla-datos">
+                <thead><tr><th scope="col">N.º</th><th scope="col">Nombre completo</th><th scope="col">Correo electrónico</th><th scope="col">Edad</th><th scope="col">Carrera</th></tr></thead>
+                <tbody>
+                    <!-- th:each repite una fila por estudiante; iter.count inicia en 1. -->
+                    <tr th:each="est, iter : ${estudiantes}">
+                        <td th:text="${iter.count}">1</td>
+                        <td class="celda-destacada" th:text="${est.nombre}">Estudiante</td>
+                        <td th:text="${est.correo}">correo@ejemplo.com</td>
+                        <td th:text="${est.edad}">20</td>
+                        <td th:text="${est.carrera}">Carrera</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<footer class="pie-pagina"><span>Chilete DevPath explica la representación de colecciones</span><span><a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a> · Iteración con <code>th:each</code></span></footer>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

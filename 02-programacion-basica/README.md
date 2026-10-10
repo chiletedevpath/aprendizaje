@@ -27,7 +27,7 @@ tema/
 - **Reto:** aparece al final del `README.md` de cada tema y se intenta sin mirar la respuesta.
 - **Soluciones:** implementaciones de referencia del reto para comparar después de resolverlo.
 
-No se crean carpetas vacías para completar una plantilla. Si se incorpora JavaScript, Python u otro lenguaje, sus archivos se ubican dentro del tema que enseñan y solo aparecen cuando existe contenido real.
+No se crean carpetas vacías para completar una plantilla. Si se incorpora JavaScript, TypeScript, Python u otro lenguaje, sus archivos se ubican dentro del tema que enseñan y solo aparecen cuando existe contenido real. TypeScript se usa como práctica complementaria para aplicar tipos explícitos, interfaces y tuplas sobre fundamentos ya estudiados.
 
 ## Cómo ejecutar el código
 
