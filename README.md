@@ -20,13 +20,13 @@ La secuencia actual corresponde a la ruta de desarrollo de software. Se mantiene
 - `09-backend`: prácticas de backend y Spring Boot.
 - `10-frontend`: etapa futura; se creará cuando existan prácticas propias de frontend moderno.
 - `11-publicacion-y-produccion`: etapa futura; se creará cuando existan laboratorios reproducibles de publicación y operación.
-- `excel-y-productividad`: ruta complementaria para Excel y automatización aplicada; inicia con su alcance editorial y crecerá solo con prácticas propias o autorizadas.
+- `excel-y-productividad`: ruta complementaria con diez módulos de Excel, prácticas resueltas y retos con datos ficticios.
 
 ## Crecimiento tecnológico
 
 Chilete DevPath no se limita a programación. Cuando haya contenido propio, comprobado y con un objetivo didáctico claro, `aprendizaje` podrá crecer con rutas complementarias como:
 
-- Excel y productividad, cuya ruta inicial ya está definida;
+- Excel y productividad, con diez módulos publicados;
 - datos y analítica;
 - cloud, infraestructura y DevOps;
 - ciberseguridad;
