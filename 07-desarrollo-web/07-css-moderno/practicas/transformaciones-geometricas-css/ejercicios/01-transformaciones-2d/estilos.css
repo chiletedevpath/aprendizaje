@@ -1,0 +1,25 @@
+/* Cuatro transformaciones 2D sobre figuras independientes */
+.zona-2d { padding: clamp(16px, 3vw, 30px); }
+.cuadricula-formas { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap:16px; }
+.elemento { background:#f6f9f7; border:1px solid #e2ebe6; border-radius: 14px; text-align:center; padding:14px 12px 18px; min-width:0; }
+.escenario { height:200px; display:grid; place-items:center; overflow:visible; }
+.caja {
+  width:100px; height:100px; border:0; border-radius:10px;
+  display:grid; place-items:center; background:#128b76; color:#fff;
+  font-weight:800; cursor:pointer; transition:transform .5s;
+  box-shadow:0 14px 24px rgba(2,91,71,.15);
+}
+.caja:is(:hover,:focus-visible) { background:#087563; }
+/* Los valores corresponden a las cuatro operaciones del ejercicio base. */
+.caja-rotar:is(:hover,:focus-visible) { transform:rotate(45deg); }
+.caja-mover:is(:hover,:focus-visible) { transform:translateX(50px); }
+.caja-escalar:is(:hover,:focus-visible) { transform:scale(1.5); }
+.caja-sesgar:is(:hover,:focus-visible) { transform:skew(10deg,10deg); }
+.elemento h2 { font-size:17px; letter-spacing:-.02em; margin:0 0 5px; }
+.elemento code { color:#067467; background:#e0f1e8; font: 600 12px Consolas,monospace; border-radius:5px; padding:4px 6px; }
+.elemento p { margin:12px 0 0; color:#667a7d; font-size:13px; }
+.apunte { margin:17px 0 0; color:#4f676b; font-size:14px; }
+.apunte code { color:#067467; }
+@media(max-width:900px) { .cuadricula-formas { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:510px) { .cuadricula-formas{grid-template-columns:1fr;} .escenario{height:175px;} }
+@media(prefers-reduced-motion:reduce) { .caja{transition:none;} }

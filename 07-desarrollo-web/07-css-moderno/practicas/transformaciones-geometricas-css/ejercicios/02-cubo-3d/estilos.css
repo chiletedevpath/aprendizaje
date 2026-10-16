@@ -1,0 +1,25 @@
+/* Cubo de 200 px: seis caras situadas a 100 px del centro. */
+.demostracion-3d { display:grid; grid-template-columns: 1.15fr .85fr; overflow:hidden; }
+.escena-cubo { min-height:485px; display:grid;place-items:center; perspective:1000px; background:radial-gradient(circle at center,#dceee8 0%,#f6faf8 65%); }
+.cubo { position:relative; width:200px;height:200px; transform-style:preserve-3d; transform:rotateX(-30deg) rotateY(-30deg); animation:rotar 5s linear infinite; outline-offset:15px; }
+.cubo:hover,.cubo:focus-visible { animation-play-state:paused; }
+.cara { position:absolute;inset:0; display:grid;place-items:center; width:200px;height:200px; border:2px solid rgba(255,255,255,.8); box-sizing:border-box; backface-visibility:hidden; font-size:19px; font-weight:800; color:#123840; }
+.frente { background:#b8e8db; transform:translateZ(100px); }
+.atras { background:#ffe1a5; transform:rotateY(180deg) translateZ(100px); }
+.izquierda { background:#8bced0; transform:rotateY(-90deg) translateZ(100px); }
+.derecha { background:#91d5c7; transform:rotateY(90deg) translateZ(100px); }
+.arriba { background:#c4e9ed; transform:rotateX(90deg) translateZ(100px); }
+.abajo { background:#a8bfc9; transform:rotateX(-90deg) translateZ(100px); }
+/* Vuelta completa conservando la inclinación del eje X. */
+@keyframes rotar { from{transform:rotateX(-30deg) rotateY(-30deg);} to{transform:rotateX(-30deg) rotateY(330deg);} }
+.datos-cubo { padding:clamp(25px,4vw,48px); display:flex;flex-direction:column;justify-content:center; }
+.datos-cubo h2 { font-size:clamp(25px,3vw,37px); margin:14px 0 8px;line-height:1.14;letter-spacing:-.04em; }
+.datos-cubo p { font-size:14px;color:#587175; }
+.datos-cubo code {font:600 12px Consolas,monospace;color:#087568;}
+.datos-cubo dl { margin:14px 0 0; }
+.datos-cubo dl>div { display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid #e6eeea;padding:10px 0; }
+.datos-cubo dt { color:#4e656a; font-size:13px; }
+.datos-cubo dd { margin:0; text-align:right; }
+.datos-cubo .ayuda-cubo { margin-top:21px;font-size:12px;line-height:1.5; }
+@media(max-width:790px) { .demostracion-3d{grid-template-columns:1fr;} .escena-cubo{min-height:420px;} .datos-cubo{padding:26px;} }
+@media(prefers-reduced-motion:reduce) {.cubo{animation:none;} .datos-cubo .ayuda-cubo{display:none;} }

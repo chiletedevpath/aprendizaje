@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hexágono reversible con imagen Chilete DevPath y transformaciones 2D y 3D.">
+  <title>Hexágono interactivo | Chilete DevPath</title>
+  <link rel="icon" href="../../recursos/chilete-devpath.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../estilos.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="encabezado"><div class="contenido barra">
+  <a class="marca" href="../../index.html"><img src="../../recursos/chilete-devpath.svg" alt="" width="40" height="40"><span>Chilete <strong>DevPath</strong></span></a>
+  <nav class="navegacion" aria-label="Navegación principal">
+    <a href="../../index.html">Inicio</a>
+    <a href="../../ejercicios/01-transformaciones-2d/index.html">2D</a>
+    <a href="../../ejercicios/02-cubo-3d/index.html">3D</a>
+    <a href="../../ejercicios/03-hexagono-interactivo/index.html" aria-current="page">Mi figura</a>
+  </nav></div></header>
+<main class="contenido">
+  <section class="titulo-pagina"><span class="etiqueta">Ejercicio 03 · 2D + 3D</span><h1>Hexágono Chilete DevPath</h1><p>Una figura geométrica reversible. El desplazamiento y la escala se aplican en 2D; el giro entre las dos caras utiliza una transformación 3D.</p></section>
+  <section class="panel-blanco demostracion-hex" aria-label="Hexágono con transformaciones 2D y 3D">
+    <div class="panel-figura">
+      <div class="escena-hexagono">
+        <input type="checkbox" class="control-giro" id="giro-hexagono">
+        <label for="giro-hexagono" class="area-hexagono">
+          <span class="movimiento-2d"><span class="giro-3d">
+            <span class="cara-hex frente-hex"><img src="../../recursos/chilete-devpath.svg" width="152" height="152" alt="Emblema de Chilete DevPath"><span class="texto-hex">CHILETE DEVPATH</span></span>
+            <span class="cara-hex reverso-hex"><span class="marca-reverso">CDP</span><span class="tipo-reverso">Transformaciones CSS</span><span class="detalle-reverso">2D · 3D</span></span>
+          </span></span>
+        </label>
+      </div>
+      <p class="instruccion-hex">Coloca el cursor sobre el hexágono o púlsalo para mostrar la otra cara.</p>
+    </div>
+    <div class="ficha-hex"><span class="etiqueta">Composición</span><h2>Dos transformaciones, una figura</h2><p>La figura conserva su forma hexagonal mientras cambia de posición y rota en profundidad. La imagen de Chilete DevPath permanece centrada en la cara frontal.</p>
+      <div class="paso"><span class="paso-numero">01</span><div><h3>Movimiento 2D</h3><code>translateY(-12px) scale(1.05) rotate(-6deg)</code><p>Eleva, amplía e inclina el hexágono.</p></div></div>
+      <div class="paso"><span class="paso-numero">02</span><div><h3>Giro 3D</h3><code>rotateY(180deg)</code><p>Gira la figura para mostrar su cara posterior.</p></div></div>
+      <div class="paso"><span class="paso-numero">03</span><div><h3>Recorte geométrico</h3><code>clip-path: polygon(...)</code><p>Define los seis lados del hexágono.</p></div></div>
+    </div>
+  </section>
+  <p class="nota nota-hex">El giro también funciona con teclado: pulsa Tab hasta seleccionar la figura y luego Espacio para activarlo.</p>
+  <a class="volver" href="../../index.html">← Volver a ejercicios</a>
+</main>
+<footer class="pie"><div class="contenido pie-interior"><span><strong>Chilete DevPath</strong> · Transformaciones con CSS</span><span>Desde Chilete, Cajamarca · <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">chiletedevpath.com</a></span></div></footer>
+</body>
+</html>

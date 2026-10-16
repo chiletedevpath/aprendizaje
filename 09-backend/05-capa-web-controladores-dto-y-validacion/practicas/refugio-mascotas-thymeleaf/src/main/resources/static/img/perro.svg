@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración de un perro</title>
+  <desc id="desc">Ilustración geométrica creada para la práctica Huellas de Chilete DevPath.</desc>
+  <rect width="800" height="600" fill="#eef4e8"/>
+  <circle cx="400" cy="290" r="175" fill="#d59a62"/>
+  <path d="M270 180 160 90q-30 145 68 222zM530 180 640 90q30 145-68 222z" fill="#9b6038"/>
+  <ellipse cx="335" cy="275" rx="18" ry="25" fill="#26352d"/>
+  <ellipse cx="465" cy="275" rx="18" ry="25" fill="#26352d"/>
+  <ellipse cx="400" cy="355" rx="42" ry="32" fill="#26352d"/>
+  <path d="M400 383q-48 58-96 5M400 383q48 58 96 5" fill="none" stroke="#26352d" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="160" cy="470" r="70" fill="#416b56" opacity=".18"/>
+  <circle cx="690" cy="105" r="48" fill="#416b56" opacity=".18"/>
+</svg>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Registro de ingreso de mascotas al refugio.">
+    <title>Registrar mascota | Huellas</title>
+    <link rel="stylesheet" href="/css/estilos.css" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <header class="site-header"><div class="shell header-inner">
+            <a class="brand" th:href="@{/}" href="/" aria-label="Huellas, ir al inicio"><span class="brand-symbol" aria-hidden="true">✳</span><span>huellas<span class="brand-dot">.</span><small>REGISTRO DEL REFUGIO</small></span></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="/" th:href="@{/}" class="nav-link ">Inicio</a>
+                <a href="/" th:href="@{/mascota/nueva}" class="nav-link is-active">Registrar</a>
+                <a href="/" th:href="@{/mascota/lista}" class="nav-link ">Mascotas</a>
+                <a href="/" th:href="@{/mascota/estado}" class="nav-link ">Estado</a>
+            </nav>
+        </div></header>
+<main id="contenido">
+<section class="shell inner-head"><a class="back-link" th:href="@{/}" href="/">← Volver al inicio</a><p class="eyebrow">NUEVO INGRESO</p><h1>Registrar una mascota</h1><p class="inner-intro">Un registro claro es el primer paso para ofrecerle la atención que necesita.</p></section>
+<section class="shell form-layout"><div class="panel form-panel"><div class="panel-top"><h2>Datos de ingreso</h2><span class="step-label">01 / 01</span></div>
+    <div class="form-error" role="alert" th:if="${error}" th:text="${error}">Revisa los datos del formulario.</div>
+    <form method="post" th:action="@{/mascota/guardar}" action="/mascota/guardar" th:object="${mascota}" id="formulario-mascota">
+    <div class="form-grid">
+      <div class="field field-wide"><label for="nombre">Nombre de la mascota <span aria-hidden="true">*</span></label><input id="nombre" th:field="*{nombre}" type="text" maxlength="60" placeholder="Ej. Rocky" autocomplete="off" required></div>
+      <div class="field"><label for="especie">Especie <span aria-hidden="true">*</span></label><select id="especie" th:field="*{especie}" required><option value="">Seleccionar especie</option><option value="Perro">Perro</option><option value="Gato">Gato</option><option value="Conejo">Conejo</option><option value="Otra">Otra</option></select></div>
+      <div class="field"><label for="edad">Edad en años <span aria-hidden="true">*</span></label><input id="edad" type="number" th:field="*{edad}" min="0" max="50" step="1" required><span class="field-note">Menores de un año: ingresar 0.</span></div>
+      <div class="field field-wide"><label for="estadoSalud">Estado de salud <span aria-hidden="true">*</span></label><select id="estadoSalud" th:field="*{estadoSalud}" required><option value="">Seleccionar estado</option><option value="Bueno">Bueno</option><option value="Regular">Regular</option><option value="Critico">Crítico</option></select><span class="field-note">La disponibilidad para adopción se determinará según el estado indicado.</span></div>
+    </div>
+    <div class="form-bottom"><span><strong>*</strong> Campos obligatorios</span><button type="submit" class="button button-primary">Guardar mascota <span aria-hidden="true">→</span></button></div>
+    </form>
+</div><aside class="form-aside"><img src="/img/perro.svg" th:src="@{/img/perro.svg}" alt="Ilustración original de un perro"><div class="aside-message"><span>UN NUEVO COMIENZO</span><h3>Detrás de cada nombre hay una historia por cuidar.</h3><p>La atención comienza con información confiable.</p></div></aside></section>
+</main>
+    <footer class="site-footer"><div class="shell footer-inner">
+        <div class="footer-description"><span class="footer-mark" aria-hidden="true">✳</span><span>Huellas · Registro y seguimiento de mascotas<br><small>Ilustraciones educativas propias</small></span></div>
+        <p>Diseño y desarrollo: <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a> · © 2026</p>
+    </div></footer>
+<script src="/js/script.js" th:src="@{/js/script.js}" defer></script>
+</body>
+</html>

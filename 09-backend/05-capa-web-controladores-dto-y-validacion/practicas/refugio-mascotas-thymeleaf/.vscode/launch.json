@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Iniciar Huellas",
+      "request": "launch",
+      "mainClass": "com.ejemplo.mascotas.MascotasApplication",
+      "projectName": "mascotas-demo"
+    }
+  ]
+}

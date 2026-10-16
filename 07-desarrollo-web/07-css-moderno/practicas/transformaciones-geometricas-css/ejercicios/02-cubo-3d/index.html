@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cubo CSS de seis caras con perspectiva y animación de rotación.">
+  <title>Cubo 3D | Chilete DevPath</title>
+  <link rel="icon" href="../../recursos/chilete-devpath.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../estilos.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="encabezado"><div class="contenido barra">
+  <a class="marca" href="../../index.html"><img src="../../recursos/chilete-devpath.svg" alt="" width="40" height="40"><span>Chilete <strong>DevPath</strong></span></a>
+  <nav class="navegacion" aria-label="Navegación principal">
+    <a href="../../index.html">Inicio</a>
+    <a href="../../ejercicios/01-transformaciones-2d/index.html">2D</a>
+    <a href="../../ejercicios/02-cubo-3d/index.html" aria-current="page">3D</a>
+    <a href="../../ejercicios/03-hexagono-interactivo/index.html">Mi figura</a>
+  </nav></div></header>
+<main class="contenido">
+  <section class="titulo-pagina"><span class="etiqueta">Ejercicio 02 · 3D</span><h1>Un cubo en tres dimensiones</h1><p>Seis caras posicionadas con transformaciones CSS. La perspectiva permite observar su profundidad mientras gira sobre el eje vertical.</p></section>
+  <section class="panel-blanco demostracion-3d" aria-label="Cubo 3D en rotación">
+    <div class="escena-cubo">
+      <div class="cubo" tabindex="0" role="img" aria-label="Cubo de seis caras con rotación tridimensional continua. Se detiene al situar el cursor encima o enfocarlo con el teclado.">
+        <div class="cara frente">Frente</div>
+        <div class="cara atras">Atrás</div>
+        <div class="cara izquierda">Izquierda</div>
+        <div class="cara derecha">Derecha</div>
+        <div class="cara arriba">Arriba</div>
+        <div class="cara abajo">Abajo</div>
+      </div>
+    </div>
+    <div class="datos-cubo"><span class="etiqueta">Propiedades CSS</span><h2>Volumen y perspectiva</h2><p>La propiedad <code>preserve-3d</code> mantiene la posición espacial de las caras. Cada superficie se desplaza 100 px desde el centro del cubo.</p>
+      <dl><div><dt>Perspectiva</dt><dd><code>1000px</code></dd></div><div><dt>Profundidad</dt><dd><code>translateZ(100px)</code></dd></div><div><dt>Rotación</dt><dd><code>rotateY()</code></dd></div><div><dt>Duración</dt><dd><code>5s linear infinite</code></dd></div></dl>
+      <p class="ayuda-cubo">Pasa el cursor sobre el cubo o selecciónalo con Tab para detener la rotación.</p>
+    </div>
+  </section>
+  <a class="volver" href="../../index.html">← Volver a ejercicios</a>
+</main>
+<footer class="pie"><div class="contenido pie-interior"><span><strong>Chilete DevPath</strong> · Transformaciones con CSS</span><span>Desde Chilete, Cajamarca · <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">chiletedevpath.com</a></span></div></footer>
+</body>
+</html>

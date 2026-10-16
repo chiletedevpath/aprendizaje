@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Chilete DevPath</title>
+  <desc id="descripcion">Emblema ilustrado de Chilete DevPath con sol, montañas y nodos de conexión.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#112f37"/>
+      <stop offset="1" stop-color="#071d26"/>
+    </linearGradient>
+    <linearGradient id="cerros" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#72d2bf"/>
+      <stop offset="1" stop-color="#1b857b"/>
+    </linearGradient>
+    <clipPath id="circulo"><circle cx="250" cy="250" r="225"/></clipPath>
+  </defs>
+  <circle cx="250" cy="250" r="237" fill="#fff" opacity=".16"/>
+  <circle cx="250" cy="250" r="225" fill="url(#fondo)" stroke="#9be7d2" stroke-width="4"/>
+  <g clip-path="url(#circulo)">
+    <circle cx="250" cy="183" r="66" fill="#f9c472"/>
+    <g stroke="#f9c472" stroke-linecap="round" stroke-width="8">
+      <path d="M250 86v-18 M250 298v-18 M153 183h-18 M365 183h-18 M181 114l-13-13 M319 252l13 13 M181 252l-13 13 M319 114l13-13"/>
+    </g>
+    <path d="M-10 330 134 217 214 289 329 203 512 342v160H-10Z" fill="#256c73"/>
+    <path d="M-15 374 134 272 216 344 331 267 512 387v125H-15Z" fill="url(#cerros)"/>
+    <path d="M111 377 166 344 214 377 277 322 331 344 397 295" stroke="#d8f9e7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <g fill="#e7fff4" stroke="#17655f" stroke-width="4">
+      <circle cx="111" cy="377" r="9"/><circle cx="214" cy="377" r="9"/>
+      <circle cx="331" cy="344" r="9"/><circle cx="397" cy="295" r="9"/>
+    </g>
+    <path d="M80 411h340" stroke="#092c32" opacity=".6" stroke-width="5"/>
+    <rect x="90" y="407" width="320" height="61" rx="16" fill="#092b32" opacity=".96"/>
+    <text x="250" y="431" font-size="25" font-family="Arial,Helvetica,sans-serif" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="2">CHILETE</text>
+    <text x="250" y="456" font-size="18" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#9ae9d4" text-anchor="middle" letter-spacing="3">DEVPATH</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<main class="contenedor">
+  <section
+    class="tarjeta"
+    [ngStyle]="{
+      'background-color': destacado ? '#f4f8ff' : '#ffffff',
+      'border-color': destacado ? '#2563eb' : '#cbd5e1'
+    }"
+  >
+    <p class="etiqueta">ANGULAR · ESTADO Y PRESENTACIÓN</p>
+    <h1 [ngClass]="{ 'titulo-destacado': destacado }">Sobre mí</h1>
+    <p class="descripcion">Información del estudiante</p>
+
+    <div class="dato">
+      <span>Nombres y apellidos</span>
+      <strong>{{ nombreCompleto }}</strong>
+    </div>
+    <div class="dato">
+      <span>Código de matrícula</span>
+      <strong>{{ codigo }}</strong>
+    </div>
+    <div class="dato">
+      <span>Carrera</span>
+      <strong>{{ carrera }}</strong>
+    </div>
+    <div class="dato">
+      <span>Hobby</span>
+      <strong>{{ mihobby }}</strong>
+    </div>
+
+    <button type="button" (click)="cambiarPresentacion()">Cambiar presentación</button>
+
+    <aside class="explicacion" aria-label="Conceptos aplicados">
+      <strong>Chilete DevPath explica</strong>
+      <p>La interpolación muestra los datos de la clase; <code>NgClass</code> y <code>NgStyle</code> cambian la presentación según el estado; el evento <code>click</code> actualiza ese estado.</p>
+    </aside>
+
+    <footer>Práctica formativa · <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a></footer>
+  </section>
+</main>

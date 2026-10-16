@@ -1,0 +1,55 @@
+.contenedor {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+}
+.tarjeta {
+  width: min(100%, 620px);
+  padding: 32px;
+  border: 2px solid;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(29, 52, 83, .08);
+}
+.etiqueta {
+  margin: 0 0 10px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+h1 { margin: 0; font-size: clamp(30px, 5vw, 38px); color: #1f2937; }
+.titulo-destacado { color: #1d4ed8; }
+.descripcion { margin: 8px 0 26px; color: #64748b; }
+.dato {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 0;
+  border-top: 1px solid #dbe3ef;
+}
+.dato span { color: #475569; }
+.dato strong { text-align: right; }
+button {
+  margin-top: 22px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { background: #334155; }
+button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+.explicacion { margin-top: 26px; padding: 18px; border-radius: 10px; background: #e8f0ff; color: #263b61; }
+.explicacion p { margin: 8px 0 0; line-height: 1.55; }
+.explicacion code { font-weight: 700; }
+footer { margin-top: 22px; color: #64748b; font-size: 13px; text-align: center; }
+footer a { color: #1d4ed8; font-weight: 700; }
+@media (max-width: 480px) {
+  .tarjeta { padding: 24px 20px; }
+  .dato { flex-direction: column; gap: 4px; }
+  .dato strong { text-align: left; }
+}

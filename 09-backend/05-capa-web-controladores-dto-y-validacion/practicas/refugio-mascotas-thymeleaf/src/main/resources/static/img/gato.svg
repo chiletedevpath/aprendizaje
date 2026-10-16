@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración de un gato</title>
+  <desc id="desc">Ilustración geométrica creada para la práctica Huellas de Chilete DevPath.</desc>
+  <rect width="800" height="600" fill="#f2ecf7"/>
+  <path d="m245 230 25-150 115 105a200 200 0 0 1 30 0L530 80l25 150a175 175 0 1 1-310 0" fill="#8f7aa7"/>
+  <ellipse cx="335" cy="280" rx="18" ry="27" fill="#fff6b7"/>
+  <ellipse cx="465" cy="280" rx="18" ry="27" fill="#fff6b7"/>
+  <path d="m400 350-30-20h60z" fill="#4a3e55"/>
+  <path d="M400 350q-35 45-70 10M400 350q35 45 70 10M290 335l-130-25M290 365l-130 25M510 335l130-25M510 365l130 25" fill="none" stroke="#4a3e55" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="120" cy="120" r="45" fill="#8f7aa7" opacity=".18"/>
+  <circle cx="690" cy="480" r="72" fill="#8f7aa7" opacity=".18"/>
+</svg>

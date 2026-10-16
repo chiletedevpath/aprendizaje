@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Huellas: registro, seguimiento y disponibilidad de mascotas."
+    />
+    <title>Inicio | Huellas</title>
+    <link rel="stylesheet" href="/css/estilos.css" th:href="@{/css/estilos.css}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" th:href="@{/}" href="/" aria-label="Huellas, ir al inicio">
+          <span class="brand-symbol" aria-hidden="true">✳</span>
+          <span>
+            huellas
+            <span class="brand-dot"></span>
+            <small>REGISTRO DEL REFUGIO</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="/" th:href="@{/}" class="nav-link is-active">Inicio</a>
+          <a href="/" th:href="@{/mascota/nueva}" class="nav-link">Registrar</a>
+          <a href="/" th:href="@{/mascota/lista}" class="nav-link">Mascotas</a>
+          <a href="/" th:href="@{/mascota/estado}" class="nav-link">Estado</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido">
+      <section class="shell hero">
+        <div class="hero-copy">
+          <p class="eyebrow">CUIDADO QUE DEJA HUELLA</p>
+          <h1>
+            Cada historia merece un
+            <em>lugar seguro.</em>
+          </h1>
+          <p class="lead">
+            Registra a los nuevos integrantes del refugio, sigue su estado de salud y consulta su
+            disponibilidad para adopción desde un mismo lugar.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" th:href="@{/mascota/nueva}" href="/mascota/nueva">
+              Registrar mascota
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-quiet" th:href="@{/mascota/lista}" href="/mascota/lista">
+              Ver registros
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong th:text="${total}">0</strong>
+              <span>Mascotas registradas</span>
+            </div>
+            <div>
+              <strong th:text="${disponibles}">0</strong>
+              <span>Disponibles para adopción</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photos">
+          <div class="photo-main">
+            <img
+              src="/img/refugio.svg"
+              th:src="@{/img/refugio.svg}"
+              alt="Ilustración original de un perro y un gato en un refugio"
+              fetchpriority="high"
+            />
+            <span class="photo-tag">Un espacio para cuidar</span>
+          </div>
+          <div class="photo-small">
+            <img
+              src="/img/gato.svg"
+              th:src="@{/img/gato.svg}"
+              alt="Ilustración original de un gato"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="shell content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">UN REGISTRO, MÁS CLARIDAD</p>
+            <h2>Lo esencial en un solo lugar</h2>
+          </div>
+          <p>Información sencilla para acompañar a cada mascota desde su llegada.</p>
+        </div>
+        <div class="feature-grid">
+          <a class="feature-card" th:href="@{/mascota/nueva}" href="/mascota/nueva">
+            <span class="feature-number">01</span>
+            <span class="feature-icon" aria-hidden="true">＋</span>
+            <h3>Nuevo ingreso</h3>
+            <p>Registra nombre, especie, edad y estado de salud.</p>
+            <span class="feature-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="feature-card" th:href="@{/mascota/lista}" href="/mascota/lista">
+            <span class="feature-number">02</span>
+            <span class="feature-icon" aria-hidden="true">▤</span>
+            <h3>Registro general</h3>
+            <p>Consulta las mascotas y su situación actual.</p>
+            <span class="feature-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="feature-card" th:href="@{/mascota/estado}" href="/mascota/estado">
+            <span class="feature-number">03</span>
+            <span class="feature-icon" aria-hidden="true">♡</span>
+            <h3>Estado de salud</h3>
+            <p>Identifica si pueden adoptarse o necesitan atención.</p>
+            <span class="feature-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div class="footer-description">
+          <span class="footer-mark" aria-hidden="true">✳</span>
+          <span>
+            Huellas · Registro y seguimiento de mascotas
+            <br />
+            <small>Ilustraciones educativas propias</small>
+          </span>
+        </div>
+        <p>
+          Diseño y desarrollo:
+          <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">
+            Chilete DevPath
+          </a>
+          · © 2026
+        </p>
+      </div>
+    </footer>
+    <script src="/js/script.js" th:src="@{/js/script.js}" defer></script>
+  </body>
+</html>

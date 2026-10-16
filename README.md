@@ -18,7 +18,7 @@ La secuencia actual corresponde a la ruta de desarrollo de software. Se mantiene
 - `07-desarrollo-web`: HTML, CSS, JavaScript y práctica de interfaces.
 - `08-patrones`: principios SOLID y patrones de diseño.
 - `09-backend`: prácticas de backend y Spring Boot.
-- `10-frontend`: etapa futura; se creará cuando existan prácticas propias de frontend moderno.
+- `10-frontend`: fundamentos de frontend moderno con prácticas propias en Angular.
 - `11-publicacion-y-produccion`: etapa futura; se creará cuando existan laboratorios reproducibles de publicación y operación.
 - `excel-y-productividad`: ruta complementaria con diez módulos de Excel, prácticas resueltas y retos con datos ficticios.
 
@@ -52,7 +52,7 @@ La ruta distingue entre contenido disponible, contenido que todavía se está re
 | `08-patrones` | Disponible | Fundamentos de diseño, SOLID, los 23 patrones GoF, comparación, refactorización e integración en Java. |
 | `09-backend` | Disponible | HTTP, PHP del lado servidor, Spring, APIs, persistencia, seguridad, pruebas, observabilidad y arquitectura verificadas. |
 | `excel-y-productividad` | Disponible | Diez módulos con prácticas y retos sobre datos, formatos, fórmulas, funciones, limpieza, visualización, integración y modelos aplicados. |
-| `10-frontend` | Planificado | Sin contenido publicado; se incorporará cuando existan prácticas propias estudiadas y comprobadas. |
+| `10-frontend` | Disponible | Inicio de la ruta con Angular standalone: componentes, binding, directivas, estilos dinámicos, formularios y pipes. |
 | `11-publicacion-y-produccion` | Planificado | Sin contenido publicado; se incorporará cuando existan laboratorios propios reproducibles. |
 
 **Disponible** significa que existe material organizado, ejecutable y revisado para estudiar y practicar. **Planificado** no se presenta como contenido aprendido ni genera carpetas publicadas sin material real.

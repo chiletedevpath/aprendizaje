@@ -1,0 +1,30 @@
+<main class="contenedor">
+  <header class="cabecera">
+    <p class="etiqueta">Angular · Componentes y formularios</p>
+    <h1>Componentes, pipe y formulario</h1>
+    <p class="descripcion">Registro académico y conversión de monedas</p>
+  </header>
+
+  <section class="perfil" aria-labelledby="titulo-perfil">
+    <div class="perfil-encabezado">
+      <div class="avatar" aria-hidden="true">AP</div>
+      <div>
+        <p class="etiqueta">Datos del estudiante</p>
+        <h2 id="titulo-perfil">{{ estudiante }}</h2>
+      </div>
+    </div>
+    <dl class="detalles">
+      <div><dt>Código de matrícula</dt><dd>{{ matricula }}</dd></div>
+      <div><dt>Carrera</dt><dd>{{ carrera }}</dd></div>
+    </dl>
+  </section>
+
+  <app-conversor-moneda></app-conversor-moneda>
+
+  <aside class="explicacion" aria-label="Conceptos aplicados">
+    <strong>Chilete DevPath explica</strong>
+    <p>El componente padre presenta el perfil y compone un conversor independiente. El formulario valida la entrada y un pipe propio transforma el monto sin modificar el dato original.</p>
+  </aside>
+
+  <footer>Práctica formativa · <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a></footer>
+</main>

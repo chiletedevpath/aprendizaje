@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Perro y gato en un refugio</title>
+  <desc id="desc">Ilustración original creada para explicar el registro de mascotas con Spring MVC y Thymeleaf.</desc>
+  <rect width="1200" height="720" fill="#e9f2ea"/>
+  <path d="M0 575q250-110 480 0t480 0 240 0v145H0z" fill="#bfd8c2"/>
+  <path d="M380 220 600 60l220 160v335H380z" fill="#fffaf0" stroke="#416b56" stroke-width="18"/>
+  <path d="M330 235 600 35l270 200" fill="none" stroke="#416b56" stroke-width="35" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="515" cy="360" r="105" fill="#d59a62"/>
+  <path d="m430 300-70-75q-15 105 48 145zM600 300l70-75q15 105-48 145z" fill="#9b6038"/>
+  <circle cx="480" cy="345" r="12" fill="#26352d"/><circle cx="550" cy="345" r="12" fill="#26352d"/>
+  <ellipse cx="515" cy="400" rx="28" ry="20" fill="#26352d"/>
+  <path d="m650 315 12-95 73 68 73-68 12 95a110 110 0 1 1-170 0" fill="#8f7aa7"/>
+  <circle cx="705" cy="350" r="11" fill="#fff6b7"/><circle cx="765" cy="350" r="11" fill="#fff6b7"/>
+  <path d="m735 395-20-14h40z" fill="#4a3e55"/>
+  <text x="600" y="650" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700" fill="#416b56">HUELLAS · PRÁCTICA MVC</text>
+</svg>

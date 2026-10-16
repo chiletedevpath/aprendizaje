@@ -21,6 +21,7 @@ Crea un botón y una tarjeta reutilizables con estados de foco y hover, variable
 - `practicas/tarjeta-producto-less`: componente responsive que explica variables, mixins, anidación y compilación.
 - `practicas/layout-empresarial-less`: layout mobile first que combina Less con áreas de CSS Grid.
 - `practicas/efectos-css-en-accion`: transiciones, `@keyframes`, animación vinculada al scroll y alternativa con JavaScript.
+- `practicas/transformaciones-geometricas-css`: ejercicios independientes de transformaciones 2D, perspectiva, cubo 3D y una figura interactiva accesible.
 
 ## Para avanzar
 

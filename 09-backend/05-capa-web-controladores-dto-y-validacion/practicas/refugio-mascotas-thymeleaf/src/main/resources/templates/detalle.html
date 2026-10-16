@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Detalle de registro y evaluación de una mascota.">
+    <title>Detalle de mascota | Huellas</title>
+    <link rel="stylesheet" href="/css/estilos.css" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <header class="site-header"><div class="shell header-inner">
+            <a class="brand" th:href="@{/}" href="/" aria-label="Huellas, ir al inicio"><span class="brand-symbol" aria-hidden="true">✳</span><span>huellas<span class="brand-dot">.</span><small>REGISTRO DEL REFUGIO</small></span></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="/" th:href="@{/}" class="nav-link ">Inicio</a>
+                <a href="/" th:href="@{/mascota/nueva}" class="nav-link ">Registrar</a>
+                <a href="/" th:href="@{/mascota/lista}" class="nav-link is-active">Mascotas</a>
+                <a href="/" th:href="@{/mascota/estado}" class="nav-link ">Estado</a>
+            </nav>
+        </div></header>
+<main id="contenido">
+<section class="shell inner-head"><a class="back-link" th:href="@{/mascota/lista}" href="/mascota/lista">← Ver todas las mascotas</a><p class="eyebrow">REGISTRO COMPLETADO</p><h1>Una nueva historia registrada</h1><p class="inner-intro">Los datos están disponibles para su consulta.</p></section>
+<section class="shell detail-layout"><div class="panel detail-panel"><div class="success-strip"><span class="success-check" aria-hidden="true">✓</span><div><strong>Registro guardado</strong><span>La información se añadió al listado del refugio.</span></div></div>
+<div class="pet-heading"><span class="pet-avatar" th:text="${#strings.substring(mascota.nombre,0,1)}">R</span><div><p class="eyebrow">FICHA DE INGRESO</p><h2 th:text="${mascota.nombre}">Rocky</h2><p><span th:text="${mascota.especie}">Perro</span> · <span th:text="${mascota.edad}">2</span> <span th:text="${mascota.edad == 1 ? 'año' : 'años'}">años</span></p></div></div>
+<div class="facts"><div><span>Nombre</span><strong th:text="${mascota.nombre}">Rocky</strong></div><div><span>Especie</span><strong th:text="${mascota.especie}">Perro</strong></div><div><span>Edad</span><strong><span th:text="${mascota.edad}">2</span> <span th:text="${mascota.edad == 1 ? 'año' : 'años'}">años</span></strong></div><div><span>Estado de salud</span><strong th:text="${mascota.estadoSalud == 'Critico' ? 'Crítico' : mascota.estadoSalud}">Bueno</strong></div></div>
+<div class="evaluation"><p class="eyebrow">EVALUACIÓN ACTUAL</p><div class="evaluation-grid"><div class="evaluation-item"><span class="field-title">Adopción</span><div class="statuses"><span class="status status-good" th:if="${mascota.estadoSalud == 'Bueno'}">Disponible para adopción</span>
+<span class="status status-medium" th:if="${mascota.estadoSalud == 'Regular'}">En tratamiento</span>
+<span class="status status-critical" th:if="${mascota.estadoSalud == 'Critico'}">No disponible (en observación)</span></div></div>
+<div class="evaluation-item"><span class="field-title">Etapa de vida</span><strong th:if="${mascota.edad lt 1}">Es cachorro</strong><strong th:unless="${mascota.edad lt 1}">No es cachorro</strong></div></div></div>
+<div class="actions-row"><a class="button button-primary" th:href="@{/mascota/estado(indice=${indice})}" href="/mascota/estado">Consultar estado <span aria-hidden="true">→</span></a><a class="button button-quiet" th:href="@{/mascota/nueva}" href="/mascota/nueva">Registrar otra mascota</a></div>
+</div><aside class="detail-aside"><div class="side-photo"><img src="/img/perro.svg" th:src="@{/img/perro.svg}" alt="Ilustración original de un perro" th:if="${mascota.especie == 'Perro'}"><img src="/img/gato.svg" th:src="@{/img/gato.svg}" alt="Ilustración original de un gato" th:if="${mascota.especie == 'Gato'}"><div class="other-animal" th:unless="${mascota.especie == 'Perro' or mascota.especie == 'Gato'}"><span aria-hidden="true">✳</span><p>Una nueva vida por cuidar</p></div></div><p class="photo-caption">Ilustración educativa · La ficha corresponde al registro ingresado.</p></aside></section>
+</main>
+    <footer class="site-footer"><div class="shell footer-inner">
+        <div class="footer-description"><span class="footer-mark" aria-hidden="true">✳</span><span>Huellas · Registro y seguimiento de mascotas<br><small>Ilustraciones educativas propias</small></span></div>
+        <p>Diseño y desarrollo: <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a> · © 2026</p>
+    </div></footer>
+<script src="/js/script.js" th:src="@{/js/script.js}" defer></script>
+</body>
+</html>

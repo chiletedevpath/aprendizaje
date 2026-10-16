@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rotación, traslación, escala y sesgado de figuras con CSS.">
+  <title>Transformaciones 2D | Chilete DevPath</title>
+  <link rel="icon" href="../../recursos/chilete-devpath.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../estilos.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="encabezado"><div class="contenido barra">
+  <a class="marca" href="../../index.html"><img src="../../recursos/chilete-devpath.svg" alt="" width="40" height="40"><span>Chilete <strong>DevPath</strong></span></a>
+  <nav class="navegacion" aria-label="Navegación principal">
+    <a href="../../index.html">Inicio</a>
+    <a href="../../ejercicios/01-transformaciones-2d/index.html" aria-current="page">2D</a>
+    <a href="../../ejercicios/02-cubo-3d/index.html">3D</a>
+    <a href="../../ejercicios/03-hexagono-interactivo/index.html">Mi figura</a>
+  </nav></div></header>
+<main class="contenido">
+  <section class="titulo-pagina"><span class="etiqueta">Ejercicio 01 · 2D</span><h1>Movimiento en dos dimensiones</h1><p>Cuatro transformaciones sobre cuadrados. Coloca el cursor sobre cada figura o selecciónala con el teclado para observar el resultado.</p></section>
+  <section class="panel-blanco zona-2d" aria-label="Demostración de transformaciones 2D">
+    <div class="cuadricula-formas">
+      <article class="elemento"><div class="escenario"><button type="button" class="caja caja-rotar">Rotar</button></div><h2>Rotación</h2><code>rotate(45deg)</code><p>Giro de 45 grados.</p></article>
+      <article class="elemento"><div class="escenario"><button type="button" class="caja caja-mover">Mover</button></div><h2>Traslación</h2><code>translateX(50px)</code><p>Desplazamiento horizontal.</p></article>
+      <article class="elemento"><div class="escenario"><button type="button" class="caja caja-escalar">Escalar</button></div><h2>Escala</h2><code>scale(1.5)</code><p>Aumento de tamaño.</p></article>
+      <article class="elemento"><div class="escenario"><button type="button" class="caja caja-sesgar">Sesgar</button></div><h2>Sesgado</h2><code>skew(10deg, 10deg)</code><p>Inclinación en ambos ejes.</p></article>
+    </div>
+  </section>
+  <p class="apunte">Las cuatro figuras utilizan <code>transition: transform 0.5s</code> para suavizar el movimiento.</p>
+  <a class="volver" href="../../index.html">← Volver a ejercicios</a>
+</main>
+<footer class="pie"><div class="contenido pie-interior"><span><strong>Chilete DevPath</strong> · Transformaciones con CSS</span><span>Desde Chilete, Cajamarca · <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">chiletedevpath.com</a></span></div></footer>
+</body>
+</html>

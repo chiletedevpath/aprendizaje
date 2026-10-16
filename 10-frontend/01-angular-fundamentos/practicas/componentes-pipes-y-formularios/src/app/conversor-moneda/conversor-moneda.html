@@ -1,0 +1,36 @@
+<section class="panel" aria-labelledby="titulo-conversor">
+  <div class="encabezado">
+    <div>
+      <p class="etiqueta">Formulario basado en plantillas</p>
+      <h2 id="titulo-conversor">Conversor de soles a dólares</h2>
+    </div>
+    <span class="referencia">1 USD = S/ {{ tasaEjemplo }}</span>
+  </div>
+
+  <form #formulario="ngForm" (ngSubmit)="convertir(formulario)" novalidate>
+    <label for="monto">Monto en soles (PEN)</label>
+    <input
+      id="monto" name="monto" type="number" min="0.01" step="0.01"
+      placeholder="Ej. 100" required [(ngModel)]="monto"
+      (ngModelChange)="mostrarResultado = false" #campoMonto="ngModel"
+    >
+
+    @if (campoMonto.invalid && (campoMonto.touched || formulario.submitted)) {
+      <p class="error" role="alert">Ingresa un monto mayor que cero.</p>
+    }
+
+    <div class="acciones">
+      <button type="submit" [disabled]="formulario.invalid">Convertir monto</button>
+      <button class="secundario" type="button" (click)="limpiar(formulario)">Restablecer</button>
+    </div>
+  </form>
+
+  @if (mostrarResultado) {
+    <div class="resultado" aria-live="polite">
+      <span>Equivalente estimado en dólares</span>
+      <strong>{{ monto | convertirmoneda: tasaEjemplo }}</strong>
+    </div>
+  }
+
+  <p class="nota">La tasa de cambio es referencial y se utiliza únicamente para este ejercicio.</p>
+</section>

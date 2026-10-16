@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Consulta del estado de salud y disponibilidad de cada mascota.">
+    <title>Estado de adopción | Huellas</title>
+    <link rel="stylesheet" href="/css/estilos.css" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <header class="site-header"><div class="shell header-inner">
+            <a class="brand" th:href="@{/}" href="/" aria-label="Huellas, ir al inicio"><span class="brand-symbol" aria-hidden="true">✳</span><span>huellas<span class="brand-dot">.</span><small>REGISTRO DEL REFUGIO</small></span></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="/" th:href="@{/}" class="nav-link ">Inicio</a>
+                <a href="/" th:href="@{/mascota/nueva}" class="nav-link ">Registrar</a>
+                <a href="/" th:href="@{/mascota/lista}" class="nav-link ">Mascotas</a>
+                <a href="/" th:href="@{/mascota/estado}" class="nav-link is-active">Estado</a>
+            </nav>
+        </div></header>
+<main id="contenido">
+<section class="shell inner-head"><a class="back-link" th:href="@{/mascota/lista}" href="/mascota/lista">← Volver al listado</a><p class="eyebrow">SEGUIMIENTO</p><h1>Estado de la mascota</h1><p class="inner-intro">Consulta su disponibilidad y las condiciones de cuidado según el registro.</p></section>
+<section class="shell status-layout"><div class="panel status-panel">
+  <form class="pet-selector" th:unless="${#lists.isEmpty(mascotas)}" method="get" th:action="@{/mascota/estado}" action="/mascota/estado"><label for="indice">Mascota registrada</label><div class="select-row"><select id="indice" name="indice"><option th:each="item, iter : ${mascotas}" th:value="${iter.index}" th:text="${item.nombre + ' · ' + item.especie}" th:selected="${iter.index == indiceSeleccionado}">Rocky · Perro</option></select><button class="button button-dark" type="submit">Consultar</button></div></form>
+  <div class="sample-note" th:if="${ejemplo}"><strong>Vista inicial</strong><span>Este es un caso ilustrativo. Al registrar mascotas podrás consultar aquí sus estados reales.</span></div>
+  <div class="pet-heading"><span class="pet-avatar" th:text="${#strings.substring(mascota.nombre,0,1)}">L</span><div><p class="eyebrow">FICHA DE ESTADO</p><h2 th:text="${mascota.nombre}">Luna</h2><p><span th:text="${mascota.especie}">Gato</span> · <span th:text="${mascota.edad}">0</span> <span th:text="${mascota.edad == 1 ? 'año' : 'años'}">años</span></p></div></div>
+  <div class="evaluation"><p class="eyebrow">RESULTADO SEGÚN ESTADO DE SALUD</p><div class="evaluation-grid"><div class="evaluation-item"><span class="field-title">Adopción</span><div class="statuses"><span class="status status-good" th:if="${mascota.estadoSalud == 'Bueno'}">Disponible para adopción</span>
+<span class="status status-medium" th:if="${mascota.estadoSalud == 'Regular'}">En tratamiento</span>
+<span class="status status-critical" th:if="${mascota.estadoSalud == 'Critico'}">No disponible (en observación)</span></div></div>
+<div class="evaluation-item"><span class="field-title">Etapa de vida</span><strong th:if="${mascota.edad lt 1}">Es cachorro</strong><strong th:unless="${mascota.edad lt 1}">No es cachorro</strong></div></div></div>
+  <div class="status-explainer"><h3>¿Cómo se determina la disponibilidad?</h3><p>La condición de adopción responde al estado de salud registrado. Las mascotas con estado bueno están disponibles; las que requieren tratamiento u observación permanecen temporalmente fuera de adopción.</p></div>
+  <a class="button button-primary" th:href="@{/mascota/nueva}" href="/mascota/nueva">Registrar otra mascota <span aria-hidden="true">→</span></a>
+</div><aside class="status-aside"><div class="side-photo"><img src="/img/perro.svg" th:src="@{/img/perro.svg}" alt="Ilustración original de un perro" th:if="${mascota.especie == 'Perro'}"><img src="/img/gato.svg" th:src="@{/img/gato.svg}" alt="Ilustración original de un gato" th:if="${mascota.especie == 'Gato'}"><div class="other-animal" th:unless="${mascota.especie == 'Perro' or mascota.especie == 'Gato'}"><span aria-hidden="true">✳</span><p>Atención para cada especie</p></div></div><p class="photo-caption">Ilustración educativa. La evaluación usa los datos de la ficha seleccionada.</p></aside></section>
+</main>
+    <footer class="site-footer"><div class="shell footer-inner">
+        <div class="footer-description"><span class="footer-mark" aria-hidden="true">✳</span><span>Huellas · Registro y seguimiento de mascotas<br><small>Ilustraciones educativas propias</small></span></div>
+        <p>Diseño y desarrollo: <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a> · © 2026</p>
+    </div></footer>
+<script src="/js/script.js" th:src="@{/js/script.js}" defer></script>
+</body>
+</html>

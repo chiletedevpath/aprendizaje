@@ -1,0 +1,38 @@
+/* La figura combina movimiento plano y giro espacial en capas separadas. */
+.demostracion-hex { display:grid;grid-template-columns:1.08fr .92fr; overflow:hidden; }
+.panel-figura { display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:510px;padding:30px 15px 24px; background:radial-gradient(circle at center,#e2f1e7,#f3f7f2 67%); }
+.escena-hexagono { perspective:1000px; display:grid;place-items:center; }
+/* El control permite mantener o revertir el giro con clic o teclado, sin JavaScript. */
+.control-giro { position:absolute;width:1px;height:1px;opacity:0;overflow:hidden; }
+.area-hexagono { display:block;width:300px;height:300px;cursor:pointer;user-select:none; outline-offset:10px; }
+.control-giro:focus-visible + .area-hexagono { outline:3px solid #d9913b; border-radius:6px; }
+.movimiento-2d, .giro-3d {display:block;position:relative;width:100%;height:100%;}
+.movimiento-2d { transition:transform .65s cubic-bezier(.2,.8,.2,1); }
+.giro-3d { transform-style:preserve-3d; transition:transform .8s cubic-bezier(.2,.75,.2,1); }
+/* Primer nivel: desplazamiento, escala y rotación en 2D. */
+.area-hexagono:hover .movimiento-2d,
+.control-giro:checked + .area-hexagono .movimiento-2d { transform:translateY(-12px) scale(1.05) rotate(-6deg); }
+/* Segundo nivel: giro horizontal en un espacio con perspectiva. */
+.area-hexagono:hover .giro-3d,
+.control-giro:checked + .area-hexagono .giro-3d {transform:rotateY(180deg);}
+.cara-hex {position:absolute;inset:0;backface-visibility:hidden; clip-path:polygon(25% 6%,75% 6%,100% 50%,75% 94%,25% 94%,0 50%); display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.frente-hex {background:linear-gradient(155deg,#287e80,#103d4b);}
+.frente-hex img { width:152px;height:152px; display:block;filter:drop-shadow(0 8px 12px #001b2b33); }
+.texto-hex {font-size:12px;letter-spacing:.13em;color:#e8fff5;font-weight:800;margin-top:6px;}
+.reverso-hex { background:linear-gradient(140deg,#e2ae65,#f5d29a);transform:rotateY(180deg);color:#213538;gap:7px; }
+.marca-reverso {display:block;font-size:68px;line-height:1;letter-spacing:-.08em;font-weight:900;}
+.tipo-reverso {font-weight:800;font-size:15px;}
+.detalle-reverso {font:700 13px Consolas,monospace;letter-spacing:.15em;}
+.instruccion-hex {font-size:13px;color:#567076;text-align:center;max-width:360px;margin:10px 0 0;}
+.ficha-hex {display:flex; flex-direction:column;justify-content:center;padding:clamp(25px,4vw,48px);}
+.ficha-hex h2 {font-size:clamp(25px,3vw,35px);margin:14px 0 8px;line-height:1.16;letter-spacing:-.04em;}
+.ficha-hex>p {font-size:14px;color:#587175;margin:0 0 16px;}
+.paso {display:flex;align-items:start;gap:14px;padding:12px 0;border-top:1px solid #e4eeeb;}
+.paso-numero {border-radius:7px;background:#e5f2eb;color:#087769;font:800 12px Consolas,monospace;padding:7px 8px;}
+.paso h3 {margin:0 0 3px;font-size:15px;}
+.paso code {display:block;color:#0c766b;overflow-wrap:anywhere;font:600 11px/1.6 Consolas,monospace;}
+.paso p {color:#738387;font-size:12px;margin:4px 0 0;}
+.nota-hex { margin:17px 0 0; }
+@media(max-width:870px) { .demostracion-hex {grid-template-columns:1fr;} .panel-figura {min-height:430px;} }
+@media(max-width:440px) { .area-hexagono {width:260px;height:260px;} .frente-hex img{width:132px;height:132px;} .marca-reverso{font-size:55px;} .panel-figura {min-height:375px;} .ficha-hex{padding:25px;} }
+@media(prefers-reduced-motion:reduce){ .movimiento-2d,.giro-3d{transition:none;} .area-hexagono:hover .movimiento-2d{transform:none;} .area-hexagono:hover .giro-3d{transform:none;} }
