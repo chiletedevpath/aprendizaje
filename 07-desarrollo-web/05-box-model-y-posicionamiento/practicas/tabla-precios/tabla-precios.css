@@ -13,6 +13,24 @@ body {
   min-height: 100vh;
 }
 
+.encabezado-ruta,
+.pie-ruta {
+  color: #fff;
+  margin-inline: auto;
+  max-width: 70rem;
+  padding: 32px 5% 0;
+  text-align: center;
+}
+
+.encabezado-ruta p {
+  line-height: 1.6;
+}
+
+.pie-ruta {
+  padding-bottom: 32px;
+  padding-top: 12px;
+}
+
 /* =========================
    CONTENEDOR
 ========================= */

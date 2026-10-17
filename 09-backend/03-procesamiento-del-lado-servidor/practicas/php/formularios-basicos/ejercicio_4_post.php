@@ -26,6 +26,8 @@ $total = $subtotal + $igv;
       <section class="tarjeta">
         <h1>Resultado con método POST</h1>
 
+        <p class="descripcion"><strong>Chilete DevPath explica:</strong> PHP leyó el cuerpo de la petición, realizó los cálculos y construyó esta respuesta HTML en el servidor.</p>
+
         <div class="resultado">
           <p><strong>Producto:</strong> <?php echo $nombre; ?></p>
           <p><strong>Precio unitario:</strong> S/ <?php echo number_format($precio, 2); ?></p>
@@ -40,6 +42,7 @@ $total = $subtotal + $igv;
         <a href="ejercicio_4_post.html" class="enlace">Volver al ejercicio POST</a>
         <br />
         <a href="index.html" class="enlace">Volver al menú principal</a>
+        <footer class="pie-ruta"><p>Práctica educativa desarrollada para Chilete DevPath.</p></footer>
       </section>
     </main>
   </body>

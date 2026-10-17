@@ -5,36 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 2 - Datos personales</title>
+    <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
-    <h1>Ejercicio 2</h1>
-
-    <h2>Registro de datos personales</h2>
-
-    <form action="ejercicio_2.php" method="GET">
-      <label for="nombres">Ingrese sus nombres:</label>
-      <input type="text" id="nombres" name="nombres" required />
-
-      <br />
-      <br />
-
-      <label for="apellidos">Ingrese sus apellidos:</label>
-      <input type="text" id="apellidos" name="apellidos" required />
-
-      <br />
-      <br />
-
-      <label for="edad">Ingrese su edad:</label>
-      <input type="number" id="edad" name="edad" required />
-
-      <br />
-      <br />
-
-      <button type="submit">Enviar datos</button>
-    </form>
-
-    <br />
-
-    <a href="index.html">Volver al menú principal</a>
+    <main class="contenedor">
+      <section class="tarjeta">
+        <h1>Ejercicio 2</h1>
+        <h2>Registro de datos demostrativos</h2>
+        <p class="descripcion"><strong>Chilete DevPath explica:</strong> GET permite observar los parámetros enviados en la URL; por eso esta demostración debe utilizar datos ficticios, nunca información sensible.</p>
+        <form action="ejercicio_2.php" method="GET" class="formulario">
+          <div class="grupo"><label for="nombres">Nombres ficticios:</label><input type="text" id="nombres" name="nombres" autocomplete="off" required /></div>
+          <div class="grupo"><label for="apellidos">Apellidos ficticios:</label><input type="text" id="apellidos" name="apellidos" autocomplete="off" required /></div>
+          <div class="grupo"><label for="edad">Edad demostrativa:</label><input type="number" id="edad" name="edad" min="1" max="120" required /></div>
+          <button type="submit" class="boton">Enviar datos</button>
+        </form>
+        <a href="index.html" class="enlace">Volver al menú principal</a>
+        <footer class="pie-ruta"><p>Práctica educativa desarrollada para Chilete DevPath.</p></footer>
+      </section>
+    </main>
   </body>
 </html>

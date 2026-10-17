@@ -203,6 +203,15 @@ input:focus {
   text-decoration: underline;
 }
 
+.pie-ruta {
+  border-top: 1px solid #cbd5e1;
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 28px;
+  padding-top: 18px;
+  text-align: center;
+}
+
 /* ==============================
    RESULTADOS
 ============================== */

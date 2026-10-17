@@ -5,24 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 1 - Descuento</title>
+    <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
-    <h1>Ejercicio 1</h1>
-
-    <h2>Calcular descuentos del sueldo mensual</h2>
-
-    <form action="ejercicio_1.php" method="POST">
-      <label for="pago">Ingrese el sueldo mensual recibido: S/</label>
-      <input type="number" id="pago" name="pago" step="0.01" required />
-
-      <br />
-      <br />
-
-      <button type="submit">Calcular descuento</button>
-    </form>
-
-    <br />
-
-    <a href="index.html">Volver al menú principal</a>
+    <main class="contenedor">
+      <section class="tarjeta">
+        <h1>Ejercicio 1</h1>
+        <h2>Calcular descuentos del sueldo mensual</h2>
+        <p class="descripcion"><strong>Chilete DevPath explica:</strong> el formulario usa POST porque envía un dato para que el servidor calcule y devuelva un resultado derivado.</p>
+        <form action="ejercicio_1.php" method="POST" class="formulario">
+          <div class="grupo"><label for="pago">Sueldo mensual recibido: S/</label><input type="number" id="pago" name="pago" min="0" step="0.01" required /></div>
+          <button type="submit" class="boton">Calcular descuento</button>
+        </form>
+        <a href="index.html" class="enlace">Volver al menú principal</a>
+        <footer class="pie-ruta"><p>Práctica educativa desarrollada para Chilete DevPath.</p></footer>
+      </section>
+    </main>
   </body>
 </html>

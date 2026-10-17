@@ -123,3 +123,30 @@ body {
 
   opacity: 1;
 }
+
+.pie-ruta {
+  margin-top: 60px;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  color: #334155;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  #principal,
+  .caja {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  #titulo {
+    font-size: 2rem;
+  }
+
+  .figura-css {
+    max-width: 100%;
+  }
+}

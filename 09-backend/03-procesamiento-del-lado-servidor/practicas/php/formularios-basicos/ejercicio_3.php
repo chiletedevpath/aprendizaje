@@ -29,6 +29,8 @@ $sueldoNeto = $sueldoBruto - $impuestoRenta;
       <section class="tarjeta">
         <h1>Resultado del ejercicio 3</h1>
 
+        <p class="descripcion"><strong>Chilete DevPath explica:</strong> esta respuesta fue generada en el servidor a partir de los datos recibidos mediante POST.</p>
+
         <div class="resultado">
           <p><strong>Días trabajados:</strong> <?php echo $dias; ?></p>
           <p><strong>Horas por día:</strong> <?php echo number_format($horas, 2); ?></p>
@@ -44,6 +46,7 @@ $sueldoNeto = $sueldoBruto - $impuestoRenta;
         <a href="ejercicio_3.html" class="enlace">Volver al ejercicio 3</a>
         <br />
         <a href="index.html" class="enlace">Volver al menú principal</a>
+        <footer class="pie-ruta"><p>Práctica educativa desarrollada para Chilete DevPath.</p></footer>
       </section>
     </main>
   </body>
