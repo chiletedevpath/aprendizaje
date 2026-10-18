@@ -1,0 +1,68 @@
+@startuml comunicacion_registrar_venta
+title Comunicación del caso de uso Registrar venta
+' Chilete DevPath: colaboración entre actor, interfaz, controles y entidades mediante mensajes numerados.
+
+top to bottom direction
+
+skinparam shadowing false
+skinparam linetype ortho
+skinparam nodesep 100
+skinparam ranksep 120
+skinparam ArrowFontSize 12
+skinparam defaultTextAlignment center
+
+actor "Propietaria/\nAdministradora" as PA
+
+rectangle "uiVenta : UIVenta\n<<boundary>>" as UIV
+rectangle "ventaControl : VentaControl\n<<control>>" as VC
+
+rectangle "venta : Venta\n<<entity>>" as VE
+rectangle "detalleVenta : DetalleVenta\n<<entity>>" as DV
+
+rectangle "producto : Producto\n<<entity>>" as PR
+rectangle "inventarioControl : InventarioControl\n<<control>>" as IC
+rectangle "movimientoProducto : MovimientoProducto\n<<entity>>" as MP
+
+
+' ==================================================
+' DISTRIBUCIÓN VISUAL
+' ==================================================
+
+PA -[hidden]right-> UIV
+
+VE -[hidden]right-> VC
+VC -[hidden]right-> DV
+
+PR -[hidden]right-> IC
+IC -[hidden]right-> MP
+
+UIV -[hidden]down-> VC
+VC -[hidden]down-> IC
+
+
+' ==================================================
+' MENSAJES DEL CASO DE USO
+' ==================================================
+
+PA -right-> UIV : 1. iniciarRegistroVenta()\n2. ingresarDetalleVenta()
+
+UIV -down-> VC : 1.1 solicitarRegistro()\n2.1 registrarVenta(datos)
+
+VC -down-> PR : 1.2 consultarProductosDisponibles()\n2.2 verificarExistencias()
+
+VC -left-> VE : 2.3 guardarVenta()
+
+VC -right-> DV : 2.4 guardarDetalle()
+
+VC -down-> IC : 2.5 actualizarExistencias()
+
+IC -left-> PR : 2.5.1 descontarCantidad()
+
+IC -right-> MP : 2.5.2 registrarSalida()
+
+
+note right of UIV
+2.6 mostrarConfirmacion()
+end note
+
+@enduml

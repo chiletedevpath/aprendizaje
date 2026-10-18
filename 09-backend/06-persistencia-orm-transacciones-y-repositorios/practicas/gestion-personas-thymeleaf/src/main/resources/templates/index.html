@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administración de personas con Spring Boot y MySQL">
+    <title>Personas | Gestión de registros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" href="/css/estilos.css">
+</head>
+<body class="app-body">
+<header class="site-header">
+    <div class="app-shell header-content">
+        <a class="brand" th:href="@{/listar}" href="/listar" aria-label="Ir al listado de personas">
+            <span class="brand-icon" aria-hidden="true">P</span>
+            <span class="brand-text">Gestión de personas <small>Panel de administración</small></span>
+        </a>
+        <span class="header-tag">Spring Boot + JPA</span>
+    </div>
+</header>
+
+<main class="app-shell page-content">
+    <section class="hero" aria-labelledby="titulo-listado">
+        <div class="hero-copy">
+            <span class="eyebrow">CONTROL DE REGISTROS</span>
+            <h1 id="titulo-listado">Personas registradas</h1>
+            <p>Consulta y administra la información de las personas desde un solo lugar.</p>
+            <a class="button button-primary" th:href="@{/nuevo}" href="/nuevo">
+                <span class="button-plus" aria-hidden="true">+</span> Nueva persona
+            </a>
+        </div>
+        <div class="hero-stat" aria-label="Número de personas registradas">
+            <span class="stat-caption">Total de registros</span>
+            <strong class="stat-value" th:text="${#lists.size(personas)}">0</strong>
+            <span class="stat-hint">Personas en la base de datos</span>
+        </div>
+    </section>
+
+    <aside class="learning-note" aria-label="Conceptos aplicados">
+        <strong>Chilete DevPath explica:</strong> el controlador solicita los registros al servicio,
+        el repositorio los obtiene mediante JPA y Thymeleaf genera esta tabla en el servidor. Las
+        acciones de guardado y eliminación usan POST; después redirigen al listado para evitar
+        repetir la operación al actualizar el navegador.
+    </aside>
+
+    <div class="notice notice-success" role="status" th:if="${mensaje != null}" th:text="${mensaje}">
+        Operación realizada correctamente.
+    </div>
+    <div class="notice notice-error" role="alert" th:if="${error != null}" th:text="${error}">
+        No se pudo completar la operación.
+    </div>
+
+    <section class="content-card" aria-labelledby="titulo-tabla">
+        <div class="card-heading">
+            <div>
+                <span class="section-overline">DIRECTORIO</span>
+                <h2 id="titulo-tabla">Listado general</h2>
+                <p>Información almacenada en MySQL.</p>
+            </div>
+            <span class="record-pill"><span class="pill-dot" aria-hidden="true"></span><span th:text="${#lists.size(personas)} + ' registros'">0 registros</span></span>
+        </div>
+
+        <div class="table-scroll">
+            <table class="data-table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col" class="actions-heading">Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="persona : ${personas}">
+                    <td class="id-cell" th:text="${persona.id}">1</td>
+                    <td>
+                        <div class="person-cell">
+                            <span class="person-avatar" aria-hidden="true" th:text="${#strings.substring(persona.nombre, 0, 1).toUpperCase()}">A</span>
+                            <strong th:text="${persona.nombre}">Ana Pérez</strong>
+                        </div>
+                    </td>
+                    <td th:text="${persona.telefono}">987654321</td>
+                    <td>
+                        <div class="row-actions">
+                            <a class="action-link action-edit"
+                               th:href="@{/editar/{id}(id=${persona.id})}" href="#">Editar</a>
+                            <form th:action="@{/eliminar/{id}(id=${persona.id})}" method="post"
+                                  onsubmit="return confirm('¿Deseas eliminar este registro? Esta acción no se puede deshacer.');">
+                                <button type="submit" class="action-link action-delete">Eliminar</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                <tr th:if="${#lists.isEmpty(personas)}">
+                    <td colspan="4">
+                        <div class="empty-state">
+                            <span class="empty-icon" aria-hidden="true">+</span>
+                            <h3>Sin personas registradas</h3>
+                            <p>Agrega el primer registro para comenzar a administrar el directorio.</p>
+                            <a class="button button-outline" th:href="@{/nuevo}" href="/nuevo">Registrar primera persona</a>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<footer class="site-footer app-shell">
+    <span>Chilete DevPath</span>
+    <span>Spring Boot · Spring Data JPA · Thymeleaf · MySQL</span>
+</footer>
+</body>
+</html>

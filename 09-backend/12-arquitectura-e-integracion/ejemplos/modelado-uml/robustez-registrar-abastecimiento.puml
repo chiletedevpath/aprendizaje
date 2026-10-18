@@ -1,0 +1,27 @@
+@startuml Registrar abastecimiento
+title Robustez del caso de uso Registrar abastecimiento
+' Chilete DevPath: separación entre actor, frontera, control y entidades.
+left to right direction
+
+actor "Propietaria/\nAdministradora" as PA
+
+boundary UIAbastecimiento
+control AbastecimientoControl
+control InventarioControl
+entity Abastecimiento
+entity DetalleAbastecimiento
+entity Proveedor
+entity Insumo
+entity MovimientoInsumo
+
+PA --> UIAbastecimiento
+UIAbastecimiento --> AbastecimientoControl
+
+AbastecimientoControl --> Proveedor : consultar
+AbastecimientoControl --> Abastecimiento : registrar
+AbastecimientoControl --> DetalleAbastecimiento : registrar detalle
+AbastecimientoControl --> InventarioControl : actualizar existencias
+
+InventarioControl --> Insumo : incrementar existencia
+InventarioControl --> MovimientoInsumo : registrar ingreso
+@enduml

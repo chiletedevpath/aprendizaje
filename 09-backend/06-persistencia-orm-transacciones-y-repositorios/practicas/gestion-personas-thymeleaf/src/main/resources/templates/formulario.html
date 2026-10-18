@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de registro y edición de personas">
+    <title th:text="${persona.id > 0 ? 'Editar persona' : 'Nueva persona'} + ' | Gestión de registros'">Formulario | Gestión de registros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" href="/css/estilos.css">
+</head>
+<body class="app-body">
+<header class="site-header">
+    <div class="app-shell header-content">
+        <a class="brand" th:href="@{/listar}" href="/listar" aria-label="Ir al listado de personas">
+            <span class="brand-icon" aria-hidden="true">P</span>
+            <span class="brand-text">Gestión de personas <small>Panel de administración</small></span>
+        </a>
+        <span class="header-tag">Spring Boot + JPA</span>
+    </div>
+</header>
+
+<main class="app-shell form-page">
+    <a class="back-link" th:href="@{/listar}" href="/listar"><span aria-hidden="true">←</span> Volver al listado</a>
+
+    <section class="form-card" aria-labelledby="titulo-formulario">
+        <div class="form-card-header">
+            <span class="section-overline" th:text="${persona.id > 0 ? 'ACTUALIZACIÓN DE DATOS' : 'NUEVO REGISTRO'}">NUEVO REGISTRO</span>
+            <h1 id="titulo-formulario" th:text="${persona.id > 0 ? 'Editar persona' : 'Registrar persona'}">Registrar persona</h1>
+            <p th:text="${persona.id > 0 ? 'Modifica los campos necesarios y guarda los cambios.' : 'Completa los siguientes datos para crear un registro.'}">
+                Completa los siguientes datos para crear un registro.
+            </p>
+        </div>
+
+        <form class="person-form" th:action="@{/guardar}" th:object="${persona}" method="post">
+            <input type="hidden" th:field="*{id}">
+
+            <div class="field">
+                <label for="nombre">Nombre completo <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="nombre" type="text" th:field="*{nombre}" placeholder="Ej. Ana Pérez"
+                       maxlength="80" autocomplete="name" required
+                       th:classappend="${#fields.hasErrors('nombre')} ? 'field-invalid' : ''"
+                       th:attr="aria-invalid=${#fields.hasErrors('nombre')}">
+                <span class="field-error" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">
+                    Revisa el nombre ingresado.
+                </span>
+            </div>
+
+            <div class="field">
+                <label for="telefono">Teléfono <span class="required-mark" aria-hidden="true">*</span></label>
+                <input id="telefono" type="tel" th:field="*{telefono}" placeholder="Ej. 987654321"
+                       maxlength="20" autocomplete="tel" required
+                       th:classappend="${#fields.hasErrors('telefono')} ? 'field-invalid' : ''"
+                       th:attr="aria-invalid=${#fields.hasErrors('telefono')}">
+                <span class="field-error" th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}">
+                    Revisa el teléfono ingresado.
+                </span>
+                <small class="field-help">Se permiten números, espacios, paréntesis y los signos + y -.</small>
+            </div>
+
+            <div class="form-actions">
+                <a class="button button-secondary" th:href="@{/listar}" href="/listar">Cancelar</a>
+                <button class="button button-primary" type="submit"
+                        th:text="${persona.id > 0 ? 'Guardar cambios' : 'Registrar persona'}">Registrar persona</button>
+            </div>
+        </form>
+    </section>
+    <aside class="learning-note" aria-label="Conceptos aplicados en el formulario">
+        <strong>Chilete DevPath explica:</strong> Thymeleaf enlaza los campos con la entidad y
+        muestra los mensajes de Bean Validation devueltos por el controlador. La misma plantilla
+        sirve para crear y editar sin duplicar el formulario.
+    </aside>
+    <p class="form-note">Los campos marcados con * son obligatorios.</p>
+</main>
+<footer class="site-footer app-shell">
+    <span>Chilete DevPath</span>
+    <span>Spring Boot · Spring Data JPA · Thymeleaf · MySQL</span>
+</footer>
+</body>
+</html>

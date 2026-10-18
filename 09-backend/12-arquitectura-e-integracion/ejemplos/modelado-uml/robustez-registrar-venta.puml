@@ -1,0 +1,26 @@
+@startuml Registrar venta
+title Robustez del caso de uso Registrar venta
+' Chilete DevPath: interacción entre la interfaz, los controles y las entidades del dominio.
+left to right direction
+
+actor "Propietaria/\nAdministradora" as PA
+
+boundary UIVenta
+control VentaControl
+control InventarioControl
+entity Venta
+entity DetalleVenta
+entity Producto
+entity MovimientoProducto
+
+PA --> UIVenta
+UIVenta --> VentaControl
+
+VentaControl --> Producto : consultar disponibilidad
+VentaControl --> Venta : registrar
+VentaControl --> DetalleVenta : registrar detalle
+VentaControl --> InventarioControl : actualizar existencias
+
+InventarioControl --> Producto : descontar cantidad
+InventarioControl --> MovimientoProducto : registrar salida
+@enduml

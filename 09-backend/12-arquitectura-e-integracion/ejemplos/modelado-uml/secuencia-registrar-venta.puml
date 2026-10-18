@@ -1,0 +1,47 @@
+@startuml Diagrama de secuencia del caso de uso Registrar venta
+title Secuencia del caso de uso Registrar venta
+' Chilete DevPath: orden temporal de mensajes y alternativa por existencias insuficientes.
+actor "Propietaria/\nAdministradora" as PA
+boundary UIVenta
+control VentaControl
+control InventarioControl
+entity Producto
+entity Venta
+entity DetalleVenta
+entity MovimientoProducto
+
+PA -> UIVenta : Seleccionar registrar venta
+UIVenta -> VentaControl : solicitarProductos()
+VentaControl -> Producto : consultarDisponibles()
+Producto --> VentaControl : productos disponibles
+VentaControl --> UIVenta : mostrarProductos()
+
+PA -> UIVenta : Seleccionar productos y cantidades
+UIVenta -> VentaControl : registrarVenta(datos)
+VentaControl -> Producto : verificarExistencias()
+
+alt Existencias suficientes
+    Producto --> VentaControl : disponibilidad confirmada
+    VentaControl -> Venta : guardar()
+    Venta --> VentaControl : venta registrada
+
+    VentaControl -> DetalleVenta : guardarDetalle()
+    DetalleVenta --> VentaControl : detalle registrado
+
+    VentaControl -> InventarioControl : actualizarExistencias()
+    InventarioControl -> Producto : descontarCantidad()
+    Producto --> InventarioControl : existencia actualizada
+
+    InventarioControl -> MovimientoProducto : registrarSalida()
+    MovimientoProducto --> InventarioControl : movimiento registrado
+
+    InventarioControl --> VentaControl : actualización completada
+    VentaControl --> UIVenta : confirmarVenta()
+    UIVenta --> PA : Mostrar confirmación
+
+else Existencia insuficiente
+    Producto --> VentaControl : existencia insuficiente
+    VentaControl --> UIVenta : informarStockInsuficiente()
+    UIVenta --> PA : Solicitar corrección de cantidad
+end
+@enduml

@@ -1,0 +1,208 @@
+@startuml diagrama_clases_capacitaciones
+title Diagrama de clases de gestión de capacitaciones
+' Chilete DevPath: responsabilidades, asociaciones, agregaciones, composiciones y dependencias.
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam linetype ortho
+hide circle
+
+' =========================================================
+' CONTROL DE ACCESO
+' =========================================================
+
+class Usuario {
+    - idUsuario : int
+    - nombreCompleto : String
+    - nombreUsuario : String
+    - correo : String
+    - contrasenaHash : String
+    - estado : String
+    --
+    + autenticar(clave : String) : boolean
+    + asignarRol(rol : Rol) : void
+    + cambiarEstado(estado : String) : void
+}
+
+class Rol {
+    - idRol : int
+    - nombre : String
+    - descripcion : String
+    --
+    + agregarPermiso(permiso : Permiso) : void
+    + quitarPermiso(permiso : Permiso) : void
+    + puedeAcceder(permiso : Permiso) : boolean
+}
+
+class Permiso {
+    - idPermiso : int
+    - nombre : String
+    - modulo : String
+    - descripcion : String
+}
+
+' =========================================================
+' PERSONAL Y CAPACITACIONES
+' =========================================================
+
+class Trabajador {
+    - idTrabajador : int
+    - dni : String
+    - nombres : String
+    - apellidos : String
+    - cargo : String
+    - estado : String
+    --
+    + registrar() : void
+    + actualizar() : void
+    + consultarHistorial() : void
+    + consultarCapacitaciones() : void
+}
+
+class Curso {
+    - idCurso : int
+    - codigo : String
+    - nombre : String
+    - tipo : String
+    - vigenciaMeses : Integer
+    - estado : String
+    --
+    + registrar() : void
+    + actualizar() : void
+    + activar() : void
+    + desactivar() : void
+}
+
+class Capacitacion {
+    - idCapacitacion : int
+    - fecha : LocalDate
+    - horaInicio : LocalTime
+    - horaFin : LocalTime
+    - modalidad : String
+    - estado : String
+    --
+    + programar() : void
+    + actualizar() : void
+    + cancelar() : void
+    + cerrar() : void
+}
+
+class Participacion {
+    - idParticipacion : int
+    - fechaAsignacion : LocalDate
+    - estado : String
+    --
+    + asignarTrabajador() : void
+    + actualizarEstado() : void
+}
+
+class Asistencia {
+    - idAsistencia : int
+    - condicion : String
+    - fechaRegistro : LocalDate
+    --
+    + registrar() : void
+    + actualizar() : void
+}
+
+class Resultado {
+    - idResultado : int
+    - condicion : String
+    - calificacion : Double
+    - fechaRegistro : LocalDate
+    --
+    + registrar() : void
+    + actualizar() : void
+    + validarCalificacion() : boolean
+    + validarAsistencia(asistencia : Asistencia) : boolean
+}
+
+class Certificado {
+    - idCertificado : int
+    - numero : String
+    - fechaEmision : LocalDate
+    - fechaVencimiento : LocalDate
+    - rutaEvidencia : String
+    - estadoVigencia : String
+    --
+    + registrar() : void
+    + actualizar() : void
+    + validarFechas() : boolean
+    + calcularEstadoVigencia() : String
+}
+
+' =========================================================
+' SEGUIMIENTO
+' =========================================================
+
+class Notificacion {
+    - idNotificacion : int
+    - tipo : String
+    - mensaje : String
+    - fechaGeneracion : LocalDateTime
+    - estado : String
+    --
+    + generar() : void
+    + marcarLeida() : void
+    + validarDuplicado() : boolean
+}
+
+' =========================================================
+' REPORTES
+' =========================================================
+
+class Reporte {
+    - fechaDesde : LocalDate
+    - fechaHasta : LocalDate
+    - estado : String
+    - vigencia : String
+    --
+    + generar() : void
+    + exportarPDF() : void
+}
+
+' =========================================================
+' ASOCIACIONES
+' =========================================================
+
+Usuario "0..*" --> "1" Rol : pertenece a
+
+Trabajador "0..1" -- "0..1" Usuario : cuenta de acceso
+
+Curso "1" -- "0..*" Capacitacion : se programa en
+
+Trabajador "1" -- "0..*" Participacion : participa mediante
+
+Trabajador "1" -- "0..*" Notificacion : recibe
+
+' =========================================================
+' AGREGACIÓN
+' =========================================================
+
+Rol "0..*" o-- "0..*" Permiso : agrupa
+
+' =========================================================
+' COMPOSICIONES
+' =========================================================
+
+Capacitacion "1" *-- "0..*" Participacion : contiene
+
+Participacion "1" *-- "0..1" Asistencia : registra
+Participacion "1" *-- "0..1" Resultado : obtiene
+Participacion "1" *-- "0..1" Certificado : genera
+
+' =========================================================
+' DEPENDENCIAS
+' =========================================================
+
+Resultado ..> Asistencia : valida
+
+Notificacion ..> Capacitacion : informa sobre
+Notificacion ..> Certificado : informa sobre
+
+Reporte ..> Trabajador : consulta
+Reporte ..> Curso : consulta
+Reporte ..> Participacion : consolida
+Reporte ..> Certificado : consulta
+
+@enduml

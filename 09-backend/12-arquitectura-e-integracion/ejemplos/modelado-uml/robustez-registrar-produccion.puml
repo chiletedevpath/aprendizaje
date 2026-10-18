@@ -1,0 +1,29 @@
+@startuml Registrar produccion
+title Robustez del caso de uso Registrar producción
+' Chilete DevPath: responsabilidades para registrar producción y actualizar inventarios.
+left to right direction
+
+actor Panadero
+
+boundary UIProduccion
+control ProduccionControl
+control InventarioControl
+entity Produccion
+entity Producto
+entity ConsumoInsumo
+entity Insumo
+entity MovimientoProducto
+entity MovimientoInsumo
+
+Panadero --> UIProduccion
+UIProduccion --> ProduccionControl
+
+ProduccionControl --> Produccion : registrar
+ProduccionControl --> ConsumoInsumo : registrar consumo
+ProduccionControl --> InventarioControl : actualizar existencias
+
+InventarioControl --> Producto : incrementar existencia
+InventarioControl --> Insumo : descontar existencia
+InventarioControl --> MovimientoProducto : registrar ingreso
+InventarioControl --> MovimientoInsumo : registrar salida
+@enduml
