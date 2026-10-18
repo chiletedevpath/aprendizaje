@@ -1,0 +1,23 @@
+<section class="tarjeta-estilos">
+  <h2>Estilos interactivos</h2>
+  <p class="descripcion">El botón modifica su color y también el estilo del texto.</p>
+  <aside class="nota-aprendizaje" aria-label="Explicación del ejemplo de estilos dinámicos">
+    <strong>Chilete DevPath explica:</strong> el evento <code>(click)</code> cambia el estado
+    <code>resaltado</code> y <code>[ngStyle]</code> vuelve a calcular la apariencia a partir de ese
+    estado. Observa que Angular actualiza la interfaz sin manipular el DOM manualmente.
+  </aside>
+  <button type="button" class="boton-estilo" (click)="cambiarApariencia()"
+          [ngStyle]="{
+            'background-color': resaltado ? '#df593c' : '#176a9a',
+            'box-shadow': resaltado ? '0 4px 13px #df593c55' : 'none'
+          }">
+    {{ resaltado ? 'Restablecer estilo' : 'Cambiar apariencia' }}
+  </button>
+  <p class="texto-estilo" [ngStyle]="{
+    'color': resaltado ? '#c2452c' : '#274767',
+    'font-weight': resaltado ? '800' : '400',
+    'font-size': resaltado ? '20px' : '16px'
+  }">
+    Este texto cambia de apariencia al pulsar el botón.
+  </p>
+</section>

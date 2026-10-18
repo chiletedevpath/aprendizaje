@@ -1,0 +1,98 @@
+<section class="panel">
+  <div class="panel-encabezado">
+    <div>
+      <span class="etiqueta">SERVICIO HTTP · JSONPLACEHOLDER</span>
+      <h2>Consulta de álbumes</h2>
+      <p>Obtener y buscar álbumes desde una API pública con Angular.</p>
+    </div>
+    <span class="servidor">API pública · GET</span>
+  </div>
+
+  <aside class="nota-aprendizaje" aria-label="Explicación del ejemplo de API pública">
+    <strong>Chilete DevPath explica:</strong> el servicio concentra la URL y devuelve observables
+    tipados. La búsqueda consulta <code>/albums/:id</code>, mientras el listado recupera la colección
+    y el componente pagina el resultado en memoria. Observa cómo una misma API requiere estados de
+    carga y error independientes para operaciones que pueden terminar en momentos distintos.
+  </aside>
+
+  <div class="datos-practica">
+    <span><strong>Fuente:</strong> JSONPlaceholder</span>
+    <span><strong>Método:</strong> GET</span>
+    <span><strong>ID de referencia:</strong> {{ idReferencia }}</span>
+  </div>
+
+  <div class="distribucion">
+    <div class="bloque-busqueda">
+      <h3>Buscar álbum por ID</h3>
+      <p class="descripcion">Consulta el título correspondiente a un identificador de la API.</p>
+
+      <form #formularioBusqueda="ngForm" (ngSubmit)="buscarAlbum(formularioBusqueda)">
+        <label for="id-album">ID del álbum</label>
+        <div class="busqueda-controles">
+          <input id="id-album" name="idAlbum" type="number" min="1" step="1"
+                 required [(ngModel)]="idBuscado" #controlId="ngModel">
+          <button type="submit" [disabled]="formularioBusqueda.invalid || cargandoBusqueda">
+            {{ cargandoBusqueda ? 'Buscando...' : 'Buscar ID' }}
+          </button>
+        </div>
+      </form>
+
+      <button type="button" class="boton-claro" (click)="buscarReferencia()" [disabled]="cargandoBusqueda">
+        Consultar ID de referencia 37
+      </button>
+
+      <div class="resultado" *ngIf="albumEncontrado as album">
+        <span class="resultado-etiqueta">ÁLBUM ENCONTRADO</span>
+        <div class="resultado-campos">
+          <div><span>userId</span><strong>{{ album.userId }}</strong></div>
+          <div><span>id</span><strong>{{ album.id }}</strong></div>
+        </div>
+        <span class="titulo-etiqueta">title</span>
+        <p class="titulo-resultado">{{ album.title }}</p>
+      </div>
+
+      <p class="aviso" *ngIf="cargandoBusqueda">Consultando el álbum...</p>
+      <p class="respuesta error-api" *ngIf="errorBusqueda">{{ errorBusqueda }}</p>
+    </div>
+
+    <div class="bloque-listado">
+      <div class="barra-listado">
+        <div>
+          <h3>Listado de álbumes</h3>
+          <span class="contador">{{ albums.length }} álbumes recuperados</span>
+        </div>
+        <button type="button" class="boton-obtener" (click)="obtenerAlbums()" [disabled]="cargandoLista">
+          {{ cargandoLista ? 'Obteniendo...' : 'Obtener álbumes' }}
+        </button>
+      </div>
+
+      <div class="tabla-contenedor" *ngIf="albums.length > 0">
+        <table>
+          <thead>
+            <tr>
+              <th>userId</th>
+              <th>id</th>
+              <th>title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let album of albumsVisibles" [class.fila-referencia]="album.id === idReferencia">
+              <td>{{ album.userId }}</td>
+              <td><strong>{{ album.id }}</strong></td>
+              <td>{{ album.title }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginacion" *ngIf="albums.length > registrosPorPagina">
+        <button type="button" class="boton-claro" (click)="cambiarPagina(-1)" [disabled]="pagina === 1">Anterior</button>
+        <span>Página {{ pagina }} de {{ totalPaginas }}</span>
+        <button type="button" class="boton-claro" (click)="cambiarPagina(1)" [disabled]="pagina === totalPaginas">Siguiente</button>
+      </div>
+
+      <p class="aviso" *ngIf="cargandoLista">Obteniendo listado de álbumes...</p>
+      <p class="respuesta error-api" *ngIf="errorLista">{{ errorLista }}</p>
+    </div>
+  </div>
+</section>

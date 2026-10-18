@@ -1,0 +1,27 @@
+.tarjeta-usuarios { background: #fff; border: 1px solid #dbe4ef; border-radius: 12px; box-shadow: 0 5px 18px #1c355212; padding: 24px; }
+h2 { margin: 0 0 5px; font-size: 20px; }
+.seccion-cabecera { display: flex; gap: 14px; justify-content: space-between; align-items: center; }
+.seccion-cabecera p, .descripcion-formulario { font-size: 13px; margin: 4px 0 12px; color: #607186; }
+.lista-usuarios { margin-top: 10px; display: grid; gap: 8px; }
+.usuario { border: 1px solid #e3eaf2; border-radius: 8px; padding: 11px; display: flex; align-items: center; gap: 12px; }
+.avatar { flex: none; display: grid; place-items: center; width: 35px; height: 35px; background: #dbeafe; color: #1d4f91; border-radius: 50%; font-weight: 700; }
+.datos-usuario { min-width: 0; display: grid; gap: 3px; flex: 1; }
+.datos-usuario strong { overflow-wrap: anywhere; font-size: 13px; }
+.datos-usuario small { color: #667b91; }
+.estado { font-size: 11px; font-weight: 700; color: #167746; background: #e4f6e9; border-radius: 20px; padding: 5px 9px; }
+.estado.inactivo { color: #8b5b13; background: #fff1d2; }
+.boton-secundario { border: 1px solid #cedbe8; background: #fff; border-radius: 7px; color: #215c85; padding: 9px 12px; font-size: 12px; font-weight: 700; }
+.boton-secundario:hover { background: #ecf6fc; }
+.divisor { border-top: 1px solid #e1e8f0; margin: 22px 0; }
+.descripcion-formulario { margin-bottom: 15px; }
+.campos { display: grid; grid-template-columns: 1.6fr 1fr; gap: 12px; }
+.campo { display: grid; gap: 6px; }
+.campo label, .casilla { color: #344a62; font-size: 13px; font-weight: 650; }
+.campo input, .campo select { background: #fff; width: 100%; padding: 10px 11px; border: 1px solid #cbd5e1; border-radius: 7px; color: #17304c; min-width: 0; }
+.campo input.ng-invalid.ng-touched { border-color: #d94747; }
+.error { font-size: 12px; color: #b73535; }
+.casilla { display: flex; align-items: center; gap: 7px; margin: 15px 0; }
+.casilla input { width: 16px; height: 16px; }
+.boton-principal { border: none; border-radius: 7px; background: #146398; color: white; padding: 11px 16px; font-weight: 700; }
+.boton-principal:hover:not(:disabled) { background: #0d4e7b; }
+@media (max-width: 540px) { .campos { grid-template-columns: 1fr; } .seccion-cabecera { flex-direction: column; align-items: start; } }

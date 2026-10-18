@@ -1,0 +1,70 @@
+  <section class="tarjeta-usuarios">
+    <div class="seccion-cabecera">
+      <div>
+        <h2>Usuarios registrados</h2>
+        <p>Listado de personas con su estado de registro.</p>
+      </div>
+      <button type="button" class="boton-secundario" (click)="mostrarInactivos = !mostrarInactivos">
+        {{ mostrarInactivos ? 'Ocultar inactivos' : 'Mostrar todos' }}
+      </button>
+    </div>
+
+    <aside class="nota-aprendizaje" aria-label="Explicación del ejemplo de usuarios">
+      <strong>Chilete DevPath explica:</strong> <code>*ngFor</code> repite una plantilla por cada
+      usuario, <code>*ngIf</code> decide cuáles se muestran y el pipe transforma el nombre solo en
+      la vista. Observa también cómo <code>ngModel</code> enlaza el formulario con el componente y
+      cómo la validación impide enviar datos incompletos.
+    </aside>
+
+    <div class="lista-usuarios">
+      <ng-container *ngFor="let usuario of usuarios">
+        <div class="usuario" *ngIf="mostrarInactivos || usuario.activo">
+          <div class="avatar" aria-hidden="true">{{ usuario.id }}</div>
+          <div class="datos-usuario">
+            <strong>{{ usuario.nombre | nombreMayuscula }}</strong>
+            <small>{{ usuario.rol }}</small>
+          </div>
+          <span class="estado" [class.inactivo]="!usuario.activo">
+            {{ usuario.activo ? 'Activo' : 'Inactivo' }}
+          </span>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="divisor"></div>
+
+    <h2>Registrar un usuario</h2>
+    <p class="descripcion-formulario">Completa los campos para agregar una persona a la lista.</p>
+
+    <form #formulario="ngForm" (ngSubmit)="agregarUsuario(formulario)" novalidate>
+      <div class="campos">
+        <div class="campo nombre-campo">
+          <label for="nombre">Nombre completo</label>
+          <input id="nombre" type="text" name="nombre" placeholder="Ej. Ana Torres"
+                 [(ngModel)]="nuevoNombre" #nombreControl="ngModel"
+                 required minlength="3" maxlength="70" autocomplete="off">
+          <small class="error" *ngIf="nombreControl.invalid && nombreControl.touched">
+            Ingresa un nombre de al menos 3 caracteres.
+          </small>
+        </div>
+
+        <div class="campo">
+          <label for="rol">Rol</label>
+          <select id="rol" name="rol" [(ngModel)]="nuevoRol" required>
+            <option value="Usuario">Usuario</option>
+            <option value="Estudiante">Estudiante</option>
+            <option value="Invitado">Invitado</option>
+          </select>
+        </div>
+      </div>
+
+      <label class="casilla">
+        <input type="checkbox" name="activo" [(ngModel)]="nuevoActivo">
+        Usuario activo
+      </label>
+
+      <button type="submit" class="boton-principal" [disabled]="formulario.invalid || !nuevoNombre.trim()">
+        Agregar usuario
+      </button>
+    </form>
+  </section>

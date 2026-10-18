@@ -1,0 +1,22 @@
+{
+  "alumnos": [
+    {
+      "id": 1,
+      "matricula": "20260001",
+      "nombres": "Elena",
+      "apellidos": "Torres"
+    },
+    {
+      "id": 2,
+      "matricula": "20260002",
+      "nombres": "Lucia",
+      "apellidos": "Fernandez Ruiz"
+    },
+    {
+      "id": 3,
+      "matricula": "20260003",
+      "nombres": "Carlos",
+      "apellidos": "Torres Perez"
+    }
+  ]
+}

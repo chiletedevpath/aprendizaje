@@ -1,0 +1,106 @@
+<section class="panel">
+  <div class="panel-encabezado">
+    <div>
+      <span class="etiqueta">SERVICIO HTTP · JSON-SERVER</span>
+      <h2>Gestión de alumnos</h2>
+      <p>Consulta, busca y registra alumnos mediante un servicio Angular.</p>
+    </div>
+    <span class="servidor">API · localhost:3000</span>
+  </div>
+
+  <aside class="nota-aprendizaje" aria-label="Explicación del ejemplo de servicio HTTP local">
+    <strong>Chilete DevPath explica:</strong> el componente delega las peticiones al servicio.
+    Un GET obtiene o filtra alumnos mediante <code>HttpParams</code> y un POST registra uno nuevo;
+    el componente se suscribe al observable y comunica los estados de carga, vacío, éxito y error.
+    Observa esos cambios al detener o iniciar <code>json-server</code>.
+  </aside>
+
+  <div class="distribucion">
+    <div class="bloque-listado">
+      <div class="barra-listado">
+        <h3>Listado de alumnos</h3>
+        <span class="contador">{{ alumnos.length }} registros</span>
+      </div>
+
+      <form class="busqueda" (ngSubmit)="buscarAlumno()">
+        <label for="buscar-matricula">Buscar por matrícula</label>
+        <div class="busqueda-controles">
+          <input id="buscar-matricula" type="search" name="buscarMatricula"
+                 [(ngModel)]="matriculaBuscada" placeholder="Ej. 20260001" autocomplete="off">
+          <button type="submit" [disabled]="cargando">Buscar</button>
+          <button type="button" class="boton-claro" (click)="matriculaBuscada = ''; obtenerAlumnos()"
+                  [disabled]="cargando">Obtener todos</button>
+        </div>
+      </form>
+
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Matrícula</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let alumno of alumnos" [class.fila-referencia]="alumno.matricula === '20260001'">
+              <td>{{ alumno.id }}</td>
+              <td><strong>{{ alumno.matricula }}</strong></td>
+              <td>{{ alumno.nombres }}</td>
+              <td>{{ alumno.apellidos }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="aviso" *ngIf="cargando">Consultando alumnos...</p>
+      <p class="aviso" *ngIf="!cargando && alumnos.length === 0 && !error">
+        {{ busquedaActiva ? 'No se encontraron alumnos con esa matrícula.' : 'Todavía no hay alumnos registrados.' }}
+      </p>
+    </div>
+
+    <div class="bloque-formulario">
+      <h3>Agregar alumno</h3>
+      <p class="descripcion">Completa los datos para guardar un registro en db.json.</p>
+
+      <form #formularioAlumno="ngForm" (ngSubmit)="agregarAlumno(formularioAlumno)" novalidate>
+        <div class="campo">
+          <label for="matricula-alumno">Matrícula</label>
+          <input id="matricula-alumno" name="matricula" type="text" inputmode="numeric"
+                 [(ngModel)]="nuevoAlumno.matricula" #matriculaControl="ngModel"
+                 required pattern="[0-9]{8}" maxlength="8" placeholder="8 dígitos" autocomplete="off">
+          <small class="error-campo" *ngIf="matriculaControl.invalid && matriculaControl.touched">
+            Ingresa una matrícula de 8 dígitos.
+          </small>
+        </div>
+
+        <div class="campo">
+          <label for="nombres-alumno">Nombres</label>
+          <input id="nombres-alumno" name="nombres" type="text"
+                 [(ngModel)]="nuevoAlumno.nombres" #nombresControl="ngModel"
+                 required minlength="2" maxlength="70" placeholder="Nombres" autocomplete="off">
+          <small class="error-campo" *ngIf="nombresControl.invalid && nombresControl.touched">
+            Ingresa los nombres del alumno.
+          </small>
+        </div>
+
+        <div class="campo">
+          <label for="apellidos-alumno">Apellidos</label>
+          <input id="apellidos-alumno" name="apellidos" type="text"
+                 [(ngModel)]="nuevoAlumno.apellidos" #apellidosControl="ngModel"
+                 required minlength="2" maxlength="70" placeholder="Apellidos" autocomplete="off">
+          <small class="error-campo" *ngIf="apellidosControl.invalid && apellidosControl.touched">
+            Ingresa los apellidos del alumno.
+          </small>
+        </div>
+
+        <button class="boton-guardar" type="submit" [disabled]="formularioAlumno.invalid || guardando">
+          {{ guardando ? 'Guardando...' : 'Agregar alumno' }}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <p class="respuesta mensaje" *ngIf="mensaje">{{ mensaje }}</p>
+  <p class="respuesta error-api" *ngIf="error">{{ error }}</p>
+</section>
