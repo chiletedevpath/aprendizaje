@@ -14,6 +14,13 @@ Antes de crear tablas se modela el dominio. El modelo ER permite discutir entida
 
 Modela una biblioteca con autores, libros, ejemplares, usuarios y préstamos.
 
+## Ejemplos disponibles
+
+- `ejemplos/modelo-conceptual-panaderia.puml`: notación Chen aplicada a producción, ventas, compras e inventario.
+- `ejemplos/modelo-conceptual-capacitaciones.puml`: entidades, atributos y relaciones de una gestión formativa.
+
+Compara ambos diagramas: el primero enfatiza relaciones con atributos; el segundo permite discutir cómo representar visualmente un dominio más amplio antes de pasar al modelo lógico.
+
 ## Para avanzar
 
 Representar entidades, atributos, relaciones, cardinalidades y restricciones antes de elegir un motor.

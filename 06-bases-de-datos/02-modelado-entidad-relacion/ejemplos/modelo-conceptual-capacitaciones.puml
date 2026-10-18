@@ -1,0 +1,189 @@
+@startuml modelo_conceptual_capacitaciones
+title Modelo conceptual de gestión de capacitaciones
+' Chilete DevPath: ejemplo de entidades, atributos y relaciones de un dominio formativo.
+left to right direction
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam defaultFontSize 14
+skinparam ArrowColor #333333
+
+' =========================
+' ENTIDADES Y ATRIBUTOS
+' =========================
+
+rectangle "ROL" as ROL #E9DCF8
+usecase "idRol" as ROL_ID #EEF7FB
+usecase "nombre" as ROL_NOMBRE #EEF7FB
+usecase "descripcion" as ROL_DESC #EEF7FB
+ROL_ID -- ROL
+ROL_NOMBRE -- ROL
+ROL_DESC -- ROL
+
+rectangle "PERMISO" as PERMISO #E9DCF8
+usecase "idPermiso" as PERMISO_ID #EEF7FB
+usecase "nombre" as PERMISO_NOMBRE #EEF7FB
+usecase "modulo" as PERMISO_MODULO #EEF7FB
+usecase "descripcion" as PERMISO_DESC #EEF7FB
+PERMISO -- PERMISO_ID
+PERMISO -- PERMISO_NOMBRE
+PERMISO -- PERMISO_MODULO
+PERMISO -- PERMISO_DESC
+
+rectangle "USUARIO" as USUARIO #E9DCF8
+usecase "idUsuario" as USUARIO_ID #EEF7FB
+usecase "nombreCompleto" as USUARIO_NOMBRE_COMPLETO #EEF7FB
+usecase "nombreUsuario" as USUARIO_NOMBRE_USUARIO #EEF7FB
+usecase "correo" as USUARIO_CORREO #EEF7FB
+usecase "contrasenaHash" as USUARIO_CLAVE #EEF7FB
+usecase "estado" as USUARIO_ESTADO #EEF7FB
+USUARIO_ID -- USUARIO
+USUARIO_NOMBRE_COMPLETO -- USUARIO
+USUARIO_NOMBRE_USUARIO -- USUARIO
+USUARIO_CORREO -- USUARIO
+USUARIO_CLAVE -- USUARIO
+USUARIO_ESTADO -- USUARIO
+
+rectangle "TRABAJADOR" as TRABAJADOR #E9DCF8
+usecase "idTrabajador" as TRABAJADOR_ID #EEF7FB
+usecase "dni" as TRABAJADOR_DNI #EEF7FB
+usecase "nombres" as TRABAJADOR_NOMBRES #EEF7FB
+usecase "apellidos" as TRABAJADOR_APELLIDOS #EEF7FB
+usecase "cargo" as TRABAJADOR_CARGO #EEF7FB
+usecase "estado" as TRABAJADOR_ESTADO #EEF7FB
+TRABAJADOR -- TRABAJADOR_ID
+TRABAJADOR -- TRABAJADOR_DNI
+TRABAJADOR -- TRABAJADOR_NOMBRES
+TRABAJADOR -- TRABAJADOR_APELLIDOS
+TRABAJADOR -- TRABAJADOR_CARGO
+TRABAJADOR -- TRABAJADOR_ESTADO
+
+rectangle "NOTIFICACION" as NOTIFICACION #E9DCF8
+usecase "idNotificacion" as NOTIFICACION_ID #EEF7FB
+usecase "tipo" as NOTIFICACION_TIPO #EEF7FB
+usecase "mensaje" as NOTIFICACION_MENSAJE #EEF7FB
+usecase "fechaGeneracion" as NOTIFICACION_FECHA #EEF7FB
+usecase "estado" as NOTIFICACION_ESTADO #EEF7FB
+NOTIFICACION -- NOTIFICACION_ID
+NOTIFICACION -- NOTIFICACION_TIPO
+NOTIFICACION -- NOTIFICACION_MENSAJE
+NOTIFICACION -- NOTIFICACION_FECHA
+NOTIFICACION -- NOTIFICACION_ESTADO
+
+rectangle "CURSO" as CURSO #E9DCF8
+usecase "idCurso" as CURSO_ID #EEF7FB
+usecase "codigo" as CURSO_CODIGO #EEF7FB
+usecase "nombre" as CURSO_NOMBRE #EEF7FB
+usecase "tipo" as CURSO_TIPO #EEF7FB
+usecase "vigenciaMeses" as CURSO_VIGENCIA #EEF7FB
+usecase "estado" as CURSO_ESTADO #EEF7FB
+CURSO_ID -- CURSO
+CURSO_CODIGO -- CURSO
+CURSO_NOMBRE -- CURSO
+CURSO_TIPO -- CURSO
+CURSO_VIGENCIA -- CURSO
+CURSO_ESTADO -- CURSO
+
+rectangle "CAPACITACION" as CAPACITACION #E9DCF8
+usecase "idCapacitacion" as CAPACITACION_ID #EEF7FB
+usecase "fecha" as CAPACITACION_FECHA #EEF7FB
+usecase "horaInicio" as CAPACITACION_INICIO #EEF7FB
+usecase "horaFin" as CAPACITACION_FIN #EEF7FB
+usecase "modalidad" as CAPACITACION_MODALIDAD #EEF7FB
+usecase "estado" as CAPACITACION_ESTADO #EEF7FB
+CAPACITACION -- CAPACITACION_ID
+CAPACITACION -- CAPACITACION_FECHA
+CAPACITACION -- CAPACITACION_INICIO
+CAPACITACION -- CAPACITACION_FIN
+CAPACITACION -- CAPACITACION_MODALIDAD
+CAPACITACION -- CAPACITACION_ESTADO
+
+rectangle "PARTICIPACION" as PARTICIPACION #E9DCF8
+usecase "idParticipacion" as PARTICIPACION_ID #EEF7FB
+usecase "fechaAsignacion" as PARTICIPACION_FECHA #EEF7FB
+usecase "estado" as PARTICIPACION_ESTADO #EEF7FB
+PARTICIPACION -- PARTICIPACION_ID
+PARTICIPACION -- PARTICIPACION_FECHA
+PARTICIPACION -- PARTICIPACION_ESTADO
+
+rectangle "ASISTENCIA" as ASISTENCIA #E9DCF8
+usecase "idAsistencia" as ASISTENCIA_ID #EEF7FB
+usecase "condicion" as ASISTENCIA_CONDICION #EEF7FB
+usecase "fechaRegistro" as ASISTENCIA_FECHA #EEF7FB
+ASISTENCIA_ID -- ASISTENCIA
+ASISTENCIA_CONDICION -- ASISTENCIA
+ASISTENCIA_FECHA -- ASISTENCIA
+
+rectangle "RESULTADO" as RESULTADO #E9DCF8
+usecase "idResultado" as RESULTADO_ID #EEF7FB
+usecase "condicion" as RESULTADO_CONDICION #EEF7FB
+usecase "calificacion" as RESULTADO_CALIFICACION #EEF7FB
+usecase "fechaRegistro" as RESULTADO_FECHA #EEF7FB
+RESULTADO -- RESULTADO_ID
+RESULTADO -- RESULTADO_CONDICION
+RESULTADO -- RESULTADO_CALIFICACION
+RESULTADO -- RESULTADO_FECHA
+
+rectangle "CERTIFICADO" as CERTIFICADO #E9DCF8
+usecase "idCertificado" as CERTIFICADO_ID #EEF7FB
+usecase "numero" as CERTIFICADO_NUMERO #EEF7FB
+usecase "fechaEmision" as CERTIFICADO_EMISION #EEF7FB
+usecase "fechaVencimiento" as CERTIFICADO_VENCIMIENTO #EEF7FB
+usecase "rutaEvidencia" as CERTIFICADO_EVIDENCIA #EEF7FB
+usecase "estadoVigencia" as CERTIFICADO_ESTADO #EEF7FB
+CERTIFICADO -- CERTIFICADO_ID
+CERTIFICADO -- CERTIFICADO_NUMERO
+CERTIFICADO -- CERTIFICADO_EMISION
+CERTIFICADO -- CERTIFICADO_VENCIMIENTO
+CERTIFICADO -- CERTIFICADO_EVIDENCIA
+CERTIFICADO -- CERTIFICADO_ESTADO
+
+' =========================
+' RELACIONES CONCEPTUALES
+' Se usan rectángulos para máxima compatibilidad con PlantUML 1.2024.3
+' y porque el ejemplo del docente también representa "Relación" como caja.
+' =========================
+
+rectangle "agrupa" as R_AGRUPA #DFF2C7
+ROL -- R_AGRUPA
+R_AGRUPA -- PERMISO
+
+rectangle "pertenece a" as R_PERTENECE #DFF2C7
+USUARIO -- R_PERTENECE
+R_PERTENECE -- ROL
+
+rectangle "cuenta de acceso" as R_CUENTA #DFF2C7
+TRABAJADOR -- R_CUENTA
+R_CUENTA -- USUARIO
+
+rectangle "recibe" as R_RECIBE #DFF2C7
+TRABAJADOR -- R_RECIBE
+R_RECIBE -- NOTIFICACION
+
+rectangle "se programa en" as R_PROGRAMA #DFF2C7
+CURSO -- R_PROGRAMA
+R_PROGRAMA -- CAPACITACION
+
+rectangle "participa mediante" as R_PARTICIPA #DFF2C7
+TRABAJADOR -- R_PARTICIPA
+R_PARTICIPA -- PARTICIPACION
+
+rectangle "contiene" as R_CONTIENE #DFF2C7
+CAPACITACION -- R_CONTIENE
+R_CONTIENE -- PARTICIPACION
+
+rectangle "registra" as R_REGISTRA #DFF2C7
+PARTICIPACION -- R_REGISTRA
+R_REGISTRA -- ASISTENCIA
+
+rectangle "obtiene" as R_OBTIENE #DFF2C7
+PARTICIPACION -- R_OBTIENE
+R_OBTIENE -- RESULTADO
+
+rectangle "genera" as R_GENERA #DFF2C7
+PARTICIPACION -- R_GENERA
+R_GENERA -- CERTIFICADO
+
+@enduml

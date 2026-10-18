@@ -1,0 +1,169 @@
+@startuml modelo_logico_panaderia
+title Modelo lógico de producción y ventas
+' Chilete DevPath: transformación del dominio a relaciones con PK, FK y tablas asociativas.
+
+left to right direction
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 45
+skinparam ranksep 55
+
+entity CLIENTE {
+  * idCliente : PK
+  --
+  nombres
+  apellidos
+  telefono
+}
+
+entity PRODUCTO {
+  * idProducto : PK
+  --
+  nombre
+  descripcion
+  precioVenta
+}
+
+entity INSUMO {
+  * idInsumo : PK
+  --
+  nombre
+  unidadMedida
+}
+
+entity PROVEEDOR {
+  * idProveedor : PK
+  --
+  nombre
+  telefono
+}
+
+entity PEDIDO {
+  * idPedido : PK
+  --
+  idCliente : FK
+  fechaPedido
+  fechaEntrega
+  estado
+}
+
+entity DETALLE_PEDIDO {
+  * idPedido : PK, FK
+  * idProducto : PK, FK
+  --
+  cantidad
+}
+
+entity VENTA {
+  * idVenta : PK
+  --
+  fecha
+  total
+}
+
+entity DETALLE_VENTA {
+  * idVenta : PK, FK
+  * idProducto : PK, FK
+  --
+  cantidad
+  precioUnitario
+}
+
+entity PRODUCCION {
+  * idProduccion : PK
+  --
+  idProducto : FK
+  fecha
+  cantidadProducida
+}
+
+entity CONSUMO_INSUMO {
+  * idProduccion : PK, FK
+  * idInsumo : PK, FK
+  --
+  cantidadUtilizada
+}
+
+entity ABASTECIMIENTO {
+  * idAbastecimiento : PK
+  --
+  idProveedor : FK
+  fecha
+}
+
+entity DETALLE_ABASTECIMIENTO {
+  * idAbastecimiento : PK, FK
+  * idInsumo : PK, FK
+  --
+  cantidad
+  costoUnitario
+}
+
+entity INVENTARIO {
+  * idInventario : PK
+  --
+  fechaActualizacion
+}
+
+entity INVENTARIO_PRODUCTO {
+  * idInventario : PK, FK
+  * idProducto : PK, FK
+  --
+  cantidadDisponible
+}
+
+entity INVENTARIO_INSUMO {
+  * idInventario : PK, FK
+  * idInsumo : PK, FK
+  --
+  cantidadDisponible
+}
+
+entity MOVIMIENTO_PRODUCTO {
+  * idMovimientoProducto : PK
+  --
+  idProducto : FK
+  fecha
+  tipoMovimiento
+  cantidad
+  origen
+}
+
+entity MOVIMIENTO_INSUMO {
+  * idMovimientoInsumo : PK
+  --
+  idInsumo : FK
+  fecha
+  tipoMovimiento
+  cantidad
+  origen
+}
+
+CLIENTE ||--o{ PEDIDO
+
+PEDIDO ||--|{ DETALLE_PEDIDO
+PRODUCTO ||--o{ DETALLE_PEDIDO
+
+VENTA ||--|{ DETALLE_VENTA
+PRODUCTO ||--o{ DETALLE_VENTA
+
+PRODUCTO ||--o{ PRODUCCION
+
+PRODUCCION ||--|{ CONSUMO_INSUMO
+INSUMO ||--o{ CONSUMO_INSUMO
+
+PROVEEDOR ||--o{ ABASTECIMIENTO
+
+ABASTECIMIENTO ||--|{ DETALLE_ABASTECIMIENTO
+INSUMO ||--o{ DETALLE_ABASTECIMIENTO
+
+INVENTARIO ||--o{ INVENTARIO_PRODUCTO
+PRODUCTO ||--o{ INVENTARIO_PRODUCTO
+
+INVENTARIO ||--o{ INVENTARIO_INSUMO
+INSUMO ||--o{ INVENTARIO_INSUMO
+
+PRODUCTO ||--o{ MOVIMIENTO_PRODUCTO
+INSUMO ||--o{ MOVIMIENTO_INSUMO
+
+@enduml

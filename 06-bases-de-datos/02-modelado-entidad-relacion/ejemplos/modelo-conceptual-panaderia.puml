@@ -1,0 +1,124 @@
+@startchen modelo_conceptual_panaderia
+' Chilete DevPath: modelo conceptual en notación Chen para identificar entidades,
+' atributos, relaciones y cardinalidades antes de diseñar tablas.
+
+entity CLIENTE {
+    idCliente <<key>>
+    nombres
+    apellidos
+    telefono
+}
+
+entity PRODUCTO {
+    idProducto <<key>>
+    nombre
+    descripcion
+    precioVenta
+}
+
+entity INSUMO {
+    idInsumo <<key>>
+    nombre
+    unidadMedida
+}
+
+entity PROVEEDOR {
+    idProveedor <<key>>
+    nombre
+    telefono
+}
+
+entity VENTA {
+    idVenta <<key>>
+    fecha
+    total
+}
+
+entity PEDIDO {
+    idPedido <<key>>
+    fechaPedido
+    fechaEntrega
+    estado
+}
+
+entity PRODUCCION {
+    idProduccion <<key>>
+    fecha
+    cantidadProducida
+}
+
+entity ABASTECIMIENTO {
+    idAbastecimiento <<key>>
+    fecha
+}
+
+entity INVENTARIO {
+    idInventario <<key>>
+    fechaActualizacion
+}
+
+
+relationship REALIZA {
+}
+
+relationship INCLUYE_PEDIDO {
+    cantidad
+}
+
+relationship INCLUYE_VENTA {
+    cantidad
+    precioUnitario
+}
+
+relationship ELABORA {
+}
+
+relationship UTILIZA {
+    cantidadUtilizada
+}
+
+relationship SUMINISTRA {
+}
+
+relationship INCLUYE_ABASTECIMIENTO {
+    cantidad
+    costoUnitario
+}
+
+relationship CONTROLA_PRODUCTO {
+    cantidadDisponible
+}
+
+relationship CONTROLA_INSUMO {
+    cantidadDisponible
+}
+
+
+CLIENTE -1- REALIZA
+REALIZA -N- PEDIDO
+
+PEDIDO -N- INCLUYE_PEDIDO
+INCLUYE_PEDIDO -N- PRODUCTO
+
+VENTA -N- INCLUYE_VENTA
+INCLUYE_VENTA -N- PRODUCTO
+
+PRODUCCION -N- ELABORA
+ELABORA -1- PRODUCTO
+
+PRODUCCION -N- UTILIZA
+UTILIZA -N- INSUMO
+
+PROVEEDOR -1- SUMINISTRA
+SUMINISTRA -N- ABASTECIMIENTO
+
+ABASTECIMIENTO -N- INCLUYE_ABASTECIMIENTO
+INCLUYE_ABASTECIMIENTO -N- INSUMO
+
+INVENTARIO -1- CONTROLA_PRODUCTO
+CONTROLA_PRODUCTO -N- PRODUCTO
+
+INVENTARIO -1- CONTROLA_INSUMO
+CONTROLA_INSUMO -N- INSUMO
+
+@endchen
