@@ -1,0 +1,385 @@
+/* Colores y estilos generales */
+:root {
+  --verde: #59b7a0;
+  --verde-oscuro: #137b70;
+  --fondo-oscuro: #111e27;
+  --texto: #20343d;
+  --texto-suave: #65767c;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: #fff;
+}
+a {
+  text-decoration: none;
+}
+
+.barra-navegacion {
+  background: #111e27 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar-brand {
+  font-size: 1.06rem;
+  letter-spacing: 0.01em;
+}
+.navbar-brand img {
+  object-fit: contain;
+}
+.nav-link {
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #9ce7d3 !important;
+}
+
+/* Inicio: entrada del contenido y tarjeta 3D */
+.seccion-inicio {
+  padding: 145px 0 92px;
+  background:
+    radial-gradient(circle at 83% 18%, #245e5e 0, transparent 32%),
+    linear-gradient(145deg, #101e27 0%, #18353d 100%);
+  color: #fff;
+}
+.etiqueta-inicio,
+.subtitulo-seccion {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.etiqueta-inicio {
+  color: #97e4cf;
+}
+.titulo-inicio {
+  font-weight: 800;
+  line-height: 1.09;
+  font-size: clamp(2.3rem, 4.2vw, 4.25rem);
+  max-width: 650px;
+}
+.titulo-inicio span {
+  color: #91debf;
+}
+.descripcion-inicio {
+  color: #d2dddc;
+  font-size: 1.08rem;
+  max-width: 540px;
+  line-height: 1.7;
+  margin: 22px 0 28px;
+}
+.btn-primary {
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #0d5d55;
+  border-color: #0d5d55;
+}
+.btn-outline-light:hover {
+  color: var(--fondo-oscuro);
+}
+.indicador-carga {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #c5d6d4;
+  font-size: 0.85rem;
+}
+
+/* Loader: giro constante del círculo */
+.loader {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 3px solid rgba(255, 255, 255, 0.24);
+  border-top-color: #8fe5c8;
+  border-radius: 50%;
+  animation-name: giro-carga;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+@keyframes giro-carga {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animación personalizada: aparece y sube el contenido inicial */
+.animar-entrada {
+  animation-name: entrada-suave;
+  animation-duration: 0.85s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-direction: normal;
+}
+@keyframes entrada-suave {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* La perspectiva va en el padre y preserve-3d en la tarjeta */
+.escena-3d {
+  perspective: 1100px;
+  width: 100%;
+}
+.tarjeta-3d {
+  position: relative;
+  width: 100%;
+  height: 355px;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+  cursor: pointer;
+  outline-offset: 6px;
+}
+.tarjeta-3d:hover,
+.tarjeta-3d:focus-visible {
+  transform: rotateX(8deg) rotateY(180deg);
+}
+.cara-3d {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+.cara-frontal {
+  background: #273e43;
+}
+.ilustracion-laboratorio {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.rotulo-imagen {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 23px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+.rotulo-imagen span {
+  color: #aee7d7;
+}
+.cara-trasera {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #203b42;
+  padding: 22px;
+  text-align: center;
+}
+.logo-trasero {
+  display: block;
+  width: min(225px, 75%);
+  max-height: 240px;
+  object-fit: contain;
+}
+.cara-trasera p {
+  font-size: 0.88rem;
+  margin: 0;
+  color: #e5efe9;
+}
+.texto-ayuda {
+  font-size: 0.8rem;
+  color: #c8d9d5;
+}
+
+.seccion-explicacion {
+  background: #eaf3f0;
+}
+.nota-aprendizaje {
+  border-left: 5px solid var(--verde-oscuro);
+  border-radius: 0 14px 14px 0;
+  background: #fff;
+  padding: 22px 25px;
+  box-shadow: 0 8px 28px rgba(13, 45, 37, 0.06);
+  color: #425c63;
+  line-height: 1.7;
+}
+.nota-aprendizaje code,
+.texto-tarjeta code {
+  color: #0d675d;
+  font-weight: 700;
+}
+
+/* Tres tarjetas con transformaciones 2D diferentes */
+.seccion-ejemplos {
+  background: #f5f8f6;
+}
+.subtitulo-seccion {
+  color: var(--verde-oscuro);
+  margin-bottom: 12px;
+}
+.titulo-seccion {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.texto-secundario {
+  color: var(--texto-suave);
+  line-height: 1.7;
+}
+.tarjeta-ejemplo {
+  border: 1px solid #e4eeea;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(13, 45, 37, 0.045);
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+.tarjeta-ejemplo:hover,
+.tarjeta-ejemplo:focus-within {
+  box-shadow: 0 15px 35px rgba(13, 45, 37, 0.16);
+}
+.tarjeta-rotar:hover,
+.tarjeta-rotar:focus-within {
+  transform: rotate(3deg);
+}
+.tarjeta-escalar:hover,
+.tarjeta-escalar:focus-within {
+  transform: scale(1.055);
+}
+.tarjeta-mover:hover,
+.tarjeta-mover:focus-within {
+  transform: translateY(-14px);
+}
+.numero-ejemplo {
+  font-weight: 700;
+  font-size: 0.73rem;
+  letter-spacing: 0.1em;
+  color: #427f72;
+}
+.icono-ejemplo {
+  width: 66px;
+  height: 66px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: #e0f3ec;
+  color: #126f63;
+  margin: 25px 0 22px;
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+.tarjeta-ejemplo h3 {
+  font-weight: 700;
+}
+.texto-tarjeta {
+  color: #60747a;
+  line-height: 1.7;
+}
+.concepto-ejemplo {
+  font-weight: 700;
+  color: #126c62;
+  padding-top: 10px;
+}
+.concepto-ejemplo:hover {
+  color: #0c4944;
+  text-decoration: underline;
+}
+
+/* Formulario demostrativo con componentes Bootstrap */
+.seccion-formulario {
+  background: #fff;
+}
+.marca-formulario {
+  margin-top: 25px;
+  font-weight: 700;
+  color: #207b6e;
+}
+.formulario-contenedor {
+  background: #f6faf8;
+  border: 1px solid #e3eee9;
+  border-radius: 18px;
+  padding: 30px;
+}
+.form-label {
+  font-weight: 600;
+}
+.form-control {
+  padding: 0.75rem 0.9rem;
+  border-color: #cbded7;
+}
+.form-control:focus {
+  border-color: #4ea18d;
+  box-shadow: 0 0 0 0.2rem rgba(25, 125, 105, 0.13);
+}
+.respuesta-formulario {
+  min-height: 1.3rem;
+  color: #355e55;
+  font-size: 0.87rem;
+}
+.pie-pagina {
+  background: #111e27;
+  color: #bacdca;
+  font-size: 0.85rem;
+}
+
+/* Ajustes para tablets y celulares */
+@media (max-width: 991.98px) {
+  .seccion-inicio {
+    padding: 125px 0 65px;
+  }
+  .tarjeta-3d {
+    height: 310px;
+  }
+}
+@media (max-width: 575.98px) {
+  .seccion-inicio {
+    padding: 112px 0 54px;
+  }
+  .titulo-inicio {
+    font-size: 2.25rem;
+  }
+  .tarjeta-3d {
+    height: 245px;
+  }
+  .formulario-contenedor {
+    padding: 22px 16px;
+  }
+  .tarjeta-escalar:hover,
+  .tarjeta-escalar:focus-within {
+    transform: scale(1.025);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animar-entrada,
+  .loader {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+  .tarjeta-3d,
+  .tarjeta-ejemplo {
+    transition-duration: 0.01ms;
+  }
+}

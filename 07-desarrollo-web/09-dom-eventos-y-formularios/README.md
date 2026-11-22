@@ -20,6 +20,7 @@ Construye una lista que agregue elementos desde un formulario sin recargar la p�
 - `practicas/analizador-numeros`: presenta en el DOM el resultado de analizar una cadena.
 - `practicas/boleta-demostrativa`: separa el cálculo de una boleta de su representación con elementos DOM seguros.
 - `practicas/reporte-academico`: combina objetos, colecciones y creación de elementos para mostrar varios resultados.
+- `practicas/validacion-formularios-y-datos`: intercepta dos formularios, normaliza entradas y comunica resultados mediante nodos DOM seguros.
 
 ## Para avanzar
 

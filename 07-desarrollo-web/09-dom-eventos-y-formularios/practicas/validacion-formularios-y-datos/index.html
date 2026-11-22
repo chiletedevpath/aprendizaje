@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Práctica de validación de formularios, normalización de datos y actualización segura del DOM."
+    />
+    <title>Validación de formularios y datos | Chilete DevPath</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="js/validar-acceso.js" defer></script>
+    <script src="js/datos-estudiante.js" defer></script>
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="contenedor">
+        <p class="curso">DOM · EVENTOS · FORMULARIOS</p>
+        <h1>Validación de formularios y datos</h1>
+        <p class="descripcion">Dos ejemplos para observar cómo JavaScript valida, transforma y presenta entradas sin recargar la página.</p>
+      </div>
+    </header>
+
+    <main class="contenedor contenido">
+      <section class="tarjeta" aria-labelledby="titulo-acceso">
+        <div class="cabecera-tarjeta">
+          <span class="numero">01</span>
+          <div>
+            <h2 id="titulo-acceso">Validación de acceso</h2>
+            <p>Comprueba el formato del correo y el dominio ficticio <code>@aula.example</code>.</p>
+          </div>
+        </div>
+
+        <aside class="nota-aprendizaje">
+          <strong>Chilete DevPath explica:</strong> el evento <code>submit</code> se intercepta con
+          <code>preventDefault()</code>. Después se normaliza el texto, se evalúan formato y dominio
+          por separado y el resultado se construye con <code>createElement</code> y
+          <code>textContent</code>, sin insertar HTML recibido del usuario.
+        </aside>
+
+        <form id="form-acceso" novalidate>
+          <label for="correo">Correo electrónico</label>
+          <div class="controles">
+            <input
+              id="correo"
+              name="correo"
+              type="email"
+              placeholder="usuario@aula.example"
+              autocomplete="email"
+              required
+            />
+            <button type="submit">Validar correo</button>
+          </div>
+        </form>
+        <div id="resultado-acceso" class="resultado oculto" role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="tarjeta" aria-labelledby="titulo-estudiante">
+        <div class="cabecera-tarjeta">
+          <span class="numero">02</span>
+          <div>
+            <h2 id="titulo-estudiante">Datos del estudiante</h2>
+            <p>Ingresa un nombre y una edad para normalizarlos antes de mostrarlos.</p>
+          </div>
+        </div>
+
+        <aside class="nota-aprendizaje">
+          <strong>Chilete DevPath explica:</strong> <code>trim()</code> elimina espacios externos,
+          <code>Number()</code> convierte la edad y <code>Number.isInteger()</code> verifica que sea
+          entera. Observa que transformar el nombre para mostrarlo no modifica el valor del campo.
+        </aside>
+
+        <form id="form-estudiante" novalidate>
+          <div class="campos-dos">
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                placeholder="ana torres"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label for="edad">Edad</label>
+              <input
+                id="edad"
+                name="edad"
+                type="number"
+                min="1"
+                max="120"
+                step="1"
+                placeholder="20"
+                required
+              />
+            </div>
+          </div>
+          <button type="submit" class="separado">Mostrar mensaje</button>
+        </form>
+        <div
+          id="resultado-estudiante"
+          class="resultado oculto"
+          role="status"
+          aria-live="polite"
+        ></div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor">Práctica educativa · Chilete DevPath</div>
+    </footer>
+  </body>
+</html>

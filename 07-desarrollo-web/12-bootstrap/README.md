@@ -19,6 +19,7 @@ Construye un panel responsive con tarjetas y un componente interactivo sin ocult
 ## Práctica guiada
 
 - [Exploradores del Código](practicas/exploradores-codigo/): catálogo temático original para practicar grid, navbar, cards, modal, formulario y personalización responsable de Bootstrap.
+- `practicas/laboratorio-bootstrap-y-transformaciones`: laboratorio responsive que combina grid, navbar, tarjetas, formulario demostrativo, transformaciones 2D/3D y animaciones CSS.
 
 ## Para avanzar
 
