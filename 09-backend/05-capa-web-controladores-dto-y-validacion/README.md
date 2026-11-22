@@ -11,3 +11,5 @@ La capa web traduce HTTP hacia operaciones de aplicación y transforma el result
 `practicas/registro-estudiantes-thymeleaf` muestra el flujo MVC completo: rutas GET y POST, enlace de formulario con `th:object` y `th:field`, atributos del modelo, iteración con `th:each` y condiciones con `th:if` y `th:unless`. Es una práctica con datos en memoria; no sustituye la persistencia del módulo 06.
 
 `practicas/refugio-mascotas-thymeleaf` refuerza el mismo flujo con varias vistas, registro en memoria, consulta individual y reglas de presentación según la edad y el estado de salud. Sus ilustraciones son recursos SVG propios y locales.
+
+`practicas/registro-productos-validacion-personalizada` separa la entidad del objeto de formulario y combina Bean Validation con reglas cruzadas implementadas mediante `Validator`. Usa MySQL para observar el flujo completo, pero su foco pedagógico es validar en el límite de entrada antes de persistir.

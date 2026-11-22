@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b2c3a">
+    <title>Registrar producto | Chilete DevPath</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" href="/css/estilos.css">
+</head>
+<body>
+<div class="page-layout">
+    <header class="site-header" aria-label="Navegación">
+        <a class="brand" th:href="@{/productos/lista}" href="/productos/lista" aria-label="Ir al listado de productos">
+            <span class="brand-mark" aria-hidden="true">P</span>
+            <span>Chilete DevPath</span>
+        </a>
+        <nav class="nav-links" aria-label="Principal">
+            <a th:href="@{/productos/lista}" href="/productos/lista">Listado</a>
+            <a class="nav-active" aria-current="page" th:href="@{/productos/nuevo}" href="/productos/nuevo">Nuevo producto</a>
+        </nav>
+    </header>
+
+    <main class="main-content main-narrow">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> REGISTRO DE INVENTARIO</div>
+        <div class="page-heading">
+            <h1>Registrar producto</h1>
+            <p>Completa los datos del artículo. Los campos se validan antes de almacenarse en la base de datos.</p>
+        </div>
+
+        <aside class="learning-note" aria-labelledby="learning-title">
+            <h2 id="learning-title">Chilete DevPath explica</h2>
+            <p>Este formulario separa el DTO de entrada de la entidad persistida. <code>@Valid</code> ejecuta las reglas declarativas y <code>ProductoValidator</code> comprueba reglas que relacionan precio, oferta, categoría y stock.</p>
+        </aside>
+
+        <section class="panel form-panel" aria-labelledby="form-title">
+            <div class="panel-header">
+                <div>
+                    <h2 id="form-title">Información del producto</h2>
+                    <p>Datos básicos y control de existencias</p>
+                </div>
+                <span class="step-label">01 / 01</span>
+            </div>
+            <form th:action="@{/productos/guardar}" action="/productos/guardar" th:object="${productoForm}" method="post" novalidate>
+                <div class="form-field" th:classappend="${#fields.hasErrors('nombre')} ? 'is-invalid' : ''">
+                    <label for="nombre">Nombre del producto <span class="required">*</span></label>
+                    <input type="text" id="nombre" th:field="*{nombre}" placeholder="Ej. Monitor LED" autocomplete="off" maxlength="101" aria-describedby="nombre-ayuda nombre-error">
+                    <span class="hint" id="nombre-ayuda">Solo letras y espacios; no debe contener números.</span>
+                    <span class="error" id="nombre-error" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+                </div>
+
+                <div class="form-field" th:classappend="${#fields.hasErrors('categoria')} ? 'is-invalid' : ''">
+                    <label for="categoria">Categoría <span class="required">*</span></label>
+                    <select id="categoria" th:field="*{categoria}" aria-describedby="categoria-error">
+                        <option value="">Selecciona una categoría</option>
+                        <option value="TECNOLOGIA">Tecnología</option>
+                        <option value="ALIMENTOS">Alimentos</option>
+                        <option value="ROPA">Ropa</option>
+                    </select>
+                    <span class="error" id="categoria-error" th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}"></span>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field" th:classappend="${#fields.hasErrors('precio')} ? 'is-invalid' : ''">
+                        <label for="precio">Precio normal <span class="required">*</span></label>
+                        <div class="input-prefix"><span>S/</span><input type="number" id="precio" th:field="*{precio}" step="0.01" placeholder="0.00" inputmode="decimal" aria-describedby="precio-error"></div>
+                        <span class="error" id="precio-error" th:if="${#fields.hasErrors('precio')}" th:errors="*{precio}"></span>
+                    </div>
+                    <div class="form-field" th:classappend="${#fields.hasErrors('precioOferta')} ? 'is-invalid' : ''">
+                        <label for="precioOferta">Precio de oferta <span class="optional">Opcional</span></label>
+                        <div class="input-prefix"><span>S/</span><input type="number" id="precioOferta" th:field="*{precioOferta}" step="0.01" placeholder="0.00" inputmode="decimal" aria-describedby="oferta-ayuda oferta-error"></div>
+                        <span class="hint" id="oferta-ayuda">Debe ser menor que el precio normal.</span>
+                        <span class="error" id="oferta-error" th:if="${#fields.hasErrors('precioOferta')}" th:errors="*{precioOferta}"></span>
+                    </div>
+                </div>
+                <div class="form-field" th:classappend="${#fields.hasErrors('stock')} ? 'is-invalid' : ''">
+                    <label for="stock">Stock disponible <span class="required">*</span></label>
+                    <input type="number" id="stock" th:field="*{stock}" step="1" placeholder="Ej. 25" inputmode="numeric" aria-describedby="stock-ayuda stock-error">
+                    <span class="hint" id="stock-ayuda">Tecnología: hasta 100 · Alimentos: hasta 500 unidades.</span>
+                    <span class="error" id="stock-error" th:if="${#fields.hasErrors('stock')}" th:errors="*{stock}"></span>
+                </div>
+                <div class="form-actions">
+                    <a class="button button-secondary" th:href="@{/productos/lista}" href="/productos/lista">Cancelar</a>
+                    <button class="button button-primary" type="submit">Guardar producto <span aria-hidden="true">↗</span></button>
+                </div>
+            </form>
+        </section>
+        <p class="footnote">Los datos se almacenan en la base de datos local MySQL/MariaDB mediante Spring Data JPA.</p>
+    </main>
+    <footer class="site-footer">Práctica educativa · <a href="https://chiletedevpath.com/" target="_blank" rel="noopener noreferrer">Chilete DevPath</a></footer>
+</div>
+</body>
+</html>

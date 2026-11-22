@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sesión autenticada | Chilete DevPath</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" href="/css/estilos.css">
+</head>
+<body>
+<main class="page">
+    <section class="card" aria-labelledby="home-title">
+        <p class="eyebrow">ACCESO CONCEDIDO</p>
+        <h1 id="home-title">La ruta protegida respondió</h1>
+        <aside class="learning-note">
+            <h2>Chilete DevPath explica</h2>
+            <p>La autenticación válida quedó almacenada en el contexto de seguridad de la sesión. Esta práctica todavía no usa base de datos: el usuario existe solo en memoria.</p>
+        </aside>
+        <form th:action="@{/logout}" action="/logout" method="post">
+            <button type="submit">Cerrar sesión</button>
+        </form>
+    </section>
+</main>
+<footer>Práctica educativa · Chilete DevPath</footer>
+</body>
+</html>

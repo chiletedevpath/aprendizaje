@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b2c3a">
+    <title>Productos registrados | Chilete DevPath</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" href="/css/estilos.css">
+</head>
+<body>
+<div class="page-layout">
+    <header class="site-header" aria-label="Navegación">
+        <a class="brand" th:href="@{/productos/lista}" href="/productos/lista" aria-label="Ir al listado de productos">
+            <span class="brand-mark" aria-hidden="true">P</span>
+            <span>Chilete DevPath</span>
+        </a>
+        <nav class="nav-links" aria-label="Principal">
+            <a class="nav-active" aria-current="page" th:href="@{/productos/lista}" href="/productos/lista">Listado</a>
+            <a th:href="@{/productos/nuevo}" href="/productos/nuevo">Nuevo producto</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> CONTROL DE INVENTARIO</div>
+        <div class="page-heading page-heading-row">
+            <div>
+                <h1>Productos registrados</h1>
+                <p>Consulta los artículos ingresados y sus existencias actuales.</p>
+            </div>
+            <a class="button button-primary add-button" th:href="@{/productos/nuevo}" href="/productos/nuevo"><span
+                    aria-hidden="true">＋</span> Nuevo producto</a>
+        </div>
+        <aside class="learning-note" aria-labelledby="learning-title">
+            <h2 id="learning-title">Chilete DevPath explica</h2>
+            <p>El controlador consulta el repositorio JPA y entrega la colección a Thymeleaf. El patrón Post/Redirect/Get evita reenviar el formulario al recargar y el mensaje temporal confirma la operación.</p>
+        </aside>
+        <div class="success-notice" th:if="${mensaje}" role="status"><span class="success-symbol"
+                                                                           aria-hidden="true">✓</span><span
+                th:text="${mensaje}">El producto se registró correctamente.</span></div>
+        <section class="panel list-panel" aria-labelledby="list-title">
+            <div class="panel-header">
+                <div>
+                    <h2 id="list-title">Catálogo de productos</h2>
+                </div>
+                <span class="count-pill" th:text="|${#lists.size(productos)} registros|">0 registros</span>
+            </div>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">PRODUCTO</th>
+                        <th scope="col">CATEGORÍA</th>
+                        <th scope="col">PRECIO NORMAL</th>
+                        <th scope="col">PRECIO OFERTA</th>
+                        <th scope="col">STOCK</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="p : ${productos}">
+                        <td class="muted-id" th:text="${p.id}">1</td>
+                        <td class="product-name" th:text="${p.nombre}">Producto de ejemplo</td>
+                        <td><span class="category-chip" th:text="${p.categoria}">TECNOLOGIA</span></td>
+                        <td class="price">S/ <span th:text="${#numbers.formatDecimal(p.precio, 1, 2)}">0.00</span></td>
+                        <td class="price offer-price"><span th:if="${p.precioOferta != null}">S/ <span
+                                th:text="${#numbers.formatDecimal(p.precioOferta, 1, 2)}">0.00</span></span><span
+                                class="muted-value" th:unless="${p.precioOferta != null}">—</span></td>
+                        <td><span class="stock-value" th:text="${p.stock}">0</span></td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(productos)}">
+                        <td colspan="6">
+                            <div class="empty-state">
+                                <div class="empty-icon" aria-hidden="true">▤</div>
+                                <h3>Aún no hay productos registrados</h3>
+                                <p>Registra tu primer producto para visualizarlo en este listado.</p>
+                                <a class="button button-secondary" th:href="@{/productos/nuevo}"
+                                   href="/productos/nuevo">Registrar primer producto</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <p class="footnote">El registro incluye validaciones personalizadas y reglas de stock por categoría.</p>
+    </main>
+    <footer class="site-footer">Práctica educativa · <a href="https://chiletedevpath.com/" target="_blank"
+                                                 rel="noopener noreferrer">Chilete DevPath</a></footer>
+</div>
+</body>
+</html>
