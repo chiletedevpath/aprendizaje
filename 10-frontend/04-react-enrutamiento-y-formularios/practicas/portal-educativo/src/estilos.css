@@ -1,0 +1,57 @@
+:root { font-family: Arial, Helvetica, sans-serif; color: #172b43; background: #f4f7fa; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, a { font: inherit; }
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid #87c4e1; outline-offset: 2px; }
+a { color: #156c86; }
+.aplicacion { display: flex; flex-direction: column; min-height: 100vh; }
+.contenedor { width: min(100% - 40px, 1040px); margin: 0 auto; }
+.cabecera { background: #173451; color: #fff; padding: 41px 0 38px; }
+.etiqueta { margin: 0 0 10px; color: #bcd7e4; letter-spacing: .09em; font-size: 12px; font-weight: bold; }
+.cabecera h1 { font-size: clamp(29px, 4vw, 39px); line-height: 1.15; margin: 0 0 12px; }
+.subtitulo { margin: 0; color: #e0e9f0; font-size: 15px; }
+.barra-navegacion { background: #fff; border-bottom: 1px solid #dce5eb; }
+.enlaces { display: flex; gap: 7px; padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; }
+.enlace { text-decoration: none; color: #25425a; padding: 11px 18px; border-radius: 8px; font-weight: bold; font-size: 14px; }
+.enlace:hover { background: #eff5f8; }
+.enlace.activo { background: #e1eff5; color: #125d78; }
+.contenido { padding-top: 37px; padding-bottom: 60px; flex: 1; }
+.nota-aprendizaje { max-width: 980px; margin: 0 0 20px; padding: 15px 18px; border-left: 4px solid #13708a; border-radius: 0 9px 9px 0; background: #e9f5f8; color: #355b69; line-height: 1.65; }
+.nota-aprendizaje code, .panel code { color: #0d6077; font-weight: bold; }
+.panel { max-width: 980px; padding: 37px 40px; background: #fff; border: 1px solid #dce5eb; border-radius: 14px; box-shadow: 0 10px 32px #1734510b; }
+.indicador { display: inline-block; background: #e6f2f6; color: #125e76; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: bold; margin-bottom: 16px; }
+.panel h2 { font-size: clamp(24px, 3vw, 32px); line-height: 1.2; margin: 0 0 14px; }
+.panel > p { font-size: 15px; color: #526778; line-height: 1.7; max-width: 740px; }
+.panel .intro { margin: 0 0 24px; }
+.resumen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.resumen-item { background: #f7fafc; border: 1px solid #dfe8ef; border-radius: 11px; padding: 23px; }
+.resumen-item h3 { font-size: 18px; margin: 0 0 10px; }
+.resumen-item p { font-size: 15px; margin: 0 0 15px; line-height: 1.6; color: #526778; }
+.resumen-item a { font-size: 14px; font-weight: bold; text-decoration: none; }
+.resumen-item a:hover { text-decoration: underline; }
+.saludo { margin: 20px 0 0; padding: 13px 15px; border-radius: 8px; background: #edf4fa; color: #245b7a; font-weight: bold; }
+.panel .nota { font-size: 12px; color: #748594; margin-top: 25px; }
+.tabla-desplazable { overflow-x: auto; border: 1px solid #dce5eb; border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; min-width: 570px; text-align: left; }
+th, td { padding: 16px 19px; border-bottom: 1px solid #e7edf1; font-size: 14px; }
+th { background: #f2f7fa; color: #35546a; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: #fbfdfe; }
+.codigo { font-weight: bold; color: #135f7a; white-space: nowrap; }
+.formulario-contacto { display: grid; gap: 10px; max-width: 520px; }
+.formulario-contacto label { font-weight: bold; }
+.formulario-contacto input { padding: 12px 13px; border: 1px solid #b9c8d3; border-radius: 8px; color: #172b43; }
+.formulario-contacto button { justify-self: start; border: 0; border-radius: 8px; background: #176b84; color: #fff; padding: 11px 17px; font-weight: bold; cursor: pointer; }
+.formulario-contacto button:disabled { opacity: .55; cursor: not-allowed; }
+.respuesta { margin-top: 18px !important; padding: 12px 14px; border-radius: 8px; background: #e8f5ef; color: #235e46 !important; }
+.pie { background: #fff; border-top: 1px solid #dce5eb; }
+.pie-contenido { display: flex; justify-content: space-between; gap: 12px; padding: 22px 0; color: #617382; font-size: 13px; }
+@media (max-width: 660px) {
+  .contenedor { width: min(100% - 24px, 1040px); }
+  .cabecera { padding: 32px 0; }
+  .contenido { padding-top: 22px; padding-bottom: 36px; }
+  .panel { padding: 26px 20px; }
+  .enlace { padding: 10px 12px; }
+  .resumen { grid-template-columns: 1fr; }
+  .pie-contenido { flex-direction: column; text-align: center; }
+}

@@ -1,0 +1,47 @@
+body {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+.cabecera-practica {
+  background: #172b43;
+  color: #fff;
+}
+
+.nota-aprendizaje {
+  padding: 1rem 1.1rem;
+  border-left: 4px solid #0d6efd;
+  border-radius: 0.5rem;
+  background: #eaf2ff;
+  color: #17385f;
+}
+
+.container {
+  max-width: 1040px;
+}
+
+.lista-posts {
+  max-height: 510px;
+  overflow-y: auto;
+}
+
+.texto-post {
+  white-space: pre-line;
+}
+
+.filtro-inicial {
+  max-width: 220px;
+}
+
+.pie-practica {
+  margin-top: auto;
+  border-top: 1px solid #dee2e6;
+  color: #66788b;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

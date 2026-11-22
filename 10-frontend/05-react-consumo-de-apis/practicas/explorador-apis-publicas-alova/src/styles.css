@@ -1,0 +1,39 @@
+body {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+main.container {
+  max-width: 960px;
+}
+
+.cabecera-practica {
+  background: #172b43;
+  color: #fff;
+}
+
+.nota-aprendizaje {
+  padding: 1rem 1.1rem;
+  border-left: 4px solid #0d6efd;
+  border-radius: 0.5rem;
+  background: #eaf2ff;
+  color: #17385f;
+}
+
+.campo-usuario {
+  width: min(100%, 390px);
+}
+
+.list-group-item.active .small {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+dt, dd {
+  margin-bottom: 0.6rem;
+}
+
+.pie-practica {
+  margin-top: auto;
+  border-top: 1px solid #dee2e6;
+  color: #66788b;
+}
